@@ -10,7 +10,7 @@
   <a href="#quick-start"><img alt="status" src="https://img.shields.io/badge/status-alpha-00ff9d?style=flat-square&labelColor=07090c"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.11%2B-e8eef5?style=flat-square&labelColor=07090c">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-8b96a5?style=flat-square&labelColor=07090c">
-  <img alt="tests" src="https://img.shields.io/badge/tests-45%20passing-00ff9d?style=flat-square&labelColor=07090c">
+  <img alt="tests" src="https://img.shields.io/badge/tests-55%20passing-00ff9d?style=flat-square&labelColor=07090c">
 </p>
 
 ---
@@ -49,11 +49,13 @@ tickline/
 │   ├── backtest/       # engine + walk-forward validator
 │   ├── intelligence/   # ML meta-labeler (algo + AI gate)
 │   ├── portfolio/      # multi-asset sizing + risk-parity engine
+│   ├── allocation/     # L6 regime gating + vote + DD circuit breaker
 │   ├── sentiment/      # lexicon scorer + event feed + bar features
 │   ├── paper/          # simulation broker + JSONL ledger (live-ready)
 │   └── risk/           # performance metrics
 ├── scripts/            # CLI entry points
-├── tests/              # unit tests (45 passing)
+├── dashboard/          # Streamlit explorer (run with `streamlit run dashboard/app.py`)
+├── tests/              # unit tests (55 passing)
 ├── assets/             # brand + logo
 ├── data/               # cached market data (gitignored)
 └── notebooks/          # research notebooks
@@ -89,6 +91,12 @@ python scripts/run_sentiment_demo.py --no-fetch
 
 # 8. Paper trading (simulation broker, JSONL ledger)
 python scripts/run_paper.py --no-fetch --strategy sma_crossover --bars 2000
+
+# 9. L6 consensus — regime gating + vote ensemble + DD breaker
+python scripts/run_consensus.py --no-fetch
+
+# 10. Dashboard (Streamlit; 6 pages)
+streamlit run dashboard/app.py
 ```
 
 ## Roadmap
@@ -103,6 +111,8 @@ python scripts/run_paper.py --no-fetch --strategy sma_crossover --bars 2000
 - [x] **Multi-asset portfolio** (equal / inverse-vol / vol-target / fractional Kelly)
 - [x] **Sentiment layer** (lexicon scorer + event feed + bar-level features)
 - [x] **Paper trading** (simulation broker + JSONL ledger; live-ready)
+- [x] **L6 consensus** (regime classifier + vote ensemble + drawdown circuit breaker)
+- [x] **Streamlit dashboard** (6 pages — overview, backtest, walk-forward, portfolio, consensus, paper ledger)
 - [ ] Streamlit dashboard
 - [ ] Live (very small size, well-understood strategy only)
 

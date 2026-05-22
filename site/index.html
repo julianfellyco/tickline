@@ -692,10 +692,10 @@
   .feat .bar-fill {
     height: 100%;
     background: var(--signal);
-    width: 0;
+    width: var(--w);
     transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .feat.in .bar-fill { width: var(--w); }
+  .feat-grid:not(.in) .feat .bar-fill { width: 0; }
   .feat .val { color: var(--signal); text-align: right; font-weight: 500; }
 
   /* ─── RULES ───────────────────────────────────────────────── */
@@ -802,13 +802,15 @@
   <div class="ticker-track">
     <span class="ticker-item"><span class="lbl">TICKLINE</span> <span class="sym">v0.1.0</span> <span class="div">·</span> <span class="lbl">STATUS</span> <span class="pos">ALPHA</span></span>
     <span class="ticker-item"><span class="lbl">BTC/USDT</span> <span class="sym">1h</span> <span class="div">·</span> <span class="sym">8,760 bars</span> <span class="div">·</span> <span class="lbl">CACHED</span></span>
-    <span class="ticker-item"><span class="lbl">TESTS</span> <span class="pos">45 / 45</span> <span class="div">·</span> <span class="lbl">COVERAGE</span> <span class="sym">core+intel+portfolio+sentiment+paper</span></span>
+    <span class="ticker-item"><span class="lbl">TESTS</span> <span class="pos">55 / 55</span> <span class="div">·</span> <span class="lbl">COVERAGE</span> <span class="sym">all 7 modules</span></span>
     <span class="ticker-item"><span class="lbl">BACKTEST</span> <span class="sym">in-sample</span> <span class="div">·</span> <span class="lbl">RET</span> <span class="neg">−32.34%</span> <span class="div">·</span> <span class="lbl">SHARPE</span> <span class="neg">−1.33</span></span>
     <span class="ticker-item"><span class="lbl">WALK-FWD</span> <span class="sym">6 windows</span> <span class="div">·</span> <span class="lbl">SHARPE</span> <span class="neg">−1.31</span> <span class="div">·</span> <span class="lbl">CONSISTENCY</span> <span class="sym">33%</span></span>
     <span class="ticker-item"><span class="lbl">ALGO+AI</span> <span class="sym">th=0.30</span> <span class="div">·</span> <span class="lbl">RET</span> <span class="pos">+2.03%</span> <span class="div">·</span> <span class="lbl">PF</span> <span class="pos">2.08</span></span>
     <span class="ticker-item"><span class="lbl">PORTFOLIO</span> <span class="sym">BTC·ETH·SOL</span> <span class="div">·</span> <span class="lbl">SIZE</span> <span class="sym">inverse-vol</span> <span class="div">·</span> <span class="lbl">CORR</span> <span class="sym">0.63–0.66</span></span>
     <span class="ticker-item"><span class="lbl">SENTIMENT</span> <span class="sym">lexicon scorer</span> <span class="div">·</span> <span class="lbl">FEATURES</span> <span class="sym">6 bar-level</span> <span class="div">·</span> <span class="lbl">SOURCES</span> <span class="sym">news+social+onchain ready</span></span>
     <span class="ticker-item"><span class="lbl">PAPER</span> <span class="sym">simulation broker</span> <span class="div">·</span> <span class="lbl">LEDGER</span> <span class="sym">jsonl</span> <span class="div">·</span> <span class="lbl">FILLS</span> <span class="pos">42 on last run</span></span>
+    <span class="ticker-item"><span class="lbl">L6</span> <span class="sym">regime classifier · vote ensemble · drawdown breaker</span></span>
+    <span class="ticker-item"><span class="lbl">DASHBOARD</span> <span class="sym">streamlit · 6 pages · plotly charts</span></span>
     <span class="ticker-item"><span class="lbl">FEATURES</span> <span class="sym">13</span> <span class="div">·</span> <span class="lbl">TOP</span> <span class="sym">hour_sin · rsi_14 · sma_slope</span></span>
     <span class="ticker-item"><span class="lbl">MODEL</span> <span class="sym">HistGradientBoosting</span> <span class="div">·</span> <span class="lbl">AUC</span> <span class="sym">0.569 (test)</span></span>
     <span class="ticker-item"><span class="lbl">LICENSE</span> <span class="sym">MIT</span> <span class="div">·</span> <span class="lbl">NOT</span> <span class="amber">FINANCIAL ADVICE</span></span>
@@ -865,11 +867,11 @@
     </div>
     <div class="status-item">
       <span class="k">MODULES</span>
-      <span class="v">6 shipped</span>
+      <span class="v">7 shipped</span>
     </div>
     <div class="status-item">
       <span class="k">TESTS</span>
-      <span class="v pos">45 / 45</span>
+      <span class="v pos">55 / 55</span>
     </div>
   </div>
 </div>
@@ -1101,12 +1103,12 @@
     <p class="sec-lead reveal">A real quant operation is layered. Each layer has a single responsibility — a failure in one doesn't silently contaminate the others. Green layers are shipped; amber layers are the next horizon.</p>
 
     <div class="stack">
-      <div class="stack-row muted reveal">
-        <div class="head"><span class="id">L6</span><span class="name">Allocation & Consensus</span><span class="stat todo">PLANNED</span><span class="role">capital · regime gating</span></div>
+      <div class="stack-row reveal">
+        <div class="head"><span class="id">L6</span><span class="name">Allocation & Consensus</span><span class="stat">SHIPPED</span><span class="role">regime gating · vote · risk overlay</span></div>
         <div class="body">
-          <div class="item">risk budgets across strategies</div>
-          <div class="item">regime-conditional voting</div>
-          <div class="item">meta-labeler agreement</div>
+          <div class="item">RegimeClassifier (trend / range / down)</div>
+          <div class="item">RegimeGatedStrategy + VoteEnsemble</div>
+          <div class="item">DrawdownCircuitBreaker</div>
         </div>
       </div>
       <div class="stack-row reveal">
