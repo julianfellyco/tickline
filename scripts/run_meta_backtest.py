@@ -23,7 +23,7 @@ from tickline.backtest import Backtester, CostModel
 from tickline.data import fetch_ohlcv, load_cached
 from tickline.intelligence import MetaLabeler
 from tickline.risk import compute_metrics
-from tickline.strategies import RSIMeanReversion, SMACrossover
+from tickline.strategies import RSIMeanReversion, SMACrossover, StopAndTarget
 
 RESET = "\033[0m"
 SIGNAL = "\033[38;2;0;255;157m"
@@ -74,6 +74,9 @@ def main() -> int:
     p.add_argument("--threshold", type=float, default=0.55,
                    help="ML probability threshold to take a trade (0-1)")
     p.add_argument("--no-fetch", action="store_true")
+    p.add_argument("--atr-stop", type=float, default=None, help="wrap with ATR stop")
+    p.add_argument("--atr-target", type=float, default=None, help="wrap with ATR target")
+    p.add_argument("--atr-window", type=int, default=14)
     args = p.parse_args()
 
     print(BANNER)
@@ -113,13 +116,23 @@ def main() -> int:
     cost_model = CostModel()
     bt = Backtester(initial_capital=10_000, cost_model=cost_model)
 
-    primary_only = FACTORIES[args.primary]()
+    def _maybe_wrap(s):
+        if args.atr_stop is None and args.atr_target is None:
+            return s
+        return StopAndTarget(
+            s,
+            stop_atr=args.atr_stop if args.atr_stop is not None else 2.0,
+            target_atr=args.atr_target if args.atr_target is not None else 3.0,
+            atr_window=args.atr_window,
+        )
+
+    primary_only = _maybe_wrap(FACTORIES[args.primary]())
     algo_result = bt.run(test_df, primary_only)
     algo_metrics = compute_metrics(
         algo_result.returns, algo_result.equity_curve, algo_result.trades, args.timeframe
     )
 
-    meta_result = bt.run(test_df, meta)
+    meta_result = bt.run(test_df, _maybe_wrap(meta))
     meta_metrics = compute_metrics(
         meta_result.returns, meta_result.equity_curve, meta_result.trades, args.timeframe
     )

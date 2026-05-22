@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from tickline.backtest import Backtester, CostModel
 from tickline.data import fetch_ohlcv
 from tickline.risk import compute_metrics
-from tickline.strategies import RSIMeanReversion, SMACrossover
+from tickline.strategies import RSIMeanReversion, SMACrossover, StopAndTarget
 
 # ANSI palette aligned with BRAND.md
 RESET = "\033[0m"
@@ -54,6 +54,11 @@ def main() -> int:
     p.add_argument("--fee-bps", type=float, default=10.0)
     p.add_argument("--slippage-bps", type=float, default=5.0)
     p.add_argument("--no-fetch", action="store_true", help="use cache only, never hit exchange")
+    p.add_argument("--atr-stop", type=float, default=None,
+                   help="wrap strategy with ATR-scaled stop-loss (e.g. 2.0)")
+    p.add_argument("--atr-target", type=float, default=None,
+                   help="wrap strategy with ATR-scaled take-profit (e.g. 3.0)")
+    p.add_argument("--atr-window", type=int, default=14)
     args = p.parse_args()
 
     print(BANNER)
@@ -70,6 +75,13 @@ def main() -> int:
     print(f"   {len(df)} candles, {df.index[0]} -> {df.index[-1]}")
 
     strategy = STRATEGY_REGISTRY[args.strategy]()
+    if args.atr_stop is not None or args.atr_target is not None:
+        strategy = StopAndTarget(
+            primary=strategy,
+            stop_atr=args.atr_stop if args.atr_stop is not None else 2.0,
+            target_atr=args.atr_target if args.atr_target is not None else 3.0,
+            atr_window=args.atr_window,
+        )
     print(f"\n>> Running strategy: {strategy.name}")
 
     bt = Backtester(

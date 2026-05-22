@@ -10,7 +10,7 @@
   <a href="#quick-start"><img alt="status" src="https://img.shields.io/badge/status-alpha-00ff9d?style=flat-square&labelColor=07090c"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.11%2B-e8eef5?style=flat-square&labelColor=07090c">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-8b96a5?style=flat-square&labelColor=07090c">
-  <img alt="tests" src="https://img.shields.io/badge/tests-63%20passing-00ff9d?style=flat-square&labelColor=07090c">
+  <img alt="tests" src="https://img.shields.io/badge/tests-71%20passing-00ff9d?style=flat-square&labelColor=07090c">
 </p>
 
 ---
@@ -109,6 +109,9 @@ streamlit run dashboard/app.py
 # 11. Live trading — shadow mode, against real Binance market data
 python scripts/run_live.py --strategy sma_crossover --symbol BTC/USDT \
     --steps 3 --interval 10
+
+# 12. ATR stop+target comparison — does adding explicit exits help?
+python scripts/run_exit_comparison.py --stop-atr 1.0 --target-atr 3.0
 ```
 
 ## Going live (carefully)
@@ -143,6 +146,7 @@ The same `LiveBroker` / `LiveRunner` code handles all three modes — the strate
 - [x] **L6 consensus** (regime classifier + vote ensemble + drawdown circuit breaker)
 - [x] **Streamlit dashboard** (6 pages — overview, backtest, walk-forward, portfolio, consensus, paper ledger)
 - [x] **Live trading** (ccxt-backed broker + runner; shadow → testnet → mainnet via env flags)
+- [x] **ATR stop-loss / take-profit wrapper** (any Strategy gets explicit exits)
 - [ ] Streamlit dashboard
 - [ ] Live (very small size, well-understood strategy only)
 
