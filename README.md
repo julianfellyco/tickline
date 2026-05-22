@@ -10,7 +10,7 @@
   <a href="#quick-start"><img alt="status" src="https://img.shields.io/badge/status-alpha-00ff9d?style=flat-square&labelColor=07090c"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.11%2B-e8eef5?style=flat-square&labelColor=07090c">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-8b96a5?style=flat-square&labelColor=07090c">
-  <img alt="tests" src="https://img.shields.io/badge/tests-24%20passing-00ff9d?style=flat-square&labelColor=07090c">
+  <img alt="tests" src="https://img.shields.io/badge/tests-31%20passing-00ff9d?style=flat-square&labelColor=07090c">
 </p>
 
 ---
@@ -48,9 +48,10 @@ tickline/
 │   ├── strategies/     # rule-based signal generators
 │   ├── backtest/       # engine + walk-forward validator
 │   ├── intelligence/   # ML meta-labeler (algo + AI gate)
+│   ├── portfolio/      # multi-asset sizing + risk-parity engine
 │   └── risk/           # performance metrics
 ├── scripts/            # CLI entry points
-├── tests/              # unit tests (24 passing)
+├── tests/              # unit tests (31 passing)
 ├── assets/             # brand + logo
 ├── data/               # cached market data (gitignored)
 └── notebooks/          # research notebooks
@@ -75,6 +76,11 @@ python scripts/run_walk_forward.py --strategy sma_crossover --no-fetch
 
 # 5. Algo + AI gate comparison (the ML layer)
 python scripts/run_meta_backtest.py --primary sma_crossover --no-fetch
+
+# 6. Multi-asset portfolio (inverse-vol across BTC / ETH / SOL)
+python scripts/run_portfolio_backtest.py --no-fetch \
+    --symbols "BTC/USDT" "ETH/USDT" "SOL/USDT" \
+    --method inverse_vol
 ```
 
 ## Roadmap
@@ -86,7 +92,7 @@ python scripts/run_meta_backtest.py --primary sma_crossover --no-fetch
 - [x] Risk metrics (Sharpe, Sortino, drawdown, Calmar, profit factor)
 - [x] **Walk-forward validation** (anchored + rolling modes)
 - [x] **Meta-labeler ML gate** (algo + AI overlay via HistGradientBoosting)
-- [ ] Multi-asset portfolio with correlation gating
+- [x] **Multi-asset portfolio** (equal / inverse-vol / vol-target / fractional Kelly)
 - [ ] Sentiment layer (news + onchain → features)
 - [ ] Paper trading via exchange testnet
 - [ ] Streamlit dashboard
