@@ -10,7 +10,7 @@
   <a href="#quick-start"><img alt="status" src="https://img.shields.io/badge/status-alpha-00ff9d?style=flat-square&labelColor=07090c"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.11%2B-e8eef5?style=flat-square&labelColor=07090c">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-8b96a5?style=flat-square&labelColor=07090c">
-  <img alt="tests" src="https://img.shields.io/badge/tests-81%20passing-00ff9d?style=flat-square&labelColor=07090c">
+  <img alt="tests" src="https://img.shields.io/badge/tests-91%20passing-00ff9d?style=flat-square&labelColor=07090c">
 </p>
 
 ---
@@ -115,6 +115,9 @@ python scripts/run_exit_comparison.py --stop-atr 1.0 --target-atr 3.0
 
 # 13. Stacked-layer comparison — HTF trend filter + ATR exits, every combo
 python scripts/run_layer_stack.py
+
+# 14. Final scoreboard — every strategy × every wrapper, sorted by Sharpe
+python scripts/run_final_scoreboard.py
 ```
 
 ## Going live (carefully)
@@ -151,6 +154,9 @@ The same `LiveBroker` / `LiveRunner` code handles all three modes — the strate
 - [x] **Live trading** (ccxt-backed broker + runner; shadow → testnet → mainnet via env flags)
 - [x] **ATR stop-loss / take-profit wrapper** (any Strategy gets explicit exits)
 - [x] **Higher-timeframe trend filter** (only trade with the bigger trend; biggest single lift measured)
+- [x] **Volatility-targeted sizing** (scale positions to constant annualized vol)
+- [x] **Donchian breakout strategy** (classic N-bar high entry / M-bar low exit)
+- [x] **Expanded meta-labeler features** (20 features: HTF alignment, microstructure, gaps, volume regime)
 - [ ] Streamlit dashboard
 - [ ] Live (very small size, well-understood strategy only)
 

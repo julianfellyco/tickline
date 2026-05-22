@@ -40,10 +40,14 @@ def test_build_features_columns_and_no_lookahead():
         "vol_20", "rsi_14", "ret_5", "ret_20", "volume_z",
         "sma_dist", "sma_slope", "drawdown_20", "atr_rel",
         "hour_sin", "hour_cos", "dow_sin", "dow_cos",
+        # expanded feature families
+        "volume_trend_5", "htf_dist_4x", "htf_slope_4x", "htf_agree",
+        "body_pct", "range_pct", "gap_pct",
     }
     assert expected <= set(feats.columns)
-    # warmup region has NaN, later region must be clean
-    assert feats.iloc[100:].notna().all().all()
+    # warmup region has NaN (htf_slope_4x uses 200-bar SMA + 20-bar slope);
+    # by bar 240 everything must be clean
+    assert feats.iloc[240:].notna().all().all()
 
 
 def test_meta_labeler_requires_fit_before_inference():

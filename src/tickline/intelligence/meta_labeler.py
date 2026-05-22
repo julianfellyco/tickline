@@ -43,43 +43,70 @@ def build_features(ohlcv: pd.DataFrame) -> pd.DataFrame:
 
     Every feature is causal — it uses only data up to (and including) the
     current bar. No lookahead.
+
+    Feature families:
+      momentum/vol     — ret_5, ret_20, vol_20, rsi_14, atr_rel
+      trend            — sma_dist, sma_slope (50-bar)
+      drawdown         — drawdown_20
+      volume regime    — volume_z, volume_trend_5
+      higher timeframe — htf_dist_4x, htf_slope_4x, htf_agree
+      microstructure   — body_pct, gap_pct, range_pct
+      cyclic time      — hour_sin/cos, dow_sin/cos
     """
     close = ohlcv["close"]
     high = ohlcv["high"]
     low = ohlcv["low"]
+    open_ = ohlcv["open"]
     volume = ohlcv["volume"]
     returns = close.pct_change()
 
     feats = pd.DataFrame(index=ohlcv.index)
 
-    # volatility / momentum
+    # ── momentum / volatility ────────────────────────────────
     feats["vol_20"] = returns.rolling(20).std()
     feats["rsi_14"] = _rsi(close, 14)
     feats["ret_5"] = close.pct_change(5)
     feats["ret_20"] = close.pct_change(20)
 
-    # volume regime
+    # ── volume regime ────────────────────────────────────────
     vol_mean = volume.rolling(20).mean()
     vol_std = volume.rolling(20).std().replace(0, np.nan)
     feats["volume_z"] = (volume - vol_mean) / vol_std
+    feats["volume_trend_5"] = volume.pct_change(5)
 
-    # trend
+    # ── base-timeframe trend (50-bar SMA) ────────────────────
     sma_50 = close.rolling(50).mean()
     feats["sma_dist"] = (close - sma_50) / sma_50
     feats["sma_slope"] = sma_50.pct_change(10)
 
-    # drawdown / structure
+    # ── higher-timeframe trend (4× and 24× via long base SMAs) ──
+    # 4× ≈ a 200-bar slow-moving filter on 1h data ≈ 4h SMA-50
+    sma_200 = close.rolling(200).mean()
+    feats["htf_dist_4x"] = (close - sma_200) / sma_200
+    feats["htf_slope_4x"] = sma_200.pct_change(20)
+    # multi-timeframe agreement: do 50-bar and 200-bar slopes have the same sign?
+    feats["htf_agree"] = (
+        np.sign(feats["sma_slope"].fillna(0))
+        * np.sign(feats["htf_slope_4x"].fillna(0))
+    ).clip(0, 1)  # 1 if same sign, 0 if opposing/either-zero
+
+    # ── drawdown / structure ─────────────────────────────────
     high_20 = close.rolling(20).max()
     feats["drawdown_20"] = (close - high_20) / high_20
 
-    # range / volatility
+    # ── range / volatility (intra-bar) ───────────────────────
     tr = pd.concat(
         [high - low, (high - close.shift()).abs(), (low - close.shift()).abs()],
         axis=1,
     ).max(axis=1)
     feats["atr_rel"] = (tr.rolling(14).mean() / close)
 
-    # cyclic time
+    # ── microstructure (bar shape) ───────────────────────────
+    feats["body_pct"] = (close - open_) / open_.replace(0, np.nan)
+    feats["range_pct"] = (high - low) / close.replace(0, np.nan)
+    feats["gap_pct"] = (open_ / close.shift() - 1.0)
+
+    # ── cyclic time ──────────────────────────────────────────
     if isinstance(ohlcv.index, pd.DatetimeIndex):
         hour = ohlcv.index.hour
         dow = ohlcv.index.dayofweek
