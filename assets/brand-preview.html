@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tick/line — brand preview</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;1,300&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-deep: #07090c;
+    --bg-surface: #0f1419;
+    --bg-elevated: #161d26;
+    --line: #1c2530;
+    --ink: #e8eef5;
+    --ink-dim: #8b96a5;
+    --ink-faint: #5a6573;
+    --signal: #00ff9d;
+    --signal-soft: #0a3d2f;
+    --alert: #ff4d6d;
+    --alert-soft: #3d0a18;
+    --amber: #ffb340;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', ui-monospace, monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg-deep);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    padding: 64px 0 100px;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  /* terminal header */
+  .term-bar {
+    border: 1px solid var(--line);
+    background: var(--bg-surface);
+    padding: 10px 16px;
+    border-radius: 8px 8px 0 0;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+  .term-bar .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .term-bar .dot.r { background: #ff4d6d; }
+  .term-bar .dot.y { background: #ffb340; }
+  .term-bar .dot.g { background: #00ff9d; }
+  .term-bar .path { margin-left: 8px; }
+
+  /* sections */
+  section {
+    border: 1px solid var(--line);
+    border-top: none;
+    padding: 56px 48px;
+    background: var(--bg-surface);
+  }
+  section + section { border-top: 1px solid var(--line); margin-top: 0; }
+  section:last-of-type { border-radius: 0 0 8px 8px; }
+
+  .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-faint);
+    margin-bottom: 28px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .label::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--signal);
+    border-radius: 50%;
+  }
+
+  h1 {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  h1 .slash { color: var(--signal); }
+  .tagline {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    color: var(--ink-dim);
+    margin-top: 16px;
+    max-width: 560px;
+  }
+
+  /* logo lockups */
+  .lockups { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 760px) { .lockups { grid-template-columns: 1fr; } }
+  .lockup {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+  }
+  .lockup.dark { background: var(--bg-deep); }
+  .lockup.light { background: #f4f6f8; }
+  .lockup img { width: 100%; max-width: 320px; height: auto; }
+
+  /* palette */
+  .swatches { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  @media (max-width: 640px) { .swatches { grid-template-columns: repeat(2, 1fr); } }
+  .sw {
+    background: var(--bg-deep);
+    padding: 28px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .sw .chip { width: 100%; height: 64px; border-radius: 4px; border: 1px solid var(--line); }
+  .sw .name { font-family: var(--mono); font-size: 12px; color: var(--ink); }
+  .sw .hex { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); }
+
+  /* typography sample */
+  .type-grid { display: grid; grid-template-columns: 140px 1fr; gap: 32px; }
+  @media (max-width: 640px) { .type-grid { grid-template-columns: 1fr; gap: 8px; } }
+  .type-grid + .type-grid { margin-top: 36px; padding-top: 36px; border-top: 1px solid var(--line); }
+  .type-role { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--ink-faint); padding-top: 6px; }
+  .type-sample-display { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 2.4rem; line-height: 1.1; color: var(--ink); }
+  .type-sample-body { font-family: var(--sans); font-weight: 400; font-size: 1.1rem; color: var(--ink-dim); max-width: 560px; }
+  .type-sample-mono { font-family: var(--mono); font-size: 1rem; color: var(--ink); }
+  .type-sample-mono .pos { color: var(--signal); }
+  .type-sample-mono .neg { color: var(--alert); }
+
+  /* metric demo */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  @media (max-width: 640px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+  .metric { background: var(--bg-deep); padding: 28px 24px; }
+  .metric .k { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.18em; color: var(--ink-faint); margin-bottom: 12px; }
+  .metric .v { font-family: var(--mono); font-size: 1.7rem; font-weight: 500; color: var(--ink); }
+  .metric .v.pos { color: var(--signal); }
+  .metric .v.neg { color: var(--alert); }
+
+  /* voice do/dont */
+  .voice { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  @media (max-width: 640px) { .voice { grid-template-columns: 1fr; } }
+  .voice .col { background: var(--bg-deep); padding: 28px 24px; }
+  .voice h4 { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 16px; }
+  .voice h4.do { color: var(--signal); }
+  .voice h4.dont { color: var(--alert); }
+  .voice ul { list-style: none; }
+  .voice li { font-family: var(--mono); font-size: 13px; color: var(--ink-dim); padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .voice li:last-child { border-bottom: none; }
+
+  footer {
+    margin-top: 56px;
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-faint);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- terminal frame -->
+  <div class="term-bar">
+    <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+    <span class="path">~/Projects/tickline — brand</span>
+  </div>
+
+  <!-- HERO -->
+  <section>
+    <div class="label">brand · v0.1.0</div>
+    <h1>tick<span class="slash">/</span>line</h1>
+    <p class="tagline">Honest curves from real ticks.</p>
+  </section>
+
+  <!-- LOGO LOCKUPS -->
+  <section>
+    <div class="label">logo lockups</div>
+    <div class="lockups">
+      <div class="lockup dark"><img src="logo.svg" alt="primary lockup, dark"></div>
+      <div class="lockup light"><img src="logo-light.svg" alt="primary lockup, light"></div>
+    </div>
+  </section>
+
+  <!-- PALETTE -->
+  <section>
+    <div class="label">palette</div>
+    <div class="swatches">
+      <div class="sw"><div class="chip" style="background:#07090c"></div><div><div class="name">bg-deep</div><div class="hex">#07090c</div></div></div>
+      <div class="sw"><div class="chip" style="background:#0f1419"></div><div><div class="name">bg-surface</div><div class="hex">#0f1419</div></div></div>
+      <div class="sw"><div class="chip" style="background:#161d26"></div><div><div class="name">bg-elevated</div><div class="hex">#161d26</div></div></div>
+      <div class="sw"><div class="chip" style="background:#1c2530"></div><div><div class="name">line</div><div class="hex">#1c2530</div></div></div>
+      <div class="sw"><div class="chip" style="background:#e8eef5"></div><div><div class="name">ink</div><div class="hex">#e8eef5</div></div></div>
+      <div class="sw"><div class="chip" style="background:#8b96a5"></div><div><div class="name">ink-dim</div><div class="hex">#8b96a5</div></div></div>
+      <div class="sw"><div class="chip" style="background:#5a6573"></div><div><div class="name">ink-faint</div><div class="hex">#5a6573</div></div></div>
+      <div class="sw"><div class="chip" style="background:#00ff9d"></div><div><div class="name">signal</div><div class="hex">#00ff9d</div></div></div>
+      <div class="sw"><div class="chip" style="background:#0a3d2f"></div><div><div class="name">signal-soft</div><div class="hex">#0a3d2f</div></div></div>
+      <div class="sw"><div class="chip" style="background:#ff4d6d"></div><div><div class="name">alert</div><div class="hex">#ff4d6d</div></div></div>
+      <div class="sw"><div class="chip" style="background:#3d0a18"></div><div><div class="name">alert-soft</div><div class="hex">#3d0a18</div></div></div>
+      <div class="sw"><div class="chip" style="background:#ffb340"></div><div><div class="name">amber</div><div class="hex">#ffb340</div></div></div>
+    </div>
+  </section>
+
+  <!-- TYPE -->
+  <section>
+    <div class="label">typography</div>
+
+    <div class="type-grid">
+      <div class="type-role">Display<br>Fraunces 300 italic</div>
+      <div class="type-sample-display">If your backtest doesn't include slippage + fees, it's fiction.</div>
+    </div>
+
+    <div class="type-grid">
+      <div class="type-role">Body<br>Inter 400</div>
+      <div class="type-sample-body">A learning-grade quantitative trading framework. Pulls live OHLCV from any ccxt-supported exchange, runs vectorized backtests with realistic costs, and reports honest performance metrics — Sharpe, Sortino, drawdown, profit factor.</div>
+    </div>
+
+    <div class="type-grid">
+      <div class="type-role">Mono<br>JetBrains 500</div>
+      <div class="type-sample-mono">
+        BTC/USDT  1h  365d<br>
+        <br>
+        Sharpe         <span class="pos">+1.43</span><br>
+        Max DD         <span class="neg">-32.61%</span><br>
+        Win rate       54.2%<br>
+        Profit factor  1.27
+      </div>
+    </div>
+  </section>
+
+  <!-- METRIC CARDS -->
+  <section>
+    <div class="label">in-product · metric strip</div>
+    <div class="metrics">
+      <div class="metric"><div class="k">total return</div><div class="v pos">+47.2%</div></div>
+      <div class="metric"><div class="k">sharpe (ann.)</div><div class="v">1.43</div></div>
+      <div class="metric"><div class="k">max drawdown</div><div class="v neg">-32.6%</div></div>
+      <div class="metric"><div class="k">profit factor</div><div class="v">1.27</div></div>
+    </div>
+  </section>
+
+  <!-- VOICE -->
+  <section>
+    <div class="label">voice</div>
+    <div class="voice">
+      <div class="col">
+        <h4 class="do">do</h4>
+        <ul>
+          <li>"lost 32% over the year"</li>
+          <li>"Sharpe 1.43 (annualized, after fees)"</li>
+          <li>"95 trades, 34% hit rate, profit factor 0.90"</li>
+          <li>"untested in live conditions"</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 class="dont">don't</h4>
+        <ul>
+          <li>"industry-leading returns"</li>
+          <li>"strong risk-adjusted performance"</li>
+          <li>"high win rate strategy"</li>
+          <li>"production-ready alpha"</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>tickline — built by julianfellyco · MIT · not financial advice</footer>
+</div>
+</body>
+</html>

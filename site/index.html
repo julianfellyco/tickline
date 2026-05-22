@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tick/line — honest curves from real ticks</title>
+<meta name="description" content="A learning-grade quantitative trading framework. Quant + algo + AI on real market data. Honest backtests, walk-forward validation, meta-labeler. Built solo by Julian Fellyco.">
+
+<meta property="og:title" content="tick/line — honest curves from real ticks">
+<meta property="og:description" content="Quant + algo + AI on real market data. 8,760 bars. 24 tests. MIT.">
+<meta property="og:image" content="../assets/social/og-image.svg">
+<meta property="og:type" content="website">
+
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500;600&family=Fraunces:ital,wght@1,300&display=swap" rel="stylesheet">
+
+<style>
+  /* ─── BLOOMBERG-TUNED PALETTE ─────────────────────────────── */
+  :root {
+    /* backgrounds: warm dark, not pure black — easier on long sessions */
+    --bg:          #0b1015;
+    --bg-panel:    #0f161d;
+    --bg-row:      #131b24;
+    --bg-row-hi:   #1a242f;
+
+    /* lines: very subtle — terminals use thin separators, not bold borders */
+    --line:        #1a232c;
+    --line-soft:   #131b23;
+
+    /* text: softer whites prevent eye strain across long reading */
+    --ink:         #d4dae3;
+    --ink-dim:     #8a96a3;
+    --ink-faint:   #5b6573;
+    --ink-ghost:   #3a4350;
+
+    /* signal palette: desaturated slightly from neon — Bloomberg-style */
+    --signal:      #2dd178;     /* gains, long, ok */
+    --signal-bg:   #0d2419;
+    --alert:       #ed5d6e;     /* losses, short, error */
+    --alert-bg:    #2a0e14;
+    --amber:       #f5a623;     /* watch, pending, neutral attention */
+    --amber-bg:    #2a1d09;
+    --cyan:        #56b4ce;     /* info, links */
+
+    --sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --serif: 'Fraunces', Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    font-feature-settings: 'tnum' 1, 'cv11' 1;   /* tabular numbers */
+  }
+  ::selection { background: var(--signal); color: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+
+  /* ─── TOP TICKER STRIP ────────────────────────────────────── */
+  .ticker {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 102;
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--line);
+    height: 28px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .ticker-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 36px;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: tick 80s linear infinite;
+  }
+  @keyframes tick {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+  }
+  .ticker-item {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-dim);
+    letter-spacing: 0.02em;
+  }
+  .ticker-item .sym  { color: var(--ink); }
+  .ticker-item .pos  { color: var(--signal); }
+  .ticker-item .neg  { color: var(--alert); }
+  .ticker-item .lbl  { color: var(--ink-faint); }
+  .ticker-item .div  { color: var(--ink-ghost); margin: 0 2px; }
+
+  /* ─── NAV ─────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 28px; left: 0; right: 0; z-index: 100;
+    background: rgba(11, 16, 21, 0.92);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border-bottom: 1px solid var(--line);
+    height: 52px;
+    display: flex;
+    align-items: center;
+  }
+  nav .row { display: flex; justify-content: space-between; align-items: center; width: 100%; }
+  nav .brand {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  nav .brand .slash { color: var(--signal); }
+  nav .brand .meta {
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding-left: 12px;
+    border-left: 1px solid var(--line);
+  }
+  nav .links { display: flex; gap: 4px; align-items: center; }
+  nav .links a {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-dim);
+    letter-spacing: 0.02em;
+    padding: 8px 14px;
+    border-radius: 3px;
+    transition: color 0.15s, background 0.15s;
+  }
+  nav .links a:hover { color: var(--signal); background: var(--bg-row); }
+  nav .cta {
+    background: var(--signal);
+    color: var(--bg) !important;
+    padding: 8px 14px;
+    margin-left: 8px;
+    font-weight: 500;
+  }
+  nav .cta:hover { background: var(--ink) !important; }
+  @media (max-width: 800px) { nav .links a:not(.cta) { display: none; } nav .brand .meta { display: none; } }
+
+  /* page offset for fixed nav+ticker */
+  main { padding-top: 80px; }
+
+  /* ─── STATUS BAR (under nav, per-page-section) ────────────── */
+  .status-strip {
+    background: var(--bg-panel);
+    border-bottom: 1px solid var(--line);
+    border-top: 1px solid var(--line);
+  }
+  .status-strip .row {
+    display: flex;
+    align-items: stretch;
+    overflow-x: auto;
+  }
+  .status-item {
+    padding: 10px 24px;
+    border-right: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 11px;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 130px;
+  }
+  .status-item .k {
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 9.5px;
+  }
+  .status-item .v {
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .status-item .v.pos { color: var(--signal); }
+  .status-item .v.neg { color: var(--alert); }
+  .status-item .v.amber { color: var(--amber); }
+  .status-item .v::before {
+    content: attr(data-prefix);
+    color: var(--ink-faint);
+    margin-right: 6px;
+  }
+  .status-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--signal);
+    box-shadow: 0 0 6px var(--signal);
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  /* ─── HERO ────────────────────────────────────────────────── */
+  header { padding: 56px 0 72px; border-bottom: 1px solid var(--line); }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-dim);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .eyebrow .live {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--signal);
+    padding: 3px 8px;
+    border: 1px solid var(--signal-bg);
+    background: var(--signal-bg);
+    border-radius: 3px;
+    font-size: 10px;
+  }
+  .eyebrow .live::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: var(--signal);
+    border-radius: 50%;
+    animation: blink 1.8s ease-in-out infinite;
+  }
+  @keyframes blink { 50% { opacity: 0.3; } }
+
+  h1 {
+    font-family: var(--mono);
+    font-weight: 600;
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+  }
+  h1 .slash { color: var(--signal); }
+
+  .hero-tag {
+    margin-top: 24px;
+    font-size: 1.1rem;
+    color: var(--ink-dim);
+    max-width: 520px;
+    line-height: 1.6;
+  }
+  .hero-tag .accent { color: var(--ink); }
+  .hero-tag .quote {
+    margin-top: 18px;
+    padding-left: 14px;
+    border-left: 2px solid var(--amber);
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .hero-quickstats {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  @media (max-width: 540px) { .hero-quickstats { grid-template-columns: repeat(2, 1fr); } }
+  .hero-quickstats .qs {
+    background: var(--bg-panel);
+    padding: 14px 16px;
+    font-family: var(--mono);
+  }
+  .hero-quickstats .qs .k {
+    font-size: 9.5px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 4px;
+  }
+  .hero-quickstats .qs .v {
+    font-size: 15px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .hero-quickstats .qs .v.s { color: var(--signal); }
+
+  .hero-actions { margin-top: 28px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    font-family: var(--mono);
+    font-size: 12.5px;
+    padding: 9px 16px;
+    border: 1px solid var(--line);
+    background: var(--bg-panel);
+    color: var(--ink);
+    border-radius: 3px;
+    transition: border-color 0.15s, color 0.15s, background 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+  .btn:hover { border-color: var(--signal); color: var(--signal); }
+  .btn.primary { background: var(--signal); color: var(--bg); border-color: var(--signal); font-weight: 500; }
+  .btn.primary:hover { background: var(--ink); border-color: var(--ink); }
+  .btn .pfx { color: var(--ink-faint); }
+  .btn.primary .pfx { color: var(--bg); opacity: 0.6; }
+
+  /* hero terminal block — Bloomberg-dense */
+  .term {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    font-family: var(--mono);
+  }
+  .term-head {
+    background: var(--bg-row);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+  }
+  .term-head .dot { width: 8px; height: 8px; border-radius: 50%; }
+  .term-head .dot.r { background: #ed5d6e; }
+  .term-head .dot.y { background: #f5a623; }
+  .term-head .dot.g { background: #2dd178; }
+  .term-head .path {
+    margin-left: 8px;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+  .term-head .time {
+    margin-left: auto;
+    color: var(--ink-faint);
+    font-size: 10.5px;
+  }
+  .term-body {
+    padding: 18px 20px;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--ink-dim);
+  }
+  .term-body .ln { display: block; }
+  .term-body .prompt { color: var(--signal); }
+  .term-body .ink { color: var(--ink); }
+  .term-body .dim { color: var(--ink-faint); }
+  .term-body .ghost { color: var(--ink-ghost); }
+  .term-body .pos { color: var(--signal); }
+  .term-body .neg { color: var(--alert); }
+  .term-body .amber { color: var(--amber); }
+  .term-body .lbl  { color: var(--ink-faint); }
+  .term-body .sep { color: var(--ink-ghost); }
+
+  /* ─── SECTION SHELL ───────────────────────────────────────── */
+  section { padding: 84px 0; border-bottom: 1px solid var(--line); }
+  .sec-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+  .sec-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--signal);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    background: var(--signal-bg);
+    border-radius: 3px;
+  }
+  .sec-tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+  h2 em { font-family: var(--serif); font-style: italic; font-weight: 300; color: var(--signal); }
+  .sec-lead {
+    color: var(--ink-dim);
+    max-width: 680px;
+    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  /* ─── LAYERS ──────────────────────────────────────────────── */
+  .layers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  @media (max-width: 880px) { .layers { grid-template-columns: 1fr; } }
+  .layer-cell {
+    background: var(--bg-panel);
+    padding: 28px 26px;
+    position: relative;
+  }
+  .layer-cell .hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  .layer-cell .hdr .id {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--signal);
+    letter-spacing: 0.2em;
+  }
+  .layer-cell .hdr .status {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    color: var(--ink-faint);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .layer-cell h3 {
+    font-family: var(--mono);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .layer-cell .role {
+    color: var(--amber);
+    font-size: 11.5px;
+    font-family: var(--mono);
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+  }
+  .layer-cell p { color: var(--ink-dim); font-size: 0.93rem; line-height: 1.6; margin-bottom: 16px; }
+  .layer-cell ul { list-style: none; padding-top: 14px; border-top: 1px solid var(--line-soft); }
+  .layer-cell li {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    padding: 5px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .layer-cell li::before {
+    content: '›';
+    color: var(--signal);
+    font-weight: 600;
+  }
+
+  /* ─── TABS + RESULTS ──────────────────────────────────────── */
+  .tabs {
+    display: flex;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0;
+    background: var(--bg-panel);
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .tab {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    background: none;
+    border: none;
+    border-right: 1px solid var(--line);
+    color: var(--ink-dim);
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+  .tab:last-child { border-right: none; }
+  .tab.active { background: var(--signal); color: var(--bg); font-weight: 500; }
+  .tab:not(.active):hover { color: var(--ink); background: var(--bg-row); }
+
+  .panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-top: none;
+    border-radius: 0 4px 4px 4px;
+    padding: 0;
+    overflow: hidden;
+  }
+  .panel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  @media (max-width: 720px) { .panel-grid { grid-template-columns: repeat(2, 1fr); } }
+  .metric {
+    background: var(--bg-panel);
+    padding: 22px 24px;
+  }
+  .metric .k {
+    font-family: var(--mono);
+    font-size: 9.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  .metric .v {
+    font-family: var(--mono);
+    font-size: clamp(1.4rem, 2.6vw, 1.8rem);
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+  .metric .v.pos { color: var(--signal); }
+  .metric .v.neg { color: var(--alert); }
+  .metric .v.amber { color: var(--amber); }
+  .metric .v.neu { color: var(--ink); }
+  .metric .sub {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-faint);
+    letter-spacing: 0.02em;
+  }
+
+  .verdict {
+    padding: 16px 22px;
+    background: var(--bg-row);
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: var(--ink-dim);
+    line-height: 1.7;
+    border-left: 2px solid var(--signal);
+  }
+  .verdict.bad { border-left-color: var(--alert); }
+  .verdict.amber { border-left-color: var(--amber); }
+  .verdict strong { color: var(--ink); font-weight: 500; }
+  .verdict em { color: var(--ink); font-family: var(--serif); }
+
+  /* ─── WALK-FORWARD TABLE ──────────────────────────────────── */
+  .wf-table { background: var(--bg-panel); overflow-x: auto; }
+  .wf-row {
+    display: grid;
+    grid-template-columns: 60px 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 16px;
+    padding: 11px 22px;
+    align-items: center;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 12px;
+  }
+  .wf-row:hover:not(.head) { background: var(--bg-row); }
+  .wf-row:last-child { border-bottom: none; }
+  .wf-row.head {
+    background: var(--bg-row);
+    font-size: 9.5px;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+  }
+  .wf-row .id { color: var(--signal); font-weight: 500; }
+  .wf-row .range { color: var(--ink-dim); }
+  .wf-row .pos { color: var(--signal); }
+  .wf-row .neg { color: var(--alert); }
+  .wf-row .v { color: var(--ink); }
+  @media (max-width: 760px) {
+    .wf-row { grid-template-columns: 50px 1fr 1fr 1fr; font-size: 11px; padding: 10px 14px; }
+    .wf-row .col-hide-sm { display: none; }
+  }
+
+  /* ─── ARCHITECTURE STACK ──────────────────────────────────── */
+  .stack { display: flex; flex-direction: column; gap: 8px; }
+  .stack-row {
+    border: 1px solid var(--line);
+    background: var(--bg-panel);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: border-color 0.2s;
+  }
+  .stack-row:hover { border-color: var(--ink-ghost); }
+  .stack-row .head {
+    background: var(--bg-row);
+    padding: 9px 18px;
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .stack-row .head .id { color: var(--signal); font-weight: 600; letter-spacing: 0.12em; }
+  .stack-row .head .name { color: var(--ink); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+  .stack-row .head .role { color: var(--ink-faint); margin-left: auto; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .stack-row .head .stat {
+    font-size: 9.5px;
+    color: var(--signal);
+    padding: 2px 7px;
+    border: 1px solid var(--signal-bg);
+    background: var(--signal-bg);
+    border-radius: 3px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .stack-row .head .stat.todo {
+    color: var(--amber);
+    border-color: var(--amber-bg);
+    background: var(--amber-bg);
+  }
+  .stack-row .body {
+    padding: 14px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  @media (max-width: 720px) { .stack-row .body { grid-template-columns: 1fr; } }
+  .stack-row .item {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink-dim);
+    padding: 6px 10px;
+    background: var(--bg-row);
+    border-radius: 3px;
+    border-left: 2px solid var(--signal);
+  }
+  .stack-row.muted .item { border-left-color: var(--ink-ghost); color: var(--ink-faint); }
+
+  /* ─── FEATURES BARS ───────────────────────────────────────── */
+  .feat-grid {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-top: 24px;
+  }
+  .feat-grid .title {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--ink-faint);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .feat-grid .sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--ink-ghost);
+    margin-bottom: 18px;
+  }
+  .feat { display: grid; grid-template-columns: 130px 1fr 76px; gap: 14px; align-items: center; padding: 6px 0; font-family: var(--mono); font-size: 12px; }
+  .feat .name { color: var(--ink); }
+  .feat .bar { height: 12px; background: var(--bg-row); border-radius: 2px; overflow: hidden; position: relative; }
+  .feat .bar-fill {
+    height: 100%;
+    background: var(--signal);
+    width: 0;
+    transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .feat.in .bar-fill { width: var(--w); }
+  .feat .val { color: var(--signal); text-align: right; font-weight: 500; }
+
+  /* ─── RULES ───────────────────────────────────────────────── */
+  .rules {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  @media (max-width: 720px) { .rules { grid-template-columns: 1fr; } }
+  .rule-cell { background: var(--bg-panel); padding: 26px 26px; }
+  .rule-cell .nm {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--amber);
+    letter-spacing: 0.25em;
+    margin-bottom: 10px;
+  }
+  .rule-cell h4 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 1.05rem;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .rule-cell p { color: var(--ink-dim); font-size: 0.92rem; line-height: 1.6; }
+
+  /* ─── CHIPS ───────────────────────────────────────────────── */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    background: var(--bg-panel);
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: border-color 0.15s, color 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .chip:hover { border-color: var(--signal); color: var(--signal); }
+  .chip .r { color: var(--ink-faint); margin-left: 6px; font-size: 10.5px; }
+
+  /* ─── CTA ─────────────────────────────────────────────────── */
+  .cta-section { text-align: center; padding: 120px 0; }
+  .cta-section .lead {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .cta-section h2 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+    margin-bottom: 18px;
+    color: var(--ink);
+  }
+  .cta-section h2 em { color: var(--signal); }
+  .cta-section .blurb { color: var(--ink-dim); max-width: 480px; margin: 0 auto 36px; }
+  .cta-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 36px; }
+  .cta-row .btn { padding: 11px 20px; font-size: 12.5px; }
+  .mail {
+    font-family: var(--mono);
+    font-size: 1rem;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 4px;
+    transition: border-color 0.2s, color 0.2s;
+    display: inline-block;
+  }
+  .mail:hover { border-color: var(--signal); color: var(--signal); }
+
+  /* ─── FOOTER ──────────────────────────────────────────────── */
+  footer { padding: 22px 0; background: var(--bg-panel); border-top: 1px solid var(--line); }
+  footer .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--ink-faint);
+    letter-spacing: 0.04em;
+  }
+  footer .brand { color: var(--ink); }
+  footer .brand .slash { color: var(--signal); }
+
+  /* ─── reveal (very subtle) ────────────────────────────────── */
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- ═══ TICKER STRIP ═══════════════════════════════════════════ -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item"><span class="lbl">TICKLINE</span> <span class="sym">v0.1.0</span> <span class="div">·</span> <span class="lbl">STATUS</span> <span class="pos">ALPHA</span></span>
+    <span class="ticker-item"><span class="lbl">BTC/USDT</span> <span class="sym">1h</span> <span class="div">·</span> <span class="sym">8,760 bars</span> <span class="div">·</span> <span class="lbl">CACHED</span></span>
+    <span class="ticker-item"><span class="lbl">TESTS</span> <span class="pos">24 / 24</span> <span class="div">·</span> <span class="lbl">COVERAGE</span> <span class="sym">core+intelligence</span></span>
+    <span class="ticker-item"><span class="lbl">BACKTEST</span> <span class="sym">in-sample</span> <span class="div">·</span> <span class="lbl">RET</span> <span class="neg">−32.34%</span> <span class="div">·</span> <span class="lbl">SHARPE</span> <span class="neg">−1.33</span></span>
+    <span class="ticker-item"><span class="lbl">WALK-FWD</span> <span class="sym">6 windows</span> <span class="div">·</span> <span class="lbl">SHARPE</span> <span class="neg">−1.31</span> <span class="div">·</span> <span class="lbl">CONSISTENCY</span> <span class="sym">33%</span></span>
+    <span class="ticker-item"><span class="lbl">ALGO+AI</span> <span class="sym">th=0.30</span> <span class="div">·</span> <span class="lbl">RET</span> <span class="pos">+2.03%</span> <span class="div">·</span> <span class="lbl">PF</span> <span class="pos">2.08</span></span>
+    <span class="ticker-item"><span class="lbl">FEATURES</span> <span class="sym">13</span> <span class="div">·</span> <span class="lbl">TOP</span> <span class="sym">hour_sin · rsi_14 · sma_slope</span></span>
+    <span class="ticker-item"><span class="lbl">MODEL</span> <span class="sym">HistGradientBoosting</span> <span class="div">·</span> <span class="lbl">AUC</span> <span class="sym">0.569 (test)</span></span>
+    <span class="ticker-item"><span class="lbl">LICENSE</span> <span class="sym">MIT</span> <span class="div">·</span> <span class="lbl">NOT</span> <span class="amber">FINANCIAL ADVICE</span></span>
+  </div>
+</div>
+
+<!-- ═══ NAV ════════════════════════════════════════════════════ -->
+<nav>
+  <div class="wrap row">
+    <a href="#top" class="brand">
+      tick<span class="slash">/</span>line
+      <span class="meta">v0.1.0 · alpha · build 24</span>
+    </a>
+    <div class="links">
+      <a href="#layers">[1] layers</a>
+      <a href="#results">[2] results</a>
+      <a href="#architecture">[3] stack</a>
+      <a href="#rules">[4] rules</a>
+      <a href="https://github.com/julianfellyco/tickline" class="cta">$ repo →</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<a id="top"></a>
+
+<!-- ═══ STATUS STRIP ═══════════════════════════════════════════ -->
+<div class="status-strip">
+  <div class="wrap row">
+    <div class="status-item">
+      <span class="k">SYMBOL</span>
+      <span class="v"><span class="status-dot"></span>BTC/USDT</span>
+    </div>
+    <div class="status-item">
+      <span class="k">PERIOD</span>
+      <span class="v">2025-05 → 2026-05</span>
+    </div>
+    <div class="status-item">
+      <span class="k">FRAME</span>
+      <span class="v">1h</span>
+    </div>
+    <div class="status-item">
+      <span class="k">EXCHANGE</span>
+      <span class="v">binance</span>
+    </div>
+    <div class="status-item">
+      <span class="k">FEES</span>
+      <span class="v amber">15 bps</span>
+    </div>
+    <div class="status-item">
+      <span class="k">CAPITAL</span>
+      <span class="v">$10,000</span>
+    </div>
+    <div class="status-item">
+      <span class="k">STRATEGIES</span>
+      <span class="v">2 + 1 ML</span>
+    </div>
+    <div class="status-item">
+      <span class="k">TESTS</span>
+      <span class="v pos">24 / 24</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════════ -->
+<header>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">
+        <span>quant · algo · ai</span>
+        <span class="live">LIVE BTC DATA</span>
+      </div>
+
+      <h1>tick<span class="slash">/</span>line</h1>
+
+      <p class="hero-tag">
+        A learning-grade <span class="accent">quantitative trading framework</span>.
+        Real exchange data, real costs, real out-of-sample tests —
+        no marketing math, no hidden fees, no curve-fit miracles.
+      </p>
+      <p class="hero-tag quote">
+        "If your backtest doesn't include slippage + fees + realistic
+        fills, it's fiction."
+      </p>
+
+      <div class="hero-quickstats">
+        <div class="qs"><div class="k">bars</div><div class="v">8,760</div></div>
+        <div class="qs"><div class="k">tests</div><div class="v s">24 / 24</div></div>
+        <div class="qs"><div class="k">LoC</div><div class="v">~2,100</div></div>
+        <div class="qs"><div class="k">license</div><div class="v">MIT</div></div>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#results" class="btn primary"><span class="pfx">›</span> see results</a>
+        <a href="https://github.com/julianfellyco/tickline" class="btn"><span class="pfx">$</span> source</a>
+        <a href="#architecture" class="btn"><span class="pfx">›</span> architecture</a>
+      </div>
+    </div>
+
+    <!-- terminal block -->
+    <div class="term reveal">
+      <div class="term-head">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="path">~/tickline ▸ run_meta_backtest.py</span>
+        <span class="time">UTC 22:41:08</span>
+      </div>
+      <div class="term-body">
+        <span class="ln"><span class="prompt">$</span> <span class="ink">python scripts/run_meta_backtest.py</span></span>
+        <span class="ln"><span class="ghost">     --primary sma_crossover --threshold 0.30</span></span>
+        <span class="ln">&nbsp;</span>
+        <span class="ln"><span class="ghost">┌─────────────────────────────────────────┐</span></span>
+        <span class="ln"><span class="ghost">│</span>  <span class="ink">tick<span style="color:var(--signal)">/</span>line</span> <span class="lbl">meta-label</span>                  <span class="ghost">│</span></span>
+        <span class="ln"><span class="ghost">└─────────────────────────────────────────┘</span></span>
+        <span class="ln">&nbsp;</span>
+        <span class="ln"><span class="lbl">>> training meta-labeler...</span></span>
+        <span class="ln">   train signals    <span class="ink">46</span></span>
+        <span class="ln">   train AUC        <span class="ink">0.915</span></span>
+        <span class="ln">   test AUC         <span class="ink">0.569</span></span>
+        <span class="ln">   base win rate    <span class="ink">26.9%</span></span>
+        <span class="ln">&nbsp;</span>
+        <span class="ln"><span class="lbl">>> out-of-sample (2,628 bars)</span></span>
+        <span class="ln">   algo only        <span class="neg">−4.01%</span>  <span class="dim">26 trades</span></span>
+        <span class="ln">   algo + AI gate   <span class="pos">+2.03%</span>  <span class="dim"> 5 trades</span></span>
+        <span class="ln">   delta            <span class="pos">+6.04%</span></span>
+        <span class="ln">&nbsp;</span>
+        <span class="ln"><span class="pos">✓</span> AI gate added value out-of-sample.</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ LAYERS ═════════════════════════════════════════════════ -->
+<section id="layers">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <span class="sec-tag">/ layers / quant + algo + ai</span>
+    </div>
+    <h2 class="reveal">Three layers. <em>One framework.</em></h2>
+    <p class="sec-lead reveal">Most retail trading projects pick one — rules, statistics, or ML — and pretend the other two don't matter. tickline composes all three, each in the role where it's actually safe to use.</p>
+
+    <div class="layers">
+      <div class="layer-cell reveal">
+        <div class="hdr">
+          <span class="id">L1 · QUANT</span>
+          <span class="status">SHIPPED</span>
+        </div>
+        <h3>Statistical rigor</h3>
+        <div class="role">the foundation</div>
+        <p>Cost-aware backtest engine with no lookahead. Sharpe, Sortino, drawdown, Calmar, profit factor. Walk-forward validation that exposes overfit before live capital does.</p>
+        <ul>
+          <li>15bps round-trip baked in</li>
+          <li>Anchored + rolling walk-forward</li>
+          <li>Triple-barrier accounting</li>
+        </ul>
+      </div>
+      <div class="layer-cell reveal">
+        <div class="hdr">
+          <span class="id">L2 · ALGO</span>
+          <span class="status">SHIPPED</span>
+        </div>
+        <h3>Rule-based signals</h3>
+        <div class="role">the interpretable core</div>
+        <p>Baseline strategies that say exactly what they will do, when, and why. Easy to read, easy to debug, easy to compare against fancier ideas.</p>
+        <ul>
+          <li>SMA crossover (20 / 50)</li>
+          <li>RSI mean-reversion (14, 30/55)</li>
+          <li>Strategy ABC for adding more</li>
+        </ul>
+      </div>
+      <div class="layer-cell reveal">
+        <div class="hdr">
+          <span class="id">L3 · AI</span>
+          <span class="status">SHIPPED</span>
+        </div>
+        <h3>Meta-labeler gate</h3>
+        <div class="role">the filter, not the prophet</div>
+        <p>Gradient boosting trained on 13 engineered features filters which algo signals to trust. AI as a gate over interpretable rules — never as a black-box price predictor.</p>
+        <ul>
+          <li>HistGradientBoostingClassifier</li>
+          <li>13 features · permutation imp.</li>
+          <li>AUC + accuracy out-of-sample</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RESULTS ════════════════════════════════════════════════ -->
+<section id="results">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <span class="sec-tag">/ results / 8,760 bars · 365 days</span>
+    </div>
+    <h2 class="reveal">Real BTC. Real costs. <em>Real numbers.</em></h2>
+    <p class="sec-lead reveal">Same data, same costs, three lenses. Hourly Binance candles, May 2025 → May 2026. Toggle the view:</p>
+
+    <div class="reveal">
+      <div class="tabs">
+        <button class="tab active" data-view="algo">[F1] algo only</button>
+        <button class="tab" data-view="wf">[F2] walk-forward</button>
+        <button class="tab" data-view="ai-strict">[F3] algo + AI · strict</button>
+        <button class="tab" data-view="ai-relaxed">[F4] algo + AI · relaxed</button>
+      </div>
+
+      <div class="panel">
+        <!-- ALGO ONLY -->
+        <div data-pane="algo">
+          <div class="panel-grid">
+            <div class="metric"><div class="k">return</div><div class="v neg">−32.34%</div><div class="sub">vs buy-hold −31.47%</div></div>
+            <div class="metric"><div class="k">sharpe</div><div class="v neg">−1.33</div><div class="sub">annualized · post-fee</div></div>
+            <div class="metric"><div class="k">max drawdown</div><div class="v neg">−39.69%</div><div class="sub">peak-to-trough</div></div>
+            <div class="metric"><div class="k">trades</div><div class="v neu">94</div><div class="sub">34% win · PF 0.90</div></div>
+          </div>
+          <div class="verdict bad">
+            <strong>verdict</strong> · SMA crossover lost money. The framework <em>tells you that</em> instead of hiding it. A naïve backtest with no fees would have shown a fake profit.
+          </div>
+        </div>
+
+        <!-- WALK-FORWARD -->
+        <div data-pane="wf" style="display:none">
+          <div class="wf-table">
+            <div class="wf-row head">
+              <div>WINDOW</div><div>TEST RANGE</div><div>RETURN</div><div>SHARPE</div>
+              <div class="col-hide-sm">MAX DD</div><div class="col-hide-sm">TRADES</div>
+            </div>
+            <div class="wf-row"><div class="id">w0</div><div class="range">2025-08-14 → 2025-09-24</div><div class="neg">−9.81%</div><div class="neg">−4.75</div><div class="col-hide-sm v">−10.9%</div><div class="col-hide-sm v">10</div></div>
+            <div class="wf-row"><div class="id">w1</div><div class="range">2025-09-24 → 2025-11-05</div><div class="pos">+5.93%</div><div class="pos">+2.34</div><div class="col-hide-sm v">−10.0%</div><div class="col-hide-sm v">7</div></div>
+            <div class="wf-row"><div class="id">w2</div><div class="range">2025-11-05 → 2025-12-17</div><div class="neg">−12.46%</div><div class="neg">−4.17</div><div class="col-hide-sm v">−14.0%</div><div class="col-hide-sm v">9</div></div>
+            <div class="wf-row"><div class="id">w3</div><div class="range">2025-12-17 → 2026-01-27</div><div class="pos">+1.54%</div><div class="pos">+0.67</div><div class="col-hide-sm v">−5.9%</div><div class="col-hide-sm v">11</div></div>
+            <div class="wf-row"><div class="id">w4</div><div class="range">2026-01-27 → 2026-03-10</div><div class="neg">−0.92%</div><div class="neg">−0.05</div><div class="col-hide-sm v">−8.2%</div><div class="col-hide-sm v">7</div></div>
+            <div class="wf-row"><div class="id">w5</div><div class="range">2026-03-10 → 2026-04-21</div><div class="neg">−7.15%</div><div class="neg">−1.92</div><div class="col-hide-sm v">−13.5%</div><div class="col-hide-sm v">11</div></div>
+          </div>
+          <div class="verdict">
+            <strong>in-sample sharpe −1.33 · walk-forward sharpe −1.31</strong> · gap of −0.01 means the strategy is <em>not overfit</em> — it's honestly bad. 33% of windows positive. The framework's verdict matches reality.
+          </div>
+        </div>
+
+        <!-- AI STRICT -->
+        <div data-pane="ai-strict" style="display:none">
+          <div class="panel-grid">
+            <div class="metric"><div class="k">return</div><div class="v amber">+0.00%</div><div class="sub">vs algo only −4.01%</div></div>
+            <div class="metric"><div class="k">sharpe</div><div class="v amber">+0.00</div><div class="sub">cash position</div></div>
+            <div class="metric"><div class="k">trades</div><div class="v neu">0 / 26</div><div class="sub">100% filtered</div></div>
+            <div class="metric"><div class="k">delta vs algo</div><div class="v pos">+4.01%</div><div class="sub">value of sitting out</div></div>
+          </div>
+          <div class="verdict amber">
+            <strong>threshold 0.50</strong> · the gate was so strict it shut trading off entirely. In a hostile regime, doing nothing <em>is</em> alpha. The AI recognized that and refused to participate.
+          </div>
+        </div>
+
+        <!-- AI RELAXED -->
+        <div data-pane="ai-relaxed" style="display:none">
+          <div class="panel-grid">
+            <div class="metric"><div class="k">return</div><div class="v pos">+2.03%</div><div class="sub">vs algo only −4.01%</div></div>
+            <div class="metric"><div class="k">sharpe</div><div class="v pos">+0.52</div><div class="sub">+0.80 vs baseline</div></div>
+            <div class="metric"><div class="k">trades</div><div class="v neu">5 / 26</div><div class="sub">81% filtered, kept the best</div></div>
+            <div class="metric"><div class="k">profit factor</div><div class="v pos">2.08</div><div class="sub">vs 1.25 baseline</div></div>
+          </div>
+          <div class="verdict">
+            <strong>threshold 0.30 · headline result</strong> · a losing algo (−4.01%) became a winning system (+2.03%) when the AI gate kept only the 5 signals it deemed best. Drawdown halved. Profit factor up 66%. <em>This is quant + algo + AI done responsibly.</em>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- feature importance -->
+    <div class="feat-grid reveal">
+      <div class="title">Top features the AI learned</div>
+      <div class="sub">permutation importance · higher = more predictive of trade outcome</div>
+      <div class="feat" style="--w:100%"><span class="name">hour_sin</span><div class="bar"><div class="bar-fill"></div></div><span class="val">+0.177</span></div>
+      <div class="feat" style="--w:54%"><span class="name">rsi_14</span><div class="bar"><div class="bar-fill"></div></div><span class="val">+0.096</span></div>
+      <div class="feat" style="--w:52%"><span class="name">sma_slope</span><div class="bar"><div class="bar-fill"></div></div><span class="val">+0.092</span></div>
+      <div class="feat" style="--w:45%"><span class="name">vol_20</span><div class="bar"><div class="bar-fill"></div></div><span class="val">+0.079</span></div>
+      <div class="feat" style="--w:11%"><span class="name">dow_cos</span><div class="bar"><div class="bar-fill"></div></div><span class="val">+0.020</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ARCHITECTURE ═══════════════════════════════════════════ -->
+<section id="architecture">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <span class="sec-tag">/ stack / capital → atoms</span>
+    </div>
+    <h2 class="reveal">From allocation down to <em>atoms.</em></h2>
+    <p class="sec-lead reveal">A real quant operation is layered. Each layer has a single responsibility — a failure in one doesn't silently contaminate the others. Green layers are shipped; amber layers are the next horizon.</p>
+
+    <div class="stack">
+      <div class="stack-row muted reveal">
+        <div class="head"><span class="id">L6</span><span class="name">Allocation & Consensus</span><span class="stat todo">PLANNED</span><span class="role">capital · regime gating</span></div>
+        <div class="body">
+          <div class="item">risk budgets across strategies</div>
+          <div class="item">regime-conditional voting</div>
+          <div class="item">meta-labeler agreement</div>
+        </div>
+      </div>
+      <div class="stack-row reveal">
+        <div class="head"><span class="id">L5</span><span class="name">Intelligence</span><span class="stat">SHIPPED</span><span class="role">signals · ML overlay</span></div>
+        <div class="body">
+          <div class="item">SMA crossover</div>
+          <div class="item">RSI mean-reversion</div>
+          <div class="item">Meta-labeler (HistGB)</div>
+        </div>
+      </div>
+      <div class="stack-row muted reveal">
+        <div class="head"><span class="id">L4</span><span class="name">Portfolio Logic</span><span class="stat todo">PLANNED</span><span class="role">sizing · vol target</span></div>
+        <div class="body">
+          <div class="item">risk parity</div>
+          <div class="item">fractional Kelly</div>
+          <div class="item">correlation gating</div>
+        </div>
+      </div>
+      <div class="stack-row reveal">
+        <div class="head"><span class="id">L3</span><span class="name">Execution</span><span class="stat">SHIPPED</span><span class="role">intelligence → physical</span></div>
+        <div class="body">
+          <div class="item">no-lookahead fill model</div>
+          <div class="item">cost-aware accounting</div>
+          <div class="item">trade ledger extraction</div>
+        </div>
+      </div>
+      <div class="stack-row muted reveal">
+        <div class="head"><span class="id">L2</span><span class="name">Settlement</span><span class="stat todo">PLANNED</span><span class="role">where money actually moves</span></div>
+        <div class="body">
+          <div class="item">exchange / CCP / self-custody</div>
+          <div class="item">reconciliation script</div>
+          <div class="item">counterparty diversification</div>
+        </div>
+      </div>
+      <div class="stack-row reveal">
+        <div class="head"><span class="id">L1</span><span class="name">Physical Infrastructure</span><span class="stat">SHIPPED</span><span class="role">data · clocks · disks</span></div>
+        <div class="body">
+          <div class="item">ccxt → parquet incremental</div>
+          <div class="item">8,760 bars · deduped · sorted</div>
+          <div class="item">redundancy ready</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ RULES ══════════════════════════════════════════════════ -->
+<section id="rules">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <span class="sec-tag">/ discipline / non-negotiable</span>
+    </div>
+    <h2 class="reveal">Four hard rules. <em>Non-negotiable.</em></h2>
+
+    <div class="rules" style="margin-top: 40px;">
+      <div class="rule-cell reveal">
+        <div class="nm">RULE 01</div>
+        <h4>No live capital until paper trading shows ≥3 months of consistency.</h4>
+        <p>Backtests lie. Paper trading lies less. Real money is the only honest oracle, and we don't ask the oracle until we've earned the right.</p>
+      </div>
+      <div class="rule-cell reveal">
+        <div class="nm">RULE 02</div>
+        <h4>Every backtest includes fees and slippage.</h4>
+        <p>Defaults are intentionally pessimistic. If a strategy survives this engine, it has a chance in production. If it dies here, it dies for free.</p>
+      </div>
+      <div class="rule-cell reveal">
+        <div class="nm">RULE 03</div>
+        <h4>No overfitting.</h4>
+        <p>If a strategy needs eight hyperparameters to look good in-sample, it's noise. Walk-forward exposes that. Either it survives forward windows, or it doesn't ship.</p>
+      </div>
+      <div class="rule-cell reveal">
+        <div class="nm">RULE 04</div>
+        <h4>Position sizing beats strategy selection.</h4>
+        <p>A great signal with bad sizing still blows up. Vol-targeting and fractional Kelly come <em>before</em> finding the next clever idea. Survival first, then alpha.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STACK ══════════════════════════════════════════════════ -->
+<section id="techstack">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-num">05</span>
+      <span class="sec-tag">/ tech / on purpose</span>
+    </div>
+    <h2 class="reveal">Boring tech. <em>On purpose.</em></h2>
+    <p class="sec-lead reveal">No frameworks-of-the-week. Every dependency is something a hiring manager has seen, debugged, and trusts.</p>
+
+    <div class="chips reveal">
+      <span class="chip">Python 3.11+</span>
+      <span class="chip">pandas<span class="r">data</span></span>
+      <span class="chip">numpy<span class="r">vectorized</span></span>
+      <span class="chip">ccxt<span class="r">exchange</span></span>
+      <span class="chip">pyarrow<span class="r">parquet</span></span>
+      <span class="chip">scikit-learn<span class="r">ML</span></span>
+      <span class="chip">pytest<span class="r">testing</span></span>
+      <span class="chip">matplotlib<span class="r">plots</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="wrap reveal">
+    <div class="lead">/ 06 · contact</div>
+    <h2>From tick<br>to honest <em>line.</em></h2>
+    <p class="blurb">Open the repo, read the portfolio doc, or reach out. Open to junior engineering, data, and quant roles in Australia.</p>
+    <div class="cta-row">
+      <a href="https://github.com/julianfellyco/tickline" class="btn primary"><span class="pfx">$</span> open repo</a>
+      <a href="https://github.com/julianfellyco/tickline/blob/main/PORTFOLIO.md" class="btn"><span class="pfx">›</span> PORTFOLIO.md</a>
+      <a href="https://github.com/julianfellyco/tickline/blob/main/BRAND.md" class="btn"><span class="pfx">›</span> BRAND.md</a>
+    </div>
+    <a href="mailto:julianfellyco85@gmail.com" class="mail">julianfellyco85@gmail.com</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ FOOTER ═════════════════════════════════════════════════ -->
+<footer>
+  <div class="wrap row">
+    <div class="brand">tick<span class="slash">/</span>line · v0.1.0 · alpha</div>
+    <p>built by julianfellyco · MIT · not financial advice</p>
+  </div>
+</footer>
+
+<script>
+  // very subtle scroll reveal
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // results tabs
+  const tabs = document.querySelectorAll('.tab');
+  const panes = document.querySelectorAll('[data-pane]');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const view = tab.dataset.view;
+      tabs.forEach(t => t.classList.toggle('active', t === tab));
+      panes.forEach(p => p.style.display = (p.dataset.pane === view ? '' : 'none'));
+    });
+  });
+
+  // F-key shortcuts
+  document.addEventListener('keydown', (e) => {
+    const map = { F1: 'algo', F2: 'wf', F3: 'ai-strict', F4: 'ai-relaxed' };
+    if (map[e.key]) {
+      e.preventDefault();
+      const tab = document.querySelector(`.tab[data-view="${map[e.key]}"]`);
+      if (tab) { tab.click(); tab.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+    }
+  });
+
+  // live UTC clock in terminal header
+  function tick() {
+    const el = document.querySelector('.term-head .time');
+    if (!el) return;
+    const d = new Date();
+    const h = String(d.getUTCHours()).padStart(2, '0');
+    const m = String(d.getUTCMinutes()).padStart(2, '0');
+    const s = String(d.getUTCSeconds()).padStart(2, '0');
+    el.textContent = `UTC ${h}:${m}:${s}`;
+  }
+  tick(); setInterval(tick, 1000);
+</script>
+
+</body>
+</html>

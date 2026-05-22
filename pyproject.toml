@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tickline"
+version = "0.1.0"
+description = "tickline — honest curves from real ticks. A learning-grade quantitative trading framework."
+authors = [{name = "Julian Fellyco", email = "julianfellyco85@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

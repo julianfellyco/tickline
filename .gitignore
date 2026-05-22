@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Data (never commit market data — it's huge and re-fetchable)
+data/*.parquet
+data/*.csv
+data/*.db
+data/cache/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets — never commit API keys
+.env
+.env.local
+*.key
+config/secrets.yaml
+
+# Results
+results/
+logs/
+*.log

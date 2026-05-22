@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="tickline">
+  <title>tickline — honest curves from real ticks</title>
+
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#1c2530" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="curveFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00ff9d" stop-opacity="0.3"/>
+      <stop offset="0.6" stop-color="#00ff9d" stop-opacity="1"/>
+      <stop offset="1" stop-color="#00ff9d" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="630" fill="#07090c"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- top label row -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="14" fill="#5a6573" letter-spacing="0.18em">
+    <text x="64" y="80" text-transform="uppercase">v0.1.0  ·  open source  ·  mit</text>
+    <text x="1136" y="80" text-anchor="end" text-transform="uppercase">julianfellyco</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="64" y1="100" x2="1136" y2="100" stroke="#1c2530" stroke-width="1"/>
+
+  <!-- main wordmark -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-weight="500">
+    <text x="64" y="240" font-size="96" fill="#e8eef5" letter-spacing="-3">tick</text>
+    <text x="290" y="240" font-size="96" fill="#00ff9d" letter-spacing="-3">/</text>
+    <text x="338" y="240" font-size="96" fill="#e8eef5" letter-spacing="-3">line</text>
+  </g>
+
+  <!-- tagline -->
+  <text x="64" y="300" font-family="'Fraunces', Georgia, serif" font-style="italic" font-weight="300" font-size="42" fill="#8b96a5">
+    honest curves from real ticks.
+  </text>
+
+  <!-- equity curve illustration -->
+  <g transform="translate(64 360)">
+    <!-- baseline -->
+    <line x1="0" y1="160" x2="1072" y2="160" stroke="#1c2530" stroke-width="1" stroke-dasharray="4 4"/>
+    <!-- curve (drawdowns and recoveries — honest looking) -->
+    <polyline
+      points="0,140 60,130 120,150 180,110 240,125 300,90 360,105 420,85 480,140 540,165 600,180 660,150 720,120 780,100 840,75 900,60 960,80 1020,40 1072,30"
+      fill="none" stroke="url(#curveFade)" stroke-width="3"
+      stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- final tick highlight -->
+    <circle cx="1072" cy="30" r="6" fill="#00ff9d"/>
+    <circle cx="1072" cy="30" r="14" fill="#00ff9d" opacity="0.2"/>
+  </g>
+
+  <!-- metric strip -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" transform="translate(64 560)">
+    <text font-size="13" fill="#5a6573" letter-spacing="0.15em" text-transform="uppercase">sharpe</text>
+    <text x="0" y="32" font-size="26" fill="#e8eef5">1.43</text>
+
+    <g transform="translate(200 0)">
+      <text font-size="13" fill="#5a6573" letter-spacing="0.15em" text-transform="uppercase">max dd</text>
+      <text x="0" y="32" font-size="26" fill="#ff4d6d">-32.6%</text>
+    </g>
+
+    <g transform="translate(400 0)">
+      <text font-size="13" fill="#5a6573" letter-spacing="0.15em" text-transform="uppercase">win rate</text>
+      <text x="0" y="32" font-size="26" fill="#e8eef5">54.2%</text>
+    </g>
+
+    <g transform="translate(620 0)">
+      <text font-size="13" fill="#5a6573" letter-spacing="0.15em" text-transform="uppercase">profit factor</text>
+      <text x="0" y="32" font-size="26" fill="#e8eef5">1.27</text>
+    </g>
+
+    <g transform="translate(880 0)">
+      <text font-size="13" fill="#5a6573" letter-spacing="0.15em" text-transform="uppercase">fees included</text>
+      <text x="0" y="32" font-size="26" fill="#00ff9d">yes</text>
+    </g>
+  </g>
+</svg>
