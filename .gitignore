@@ -19,6 +19,9 @@ data/*.db
 data/cache/
 data/ledgers/
 
+# Demo recordings — keep the gif+mp4 tracked, not the raw webm
+assets/demo/*.webm
+
 # Notebooks
 .ipynb_checkpoints/
 

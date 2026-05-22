@@ -10,7 +10,7 @@
   <a href="#quick-start"><img alt="status" src="https://img.shields.io/badge/status-alpha-00ff9d?style=flat-square&labelColor=07090c"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.11%2B-e8eef5?style=flat-square&labelColor=07090c">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-8b96a5?style=flat-square&labelColor=07090c">
-  <img alt="tests" src="https://img.shields.io/badge/tests-55%20passing-00ff9d?style=flat-square&labelColor=07090c">
+  <img alt="tests" src="https://img.shields.io/badge/tests-63%20passing-00ff9d?style=flat-square&labelColor=07090c">
 </p>
 
 ---
@@ -18,6 +18,13 @@
 # tickline
 
 A learning-grade quantitative trading framework. Built for research, backtesting, and paper trading — **not** for blind live deployment.
+
+<p align="center">
+  <img src="assets/demo/dashboard.gif" alt="tick/line dashboard demo" width="900">
+  <br>
+  <em>Six-page Streamlit dashboard — overview · backtest · walk-forward · portfolio · consensus · paper ledger</em>
+</p>
+
 
 ## Philosophy
 
@@ -51,11 +58,12 @@ tickline/
 │   ├── portfolio/      # multi-asset sizing + risk-parity engine
 │   ├── allocation/     # L6 regime gating + vote + DD circuit breaker
 │   ├── sentiment/      # lexicon scorer + event feed + bar features
-│   ├── paper/          # simulation broker + JSONL ledger (live-ready)
+│   ├── paper/          # simulation broker + JSONL ledger
+│   ├── live/           # ccxt-backed broker + runner (shadow → testnet → mainnet)
 │   └── risk/           # performance metrics
 ├── scripts/            # CLI entry points
 ├── dashboard/          # Streamlit explorer (run with `streamlit run dashboard/app.py`)
-├── tests/              # unit tests (55 passing)
+├── tests/              # unit tests (63 passing)
 ├── assets/             # brand + logo
 ├── data/               # cached market data (gitignored)
 └── notebooks/          # research notebooks
@@ -97,7 +105,28 @@ python scripts/run_consensus.py --no-fetch
 
 # 10. Dashboard (Streamlit; 6 pages)
 streamlit run dashboard/app.py
+
+# 11. Live trading — shadow mode, against real Binance market data
+python scripts/run_live.py --strategy sma_crossover --symbol BTC/USDT \
+    --steps 3 --interval 10
 ```
+
+## Going live (carefully)
+
+The `live/` module ships in **shadow mode** by default. Real orders require three deliberate environment flags:
+
+```bash
+# step 1 · testnet (safe, no real money)
+export TICKLINE_API_KEY=...          # from Binance testnet
+export TICKLINE_SECRET=...
+export TICKLINE_SHADOW=false         # actually place orders
+# TICKLINE_SANDBOX=true is the default
+
+# step 2 · mainnet (real money — only after months of testnet success)
+export TICKLINE_SANDBOX=false
+```
+
+The same `LiveBroker` / `LiveRunner` code handles all three modes — the strategy doesn't know or care.
 
 ## Roadmap
 
@@ -113,6 +142,7 @@ streamlit run dashboard/app.py
 - [x] **Paper trading** (simulation broker + JSONL ledger; live-ready)
 - [x] **L6 consensus** (regime classifier + vote ensemble + drawdown circuit breaker)
 - [x] **Streamlit dashboard** (6 pages — overview, backtest, walk-forward, portfolio, consensus, paper ledger)
+- [x] **Live trading** (ccxt-backed broker + runner; shadow → testnet → mainnet via env flags)
 - [ ] Streamlit dashboard
 - [ ] Live (very small size, well-understood strategy only)
 
