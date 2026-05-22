@@ -10,7 +10,7 @@
   <a href="#quick-start"><img alt="status" src="https://img.shields.io/badge/status-alpha-00ff9d?style=flat-square&labelColor=07090c"></a>
   <img alt="python" src="https://img.shields.io/badge/python-3.11%2B-e8eef5?style=flat-square&labelColor=07090c">
   <img alt="license" src="https://img.shields.io/badge/license-MIT-8b96a5?style=flat-square&labelColor=07090c">
-  <img alt="tests" src="https://img.shields.io/badge/tests-31%20passing-00ff9d?style=flat-square&labelColor=07090c">
+  <img alt="tests" src="https://img.shields.io/badge/tests-45%20passing-00ff9d?style=flat-square&labelColor=07090c">
 </p>
 
 ---
@@ -49,9 +49,11 @@ tickline/
 │   ├── backtest/       # engine + walk-forward validator
 │   ├── intelligence/   # ML meta-labeler (algo + AI gate)
 │   ├── portfolio/      # multi-asset sizing + risk-parity engine
+│   ├── sentiment/      # lexicon scorer + event feed + bar features
+│   ├── paper/          # simulation broker + JSONL ledger (live-ready)
 │   └── risk/           # performance metrics
 ├── scripts/            # CLI entry points
-├── tests/              # unit tests (31 passing)
+├── tests/              # unit tests (45 passing)
 ├── assets/             # brand + logo
 ├── data/               # cached market data (gitignored)
 └── notebooks/          # research notebooks
@@ -81,6 +83,12 @@ python scripts/run_meta_backtest.py --primary sma_crossover --no-fetch
 python scripts/run_portfolio_backtest.py --no-fetch \
     --symbols "BTC/USDT" "ETH/USDT" "SOL/USDT" \
     --method inverse_vol
+
+# 7. Sentiment demo (synthetic events → bar features → forward returns)
+python scripts/run_sentiment_demo.py --no-fetch
+
+# 8. Paper trading (simulation broker, JSONL ledger)
+python scripts/run_paper.py --no-fetch --strategy sma_crossover --bars 2000
 ```
 
 ## Roadmap
@@ -93,8 +101,8 @@ python scripts/run_portfolio_backtest.py --no-fetch \
 - [x] **Walk-forward validation** (anchored + rolling modes)
 - [x] **Meta-labeler ML gate** (algo + AI overlay via HistGradientBoosting)
 - [x] **Multi-asset portfolio** (equal / inverse-vol / vol-target / fractional Kelly)
-- [ ] Sentiment layer (news + onchain → features)
-- [ ] Paper trading via exchange testnet
+- [x] **Sentiment layer** (lexicon scorer + event feed + bar-level features)
+- [x] **Paper trading** (simulation broker + JSONL ledger; live-ready)
 - [ ] Streamlit dashboard
 - [ ] Live (very small size, well-understood strategy only)
 

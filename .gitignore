@@ -17,6 +17,7 @@ data/*.parquet
 data/*.csv
 data/*.db
 data/cache/
+data/ledgers/
 
 # Notebooks
 .ipynb_checkpoints/

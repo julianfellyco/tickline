@@ -802,10 +802,13 @@
   <div class="ticker-track">
     <span class="ticker-item"><span class="lbl">TICKLINE</span> <span class="sym">v0.1.0</span> <span class="div">·</span> <span class="lbl">STATUS</span> <span class="pos">ALPHA</span></span>
     <span class="ticker-item"><span class="lbl">BTC/USDT</span> <span class="sym">1h</span> <span class="div">·</span> <span class="sym">8,760 bars</span> <span class="div">·</span> <span class="lbl">CACHED</span></span>
-    <span class="ticker-item"><span class="lbl">TESTS</span> <span class="pos">24 / 24</span> <span class="div">·</span> <span class="lbl">COVERAGE</span> <span class="sym">core+intelligence</span></span>
+    <span class="ticker-item"><span class="lbl">TESTS</span> <span class="pos">45 / 45</span> <span class="div">·</span> <span class="lbl">COVERAGE</span> <span class="sym">core+intel+portfolio+sentiment+paper</span></span>
     <span class="ticker-item"><span class="lbl">BACKTEST</span> <span class="sym">in-sample</span> <span class="div">·</span> <span class="lbl">RET</span> <span class="neg">−32.34%</span> <span class="div">·</span> <span class="lbl">SHARPE</span> <span class="neg">−1.33</span></span>
     <span class="ticker-item"><span class="lbl">WALK-FWD</span> <span class="sym">6 windows</span> <span class="div">·</span> <span class="lbl">SHARPE</span> <span class="neg">−1.31</span> <span class="div">·</span> <span class="lbl">CONSISTENCY</span> <span class="sym">33%</span></span>
     <span class="ticker-item"><span class="lbl">ALGO+AI</span> <span class="sym">th=0.30</span> <span class="div">·</span> <span class="lbl">RET</span> <span class="pos">+2.03%</span> <span class="div">·</span> <span class="lbl">PF</span> <span class="pos">2.08</span></span>
+    <span class="ticker-item"><span class="lbl">PORTFOLIO</span> <span class="sym">BTC·ETH·SOL</span> <span class="div">·</span> <span class="lbl">SIZE</span> <span class="sym">inverse-vol</span> <span class="div">·</span> <span class="lbl">CORR</span> <span class="sym">0.63–0.66</span></span>
+    <span class="ticker-item"><span class="lbl">SENTIMENT</span> <span class="sym">lexicon scorer</span> <span class="div">·</span> <span class="lbl">FEATURES</span> <span class="sym">6 bar-level</span> <span class="div">·</span> <span class="lbl">SOURCES</span> <span class="sym">news+social+onchain ready</span></span>
+    <span class="ticker-item"><span class="lbl">PAPER</span> <span class="sym">simulation broker</span> <span class="div">·</span> <span class="lbl">LEDGER</span> <span class="sym">jsonl</span> <span class="div">·</span> <span class="lbl">FILLS</span> <span class="pos">42 on last run</span></span>
     <span class="ticker-item"><span class="lbl">FEATURES</span> <span class="sym">13</span> <span class="div">·</span> <span class="lbl">TOP</span> <span class="sym">hour_sin · rsi_14 · sma_slope</span></span>
     <span class="ticker-item"><span class="lbl">MODEL</span> <span class="sym">HistGradientBoosting</span> <span class="div">·</span> <span class="lbl">AUC</span> <span class="sym">0.569 (test)</span></span>
     <span class="ticker-item"><span class="lbl">LICENSE</span> <span class="sym">MIT</span> <span class="div">·</span> <span class="lbl">NOT</span> <span class="amber">FINANCIAL ADVICE</span></span>
@@ -861,12 +864,12 @@
       <span class="v">$10,000</span>
     </div>
     <div class="status-item">
-      <span class="k">STRATEGIES</span>
-      <span class="v">2 + 1 ML</span>
+      <span class="k">MODULES</span>
+      <span class="v">6 shipped</span>
     </div>
     <div class="status-item">
       <span class="k">TESTS</span>
-      <span class="v pos">24 / 24</span>
+      <span class="v pos">45 / 45</span>
     </div>
   </div>
 </div>
@@ -1114,12 +1117,12 @@
           <div class="item">Meta-labeler (HistGB)</div>
         </div>
       </div>
-      <div class="stack-row muted reveal">
-        <div class="head"><span class="id">L4</span><span class="name">Portfolio Logic</span><span class="stat todo">PLANNED</span><span class="role">sizing · vol target</span></div>
+      <div class="stack-row reveal">
+        <div class="head"><span class="id">L4</span><span class="name">Portfolio Logic</span><span class="stat">SHIPPED</span><span class="role">sizing · vol target · correlation</span></div>
         <div class="body">
-          <div class="item">risk parity</div>
-          <div class="item">fractional Kelly</div>
-          <div class="item">correlation gating</div>
+          <div class="item">equal · inverse-vol · vol-target · ¼ Kelly</div>
+          <div class="item">multi-sleeve engine</div>
+          <div class="item">realized correlation matrix</div>
         </div>
       </div>
       <div class="stack-row reveal">
@@ -1130,12 +1133,12 @@
           <div class="item">trade ledger extraction</div>
         </div>
       </div>
-      <div class="stack-row muted reveal">
-        <div class="head"><span class="id">L2</span><span class="name">Settlement</span><span class="stat todo">PLANNED</span><span class="role">where money actually moves</span></div>
+      <div class="stack-row reveal">
+        <div class="head"><span class="id">L2</span><span class="name">Settlement</span><span class="stat todo">PAPER</span><span class="role">simulation broker · jsonl ledger</span></div>
         <div class="body">
-          <div class="item">exchange / CCP / self-custody</div>
-          <div class="item">reconciliation script</div>
-          <div class="item">counterparty diversification</div>
+          <div class="item">PaperBroker (cash + positions)</div>
+          <div class="item">Order → Fill → Ledger (JSONL)</div>
+          <div class="item">live exchange = swap one class</div>
         </div>
       </div>
       <div class="stack-row reveal">
