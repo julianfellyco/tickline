@@ -1,0 +1,48 @@
+name: refresh watchlist
+
+# Auto-advances the live site to the latest market data. This is what
+# "realtime" means for a 21–63d momentum tool: fresh every trading day,
+# refreshed a few times intraday — NOT tick streaming (that would be noise
+# for a multi-week signal).
+#
+# Setup (one-time): add a repo secret VERCEL_TOKEN
+#   (vercel.com/account/tokens). The org/project IDs below are identifiers,
+#   not secrets, so they're safe to commit.
+#
+# Note: GitHub Actions cron is best-effort and often runs 5–15 min late.
+# Fine for a daily/intraday momentum signal.
+
+on:
+  schedule:
+    - cron: "0 14-20 * * 1-5"   # hourly during US market hours (≈9:30–16:00 ET / EDT)
+    - cron: "0 21 * * 1-5"      # post-close snapshot
+  workflow_dispatch: {}          # manual "Run workflow" button
+
+concurrency:
+  group: refresh
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: team_MAVkVtSps6hmtTQkUQfU8uLP
+      VERCEL_PROJECT_ID: prj_Aoyfikd3WI45LDaBD2TioykjJ5fq
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install data deps
+        run: pip install --quiet yfinance pandas numpy pyarrow requests
+
+      - name: Rebuild data.js (latest market data)
+        run: python scripts/build_site.py
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Deploy to Vercel
+        run: vercel deploy ./web --prod --yes --token "${{ secrets.VERCEL_TOKEN }}"
