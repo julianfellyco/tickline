@@ -86,6 +86,47 @@
   .stk-ret{margin-left:5px;font-size:.66rem;font-weight:600;opacity:.85}
   .stk-ret.up{color:var(--green)} .stk-ret.down{color:var(--red)}
   .card-foot .up{color:var(--green);font-weight:600}
+
+  /* company briefing modal */
+  .modal-overlay{position:fixed;inset:0;z-index:50;background:rgba(20,32,46,.55);
+    -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+    display:flex;align-items:flex-start;justify-content:center;padding:5vh 1rem;overflow-y:auto}
+  .modal-overlay[hidden]{display:none}
+  .modal{background:var(--card);border-radius:16px;max-width:560px;width:100%;
+    padding:1.6rem 1.7rem 1.9rem;position:relative;box-shadow:0 20px 60px rgba(20,32,46,.3)}
+  .modal-x{position:absolute;top:.8rem;right:1rem;background:none;border:0;font-size:1.5rem;
+    line-height:1;color:var(--ink-dim);cursor:pointer}
+  .modal-x:hover{color:var(--ink)}
+  .md-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;
+    border-bottom:1px solid var(--line);padding-bottom:1rem}
+  .md-head h2{font-size:1.2rem;line-height:1.2}
+  .md-tk{font-family:var(--mono);font-size:.76rem;color:var(--ink-dim);font-weight:500}
+  .md-sub{font-size:.8rem;color:var(--ink-dim);margin-top:.25rem}
+  .md-price{font-family:var(--mono);font-size:1.35rem;font-weight:600;white-space:nowrap;
+    display:flex;align-items:center;gap:.4rem}
+  .md-sec{margin-top:1.1rem}
+  .md-sec h3{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:.55rem}
+  .md-row{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;margin-bottom:.3rem;font-size:.92rem}
+  .md-rate{font-weight:600;padding:.15rem .55rem;border-radius:999px;font-size:.8rem}
+  .rate-strong_buy,.rate-buy,.rate-outperform{background:var(--green-t);color:var(--green)}
+  .rate-hold,.rate-na{background:#eef1f5;color:var(--ink-dim)}
+  .rate-sell,.rate-strong_sell,.rate-underperform{background:var(--red-t);color:var(--red)}
+  .md-dim{color:var(--ink-dim);font-size:.82rem}
+  .md-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem}
+  .md-rets{grid-template-columns:repeat(3,1fr)}
+  .md-metric{background:#f6f7f9;border:1px solid var(--line);border-radius:8px;padding:.5rem .55rem}
+  .md-mlabel{font-size:.62rem;color:var(--ink-dim);text-transform:uppercase;letter-spacing:.04em}
+  .md-mval{font-family:var(--mono);font-weight:600;font-size:.9rem;margin-top:.15rem}
+  .md-52{display:flex;align-items:center;gap:.6rem;font-family:var(--mono);font-size:.72rem}
+  .md-bar{flex:1;height:6px;border-radius:3px;position:relative;
+    background:linear-gradient(90deg,var(--red),var(--amber),var(--green))}
+  .md-bar span{position:absolute;top:-3px;width:12px;height:12px;border-radius:50%;
+    background:var(--ink);border:2px solid var(--card);transform:translateX(-50%)}
+  .md-center{text-align:center;margin:.15rem 0 .6rem;font-size:.7rem}
+  .md-summary{font-size:.86rem;line-height:1.6;color:var(--ink-dim)}
+  .md-link{display:inline-block;margin-top:1.1rem;font-size:.82rem;color:var(--blue);text-decoration:none}
+  .md-link:hover{text-decoration:underline}
+  @media (max-width:520px){.md-grid{grid-template-columns:repeat(2,1fr)}.md-head{flex-direction:column}}
 </style>
 </head>
 <body>

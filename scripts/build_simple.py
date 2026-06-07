@@ -121,6 +121,51 @@ def _stock_trend(df) -> dict:
     }
 
 
+def _company_brief(sym: str, df) -> dict:
+    """Analyst view + fundamentals + price action for the click-out modal.
+
+    Price action is computed from the price frame (always available);
+    fundamentals/analyst come from yfinance .info (best-effort — small or
+    new names may be missing, and those fields come back None).
+    """
+    info = {}
+    try:
+        import yfinance as yf
+        info = yf.Ticker(sym).info or {}
+    except Exception:
+        info = {}
+
+    close = df["close"]
+    price = float(close.iloc[-1])
+
+    def ret(n):
+        return round(float(close.iloc[-1] / close.iloc[-1 - n] - 1), 3) if len(close) > n else None
+
+    def rnd(key, dp=2):
+        v = info.get(key)
+        return round(float(v), dp) if isinstance(v, (int, float)) else None
+
+    window = close.iloc[-252:] if len(close) >= 60 else close
+    summary = info.get("longBusinessSummary") or ""
+    if len(summary) > 340:
+        summary = summary[:337].rsplit(" ", 1)[0] + "…"
+
+    return {
+        "name": info.get("shortName") or info.get("longName") or sym,
+        "sector": info.get("sector"), "industry": info.get("industry"),
+        "summary": summary or None, "employees": info.get("fullTimeEmployees"),
+        "price": round(price, 2),
+        "w52h": round(float(window.max()), 2), "w52l": round(float(window.min()), 2),
+        "mcap": info.get("marketCap"),
+        "pe": rnd("trailingPE"), "fpe": rnd("forwardPE"), "eps": rnd("trailingEps"),
+        "margin": rnd("profitMargins", 3), "beta": rnd("beta"), "divY": rnd("dividendYield", 4),
+        "tgtMean": rnd("targetMeanPrice"), "tgtHigh": rnd("targetHighPrice"),
+        "tgtLow": rnd("targetLowPrice"), "reco": info.get("recommendationKey"),
+        "nAnalysts": info.get("numberOfAnalystOpinions"),
+        "r1m": ret(21), "r3m": ret(63), "r6m": ret(126), "r1y": ret(252),
+    }
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="Build the simple Trend & Crowd board")
     p.add_argument("--no-fetch", action="store_true")
@@ -189,10 +234,16 @@ def main() -> int:
     all_stocks = sorted({s for syms in STOCKS.values() for s in syms})
     print(f">> fetching {len(all_stocks)} companies for drill-down…")
     stock_frames = fetch_many(all_stocks, days=320, use_cache=use_cache)
-    stock_info = {
-        sym: _stock_trend(df) for sym, df in stock_frames.items()
-        if df is not None and not df.empty and len(df) >= 120
-    }
+    valid = {s: df for s, df in stock_frames.items()
+             if df is not None and not df.empty and len(df) >= 120}
+    stock_info = {sym: _stock_trend(df) for sym, df in valid.items()}
+
+    print(f">> fetching analyst + fundamentals for {len(valid)} companies (slow)…")
+    company_info = {}
+    for i, (sym, df) in enumerate(valid.items(), 1):
+        company_info[sym] = _company_brief(sym, df)
+        if i % 25 == 0:
+            print(f"   …{i}/{len(valid)}")
 
     payload = {
         "as_of": str(spy.index[-1].date()),
@@ -200,6 +251,7 @@ def main() -> int:
         "benchmark": BENCH,
         "buzz_median": median,
         "stock_info": stock_info,
+        "company_info": company_info,
         "themes": rows,
     }
     OUT.mkdir(parents=True, exist_ok=True)

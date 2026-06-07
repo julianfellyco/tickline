@@ -41,11 +41,88 @@
     }
     a.href = "https://finance.yahoo.com/quote/" + encodeURIComponent(sym);
     a.target = "_blank"; a.rel = "noopener";
-    a.title = sym + (info.ret3mo != null
-      ? " · " + (info.above_ma ? "uptrend" : "downtrend") + " · 3-mo " + pct(info.ret3mo) + " — chart"
-      : " — open chart");
-    a.addEventListener("click", function (e) { e.stopPropagation(); });
+    a.title = sym + " — click for analyst & fundamentals briefing";
+    a.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.button === 1) { e.stopPropagation(); return; }
+      e.preventDefault(); e.stopPropagation(); openModal(sym);
+    });
     return a;
+  }
+
+  // ── in-page company briefing modal ──────────────────────────
+  var overlay = document.createElement("div");
+  overlay.className = "modal-overlay"; overlay.hidden = true;
+  overlay.innerHTML = '<div class="modal" role="dialog" aria-modal="true">' +
+    '<button class="modal-x" aria-label="Close">×</button><div class="modal-body"></div></div>';
+  document.body.appendChild(overlay);
+  var mbody = overlay.querySelector(".modal-body");
+  overlay.addEventListener("click", function (e) { if (e.target === overlay) closeModal(); });
+  overlay.querySelector(".modal-x").addEventListener("click", closeModal);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
+  function closeModal() { overlay.hidden = true; document.body.style.overflow = ""; }
+  function openModal(sym) {
+    mbody.innerHTML = renderBrief(sym);
+    overlay.hidden = false; overlay.scrollTop = 0;
+    document.body.style.overflow = "hidden";
+  }
+
+  function money(v) {
+    if (v == null) return "—";
+    var a = Math.abs(v);
+    if (a >= 1e12) return "$" + (v / 1e12).toFixed(2) + "T";
+    if (a >= 1e9) return "$" + (v / 1e9).toFixed(1) + "B";
+    if (a >= 1e6) return "$" + (v / 1e6).toFixed(0) + "M";
+    return "$" + v;
+  }
+  function metric(label, val, signed) {
+    var cls = signed == null ? "" : (signed >= 0 ? "up" : "down");
+    return '<div class="md-metric"><div class="md-mlabel">' + label +
+      '</div><div class="md-mval ' + cls + '">' + val + "</div></div>";
+  }
+  var RECO = { strong_buy: "Strong Buy", buy: "Buy", outperform: "Outperform",
+    hold: "Hold", underperform: "Underperform", sell: "Sell", strong_sell: "Strong Sell" };
+
+  function renderBrief(sym) {
+    var c = (D.company_info || {})[sym], ti = (D.stock_info || {})[sym] || {};
+    if (!c) return "<h2>" + sym + '</h2><p class="md-dim">No briefing available.</p>';
+    var up = (c.tgtMean != null && c.price) ? (c.tgtMean / c.price - 1) : null;
+    var reco = RECO[c.reco] || (c.reco || "—");
+    var pos = (c.w52h > c.w52l) ? Math.max(2, Math.min(98, (c.price - c.w52l) / (c.w52h - c.w52l) * 100)) : 50;
+    return '' +
+      '<div class="md-head"><div><h2>' + c.name + ' <span class="md-tk">' + sym + "</span></h2>" +
+        '<div class="md-sub">' + (c.sector || "") + (c.industry ? " · " + c.industry : "") + "</div></div>" +
+        '<div class="md-price"><span class="stk-dot stk-' + (ti.trend || "flat") + '"></span>$' + c.price + "</div></div>" +
+      '<div class="md-sec"><h3>Analyst view</h3>' +
+        '<div class="md-row"><span class="md-rate rate-' + (c.reco || "na") + '">' + reco + "</span>" +
+        '<span class="md-dim">' + (c.nAnalysts ? c.nAnalysts + " analysts" : "no coverage") + "</span></div>" +
+        (c.tgtMean != null
+          ? '<div class="md-row"><b>Price target $' + c.tgtMean + '</b> <span class="' + (up >= 0 ? "up" : "down") +
+            '">' + pct(up) + " vs now</span></div><div class=\"md-dim\">range $" + (c.tgtLow != null ? c.tgtLow : "—") +
+            " – $" + (c.tgtHigh != null ? c.tgtHigh : "—") + "</div>"
+          : '<div class="md-dim">No published price targets.</div>') +
+      "</div>" +
+      '<div class="md-sec"><h3>Fundamentals</h3><div class="md-grid">' +
+        metric("Market cap", money(c.mcap)) +
+        metric("P/E", c.pe != null ? c.pe : "—") +
+        metric("Fwd P/E", c.fpe != null ? c.fpe : "—") +
+        metric("EPS", c.eps != null ? "$" + c.eps : "—") +
+        metric("Profit margin", c.margin != null ? Math.round(c.margin * 100) + "%" : "—") +
+        metric("Beta", c.beta != null ? c.beta : "—") +
+        metric("Div yield", c.divY != null ? c.divY.toFixed(2) + "%" : "—") +
+        metric("Employees", c.employees != null ? c.employees.toLocaleString() : "—") +
+      "</div></div>" +
+      '<div class="md-sec"><h3>Price action</h3>' +
+        '<div class="md-52"><span class="md-dim">$' + c.w52l + '</span>' +
+        '<div class="md-bar"><span style="left:' + pos + '%"></span></div>' +
+        '<span class="md-dim">$' + c.w52h + "</span></div>" +
+        '<div class="md-dim md-center">52-week range</div>' +
+        '<div class="md-grid md-rets">' +
+          metric("1 month", pct(c.r1m), c.r1m) + metric("3 month", pct(c.r3m), c.r3m) +
+          metric("6 month", pct(c.r6m), c.r6m) +
+        "</div></div>" +
+      (c.summary ? '<div class="md-sec"><h3>Company briefing</h3><p class="md-summary">' + c.summary + "</p></div>" : "") +
+      '<a class="md-link" href="https://finance.yahoo.com/quote/' + encodeURIComponent(sym) +
+      '" target="_blank" rel="noopener">Full chart &amp; financials on Yahoo ↗</a>';
   }
 
   D.themes.forEach(function (t) {
