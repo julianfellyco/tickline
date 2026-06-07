@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tick/line — US market theme rotation</title>
+<meta name="description" content="Cross-sectional momentum across US market themes. Leaders, laggards, and where money is rotating — honest curves from real ticks.">
+<meta property="og:title" content="tick/line — theme rotation">
+<meta property="og:description" content="Where money is rotating across the US market. Ranked by relative strength, net of marketing math.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="#" aria-label="tickline home">
+    <span class="brand-tick">tick</span><span class="brand-slash">/</span><span class="brand-line">line</span>
+    <span class="brand-tag">watchlist</span>
+  </a>
+  <nav class="topnav" aria-label="Primary">
+    <span class="stamp" id="stamp">—</span>
+    <a class="navlink" href="https://github.com/julianfellyco/tickline" rel="noopener">source</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO ─────────────────────────────────────────────────────── -->
+  <section class="hero" aria-labelledby="hero-h">
+    <p class="eyebrow reveal" data-d="1">US MARKET · CROSS-SECTIONAL MOMENTUM</p>
+    <h1 class="hero-h reveal" data-d="2" id="hero-h"><span id="regime">Where the money is rotating.</span></h1>
+    <p class="hero-sub reveal" data-d="3">
+      Every US theme ranked by relative strength versus <span class="mono" id="bench">SPY</span>.
+      Leaders are what the tape rewards; laggards are what it punishes.
+      <span class="ink-faint">No narrative, no marketing math — just the curves.</span>
+    </p>
+    <dl class="stat-strip reveal" data-d="4" id="stats" aria-label="Snapshot stats"></dl>
+  </section>
+
+  <!-- BOARD ────────────────────────────────────────────────────── -->
+  <section class="board" aria-labelledby="board-h">
+    <div class="board-head">
+      <h2 class="section-h" id="board-h">The rotation board</h2>
+      <div class="controls">
+        <div class="segmented" role="tablist" aria-label="Tier">
+          <button class="seg active" data-tier="slow" role="tab" aria-selected="true">position · 63d</button>
+          <button class="seg" data-tier="fast" role="tab" aria-selected="false">swing · 21d</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- long / short books -->
+    <div class="books">
+      <div class="book book-long">
+        <h3 class="book-h"><span class="dot dot-long"></span>LONG · leaders</h3>
+        <ul class="book-list" id="leaders"></ul>
+      </div>
+      <div class="book book-short">
+        <h3 class="book-h"><span class="dot dot-short"></span>SHORT · laggards</h3>
+        <ul class="book-list" id="laggards"></ul>
+      </div>
+    </div>
+
+    <!-- group filter -->
+    <div class="chips" id="chips" role="group" aria-label="Filter by sector"></div>
+
+    <!-- ranked diverging-bar list -->
+    <div class="ranktable" id="ranktable" aria-label="Themes ranked by relative strength"></div>
+  </section>
+
+  <!-- METHOD ───────────────────────────────────────────────────── -->
+  <section class="method" aria-labelledby="method-h">
+    <h2 class="section-h" id="method-h">How to read this</h2>
+    <div class="method-grid">
+      <article class="note">
+        <h3>Relative strength, not price</h3>
+        <p>Each theme is an equal-weight basket. The bar is its return <em>minus the benchmark</em> over the window. Positive = outrunning the market; negative = dragging.</p>
+      </article>
+      <article class="note">
+        <h3>Rank is the signal</h3>
+        <p>Themes are ranked against each other. Top <span class="mono">15%</span> = <span class="long">leader</span> (long), bottom <span class="mono">15%</span> = <span class="short">laggard</span> (short). This cross-sectional momentum is the one cut the backtest validated.</p>
+      </article>
+      <article class="note">
+        <h3>What's proven, what isn't</h3>
+        <p>Net of costs the long/short ran <span class="mono long">+29.6%/yr · Sharpe 1.23</span> over ~6y — <em>on the AI subset</em>. The full universe shown here is <span class="amber">not yet re-validated</span>. Treat it as a map, not a trade.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-brand"><span class="brand-tick">tick</span><span class="brand-slash">/</span><span class="brand-line">line</span></div>
+  <p class="foot-disclaim">
+    Honest curves from real ticks. Data via yfinance, as of <span id="foot-date">—</span>.
+    <strong>Not investment advice.</strong> A research map of relative strength — backtested on the AI
+    subset, not the full universe. If a backtest doesn't include slippage, fees, and realistic fills, it's fiction.
+  </p>
+  <p class="foot-meta mono">MIT · built solo by Julian Fellyco</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
