@@ -63,13 +63,18 @@ def _equity_stats(ret: pd.Series, time_in: float, switches: int, label: str) -> 
     return TrendStats(label, float(cagr), vol, sharpe, max_dd, float(time_in), int(switches))
 
 
-def trend_follow(close: pd.Series, ma_window: int = 200, cost_bps: float = 5.0) -> TrendStats:
-    """Hold when above the MA, cash otherwise; net of switch costs."""
+def _cash_daily(cash_yield_annual: float) -> float:
+    return (1.0 + cash_yield_annual) ** (1.0 / TRADING_DAYS) - 1.0
+
+
+def trend_follow(close: pd.Series, ma_window: int = 200, cost_bps: float = 5.0,
+                 cash_yield_annual: float = 0.0) -> TrendStats:
+    """Hold when above the MA, else earn the cash yield; net of switch costs."""
     ret = daily_returns(close)
     pos = trend_position(close, ma_window)
     turn = pos.diff().abs().fillna(0.0)
     switches = int((turn > 0).sum())
-    strat = pos * ret - turn * (cost_bps / 1e4)
+    strat = pos * ret + (1.0 - pos) * _cash_daily(cash_yield_annual) - turn * (cost_bps / 1e4)
     return _equity_stats(strat, float(pos.mean()), switches, "trend-follow")
 
 
@@ -95,13 +100,10 @@ def breadth(frames: dict[str, pd.DataFrame], ma_window: int = 200) -> pd.Series:
     return mat.mean(axis=1, skipna=True).rename("breadth")
 
 
-def portfolio(frames: dict[str, pd.DataFrame], ma_window: int = 200,
-              cost_bps: float = 5.0) -> tuple[TrendStats, TrendStats]:
-    """Equal-weight basket: (trend-follow, buy & hold) over all assets.
-
-    Trend-follow times each asset in/out independently; an asset in cash
-    contributes 0 to its slice that day.
-    """
+def portfolio_returns(frames: dict[str, pd.DataFrame], ma_window: int = 200,
+                      cost_bps: float = 5.0, cash_yield_annual: float = 0.0):
+    """Equal-weight basket daily return series: (trend_follow, buy_hold, time_in, switches)."""
+    cash_daily = _cash_daily(cash_yield_annual)
     tf_cols, bh_cols, times, switches = [], [], [], 0
     for sym, df in frames.items():
         c = df["close"]
@@ -110,11 +112,18 @@ def portfolio(frames: dict[str, pd.DataFrame], ma_window: int = 200,
         turn = pos.diff().abs().fillna(0.0)
         switches += int((turn > 0).sum())
         times.append(float(pos.mean()))
-        tf_cols.append((pos * ret - turn * (cost_bps / 1e4)).rename(sym))
+        tf_cols.append((pos * ret + (1.0 - pos) * cash_daily - turn * (cost_bps / 1e4)).rename(sym))
         bh_cols.append(ret.rename(sym))
     tf = pd.concat(tf_cols, axis=1).mean(axis=1, skipna=True)
     bh = pd.concat(bh_cols, axis=1).mean(axis=1, skipna=True)
     time_in = sum(times) / len(times) if times else 0.0
+    return tf, bh, time_in, switches
+
+
+def portfolio(frames: dict[str, pd.DataFrame], ma_window: int = 200,
+              cost_bps: float = 5.0, cash_yield_annual: float = 0.0) -> tuple[TrendStats, TrendStats]:
+    """Equal-weight basket: (trend-follow, buy & hold) over all assets."""
+    tf, bh, time_in, switches = portfolio_returns(frames, ma_window, cost_bps, cash_yield_annual)
     return (
         _equity_stats(tf, time_in, switches, "portfolio · trend-follow"),
         _equity_stats(bh, 1.0, 0, "portfolio · buy & hold"),

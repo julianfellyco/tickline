@@ -24,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import pandas as pd
 
 from tickline.data import fetch_many
-from tickline.timing import breadth, buy_hold, portfolio, trend_follow
+from tickline.timing import breadth, buy_hold, portfolio, portfolio_returns, trend_follow
 
 RESET = "\033[0m"; SIGNAL = "\033[38;2;45;209;120m"; ALERT = "\033[38;2;237;93;110m"
 AMBER = "\033[38;2;245;166;35m"; INK = "\033[38;2;212;218;227m"
@@ -59,8 +59,11 @@ def main() -> int:
     p.add_argument("--days", type=int, default=1800)
     p.add_argument("--ma", type=int, default=200)
     p.add_argument("--cost-bps", type=float, default=5.0)
+    p.add_argument("--cash-yield", type=float, default=2.5,
+                   help="annual %% earned while sitting in cash")
     p.add_argument("--no-fetch", action="store_true")
     args = p.parse_args()
+    cash = args.cash_yield / 100.0
 
     print(BANNER)
     print(f"{INK_FAINT}>>{RESET} fetching {len(ETFS)} ETFs, ~{args.days//252}y…")
@@ -92,8 +95,9 @@ def main() -> int:
               f"{INK_DIM}{tf.time_in*100:>6.0f}%{RESET}")
 
     # ── portfolio ────────────────────────────────────────────────────────
-    tf, bh = portfolio(frames, args.ma, args.cost_bps)
-    print(f"\n{INK}Equal-weight basket of all {len(frames)} themes{RESET}\n")
+    tf, bh = portfolio(frames, args.ma, args.cost_bps, cash)
+    print(f"\n{INK}Equal-weight basket of all {len(frames)} themes{RESET} "
+          f"{INK_FAINT}(cash earns {args.cash_yield:.1f}%/yr){RESET}\n")
     for s in (tf, bh):
         print(f"   {INK}{s.label:<26}{RESET} return {SIGNAL if s.cagr>0 else ALERT}"
               f"{_pct(s.cagr):>6}{RESET}/yr   {INK_DIM}Sharpe{RESET} {INK}{s.sharpe:>5.2f}{RESET}   "
@@ -106,6 +110,29 @@ def main() -> int:
           f"({_pct(bh.max_dd)} → {_pct(tf.max_dd)}), "
           f"Sharpe {bh.sharpe:.2f} → {tf.sharpe:.2f}, "
           f"for {_pct(tf.cagr-bh.cagr)} of return.{RESET}")
+
+    # ── robustness: does it hold across MA lengths? ──────────────────────
+    print(f"\n{INK}Robustness{RESET} {INK_FAINT}(is the drawdown-cut just a 200-day fluke?){RESET}\n")
+    print(f"   {INK_FAINT}{'MA window':<12}{'TF ret':>9}{'TF maxDD':>10}{'TF Sharpe':>11}{RESET}")
+    print(f"   {INK_FAINT}{'─'*42}{RESET}")
+    for ma in (50, 100, 150, 200, 250):
+        s, _ = portfolio(frames, ma, args.cost_bps, cash)
+        print(f"   {INK}{str(ma)+'-day':<12}{RESET}{INK}{_pct(s.cagr):>9}{RESET}"
+              f"{SIGNAL if s.max_dd > bh.max_dd else ALERT}{s.max_dd*100:>9.0f}%{RESET}"
+              f"{INK}{s.sharpe:>11.2f}{RESET}")
+    print(f"   {INK_DIM}{'buy & hold':<12}{_pct(bh.cagr):>9}{bh.max_dd*100:>9.0f}%{bh.sharpe:>11.2f}{RESET}")
+
+    # ── regime split: when does it actually help? ────────────────────────
+    tfr, bhr, _, _ = portfolio_returns(frames, args.ma, args.cost_bps, cash)
+    print(f"\n{INK}When does it help?{RESET} {INK_FAINT}(return by year){RESET}\n")
+    print(f"   {INK_FAINT}{'year':<8}{'buy & hold':>12}{'trend-follow':>14}{'  helped?':>10}{RESET}")
+    for y in sorted(set(tfr.index.year)):
+        b_y = (1 + bhr[bhr.index.year == y]).prod() - 1
+        t_y = (1 + tfr[tfr.index.year == y]).prod() - 1
+        helped = "✓ saved you" if (b_y < 0 and t_y > b_y) else ("· gave up" if t_y < b_y else "·")
+        hc = SIGNAL if (b_y < 0 and t_y > b_y) else INK_FAINT
+        print(f"   {INK}{y:<8}{RESET}{(SIGNAL if b_y>0 else ALERT)}{_pct(b_y):>12}{RESET}"
+              f"{(SIGNAL if t_y>0 else ALERT)}{_pct(t_y):>14}{RESET}{hc}{helped:>12}{RESET}")
 
     # ── breadth as consensus ─────────────────────────────────────────────
     b = breadth(frames, args.ma).dropna()
