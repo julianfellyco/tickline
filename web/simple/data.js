@@ -1,6 +1,6 @@
 window.SIMPLE_DATA = {
   "as_of": "2026-06-05",
-  "generated": "2026-06-07 08:50Z",
+  "generated": "2026-06-07 09:02Z",
   "benchmark": "SPY",
   "buzz_median": 35,
   "stock_info": {
@@ -9,15 +9,45 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.195
     },
+    "ADBE": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.113
+    },
+    "ADI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.274
+    },
     "AEM": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.258
     },
+    "AEP": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.014
+    },
     "AG": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.342
+    },
+    "AGI": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.287
+    },
+    "ALNY": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.055
+    },
+    "AMAT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.397
     },
     "AMD": {
       "trend": "up",
@@ -34,15 +64,35 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.154
     },
+    "ARRY": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.188
+    },
     "ASTS": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.046
     },
+    "AU": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.187
+    },
     "AVGO": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.17
+    },
+    "AXON": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.153
+    },
+    "AXP": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.035
     },
     "BA": {
       "trend": "down",
@@ -59,15 +109,65 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.151
     },
+    "BIIB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.057
+    },
+    "BKSY": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.465
+    },
+    "BLD": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.038
+    },
+    "BLDR": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.209
+    },
+    "BTG": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.214
+    },
+    "BWXT": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.045
+    },
+    "C": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.249
+    },
     "CCJ": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.057
     },
+    "CDE": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.276
+    },
     "CEG": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.199
+    },
+    "CIFR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.648
+    },
+    "CLSK": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.693
     },
     "COIN": {
       "trend": "down",
@@ -79,6 +179,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.008
     },
+    "COST": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.025
+    },
     "CRM": {
       "trend": "down",
       "above_ma": false,
@@ -89,20 +194,55 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.564
     },
+    "CSIQ": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.072
+    },
     "CVX": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.005
+    },
+    "D": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.068
+    },
+    "DDOG": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.862
     },
     "DHI": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.008
     },
+    "DNN": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.174
+    },
     "DUK": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.054
+    },
+    "DVN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.001
+    },
+    "ED": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.046
+    },
+    "EMR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.002
     },
     "ENPH": {
       "trend": "up",
@@ -113,6 +253,21 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.057
+    },
+    "ERO": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.071
+    },
+    "EXC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.064
+    },
+    "EXK": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.284
     },
     "FCX": {
       "trend": "up",
@@ -129,6 +284,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.475
     },
+    "FSM": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.246
+    },
     "FTNT": {
       "trend": "up",
       "above_ma": true,
@@ -138,6 +298,11 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.042
+    },
+    "GFI": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.253
     },
     "GILD": {
       "trend": "up",
@@ -159,6 +324,21 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.27
     },
+    "HAL": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.156
+    },
+    "HBM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.152
+    },
+    "HII": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.314
+    },
     "HL": {
       "trend": "down",
       "above_ma": false,
@@ -169,15 +349,70 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": 0.07
     },
+    "HUT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.385
+    },
+    "HWM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.008
+    },
+    "INCY": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.067
+    },
+    "INTU": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.381
+    },
     "ISRG": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.139
     },
+    "JKS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.141
+    },
     "JPM": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.085
+    },
+    "KBH": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.095
+    },
+    "KGC": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.192
+    },
+    "KLAC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.437
+    },
+    "KMI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.048
+    },
+    "KTOS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.327
+    },
+    "LDOS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.299
     },
     "LEN": {
       "trend": "down",
@@ -189,10 +424,20 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.144
     },
+    "LHX": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.157
+    },
     "LMT": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.215
+    },
+    "LRCX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.521
     },
     "LUNR": {
       "trend": "up",
@@ -204,15 +449,35 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": 0.538
     },
+    "MAXN": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.818
+    },
+    "MCHP": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.371
+    },
     "META": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.08
     },
+    "MPC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.189
+    },
     "MRNA": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.097
+    },
+    "MRVL": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.943
     },
     "MS": {
       "trend": "up",
@@ -229,10 +494,20 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.098
     },
+    "MTH": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.017
+    },
     "MU": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 1.334
+    },
+    "NBIX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.279
     },
     "NEE": {
       "trend": "up",
@@ -248,6 +523,16 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.281
+    },
+    "NFLX": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.17
+    },
+    "NNE": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.001
     },
     "NOC": {
       "trend": "down",
@@ -269,6 +554,16 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.112
     },
+    "NXE": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.15
+    },
+    "NXPI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.475
+    },
     "NXT": {
       "trend": "up",
       "above_ma": true,
@@ -279,10 +574,25 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.003
     },
+    "OKTA": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.471
+    },
+    "ON": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.062
+    },
     "ORCL": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.402
+    },
+    "OXY": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.056
     },
     "PAAS": {
       "trend": "down",
@@ -299,20 +609,50 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.052
     },
+    "PEG": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.039
+    },
+    "PEP": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.1
+    },
     "PHM": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.072
+    },
+    "PL": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.275
     },
     "PLTR": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.138
     },
+    "PNC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.116
+    },
+    "PSX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.111
+    },
     "QCOM": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.597
+    },
+    "QLYS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.114
     },
     "RDW": {
       "trend": "up",
@@ -323,6 +663,11 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.162
+    },
+    "RGLD": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.262
     },
     "RIO": {
       "trend": "up",
@@ -339,6 +684,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.57
     },
+    "ROK": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.212
+    },
     "RTX": {
       "trend": "up",
       "above_ma": true,
@@ -349,20 +699,45 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": 0.178
     },
+    "S": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.124
+    },
     "SCCO": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.051
+    },
+    "SCHW": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.064
     },
     "SEDG": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.891
     },
+    "SERV": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.179
+    },
+    "SHLS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.893
+    },
     "SLB": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.176
+    },
+    "SMCI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.33
     },
     "SMR": {
       "trend": "down",
@@ -379,15 +754,65 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": -0.042
     },
+    "SPCE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.738
+    },
+    "SRE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.006
+    },
+    "SRPT": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.057
+    },
+    "SVM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.1
+    },
+    "TEAM": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.19
+    },
     "TECK": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.222
     },
+    "TENB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.324
+    },
     "TER": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.311
+    },
+    "TFC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.069
+    },
+    "TGB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.076
+    },
+    "TOL": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.064
+    },
+    "TPH": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.272
     },
     "TSLA": {
       "trend": "down",
@@ -399,10 +824,35 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.229
     },
+    "TXN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.483
+    },
+    "TXT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.041
+    },
     "UEC": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.022
+    },
+    "USB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.074
+    },
+    "UUUU": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.21
+    },
+    "VALE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.017
     },
     "VRTX": {
       "trend": "up",
@@ -414,20 +864,45 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.061
     },
+    "WDAY": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.045
+    },
     "WFC": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": 0.025
+    },
+    "WMB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.024
     },
     "WPM": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.206
     },
+    "WULF": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.745
+    },
+    "XEL": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.035
+    },
     "XOM": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.002
+    },
+    "ZBRA": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.057
     },
     "ZS": {
       "trend": "down",
@@ -449,7 +924,17 @@ window.SIMPLE_DATA = {
         "AMD",
         "TSM",
         "MU",
-        "QCOM"
+        "QCOM",
+        "TXN",
+        "AMAT",
+        "LRCX",
+        "KLAC",
+        "ADI",
+        "MRVL",
+        "MCHP",
+        "NXPI",
+        "ON",
+        "SMCI"
       ],
       "crowd": "loud",
       "state": "confirmed",
@@ -469,7 +954,12 @@ window.SIMPLE_DATA = {
         "PANW",
         "ZS",
         "FTNT",
-        "NET"
+        "NET",
+        "S",
+        "OKTA",
+        "CYBR",
+        "TENB",
+        "QLYS"
       ],
       "crowd": "quiet",
       "state": "early",
@@ -483,12 +973,16 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.2292,
       "vs_spy": 0.1292,
-      "buzz": 72,
+      "buzz": 68,
       "stocks": [
         "RKLB",
         "LUNR",
         "ASTS",
-        "RDW"
+        "RDW",
+        "PL",
+        "BKSY",
+        "SPCE",
+        "ASTR"
       ],
       "crowd": "loud",
       "state": "confirmed",
@@ -508,7 +1002,12 @@ window.SIMPLE_DATA = {
         "ENPH",
         "RUN",
         "NXT",
-        "SEDG"
+        "SEDG",
+        "ARRY",
+        "SHLS",
+        "CSIQ",
+        "JKS",
+        "MAXN"
       ],
       "crowd": "quiet",
       "state": "early",
@@ -522,14 +1021,20 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.1771,
       "vs_spy": 0.0772,
-      "buzz": 52,
+      "buzz": 49,
       "stocks": [
         "AAPL",
         "MSFT",
         "NVDA",
         "AMZN",
         "GOOGL",
-        "META"
+        "META",
+        "AVGO",
+        "TSLA",
+        "NFLX",
+        "COST",
+        "PEP",
+        "ADBE"
       ],
       "crowd": "loud",
       "state": "confirmed",
@@ -549,7 +1054,12 @@ window.SIMPLE_DATA = {
         "ISRG",
         "TSLA",
         "PATH",
-        "TER"
+        "TER",
+        "ROK",
+        "EMR",
+        "ZBRA",
+        "IRBT",
+        "SERV"
       ],
       "crowd": "loud",
       "state": "neutral_loud",
@@ -569,7 +1079,13 @@ window.SIMPLE_DATA = {
         "BAC",
         "WFC",
         "GS",
-        "MS"
+        "MS",
+        "C",
+        "USB",
+        "PNC",
+        "TFC",
+        "SCHW",
+        "AXP"
       ],
       "crowd": "loud",
       "state": "neutral_loud",
@@ -589,7 +1105,12 @@ window.SIMPLE_DATA = {
         "REGN",
         "MRNA",
         "GILD",
-        "AMGN"
+        "AMGN",
+        "BIIB",
+        "ALNY",
+        "INCY",
+        "NBIX",
+        "SRPT"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -609,7 +1130,14 @@ window.SIMPLE_DATA = {
         "CVX",
         "COP",
         "EOG",
-        "SLB"
+        "SLB",
+        "MPC",
+        "PSX",
+        "OXY",
+        "WMB",
+        "KMI",
+        "HAL",
+        "DVN"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -623,13 +1151,17 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": 0.0086,
       "vs_spy": -0.0913,
-      "buzz": 31,
+      "buzz": 32,
       "stocks": [
         "FCX",
         "SCCO",
         "TECK",
         "BHP",
-        "RIO"
+        "RIO",
+        "VALE",
+        "ERO",
+        "HBM",
+        "TGB"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -649,7 +1181,14 @@ window.SIMPLE_DATA = {
         "SO",
         "DUK",
         "CEG",
-        "VST"
+        "VST",
+        "AEP",
+        "D",
+        "EXC",
+        "SRE",
+        "XEL",
+        "ED",
+        "PEG"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -669,7 +1208,14 @@ window.SIMPLE_DATA = {
         "RTX",
         "NOC",
         "GD",
-        "BA"
+        "BA",
+        "LHX",
+        "HII",
+        "TXT",
+        "LDOS",
+        "HWM",
+        "AXON",
+        "KTOS"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -690,7 +1236,15 @@ window.SIMPLE_DATA = {
         "NOW",
         "PLTR",
         "SNOW",
-        "ORCL"
+        "ORCL",
+        "ADBE",
+        "INTU",
+        "PANW",
+        "CRWD",
+        "DDOG",
+        "TEAM",
+        "WDAY",
+        "NET"
       ],
       "crowd": "loud",
       "state": "hype",
@@ -709,7 +1263,13 @@ window.SIMPLE_DATA = {
         "DHI",
         "LEN",
         "PHM",
-        "NVR"
+        "NVR",
+        "TOL",
+        "KBH",
+        "MTH",
+        "TPH",
+        "BLDR",
+        "BLD"
       ],
       "crowd": "quiet",
       "state": "dead",
@@ -729,7 +1289,12 @@ window.SIMPLE_DATA = {
         "OKLO",
         "SMR",
         "LEU",
-        "UEC"
+        "UEC",
+        "UUUU",
+        "DNN",
+        "NNE",
+        "NXE",
+        "BWXT"
       ],
       "crowd": "quiet",
       "state": "dead",
@@ -743,13 +1308,18 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.1155,
       "vs_spy": -0.2155,
-      "buzz": 83,
+      "buzz": 85,
       "stocks": [
         "COIN",
         "MSTR",
         "MARA",
         "RIOT",
-        "HOOD"
+        "HOOD",
+        "CLSK",
+        "WULF",
+        "CIFR",
+        "BITF",
+        "HUT"
       ],
       "crowd": "loud",
       "state": "hype",
@@ -769,7 +1339,12 @@ window.SIMPLE_DATA = {
         "AG",
         "HL",
         "WPM",
-        "FNV"
+        "FNV",
+        "CDE",
+        "SVM",
+        "EXK",
+        "MAG",
+        "FSM"
       ],
       "crowd": "loud",
       "state": "hype",
@@ -783,13 +1358,19 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.2223,
       "vs_spy": -0.3223,
-      "buzz": 86,
+      "buzz": 85,
       "stocks": [
         "NEM",
         "AEM",
         "GOLD",
         "WPM",
-        "FNV"
+        "FNV",
+        "KGC",
+        "AU",
+        "GFI",
+        "RGLD",
+        "AGI",
+        "BTG"
       ],
       "crowd": "loud",
       "state": "hype",

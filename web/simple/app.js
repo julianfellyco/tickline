@@ -33,6 +33,12 @@
       a.appendChild(dot);
     }
     a.appendChild(document.createTextNode(sym));
+    if (info.ret3mo != null) {
+      var rr = document.createElement("span");
+      rr.className = "stk-ret " + (info.ret3mo >= 0 ? "up" : "down");
+      rr.textContent = pct(info.ret3mo);
+      a.appendChild(rr);
+    }
     a.href = "https://finance.yahoo.com/quote/" + encodeURIComponent(sym);
     a.target = "_blank"; a.rel = "noopener";
     a.title = sym + (info.ret3mo != null
@@ -51,7 +57,13 @@
     var med = D.buzz_median || 0;
     var crowd = (t.crowd === "loud" ? "🗣 Loud" : "Quiet") +
       " · " + t.buzz + " stories vs ~" + med + " typical";
-    var n = (t.stocks || []).length;
+    // screen: rank the companies by 3-month return, strongest first
+    var SI = D.stock_info || {};
+    function r3(s) { var v = (SI[s] || {}).ret3mo; return v == null ? -999 : v; }
+    var stocks = (t.stocks || []).slice().sort(function (a, b) { return r3(b) - r3(a); });
+    var n = stocks.length;
+    var upN = stocks.filter(function (s) { return (SI[s] || {}).above_ma; }).length;
+
     card.innerHTML =
       '<div class="chead"><span class="em">' + t.emoji + '</span>' +
       "<h3>" + t.label + '</h3><span class="etf">' + t.etf + "</span></div>" +
@@ -60,11 +72,12 @@
       '<span class="dim ' + beatCls + '">' + beatTxt + "</span>" +
       '<span class="dim">' + crowd + "</span></div>" +
       '<p class="verdict">' + t.verdict + "</p>" +
-      '<div class="card-foot"><span class="caret">▸</span> ' + n + " companies</div>";
+      '<div class="card-foot"><span class="caret">▸</span> ' +
+      '<span class="up">' + upN + "</span> of " + n + " companies trending up</div>";
 
     var detail = document.createElement("div");
     detail.className = "card-stocks";
-    (t.stocks || []).forEach(function (s) { detail.appendChild(chip(s)); });
+    stocks.forEach(function (s) { detail.appendChild(chip(s)); });
     if (!n) detail.appendChild(document.createTextNode("—"));
     card.appendChild(detail);
 

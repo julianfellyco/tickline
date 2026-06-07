@@ -56,26 +56,29 @@ THEMES = [
     ("Utilities & Power", "XLU", "utility stocks power grid"),
 ]
 
-# Representative companies behind each category (the stocks you'd actually buy).
+# The companies screened into each category (comprehensive major US names).
 STOCKS = {
-    "SMH":  ["NVDA", "AVGO", "AMD", "TSM", "MU", "QCOM"],
-    "IGV":  ["MSFT", "CRM", "NOW", "PLTR", "SNOW", "ORCL"],
-    "QQQ":  ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META"],
-    "CIBR": ["CRWD", "PANW", "ZS", "FTNT", "NET"],
-    "BOTZ": ["NVDA", "ISRG", "TSLA", "PATH", "TER"],
-    "IBIT": ["COIN", "MSTR", "MARA", "RIOT", "HOOD"],
-    "URA":  ["CCJ", "OKLO", "SMR", "LEU", "UEC"],
-    "TAN":  ["FSLR", "ENPH", "RUN", "NXT", "SEDG"],
-    "XLE":  ["XOM", "CVX", "COP", "EOG", "SLB"],
-    "GDX":  ["NEM", "AEM", "GOLD", "WPM", "FNV"],
-    "SIL":  ["PAAS", "AG", "HL", "WPM", "FNV"],
-    "COPX": ["FCX", "SCCO", "TECK", "BHP", "RIO"],
-    "ITA":  ["LMT", "RTX", "NOC", "GD", "BA"],
-    "UFO":  ["RKLB", "LUNR", "ASTS", "RDW"],
-    "XBI":  ["VRTX", "REGN", "MRNA", "GILD", "AMGN"],
-    "XLF":  ["JPM", "BAC", "WFC", "GS", "MS"],
-    "XHB":  ["DHI", "LEN", "PHM", "NVR"],
-    "XLU":  ["NEE", "SO", "DUK", "CEG", "VST"],
+    "SMH":  ["NVDA", "AVGO", "AMD", "TSM", "MU", "QCOM", "TXN", "AMAT", "LRCX",
+             "KLAC", "ADI", "MRVL", "MCHP", "NXPI", "ON", "SMCI"],
+    "IGV":  ["MSFT", "CRM", "NOW", "PLTR", "SNOW", "ORCL", "ADBE", "INTU",
+             "PANW", "CRWD", "DDOG", "TEAM", "WDAY", "NET"],
+    "QQQ":  ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "AVGO", "TSLA",
+             "NFLX", "COST", "PEP", "ADBE"],
+    "CIBR": ["CRWD", "PANW", "ZS", "FTNT", "NET", "S", "OKTA", "CYBR", "TENB", "QLYS"],
+    "BOTZ": ["NVDA", "ISRG", "TSLA", "PATH", "TER", "ROK", "EMR", "ZBRA", "IRBT", "SERV"],
+    "IBIT": ["COIN", "MSTR", "MARA", "RIOT", "HOOD", "CLSK", "WULF", "CIFR", "BITF", "HUT"],
+    "URA":  ["CCJ", "OKLO", "SMR", "LEU", "UEC", "UUUU", "DNN", "NNE", "NXE", "BWXT"],
+    "TAN":  ["FSLR", "ENPH", "RUN", "NXT", "SEDG", "ARRY", "SHLS", "CSIQ", "JKS", "MAXN"],
+    "XLE":  ["XOM", "CVX", "COP", "EOG", "SLB", "MPC", "PSX", "OXY", "WMB", "KMI", "HAL", "DVN"],
+    "GDX":  ["NEM", "AEM", "GOLD", "WPM", "FNV", "KGC", "AU", "GFI", "RGLD", "AGI", "BTG"],
+    "SIL":  ["PAAS", "AG", "HL", "WPM", "FNV", "CDE", "SVM", "EXK", "MAG", "FSM"],
+    "COPX": ["FCX", "SCCO", "TECK", "BHP", "RIO", "VALE", "ERO", "HBM", "TGB"],
+    "ITA":  ["LMT", "RTX", "NOC", "GD", "BA", "LHX", "HII", "TXT", "LDOS", "HWM", "AXON", "KTOS"],
+    "UFO":  ["RKLB", "LUNR", "ASTS", "RDW", "PL", "BKSY", "SPCE", "ASTR"],
+    "XBI":  ["VRTX", "REGN", "MRNA", "GILD", "AMGN", "BIIB", "ALNY", "INCY", "NBIX", "SRPT"],
+    "XLF":  ["JPM", "BAC", "WFC", "GS", "MS", "C", "USB", "PNC", "TFC", "SCHW", "AXP"],
+    "XHB":  ["DHI", "LEN", "PHM", "NVR", "TOL", "KBH", "MTH", "TPH", "BLDR", "BLD"],
+    "XLU":  ["NEE", "SO", "DUK", "CEG", "VST", "AEP", "D", "EXC", "SRE", "XEL", "ED", "PEG"],
 }
 
 VERDICTS = {
