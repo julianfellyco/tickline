@@ -154,10 +154,31 @@ main, .topbar, .foot { position: relative; z-index: 2; }
 
 /* ── ranked diverging bars ────────────────────────────────────── */
 .ranktable { border-top: 1px solid var(--line); }
-.rank-row { display: grid; grid-template-columns: minmax(140px, 1.4fr) minmax(120px, 1fr) 76px;
-  align-items: center; gap: 1rem; padding: 0.72rem 0.6rem; border-bottom: 1px solid var(--line-soft);
-  transition: background .18s var(--ease); cursor: default; }
+.rank-item { border-bottom: 1px solid var(--line-soft); }
+.rank-row { display: grid; grid-template-columns: 14px minmax(130px, 1.4fr) minmax(120px, 1fr) 76px;
+  align-items: center; gap: 1rem; padding: 0.72rem 0.6rem;
+  transition: background .18s var(--ease); cursor: pointer; }
+.rank-row::before { content: "▸"; color: var(--ink-faint); font-size: 0.7rem;
+  transition: transform .2s var(--ease), color .2s; }
+.rank-item.open .rank-row::before { transform: rotate(90deg); color: var(--signal); }
 .rank-row:hover { background: var(--bg-row-hi); }
+.rank-item.open .rank-row { background: var(--bg-row-hi); }
+
+/* drill-down: companies inside the category */
+.rank-detail { max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height .3s var(--ease), opacity .25s, padding .3s var(--ease);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; padding: 0 2.2rem; }
+.rank-item.open .rank-detail { max-height: 260px; opacity: 1; padding: 0.9rem 2.2rem 1.1rem; }
+.rd-label { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.04em;
+  color: var(--ink-faint); margin-right: 0.35rem; }
+.chip-ticker { font-family: var(--mono); font-size: 0.74rem; font-weight: 500; color: var(--ink);
+  background: var(--bg-elevated, #161d26); border: 1px solid var(--line); border-radius: 6px;
+  padding: 0.22rem 0.5rem; text-decoration: none; cursor: pointer;
+  transition: color .15s, border-color .15s, background .15s; }
+.chip-ticker:hover { color: var(--signal); border-color: var(--signal); background: var(--signal-bg, #0d2419); }
+.chip-etf { color: var(--cyan); border-color: var(--cyan); }
+.chip-etf:hover { color: var(--cyan); border-color: var(--cyan); }
+.rd-empty { font-size: 0.78rem; color: var(--ink-faint); }
 .rank-id { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
 .rank-name { font-size: 0.95rem; color: var(--ink); white-space: nowrap; overflow: hidden;
   text-overflow: ellipsis; }
@@ -213,7 +234,8 @@ main, .topbar, .foot { position: relative; z-index: 2; }
 /* ── responsive ───────────────────────────────────────────────── */
 @media (max-width: 720px) {
   .books { grid-template-columns: 1fr; }
-  .rank-row { grid-template-columns: minmax(110px, 1.3fr) 1fr 64px; gap: 0.6rem; }
+  .rank-row { grid-template-columns: 12px minmax(96px, 1.3fr) 1fr 64px; gap: 0.6rem; }
+  .rank-detail, .rank-item.open .rank-detail { padding-left: 1rem; padding-right: 1rem; }
   .rank-meta .group-label { display: none; }
   .topnav .navlink { display: none; }
 }
@@ -223,7 +245,7 @@ main, .topbar, .foot { position: relative; z-index: 2; }
 @media (max-width: 420px) {
   .stat-strip { gap: 1.1rem 1.4rem; }
   .stat-strip dd { font-size: 1.15rem; }
-  .rank-row { grid-template-columns: 1.4fr 1fr 56px; }
+  .rank-row { grid-template-columns: 12px 1.4fr 1fr 56px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

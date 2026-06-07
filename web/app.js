@@ -18,6 +18,17 @@
     if (html !== undefined) n.innerHTML = html;
     return n;
   }
+  // a clickable ticker chip -> opens that company's chart (its own trend)
+  function chip(sym, label, cls) {
+    var a = document.createElement("a");
+    a.className = "chip-ticker" + (cls ? " " + cls : "");
+    a.textContent = label || sym;
+    a.href = "https://finance.yahoo.com/quote/" + encodeURIComponent(sym);
+    a.target = "_blank"; a.rel = "noopener";
+    a.title = "Open " + sym + " chart on Yahoo Finance";
+    a.addEventListener("click", function (e) { e.stopPropagation(); });
+    return a;
+  }
   function tierRows() { return DATA.tiers[state.tier].rows; }
 
   // ── hero: stamp, stats, editorial regime line ───────────────
@@ -114,7 +125,27 @@
       val.appendChild(el("div", "rank-slope", "slope " + pct(r.slope)));
       row.appendChild(val);
 
-      box.appendChild(row);
+      // category drill-down: click a theme to reveal the companies inside it
+      var item = el("div", "rank-item");
+      function toggle() { item.classList.toggle("open"); }
+      row.setAttribute("role", "button");
+      row.setAttribute("tabindex", "0");
+      row.setAttribute("aria-expanded", "false");
+      row.addEventListener("click", toggle);
+      row.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+      });
+
+      var detail = el("div", "rank-detail");
+      var holdings = (r.tickers || []).slice();
+      detail.appendChild(el("span", "rd-label", "Companies in " + r.label + ":"));
+      if (r.etf) detail.appendChild(chip(r.etf, r.etf + " · ETF", "chip-etf"));
+      holdings.forEach(function (t) { detail.appendChild(chip(t)); });
+      if (!holdings.length && !r.etf) detail.appendChild(el("span", "rd-empty", "no constituents listed"));
+
+      item.appendChild(row);
+      item.appendChild(detail);
+      box.appendChild(item);
     });
   }
 

@@ -36,6 +36,8 @@ WEB_DIR = Path(__file__).resolve().parents[1] / "web"
 TIERS = {"slow": SLOW, "fast": FAST}
 RANK_FRAC = 0.15
 GROUP_BY_KEY = {t.key: t.group for t in ALL_THEMES}
+TICKERS_BY_KEY = {t.key: list(t.tickers) for t in ALL_THEMES}
+ETF_BY_KEY = {t.key: t.etf for t in ALL_THEMES}
 
 
 def _round(x, n=4):
@@ -60,6 +62,8 @@ def _tier_payload(cfg, frames, bench_ret) -> dict:
             "rel": _round(h.market_level),
             "slope": _round(h.market_slope),
             "breadth": _round(h.components.breadth),
+            "tickers": TICKERS_BY_KEY.get(h.key, []),
+            "etf": ETF_BY_KEY.get(h.key),
         }
         for h in ranked
     ]

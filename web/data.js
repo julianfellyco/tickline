@@ -1,6 +1,6 @@
 window.TICKLINE_DATA = {
   "as_of": "2026-06-05",
-  "generated": "2026-06-06 05:48Z",
+  "generated": "2026-06-07 08:09Z",
   "benchmark": "SPY",
   "n_symbols": 154,
   "groups": [
@@ -22,7 +22,13 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 1.2002,
           "slope": 0.4451,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "MU",
+            "WDC",
+            "STX"
+          ],
+          "etf": null
         },
         {
           "key": "custom_silicon",
@@ -31,7 +37,14 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 1.0175,
           "slope": 0.2289,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "AVGO",
+            "MRVL",
+            "ALAB",
+            "CRDO"
+          ],
+          "etf": null
         },
         {
           "key": "neoclouds",
@@ -40,7 +53,14 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.6533,
           "slope": 0.0828,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "CRWV",
+            "NBIS",
+            "APLD",
+            "IREN"
+          ],
+          "etf": null
         },
         {
           "key": "bitcoin_miners",
@@ -49,7 +69,14 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.6079,
           "slope": 0.0527,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "MARA",
+            "RIOT",
+            "CLSK",
+            "WULF"
+          ],
+          "etf": "WGMI"
         },
         {
           "key": "compute_gpu",
@@ -58,7 +85,12 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.5974,
           "slope": 0.0457,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "NVDA",
+            "AMD"
+          ],
+          "etf": null
         },
         {
           "key": "foundry",
@@ -67,7 +99,13 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.5968,
           "slope": -0.0971,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "TSM",
+            "INTC",
+            "GFS"
+          ],
+          "etf": null
         },
         {
           "key": "space",
@@ -76,7 +114,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.5238,
           "slope": -0.1326,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "RKLB",
+            "LUNR",
+            "ASTS",
+            "RDW"
+          ],
+          "etf": "UFO"
         },
         {
           "key": "semis_broad",
@@ -85,7 +130,16 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.5137,
           "slope": 0.1054,
-          "breadth": 0.8333
+          "breadth": 0.8333,
+          "tickers": [
+            "NVDA",
+            "AVGO",
+            "AMD",
+            "TSM",
+            "MU",
+            "QCOM"
+          ],
+          "etf": "SMH"
         },
         {
           "key": "networking_optical",
@@ -94,7 +148,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.3489,
           "slope": -0.0132,
-          "breadth": 0.4
+          "breadth": 0.4,
+          "tickers": [
+            "AVGO",
+            "ANET",
+            "COHR",
+            "LITE",
+            "CIEN"
+          ],
+          "etf": null
         },
         {
           "key": "steel_metals",
@@ -103,7 +165,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.3267,
           "slope": 0.2495,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "NUE",
+            "STLD",
+            "CLF",
+            "RS"
+          ],
+          "etf": "SLX"
         },
         {
           "key": "semicap",
@@ -112,7 +181,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.3097,
           "slope": 0.2139,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "AMAT",
+            "LRCX",
+            "KLAC",
+            "ASML"
+          ],
+          "etf": null
         },
         {
           "key": "cybersecurity",
@@ -121,7 +197,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.2976,
           "slope": -0.1238,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "CRWD",
+            "PANW",
+            "ZS",
+            "FTNT"
+          ],
+          "etf": "CIBR"
         },
         {
           "key": "cooling_thermal",
@@ -130,7 +213,12 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.2916,
           "slope": -0.0003,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "VRT",
+            "NVT"
+          ],
+          "etf": null
         },
         {
           "key": "solar_clean",
@@ -139,7 +227,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.2639,
           "slope": 0.308,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "FSLR",
+            "ENPH",
+            "RUN",
+            "NXT"
+          ],
+          "etf": "TAN"
         },
         {
           "key": "quantum",
@@ -148,7 +243,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.2629,
           "slope": -0.1947,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "IONQ",
+            "RGTI",
+            "QBTS",
+            "QUBT"
+          ],
+          "etf": null
         },
         {
           "key": "industrials_infra",
@@ -157,7 +259,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.119,
           "slope": 0.1426,
-          "breadth": 0.8
+          "breadth": 0.8,
+          "tickers": [
+            "CAT",
+            "DE",
+            "PWR",
+            "URI",
+            "ETN"
+          ],
+          "etf": "XLI"
         },
         {
           "key": "obesity_glp1",
@@ -166,7 +276,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.1137,
           "slope": 0.0368,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "LLY",
+            "NVO",
+            "VKTX",
+            "HIMS"
+          ],
+          "etf": null
         },
         {
           "key": "big_banks",
@@ -175,7 +292,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.062,
           "slope": 0.1357,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "JPM",
+            "BAC",
+            "WFC",
+            "GS",
+            "MS"
+          ],
+          "etf": "XLF"
         },
         {
           "key": "datacenter_reit",
@@ -184,7 +309,12 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0133,
           "slope": -0.0508,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "EQIX",
+            "DLR"
+          ],
+          "etf": null
         },
         {
           "key": "power_grid",
@@ -193,7 +323,16 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0133,
           "slope": 0.0147,
-          "breadth": 0.1667
+          "breadth": 0.1667,
+          "tickers": [
+            "VST",
+            "CEG",
+            "GEV",
+            "NRG",
+            "ETN",
+            "POWL"
+          ],
+          "etf": null
         },
         {
           "key": "hyperscalers",
@@ -202,7 +341,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0162,
           "slope": -0.0571,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "MSFT",
+            "GOOGL",
+            "AMZN",
+            "META"
+          ],
+          "etf": null
         },
         {
           "key": "copper",
@@ -211,7 +357,13 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0201,
           "slope": 0.0782,
-          "breadth": 0.6667
+          "breadth": 0.6667,
+          "tickers": [
+            "FCX",
+            "SCCO",
+            "TECK"
+          ],
+          "etf": "COPX"
         },
         {
           "key": "ai_software",
@@ -220,7 +372,13 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0707,
           "slope": 0.0202,
-          "breadth": 0.6667
+          "breadth": 0.6667,
+          "tickers": [
+            "PLTR",
+            "NOW",
+            "SNOW"
+          ],
+          "etf": "IGV"
         },
         {
           "key": "oil_gas",
@@ -229,7 +387,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0759,
           "slope": -0.0959,
-          "breadth": 0.2
+          "breadth": 0.2,
+          "tickers": [
+            "XOM",
+            "CVX",
+            "COP",
+            "EOG",
+            "OXY"
+          ],
+          "etf": "XLE"
         },
         {
           "key": "fintech_payments",
@@ -238,7 +404,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0808,
           "slope": -0.0947,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "V",
+            "MA",
+            "PYPL",
+            "AFRM"
+          ],
+          "etf": null
         },
         {
           "key": "pharma",
@@ -247,7 +420,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0976,
           "slope": 0.0131,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "JNJ",
+            "MRK",
+            "PFE",
+            "ABBV"
+          ],
+          "etf": null
         },
         {
           "key": "nuclear_smr",
@@ -256,7 +436,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1468,
           "slope": -0.0172,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "OKLO",
+            "SMR",
+            "NNE",
+            "LEU"
+          ],
+          "etf": null
         },
         {
           "key": "rare_earth",
@@ -265,7 +452,13 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1717,
           "slope": -0.1602,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "MP",
+            "TMC",
+            "UAMY"
+          ],
+          "etf": "REMX"
         },
         {
           "key": "homebuilders",
@@ -274,7 +467,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1719,
           "slope": 0.0882,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "DHI",
+            "LEN",
+            "PHM",
+            "NVR"
+          ],
+          "etf": "XHB"
         },
         {
           "key": "biotech",
@@ -283,7 +483,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1765,
           "slope": 0.0013,
-          "breadth": 0.25
+          "breadth": 0.25,
+          "tickers": [
+            "VRTX",
+            "REGN",
+            "MRNA",
+            "ALNY"
+          ],
+          "etf": "XBI"
         },
         {
           "key": "crypto_equities",
@@ -292,7 +499,13 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1835,
           "slope": -0.2363,
-          "breadth": 0.3333
+          "breadth": 0.3333,
+          "tickers": [
+            "COIN",
+            "MSTR",
+            "HOOD"
+          ],
+          "etf": null
         },
         {
           "key": "robotics_physical",
@@ -301,7 +514,12 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.1896,
           "slope": -0.0894,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "TSLA",
+            "SERV"
+          ],
+          "etf": null
         },
         {
           "key": "natgas_lng",
@@ -310,7 +528,14 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.1989,
           "slope": -0.1158,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "LNG",
+            "EQT",
+            "AR",
+            "EXE"
+          ],
+          "etf": null
         },
         {
           "key": "uranium",
@@ -319,7 +544,14 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.212,
           "slope": 0.0367,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "CCJ",
+            "UEC",
+            "UUUU",
+            "DNN"
+          ],
+          "etf": "URA"
         },
         {
           "key": "defense",
@@ -328,7 +560,15 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.2665,
           "slope": -0.0365,
-          "breadth": 0.2
+          "breadth": 0.2,
+          "tickers": [
+            "LMT",
+            "RTX",
+            "NOC",
+            "GD",
+            "LHX"
+          ],
+          "etf": "ITA"
         },
         {
           "key": "gold_miners",
@@ -337,7 +577,14 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.307,
           "slope": -0.0372,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "NEM",
+            "AEM",
+            "GOLD",
+            "WPM"
+          ],
+          "etf": "GDX"
         },
         {
           "key": "silver_miners",
@@ -346,7 +593,13 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.3716,
           "slope": -0.057,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "PAAS",
+            "AG",
+            "HL"
+          ],
+          "etf": "SIL"
         }
       ],
       "leaders": [
@@ -376,7 +629,14 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.4124,
           "slope": -0.5432,
-          "breadth": 0.25
+          "breadth": 0.25,
+          "tickers": [
+            "RKLB",
+            "LUNR",
+            "ASTS",
+            "RDW"
+          ],
+          "etf": "UFO"
         },
         {
           "key": "cybersecurity",
@@ -385,7 +645,14 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.3536,
           "slope": -0.0313,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "CRWD",
+            "PANW",
+            "ZS",
+            "FTNT"
+          ],
+          "etf": "CIBR"
         },
         {
           "key": "ai_software",
@@ -394,7 +661,13 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.3053,
           "slope": -0.068,
-          "breadth": 0.6667
+          "breadth": 0.6667,
+          "tickers": [
+            "PLTR",
+            "NOW",
+            "SNOW"
+          ],
+          "etf": "IGV"
         },
         {
           "key": "custom_silicon",
@@ -403,7 +676,14 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.2316,
           "slope": -0.0759,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "AVGO",
+            "MRVL",
+            "ALAB",
+            "CRDO"
+          ],
+          "etf": null
         },
         {
           "key": "solar_clean",
@@ -412,7 +692,14 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.2283,
           "slope": -0.3428,
-          "breadth": 0.25
+          "breadth": 0.25,
+          "tickers": [
+            "FSLR",
+            "ENPH",
+            "RUN",
+            "NXT"
+          ],
+          "etf": "TAN"
         },
         {
           "key": "memory_hbm",
@@ -421,7 +708,13 @@ window.TICKLINE_DATA = {
           "signal": "leader",
           "rel": 0.1408,
           "slope": -0.2935,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "MU",
+            "WDC",
+            "STX"
+          ],
+          "etf": null
         },
         {
           "key": "steel_metals",
@@ -430,7 +723,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.1109,
           "slope": 0.0077,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "NUE",
+            "STLD",
+            "CLF",
+            "RS"
+          ],
+          "etf": "SLX"
         },
         {
           "key": "semis_broad",
@@ -439,7 +739,16 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0709,
           "slope": -0.2126,
-          "breadth": 0.3333
+          "breadth": 0.3333,
+          "tickers": [
+            "NVDA",
+            "AVGO",
+            "AMD",
+            "TSM",
+            "MU",
+            "QCOM"
+          ],
+          "etf": "SMH"
         },
         {
           "key": "pharma",
@@ -448,7 +757,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0479,
           "slope": 0.0735,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "JNJ",
+            "MRK",
+            "PFE",
+            "ABBV"
+          ],
+          "etf": null
         },
         {
           "key": "semicap",
@@ -457,7 +773,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0475,
           "slope": -0.0573,
-          "breadth": 0.75
+          "breadth": 0.75,
+          "tickers": [
+            "AMAT",
+            "LRCX",
+            "KLAC",
+            "ASML"
+          ],
+          "etf": null
         },
         {
           "key": "compute_gpu",
@@ -466,7 +789,12 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0468,
           "slope": -0.142,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "NVDA",
+            "AMD"
+          ],
+          "etf": null
         },
         {
           "key": "big_banks",
@@ -475,7 +803,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0422,
           "slope": 0.0771,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "JPM",
+            "BAC",
+            "WFC",
+            "GS",
+            "MS"
+          ],
+          "etf": "XLF"
         },
         {
           "key": "quantum",
@@ -484,7 +820,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0207,
           "slope": -0.528,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "IONQ",
+            "RGTI",
+            "QBTS",
+            "QUBT"
+          ],
+          "etf": null
         },
         {
           "key": "oil_gas",
@@ -493,7 +836,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0121,
           "slope": 0.1371,
-          "breadth": 0.4
+          "breadth": 0.4,
+          "tickers": [
+            "XOM",
+            "CVX",
+            "COP",
+            "EOG",
+            "OXY"
+          ],
+          "etf": "XLE"
         },
         {
           "key": "defense",
@@ -502,7 +853,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": 0.0053,
           "slope": 0.0535,
-          "breadth": 0.8
+          "breadth": 0.8,
+          "tickers": [
+            "LMT",
+            "RTX",
+            "NOC",
+            "GD",
+            "LHX"
+          ],
+          "etf": "ITA"
         },
         {
           "key": "bitcoin_miners",
@@ -511,7 +870,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0035,
           "slope": -0.4193,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "MARA",
+            "RIOT",
+            "CLSK",
+            "WULF"
+          ],
+          "etf": "WGMI"
         },
         {
           "key": "copper",
@@ -520,7 +886,13 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0079,
           "slope": -0.1071,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "FCX",
+            "SCCO",
+            "TECK"
+          ],
+          "etf": "COPX"
         },
         {
           "key": "homebuilders",
@@ -529,7 +901,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0103,
           "slope": 0.0656,
-          "breadth": 1.0
+          "breadth": 1.0,
+          "tickers": [
+            "DHI",
+            "LEN",
+            "PHM",
+            "NVR"
+          ],
+          "etf": "XHB"
         },
         {
           "key": "obesity_glp1",
@@ -538,7 +917,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0163,
           "slope": -0.0738,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "LLY",
+            "NVO",
+            "VKTX",
+            "HIMS"
+          ],
+          "etf": null
         },
         {
           "key": "industrials_infra",
@@ -547,7 +933,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0257,
           "slope": -0.0056,
-          "breadth": 0.6
+          "breadth": 0.6,
+          "tickers": [
+            "CAT",
+            "DE",
+            "PWR",
+            "URI",
+            "ETN"
+          ],
+          "etf": "XLI"
         },
         {
           "key": "biotech",
@@ -556,7 +950,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0273,
           "slope": 0.0365,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "VRTX",
+            "REGN",
+            "MRNA",
+            "ALNY"
+          ],
+          "etf": "XBI"
         },
         {
           "key": "foundry",
@@ -565,7 +966,13 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.028,
           "slope": -0.1568,
-          "breadth": 0.3333
+          "breadth": 0.3333,
+          "tickers": [
+            "TSM",
+            "INTC",
+            "GFS"
+          ],
+          "etf": null
         },
         {
           "key": "fintech_payments",
@@ -574,7 +981,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0331,
           "slope": 0.0435,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "V",
+            "MA",
+            "PYPL",
+            "AFRM"
+          ],
+          "etf": null
         },
         {
           "key": "networking_optical",
@@ -583,7 +997,15 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0358,
           "slope": -0.069,
-          "breadth": 0.2
+          "breadth": 0.2,
+          "tickers": [
+            "AVGO",
+            "ANET",
+            "COHR",
+            "LITE",
+            "CIEN"
+          ],
+          "etf": null
         },
         {
           "key": "datacenter_reit",
@@ -592,7 +1014,12 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0384,
           "slope": 0.0434,
-          "breadth": 0.5
+          "breadth": 0.5,
+          "tickers": [
+            "EQIX",
+            "DLR"
+          ],
+          "etf": null
         },
         {
           "key": "hyperscalers",
@@ -601,7 +1028,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0545,
           "slope": -0.0249,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "MSFT",
+            "GOOGL",
+            "AMZN",
+            "META"
+          ],
+          "etf": null
         },
         {
           "key": "natgas_lng",
@@ -610,7 +1044,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0607,
           "slope": 0.1019,
-          "breadth": 0.25
+          "breadth": 0.25,
+          "tickers": [
+            "LNG",
+            "EQT",
+            "AR",
+            "EXE"
+          ],
+          "etf": null
         },
         {
           "key": "neoclouds",
@@ -619,7 +1060,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.0811,
           "slope": -0.3986,
-          "breadth": 0.25
+          "breadth": 0.25,
+          "tickers": [
+            "CRWV",
+            "NBIS",
+            "APLD",
+            "IREN"
+          ],
+          "etf": null
         },
         {
           "key": "robotics_physical",
@@ -628,7 +1076,12 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1097,
           "slope": -0.153,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "TSLA",
+            "SERV"
+          ],
+          "etf": null
         },
         {
           "key": "cooling_thermal",
@@ -637,7 +1090,12 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1145,
           "slope": -0.1745,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "VRT",
+            "NVT"
+          ],
+          "etf": null
         },
         {
           "key": "gold_miners",
@@ -646,7 +1104,14 @@ window.TICKLINE_DATA = {
           "signal": "neutral",
           "rel": -0.1231,
           "slope": -0.0676,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "NEM",
+            "AEM",
+            "GOLD",
+            "WPM"
+          ],
+          "etf": "GDX"
         },
         {
           "key": "power_grid",
@@ -655,7 +1120,16 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.1282,
           "slope": -0.0544,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "VST",
+            "CEG",
+            "GEV",
+            "NRG",
+            "ETN",
+            "POWL"
+          ],
+          "etf": null
         },
         {
           "key": "silver_miners",
@@ -664,7 +1138,13 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.184,
           "slope": -0.2032,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "PAAS",
+            "AG",
+            "HL"
+          ],
+          "etf": "SIL"
         },
         {
           "key": "crypto_equities",
@@ -673,7 +1153,13 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.1986,
           "slope": -0.255,
-          "breadth": 0.3333
+          "breadth": 0.3333,
+          "tickers": [
+            "COIN",
+            "MSTR",
+            "HOOD"
+          ],
+          "etf": null
         },
         {
           "key": "uranium",
@@ -682,7 +1168,14 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.2409,
           "slope": -0.1578,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "CCJ",
+            "UEC",
+            "UUUU",
+            "DNN"
+          ],
+          "etf": "URA"
         },
         {
           "key": "nuclear_smr",
@@ -691,7 +1184,14 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.2486,
           "slope": -0.2816,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "OKLO",
+            "SMR",
+            "NNE",
+            "LEU"
+          ],
+          "etf": null
         },
         {
           "key": "rare_earth",
@@ -700,7 +1200,13 @@ window.TICKLINE_DATA = {
           "signal": "laggard",
           "rel": -0.2541,
           "slope": -0.2539,
-          "breadth": 0.0
+          "breadth": 0.0,
+          "tickers": [
+            "MP",
+            "TMC",
+            "UAMY"
+          ],
+          "etf": "REMX"
         }
       ],
       "leaders": [
