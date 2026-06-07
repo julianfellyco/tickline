@@ -58,27 +58,32 @@ THEMES = [
 
 # The companies screened into each category (comprehensive major US names).
 STOCKS = {
-    "SMH":  ["NVDA", "AVGO", "AMD", "TSM", "MU", "QCOM", "TXN", "AMAT", "LRCX",
-             "KLAC", "ADI", "MRVL", "MCHP", "NXPI", "ON", "SMCI"],
-    "IGV":  ["MSFT", "CRM", "NOW", "PLTR", "SNOW", "ORCL", "ADBE", "INTU",
-             "PANW", "CRWD", "DDOG", "TEAM", "WDAY", "NET"],
-    "QQQ":  ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "AVGO", "TSLA",
-             "NFLX", "COST", "PEP", "ADBE"],
-    "CIBR": ["CRWD", "PANW", "ZS", "FTNT", "NET", "S", "OKTA", "CYBR", "TENB", "QLYS"],
-    "BOTZ": ["NVDA", "ISRG", "TSLA", "PATH", "TER", "ROK", "EMR", "ZBRA", "IRBT", "SERV"],
-    "IBIT": ["COIN", "MSTR", "MARA", "RIOT", "HOOD", "CLSK", "WULF", "CIFR", "BITF", "HUT"],
-    "URA":  ["CCJ", "OKLO", "SMR", "LEU", "UEC", "UUUU", "DNN", "NNE", "NXE", "BWXT"],
-    "TAN":  ["FSLR", "ENPH", "RUN", "NXT", "SEDG", "ARRY", "SHLS", "CSIQ", "JKS", "MAXN"],
-    "XLE":  ["XOM", "CVX", "COP", "EOG", "SLB", "MPC", "PSX", "OXY", "WMB", "KMI", "HAL", "DVN"],
-    "GDX":  ["NEM", "AEM", "GOLD", "WPM", "FNV", "KGC", "AU", "GFI", "RGLD", "AGI", "BTG"],
-    "SIL":  ["PAAS", "AG", "HL", "WPM", "FNV", "CDE", "SVM", "EXK", "MAG", "FSM"],
-    "COPX": ["FCX", "SCCO", "TECK", "BHP", "RIO", "VALE", "ERO", "HBM", "TGB"],
-    "ITA":  ["LMT", "RTX", "NOC", "GD", "BA", "LHX", "HII", "TXT", "LDOS", "HWM", "AXON", "KTOS"],
-    "UFO":  ["RKLB", "LUNR", "ASTS", "RDW", "PL", "BKSY", "SPCE", "ASTR"],
-    "XBI":  ["VRTX", "REGN", "MRNA", "GILD", "AMGN", "BIIB", "ALNY", "INCY", "NBIX", "SRPT"],
-    "XLF":  ["JPM", "BAC", "WFC", "GS", "MS", "C", "USB", "PNC", "TFC", "SCHW", "AXP"],
-    "XHB":  ["DHI", "LEN", "PHM", "NVR", "TOL", "KBH", "MTH", "TPH", "BLDR", "BLD"],
-    "XLU":  ["NEE", "SO", "DUK", "CEG", "VST", "AEP", "D", "EXC", "SRE", "XEL", "ED", "PEG"],
+    "SMH":  ["NVDA", "AVGO", "AMD", "TSM", "MU", "QCOM", "TXN", "AMAT", "LRCX", "KLAC",
+             "ADI", "MRVL", "MCHP", "NXPI", "ON", "SMCI", "ASML", "ARM", "ALAB", "CRDO", "ENTG", "MPWR"],
+    "IGV":  ["MSFT", "CRM", "NOW", "PLTR", "SNOW", "ORCL", "ADBE", "INTU", "PANW", "CRWD",
+             "DDOG", "TEAM", "WDAY", "NET", "SHOP", "HUBS", "MDB", "APP"],
+    "QQQ":  ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "AVGO", "TSLA", "NFLX", "COST",
+             "PEP", "CSCO", "AMD", "INTC", "QCOM", "TXN", "AMAT", "ADBE"],
+    "CIBR": ["CRWD", "PANW", "ZS", "FTNT", "NET", "S", "OKTA", "CYBR", "TENB", "QLYS",
+             "RPD", "VRNS", "GEN", "AKAM"],
+    "BOTZ": ["NVDA", "ISRG", "TSLA", "PATH", "TER", "ROK", "EMR", "ZBRA", "IRBT", "SERV", "NDSN"],
+    "IBIT": ["COIN", "MSTR", "MARA", "RIOT", "HOOD", "CLSK", "WULF", "CIFR", "BITF", "HUT",
+             "IREN", "CORZ"],
+    "URA":  ["CCJ", "OKLO", "SMR", "LEU", "UEC", "UUUU", "DNN", "NNE", "NXE", "BWXT", "GEV"],
+    "TAN":  ["FSLR", "ENPH", "RUN", "NXT", "SEDG", "ARRY", "SHLS", "CSIQ", "JKS", "MAXN", "NOVA"],
+    "XLE":  ["XOM", "CVX", "COP", "EOG", "SLB", "MPC", "PSX", "OXY", "WMB", "KMI", "HAL",
+             "DVN", "FANG", "HES", "BKR", "OKE"],
+    "GDX":  ["NEM", "AEM", "GOLD", "WPM", "FNV", "KGC", "AU", "GFI", "RGLD", "AGI", "BTG", "HMY", "OR"],
+    "SIL":  ["PAAS", "AG", "HL", "WPM", "FNV", "CDE", "SVM", "EXK", "MAG", "FSM", "SILV", "GATO"],
+    "COPX": ["FCX", "SCCO", "TECK", "BHP", "RIO", "VALE", "ERO", "HBM", "TGB", "IVN"],
+    "ITA":  ["LMT", "RTX", "NOC", "GD", "BA", "LHX", "HII", "TXT", "LDOS", "HWM", "AXON",
+             "KTOS", "TDG", "HEI"],
+    "UFO":  ["RKLB", "LUNR", "ASTS", "RDW", "PL", "BKSY", "SPCE", "ASTR", "VSAT"],
+    "XBI":  ["VRTX", "REGN", "MRNA", "GILD", "AMGN", "BIIB", "ALNY", "INCY", "NBIX", "SRPT",
+             "EXAS", "NTLA", "BNTX", "ARGX"],
+    "XLF":  ["JPM", "BAC", "WFC", "GS", "MS", "C", "USB", "PNC", "TFC", "SCHW", "AXP", "COF", "BK"],
+    "XHB":  ["DHI", "LEN", "PHM", "NVR", "TOL", "KBH", "MTH", "TPH", "BLDR", "BLD", "MAS", "SHW"],
+    "XLU":  ["NEE", "SO", "DUK", "CEG", "VST", "AEP", "D", "EXC", "SRE", "XEL", "ED", "PEG", "ETR", "WEC"],
 }
 
 VERDICTS = {
@@ -98,6 +103,30 @@ def _ret(close: pd.Series, bars: int):
     if len(close) <= bars:
         return None
     return float(close.iloc[-1] / close.iloc[-1 - bars] - 1.0)
+
+
+def _batch_frames(tickers: list, days: int = 320) -> dict:
+    """Fast batch price download (close-only) for many tickers in one call.
+
+    yfinance bulk-downloads far quicker than fetching each ticker on its
+    own, which is what makes a broader universe practical.
+    """
+    import yfinance as yf
+
+    raw = yf.download(tickers, period=f"{days}d", interval="1d", auto_adjust=True,
+                      group_by="ticker", progress=False, threads=True)
+    out = {}
+    multi = len(tickers) > 1
+    for t in tickers:
+        try:
+            sub = raw[t] if multi else raw
+            close = sub["Close"].dropna()
+            if len(close) < 40:
+                continue
+            out[t] = close.rename("close").to_frame()
+        except Exception:
+            continue
+    return out
 
 
 def _news_last7(query: str, session) -> int:
@@ -287,8 +316,8 @@ def main() -> int:
 
     # per-company trend for the drill-down dots
     all_stocks = sorted({s for syms in STOCKS.values() for s in syms})
-    print(f">> fetching {len(all_stocks)} companies for drill-down…")
-    stock_frames = fetch_many(all_stocks, days=320, use_cache=use_cache)
+    print(f">> batch-fetching {len(all_stocks)} companies…")
+    stock_frames = _batch_frames(all_stocks, days=320)
     valid = {s: df for s, df in stock_frames.items()
              if df is not None and not df.empty and len(df) >= 120}
     stock_info = {sym: _stock_trend(df) for sym, df in valid.items()}

@@ -1,8 +1,8 @@
 window.SIMPLE_DATA = {
   "as_of": "2026-06-05",
-  "generated": "2026-06-07 09:47Z",
+  "generated": "2026-06-07 22:47Z",
   "benchmark": "SPY",
-  "buzz_median": 35,
+  "buzz_median": 31,
   "stock_info": {
     "AAPL": {
       "trend": "up",
@@ -39,6 +39,16 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.287
     },
+    "AKAM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.495
+    },
+    "ALAB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.66
+    },
     "ALNY": {
       "trend": "down",
       "above_ma": false,
@@ -64,10 +74,30 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.154
     },
+    "APP": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.11
+    },
+    "ARGX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.242
+    },
+    "ARM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.998
+    },
     "ARRY": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": 0.188
+    },
+    "ASML": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.273
     },
     "ASTS": {
       "trend": "up",
@@ -114,6 +144,16 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.057
     },
+    "BK": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.241
+    },
+    "BKR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.05
+    },
     "BKSY": {
       "trend": "up",
       "above_ma": true,
@@ -128,6 +168,11 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.209
+    },
+    "BNTX": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.132
     },
     "BTG": {
       "trend": "down",
@@ -169,6 +214,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.693
     },
+    "COF": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.033
+    },
     "COIN": {
       "trend": "down",
       "above_ma": false,
@@ -179,10 +229,20 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.008
     },
+    "CORZ": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.74
+    },
     "COST": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.025
+    },
+    "CRDO": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.884
     },
     "CRM": {
       "trend": "down",
@@ -193,6 +253,11 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.564
+    },
+    "CSCO": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.555
     },
     "CSIQ": {
       "trend": "down",
@@ -249,6 +314,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.394
     },
+    "ENTG": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.116
+    },
     "EOG": {
       "trend": "up",
       "above_ma": true,
@@ -259,6 +329,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": -0.071
     },
+    "ETR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.063
+    },
     "EXC": {
       "trend": "up",
       "above_ma": true,
@@ -268,6 +343,11 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.284
+    },
+    "FANG": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.073
     },
     "FCX": {
       "trend": "up",
@@ -298,6 +378,16 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.042
+    },
+    "GEN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.169
+    },
+    "GEV": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.184
     },
     "GFI": {
       "trend": "down",
@@ -334,6 +424,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.152
     },
+    "HEI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.091
+    },
     "HII": {
       "trend": "down",
       "above_ma": false,
@@ -344,10 +439,20 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.275
     },
+    "HMY": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.183
+    },
     "HOOD": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": 0.07
+    },
+    "HUBS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.283
     },
     "HUT": {
       "trend": "up",
@@ -364,10 +469,20 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.067
     },
+    "INTC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.284
+    },
     "INTU": {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.381
+    },
+    "IREN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.481
     },
     "ISRG": {
       "trend": "down",
@@ -449,6 +564,11 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": 0.538
     },
+    "MAS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.096
+    },
     "MAXN": {
       "trend": "down",
       "above_ma": false,
@@ -459,6 +579,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.371
     },
+    "MDB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.297
+    },
     "META": {
       "trend": "down",
       "above_ma": false,
@@ -468,6 +593,11 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.189
+    },
+    "MPWR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.45
     },
     "MRNA": {
       "trend": "up",
@@ -509,6 +639,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.279
     },
+    "NDSN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.039
+    },
     "NEE": {
       "trend": "up",
       "above_ma": true,
@@ -544,6 +679,11 @@ window.SIMPLE_DATA = {
       "above_ma": false,
       "ret3mo": -0.096
     },
+    "NTLA": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.007
+    },
     "NVDA": {
       "trend": "up",
       "above_ma": true,
@@ -569,6 +709,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.297
     },
+    "OKE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.027
+    },
     "OKLO": {
       "trend": "down",
       "above_ma": false,
@@ -583,6 +728,11 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 1.062
+    },
+    "OR": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.213
     },
     "ORCL": {
       "trend": "up",
@@ -689,6 +839,11 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.212
     },
+    "RPD": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.062
+    },
     "RTX": {
       "trend": "up",
       "above_ma": true,
@@ -728,6 +883,16 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": 0.893
+    },
+    "SHOP": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.159
+    },
+    "SHW": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.072
     },
     "SLB": {
       "trend": "up",
@@ -773,6 +938,11 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.1
+    },
+    "TDG": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.043
     },
     "TEAM": {
       "trend": "down",
@@ -854,10 +1024,20 @@ window.SIMPLE_DATA = {
       "above_ma": true,
       "ret3mo": 0.017
     },
+    "VRNS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.34
+    },
     "VRTX": {
       "trend": "up",
       "above_ma": true,
       "ret3mo": -0.022
+    },
+    "VSAT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.534
     },
     "VST": {
       "trend": "down",
@@ -868,6 +1048,11 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "above_ma": false,
       "ret3mo": -0.045
+    },
+    "WEC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.016
     },
     "WFC": {
       "trend": "down",
@@ -930,7 +1115,7 @@ window.SIMPLE_DATA = {
       "employees": 166000,
       "price": 307.34,
       "w52h": 315.2,
-      "w52l": 201.58,
+      "w52l": 194.87,
       "mcap": 4514011676672,
       "pe": 37.16,
       "fpe": 31.99,
@@ -946,7 +1131,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.07,
       "r3m": 0.195,
       "r6m": 0.084,
-      "r1y": null
+      "r1y": 0.521
     },
     "ADBE": {
       "news": [
@@ -970,7 +1155,7 @@ window.SIMPLE_DATA = {
       "summary": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. This segment serves photographers, video editors, graphic and experience designers, game developers, content creators, students,\u2026",
       "employees": 31360,
       "price": 251.44,
-      "w52h": 372.87,
+      "w52h": 416.92,
       "w52l": 225.35,
       "mcap": 101632049152,
       "pe": 14.66,
@@ -987,7 +1172,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.005,
       "r3m": -0.113,
       "r6m": -0.231,
-      "r1y": null
+      "r1y": -0.393
     },
     "ADI": {
       "news": [
@@ -996,7 +1181,7 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Analog Devices Inc. stock outperforms competitors on strong trading day",
+          "title": "Analog Devices Inc. stock outperforms competitors despite losses on the day",
           "source": "MarketWatch"
         },
         {
@@ -1012,7 +1197,7 @@ window.SIMPLE_DATA = {
       "employees": 24500,
       "price": 401.39,
       "w52h": 437.67,
-      "w52l": 217.76,
+      "w52l": 215.15,
       "mcap": 195511877632,
       "pe": 59.91,
       "fpe": 27.17,
@@ -1028,7 +1213,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.032,
       "r3m": 0.274,
       "r6m": 0.456,
-      "r1y": null
+      "r1y": 0.862
     },
     "AEM": {
       "news": [
@@ -1053,7 +1238,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 163.66,
       "w52h": 251.57,
-      "w52l": 121.53,
+      "w52l": 115.04,
       "mcap": 81835933696,
       "pe": 15.41,
       "fpe": 11.29,
@@ -1069,7 +1254,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.136,
       "r3m": -0.258,
       "r6m": -0.029,
-      "r1y": null
+      "r1y": 0.336
     },
     "AEP": {
       "news": [
@@ -1094,7 +1279,7 @@ window.SIMPLE_DATA = {
       "employees": 17581,
       "price": 129.14,
       "w52h": 136.16,
-      "w52l": 104.02,
+      "w52l": 98.09,
       "mcap": 70265724928,
       "pe": 19.13,
       "fpe": 18.84,
@@ -1102,7 +1287,7 @@ window.SIMPLE_DATA = {
       "margin": 0.163,
       "beta": 0.52,
       "divY": 2.94,
-      "tgtMean": 144.52,
+      "tgtMean": 144.33,
       "tgtHigh": 173.0,
       "tgtLow": 129.0,
       "reco": "buy",
@@ -1110,7 +1295,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.019,
       "r3m": -0.014,
       "r6m": 0.111,
-      "r1y": null
+      "r1y": 0.308
     },
     "AG": {
       "news": [
@@ -1143,7 +1328,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.197,
       "r3m": -0.342,
       "r6m": 0.084,
-      "r1y": null
+      "r1y": 1.337
     },
     "AGI": {
       "news": [
@@ -1176,24 +1361,89 @@ window.SIMPLE_DATA = {
       "r1m": -0.154,
       "r3m": -0.287,
       "r6m": -0.007,
-      "r1y": null
+      "r1y": 0.313
     },
-    "ALNY": {
+    "AKAM": {
       "news": [
         {
-          "title": "Alnylam Pharmaceuticals (ALNY): Company Profile, Stock Price, News, Rankings",
-          "source": "Fortune"
+          "title": "Akamai Technologies Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
         },
         {
-          "title": "How Alnylam Stock Weathers Market Shocks",
-          "source": "Forbes"
+          "title": "Akamai Technologies Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
         },
         {
-          "title": "JPM Kicks Off With Alnylam In the Red; But Others Surge",
-          "source": "Investor's Business Daily"
+          "title": "Akamai Technologies Inc. stock underperforms Monday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
         }
       ],
       "news_tone": "positive",
+      "name": "Akamai Technologies, Inc.",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "summary": "Akamai Technologies, Inc. engages in the provision of security, delivery, and cloud computing solutions in the United States and internationally. It offers security solutions that include web application and application programming interfaces (API) protection solutions, which protect web, API, and mobile app traffic from attacks; Bot\u2026",
+      "employees": 11419,
+      "price": 149.32,
+      "w52h": 161.14,
+      "w52l": 70.53,
+      "mcap": 21708957696,
+      "pe": 50.45,
+      "fpe": 20.85,
+      "eps": 2.96,
+      "margin": 0.102,
+      "beta": 0.6,
+      "divY": null,
+      "tgtMean": 159.3,
+      "tgtHigh": 195.0,
+      "tgtLow": 87.0,
+      "reco": "buy",
+      "nAnalysts": 23,
+      "r1m": 0.224,
+      "r3m": 0.495,
+      "r6m": 0.697,
+      "r1y": 0.949
+    },
+    "ALAB": {
+      "news": [
+        {
+          "title": "Here\u2019s why Astera Labs\u2019 stock just staged a big gain",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Astera Labs\u2019 stock climbs as the company strives to make AI chips more powerful",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Astera Labs, Inc.",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "summary": "Astera Labs, Inc. designs, manufactures, and sells semiconductor-based connectivity solutions for cloud and AI infrastructure in Taiwan and the United States. It offers an intelligent connectivity platform, comprised of semiconductor-based, high-speed, mixed-signal connectivity products that integrate a matrix of microcontrollers and\u2026",
+      "employees": 756,
+      "price": 317.06,
+      "w52h": 363.54,
+      "w52l": 85.95,
+      "mcap": 54346600448,
+      "pe": 212.79,
+      "fpe": 75.37,
+      "eps": 1.49,
+      "margin": 0.267,
+      "beta": 3.96,
+      "divY": null,
+      "tgtMean": 244.97,
+      "tgtHigh": 297.0,
+      "tgtLow": 155.0,
+      "reco": "buy",
+      "nAnalysts": 22,
+      "r1m": 0.482,
+      "r3m": 1.66,
+      "r6m": 1.079,
+      "r1y": 2.33
+    },
+    "ALNY": {
+      "news": [],
+      "news_tone": null,
       "name": "Alnylam Pharmaceuticals, Inc.",
       "sector": "Healthcare",
       "industry": "Biotechnology",
@@ -1217,7 +1467,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.0,
       "r3m": -0.055,
       "r6m": -0.36,
-      "r1y": null
+      "r1y": -0.007
     },
     "AMAT": {
       "news": [
@@ -1258,11 +1508,16 @@ window.SIMPLE_DATA = {
       "r1m": 0.058,
       "r3m": 0.397,
       "r6m": 0.691,
-      "r1y": null
+      "r1y": 1.818
     },
     "AMD": {
-      "news": [],
-      "news_tone": null,
+      "news": [
+        {
+          "title": "AMD: Has the Easy Money Already Been Made?",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Advanced Micro Devices, Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -1270,7 +1525,7 @@ window.SIMPLE_DATA = {
       "employees": 31000,
       "price": 466.38,
       "w52h": 542.52,
-      "w52l": 151.14,
+      "w52l": 115.69,
       "mcap": 760479481856,
       "pe": 156.5,
       "fpe": 35.67,
@@ -1286,7 +1541,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.107,
       "r3m": 1.424,
       "r6m": 1.143,
-      "r1y": null
+      "r1y": 2.933
     },
     "AMGN": {
       "news": [
@@ -1311,7 +1566,7 @@ window.SIMPLE_DATA = {
       "employees": 31500,
       "price": 349.58,
       "w52h": 385.25,
-      "w52l": 265.4,
+      "w52l": 264.49,
       "mcap": 188671213568,
       "pe": 24.33,
       "fpe": 14.89,
@@ -1327,7 +1582,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.064,
       "r3m": -0.047,
       "r6m": 0.027,
-      "r1y": null
+      "r1y": 0.255
     },
     "AMZN": {
       "news": [
@@ -1336,12 +1591,12 @@ window.SIMPLE_DATA = {
           "source": "Morningstar"
         },
         {
-          "title": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?",
-          "source": "Morningstar"
-        },
-        {
           "title": "Amazon\u2019s AI Success Sends Stock Racing Toward $3 Trillion Club",
           "source": "Bloomberg.com"
+        },
+        {
+          "title": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
         }
       ],
       "news_tone": "mixed",
@@ -1368,11 +1623,135 @@ window.SIMPLE_DATA = {
       "r1m": -0.105,
       "r3m": 0.154,
       "r6m": 0.059,
-      "r1y": null
+      "r1y": 0.187
+    },
+    "APP": {
+      "news": [
+        {
+          "title": "AppLovin Rival Liftoff Stock Jumps After IPO",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "AppLovin Beats Quarterly Revenue Expectations. The Stock Is Rising.",
+          "source": "Barron's"
+        },
+        {
+          "title": "AppLovin and 6 More Stock Picks by Einhorn and Other Hedge Fund Managers",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Applovin Corporation",
+      "sector": "Communication Services",
+      "industry": "Advertising Agencies",
+      "summary": "AppLovin Corporation provides end-to-end artificial intelligence-powered advertising solutions for businesses in the United States and internationally. It operates through two segments, Advertising and Apps. The company offers Axon Ads Manager, a suite of marketing solutions that enables developers to automate, optimize, and manage\u2026",
+      "employees": 876,
+      "price": 557.2,
+      "w52h": 733.6,
+      "w52l": 324.7,
+      "mcap": 187185512448,
+      "pe": 48.54,
+      "fpe": 25.41,
+      "eps": 11.48,
+      "margin": 0.643,
+      "beta": 2.46,
+      "divY": null,
+      "tgtMean": 648.1,
+      "tgtHigh": 860.0,
+      "tgtLow": 340.0,
+      "reco": "strong_buy",
+      "nAnalysts": 30,
+      "r1m": 0.188,
+      "r3m": 0.11,
+      "r6m": -0.159,
+      "r1y": 0.338
+    },
+    "ARGX": {
+      "news": [
+        {
+          "title": "Argenx Fends Off First-Quarter Seasonality, But Shares Defy Analysts' Bullish Views",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "Argenx Flops, While Its Rivals Jump, On A Vyvgart Setback",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "Why This Top Biotech Just Screamed To A 25-Year High",
+          "source": "Investor's Business Daily"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "argenx SE",
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "summary": "argenx SE, a commercial-stage biopharma company, develops various therapies for the treatment of autoimmune diseases in the United States, Japan, China, the Netherlands, and internationally. The company offers VYVGART for the treatment of gMG and immune thrombocytopenia (ITP), and VYVGART HYTRULO for the treatment of gMG and chronic\u2026",
+      "employees": 1863,
+      "price": 891.32,
+      "w52h": 929.61,
+      "w52l": 537.92,
+      "mcap": 55703015424,
+      "pe": 39.53,
+      "fpe": 24.14,
+      "eps": 22.55,
+      "margin": 0.314,
+      "beta": -0.03,
+      "divY": null,
+      "tgtMean": 1022.01,
+      "tgtHigh": 1279.7,
+      "tgtLow": 684.92,
+      "reco": "strong_buy",
+      "nAnalysts": 22,
+      "r1m": 0.104,
+      "r3m": 0.242,
+      "r6m": -0.033,
+      "r1y": 0.554
+    },
+    "ARM": {
+      "news": [
+        {
+          "title": "Arm\u2019s $218 Billion Leap Makes It One of Market\u2019s Priciest Stocks",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Why Arm Stock Hit A Record High on Nvidia\u2019s Chip Announcement",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
+      "name": "Arm Holdings plc",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "summary": "Arm Holdings plc researches, develops, licenses, and markets central processing unit (CPU) intellectual property (IP), graphics processing unit IP, systems IP, compute subsystems (CSS), and associated software, tools and related services. The company provides a product portfolio, including CPU IP, GPU and neural processing unit (NPU)\u2026",
+      "employees": 9584,
+      "price": 342.93,
+      "w52h": 411.83,
+      "w52l": 104.55,
+      "mcap": 366276247552,
+      "pe": 398.76,
+      "fpe": 112.03,
+      "eps": 0.86,
+      "margin": 0.184,
+      "beta": 3.79,
+      "divY": null,
+      "tgtMean": 247.41,
+      "tgtHigh": 500.0,
+      "tgtLow": 125.0,
+      "reco": "buy",
+      "nAnalysts": 37,
+      "r1m": 0.445,
+      "r3m": 1.998,
+      "r6m": 1.464,
+      "r1y": 1.631
     },
     "ARRY": {
-      "news": [],
-      "news_tone": null,
+      "news": [
+        {
+          "title": "ARRAY Technologies Rings the Nasdaq Stock Market Closing Bell",
+          "source": "Nasdaq"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Array Technologies, Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -1396,7 +1775,44 @@ window.SIMPLE_DATA = {
       "r1m": -0.005,
       "r3m": 0.188,
       "r6m": 0.039,
-      "r1y": null
+      "r1y": 0.159
+    },
+    "ASML": {
+      "news": [
+        {
+          "title": "ASML lifts outlook on record AI chip orders but analysts query capacity",
+          "source": "Reuters"
+        },
+        {
+          "title": "Exclusive look at the creation of High NA, ASML\u2019s new $400 million chipmaking colossus",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "mixed",
+      "name": "ASML Holding N.V. - New York Re",
+      "sector": "Technology",
+      "industry": "Semiconductor Equipment & Materials",
+      "summary": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The company offers lithography, metrology, and inspection systems. It also provides extreme ultraviolet lithography systems; and deep ultraviolet lithography systems\u2026",
+      "employees": 43882,
+      "price": 1641.74,
+      "w52h": 1757.47,
+      "w52l": 686.0,
+      "mcap": 632755585024,
+      "pe": 54.65,
+      "fpe": 34.38,
+      "eps": 30.04,
+      "margin": 0.297,
+      "beta": 1.4,
+      "divY": 0.54,
+      "tgtMean": 1693.68,
+      "tgtHigh": 2250.24,
+      "tgtLow": 890.98,
+      "reco": "strong_buy",
+      "nAnalysts": 15,
+      "r1m": 0.063,
+      "r3m": 0.273,
+      "r6m": 0.444,
+      "r1y": 1.228
     },
     "ASTS": {
       "news": [
@@ -1417,7 +1833,7 @@ window.SIMPLE_DATA = {
       "employees": 1126,
       "price": 93.6,
       "w52h": 133.09,
-      "w52l": 36.91,
+      "w52l": 30.85,
       "mcap": 36328460288,
       "pe": null,
       "fpe": -315.01,
@@ -1433,7 +1849,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.324,
       "r3m": 0.046,
       "r6m": 0.523,
-      "r1y": null
+      "r1y": 2.262
     },
     "AU": {
       "news": [],
@@ -1445,7 +1861,7 @@ window.SIMPLE_DATA = {
       "employees": 38000,
       "price": 84.12,
       "w52h": 124.62,
-      "w52l": 43.83,
+      "w52l": 41.58,
       "mcap": 42533101568,
       "pe": 12.35,
       "fpe": 8.39,
@@ -1461,21 +1877,21 @@ window.SIMPLE_DATA = {
       "r1m": -0.136,
       "r3m": -0.187,
       "r6m": 0.036,
-      "r1y": null
+      "r1y": 0.924
     },
     "AVGO": {
       "news": [
         {
-          "title": "Broadcom suffers $285bn rout as revenue outlook disappoints",
-          "source": "Financial Times"
-        },
-        {
-          "title": "Emerging-Market Stocks Sink as Broadcom Miss Revives AI Concerns",
-          "source": "Bloomberg.com"
+          "title": "Broadcom Earnings: Stock Decline Is an Overreaction to Conservative Guidance",
+          "source": "Morningstar"
         },
         {
           "title": "Why Broadcom\u2019s stock is falling so hard after earnings",
           "source": "MarketWatch"
+        },
+        {
+          "title": "This Chip Stock Made a Comeback After Broadcom Earnings",
+          "source": "WSJ"
         }
       ],
       "news_tone": "negative",
@@ -1486,7 +1902,7 @@ window.SIMPLE_DATA = {
       "employees": 33000,
       "price": 385.73,
       "w52h": 481.57,
-      "w52l": 277.0,
+      "w52l": 242.32,
       "mcap": 1826303639552,
       "pe": 64.07,
       "fpe": 19.96,
@@ -1502,7 +1918,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.093,
       "r3m": 0.17,
       "r6m": 0.018,
-      "r1y": null
+      "r1y": 0.489
     },
     "AXON": {
       "news": [
@@ -1538,12 +1954,12 @@ window.SIMPLE_DATA = {
       "tgtMean": 662.04,
       "tgtHigh": 825.0,
       "tgtLow": 409.68,
-      "reco": "none",
+      "reco": "buy",
       "nAnalysts": 18,
       "r1m": 0.26,
       "r3m": -0.153,
       "r6m": -0.106,
-      "r1y": null
+      "r1y": -0.377
     },
     "AXP": {
       "news": [
@@ -1560,7 +1976,7 @@ window.SIMPLE_DATA = {
       "employees": 76800,
       "price": 310.66,
       "w52h": 382.83,
-      "w52l": 291.35,
+      "w52l": 284.8,
       "mcap": 211971538944,
       "pe": 19.38,
       "fpe": 15.44,
@@ -1576,7 +1992,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.035,
       "r3m": 0.035,
       "r6m": -0.152,
-      "r1y": null
+      "r1y": 0.061
     },
     "BA": {
       "news": [
@@ -1617,7 +2033,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.063,
       "r3m": -0.068,
       "r6m": 0.064,
-      "r1y": null
+      "r1y": 0.016
     },
     "BAC": {
       "news": [
@@ -1642,7 +2058,7 @@ window.SIMPLE_DATA = {
       "employees": 212000,
       "price": 53.83,
       "w52h": 56.63,
-      "w52l": 43.96,
+      "w52l": 43.15,
       "mcap": 382009507840,
       "pe": 13.36,
       "fpe": 10.66,
@@ -1658,7 +2074,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.01,
       "r3m": 0.112,
       "r6m": 0.011,
-      "r1y": null
+      "r1y": 0.247
     },
     "BHP": {
       "news": [
@@ -1679,7 +2095,7 @@ window.SIMPLE_DATA = {
       "employees": 39369,
       "price": 82.72,
       "w52h": 93.15,
-      "w52l": 49.67,
+      "w52l": 45.25,
       "mcap": 210137350144,
       "pe": 20.53,
       "fpe": 15.55,
@@ -1695,7 +2111,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.019,
       "r3m": 0.151,
       "r6m": 0.456,
-      "r1y": null
+      "r1y": 0.718
     },
     "BIIB": {
       "news": [
@@ -1704,15 +2120,15 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Biogen Inc. Investigation Initiated: Levi & Korsinsky Investigates the Officers and Directors of Biogen Inc. (BIIB)",
-          "source": "Morningstar"
+          "title": "Biogen Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
         },
         {
-          "title": "Biogen Inc. stock underperforms Monday when compared to competitors",
+          "title": "Biogen Inc. stock outperforms competitors on strong trading day",
           "source": "MarketWatch"
         }
       ],
-      "news_tone": "negative",
+      "news_tone": "positive",
       "name": "Biogen Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
@@ -1736,7 +2152,81 @@ window.SIMPLE_DATA = {
       "r1m": 0.024,
       "r3m": 0.057,
       "r6m": 0.081,
-      "r1y": null
+      "r1y": 0.481
+    },
+    "BK": {
+      "news": [
+        {
+          "title": "Bank of New York Mellon",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "mixed",
+      "name": "The Bank of New York Mellon Cor",
+      "sector": "Financial Services",
+      "industry": "Banks - Diversified",
+      "summary": "The Bank of New York Mellon Corporation provides a range of financial products and services in the United States and internationally. It operates through Securities Services, Market and Wealth Services, Investment and Wealth Management, and Other segments. The Securities Services segment offers custody, trust and depositary,\u2026",
+      "employees": 47200,
+      "price": 142.39,
+      "w52h": 144.02,
+      "w52l": 86.95,
+      "mcap": 94143750144,
+      "pe": 17.02,
+      "fpe": 14.23,
+      "eps": 8.06,
+      "margin": 0.287,
+      "beta": 1.07,
+      "divY": 0.0153,
+      "tgtMean": 142.64,
+      "tgtHigh": 156.0,
+      "tgtLow": 120.0,
+      "reco": "buy",
+      "nAnalysts": 14,
+      "r1m": 0.065,
+      "r3m": 0.241,
+      "r6m": 0.27,
+      "r1y": 0.642
+    },
+    "BKR": {
+      "news": [
+        {
+          "title": "Baker Hughes Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Baker Hughes Co. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Baker Hughes Co. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Baker Hughes Company",
+      "sector": "Energy",
+      "industry": "Oil & Gas Equipment & Services",
+      "summary": "Baker Hughes Company provides a portfolio of technologies and services to energy and industrial value chain. Its Oilfield Services & Equipment segment designs and manufactures exploration, appraisal, development, production, rejuvenation, and decommissioning products and related services for onshore and offshore oilfield operations.\u2026",
+      "employees": 53000,
+      "price": 62.59,
+      "w52h": 69.44,
+      "w52l": 36.52,
+      "mcap": 62093578240,
+      "pe": 20.0,
+      "fpe": 22.49,
+      "eps": 3.13,
+      "margin": 0.112,
+      "beta": 0.94,
+      "divY": 1.47,
+      "tgtMean": 71.24,
+      "tgtHigh": 85.0,
+      "tgtLow": 48.0,
+      "reco": "buy",
+      "nAnalysts": 21,
+      "r1m": -0.061,
+      "r3m": 0.05,
+      "r6m": 0.248,
+      "r1y": 0.707
     },
     "BKSY": {
       "news": [],
@@ -1748,7 +2238,7 @@ window.SIMPLE_DATA = {
       "employees": 321,
       "price": 34.76,
       "w52h": 51.63,
-      "w52l": 13.14,
+      "w52l": 10.89,
       "mcap": 1289909632,
       "pe": null,
       "fpe": -63.78,
@@ -1764,7 +2254,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.142,
       "r3m": 0.465,
       "r6m": 0.966,
-      "r1y": null
+      "r1y": 1.892
     },
     "BLD": {
       "news": [
@@ -1789,7 +2279,7 @@ window.SIMPLE_DATA = {
       "employees": 14707,
       "price": 401.82,
       "w52h": 550.9,
-      "w52l": 335.39,
+      "w52l": 294.06,
       "mcap": 11309047808,
       "pe": 22.62,
       "fpe": 19.2,
@@ -1805,20 +2295,20 @@ window.SIMPLE_DATA = {
       "r1m": -0.085,
       "r3m": 0.038,
       "r6m": -0.107,
-      "r1y": null
+      "r1y": 0.39
     },
     "BLDR": {
       "news": [
-        {
-          "title": "Builders FirstSource Inc. stock underperforms Friday when compared to competitors",
-          "source": "MarketWatch"
-        },
         {
           "title": "Builders FirstSource Inc. stock outperforms competitors on strong trading day",
           "source": "MarketWatch"
         },
         {
           "title": "Builders FirstSource Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Builders FirstSource Inc. stock underperforms Tuesday when compared to competitors",
           "source": "MarketWatch"
         }
       ],
@@ -1846,7 +2336,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.08,
       "r3m": -0.209,
       "r6m": -0.357,
-      "r1y": null
+      "r1y": -0.347
+    },
+    "BNTX": {
+      "news": [
+        {
+          "title": "BioNTech Stock Is Stuck in the Red. A Cancer Drug Could Change the Narrative.",
+          "source": "Barron's"
+        },
+        {
+          "title": "BioNTech to Slash 22% of Workforce as Losses Widen. The Stock Falls.",
+          "source": "Barron's"
+        },
+        {
+          "title": "BioNTech Reports Earnings. That\u2019s Not Why the Stock Is Down 21%.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "negative",
+      "name": "BioNTech SE",
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "summary": "BioNTech SE, together with its subsidiaries, engages in the development and commercialization of immunotherapies in Germany. The company offers BNT162, an mRNA vaccine for the treatment of SARS-CoV-2 virus. It also develops oncology drugs under Phase III clinical trial, including Gotistobart for metastatic non-small cell lung cancer,\u2026",
+      "employees": 7807,
+      "price": 88.08,
+      "w52h": 119.34,
+      "w52l": 83.89,
+      "mcap": 22274045952,
+      "pe": null,
+      "fpe": -17.04,
+      "eps": -5.88,
+      "margin": -0.446,
+      "beta": 1.32,
+      "divY": null,
+      "tgtMean": 122.63,
+      "tgtHigh": 155.8,
+      "tgtLow": 74.98,
+      "reco": "buy",
+      "nAnalysts": 19,
+      "r1m": -0.075,
+      "r3m": -0.132,
+      "r6m": -0.089,
+      "r1y": -0.208
     },
     "BTG": {
       "news": [],
@@ -1874,7 +2405,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.067,
       "r3m": -0.214,
       "r6m": -0.068,
-      "r1y": null
+      "r1y": 0.15
     },
     "BWXT": {
       "news": [
@@ -1899,7 +2430,7 @@ window.SIMPLE_DATA = {
       "employees": 10400,
       "price": 185.95,
       "w52h": 238.1,
-      "w52l": 139.26,
+      "w52l": 128.22,
       "mcap": 17035743232,
       "pe": 49.45,
       "fpe": 35.8,
@@ -1915,7 +2446,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.135,
       "r3m": -0.045,
       "r6m": 0.067,
-      "r1y": null
+      "r1y": 0.451
     },
     "C": {
       "news": [
@@ -1924,7 +2455,7 @@ window.SIMPLE_DATA = {
           "source": "Barron's"
         },
         {
-          "title": "Citigroup Inc. stock outperforms competitors on strong trading day",
+          "title": "Citigroup Inc. stock underperforms Wednesday when compared to competitors",
           "source": "MarketWatch"
         },
         {
@@ -1940,7 +2471,7 @@ window.SIMPLE_DATA = {
       "employees": 224000,
       "price": 132.47,
       "w52h": 135.15,
-      "w52l": 89.79,
+      "w52l": 74.67,
       "mcap": 225937784832,
       "pe": 16.37,
       "fpe": 10.57,
@@ -1956,7 +2487,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.038,
       "r3m": 0.249,
       "r6m": 0.254,
-      "r1y": null
+      "r1y": 0.773
     },
     "CCJ": {
       "news": [
@@ -1965,11 +2496,11 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Cameco Corp. stock rises Tuesday, outperforms market",
+          "title": "Cameco Corp. stock falls Wednesday, underperforms market",
           "source": "MarketWatch"
         },
         {
-          "title": "Cameco Corp. stock falls Wednesday, underperforms market",
+          "title": "Cameco Corp. stock rises Tuesday, outperforms market",
           "source": "MarketWatch"
         }
       ],
@@ -1981,7 +2512,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 103.44,
       "w52h": 134.09,
-      "w52l": 70.33,
+      "w52l": 59.91,
       "mcap": 45051535360,
       "pe": 95.78,
       "fpe": 54.31,
@@ -1989,15 +2520,15 @@ window.SIMPLE_DATA = {
       "margin": 0.184,
       "beta": 0.98,
       "divY": 0.17,
-      "tgtMean": 129.14,
-      "tgtHigh": 171.0,
-      "tgtLow": 80.94,
+      "tgtMean": 129.05,
+      "tgtHigh": 170.88,
+      "tgtLow": 80.88,
       "reco": "buy",
       "nAnalysts": 11,
       "r1m": -0.164,
       "r3m": -0.057,
       "r6m": 0.156,
-      "r1y": null
+      "r1y": 0.729
     },
     "CDE": {
       "news": [],
@@ -2025,7 +2556,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.126,
       "r3m": -0.276,
       "r6m": 0.015,
-      "r1y": null
+      "r1y": 0.829
     },
     "CEG": {
       "news": [
@@ -2034,11 +2565,11 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Constellation Energy Corp. stock rises Tuesday, outperforms market",
+          "title": "Constellation Energy Corp. stock falls Wednesday, underperforms market",
           "source": "MarketWatch"
         },
         {
-          "title": "Constellation Energy Corp. stock falls Wednesday, underperforms market",
+          "title": "Constellation Energy Corp. stock falls Monday, underperforms market",
           "source": "MarketWatch"
         }
       ],
@@ -2066,7 +2597,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.209,
       "r3m": -0.199,
       "r6m": -0.293,
-      "r1y": null
+      "r1y": -0.145
     },
     "CIFR": {
       "news": [],
@@ -2078,7 +2609,7 @@ window.SIMPLE_DATA = {
       "employees": 66,
       "price": 22.45,
       "w52h": 26.29,
-      "w52l": 4.72,
+      "w52l": 3.53,
       "mcap": 9183154176,
       "pe": null,
       "fpe": 33.51,
@@ -2094,7 +2625,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.025,
       "r3m": 0.648,
       "r6m": 0.205,
-      "r1y": null
+      "r1y": 5.003
     },
     "CLSK": {
       "news": [],
@@ -2122,7 +2653,48 @@ window.SIMPLE_DATA = {
       "r1m": 0.075,
       "r3m": 0.693,
       "r6m": 0.076,
-      "r1y": null
+      "r1y": 0.636
+    },
+    "COF": {
+      "news": [
+        {
+          "title": "Capital One Financial Corp. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Capital One Financial Corp. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Capital One Financial Corp. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Capital One Financial Corporati",
+      "sector": "Financial Services",
+      "industry": "Credit Services",
+      "summary": "Capital One Financial Corporation operates as the financial services holding company for the Capital One, National Association, which engages in the provision of various financial products and services in the United States, Canada, and the United Kingdom. It operates through three segments: Credit Card, Consumer Banking, and\u2026",
+      "employees": 77100,
+      "price": 180.67,
+      "w52h": 255.86,
+      "w52l": 175.35,
+      "mcap": 112429637632,
+      "pe": 55.59,
+      "fpe": 7.44,
+      "eps": 3.25,
+      "margin": 0.089,
+      "beta": 1.04,
+      "divY": 1.77,
+      "tgtMean": 255.19,
+      "tgtHigh": 310.0,
+      "tgtLow": 215.0,
+      "reco": "buy",
+      "nAnalysts": 21,
+      "r1m": -0.062,
+      "r3m": -0.033,
+      "r6m": -0.198,
+      "r1y": -0.049
     },
     "COIN": {
       "news": [
@@ -2135,8 +2707,8 @@ window.SIMPLE_DATA = {
           "source": "Morningstar"
         },
         {
-          "title": "Is Coinbase Stock A Buy Now?",
-          "source": "Forbes"
+          "title": "Coinbase Rises After Revenue Climbs More Than Estimates",
+          "source": "Bloomberg.com"
         }
       ],
       "news_tone": "positive",
@@ -2146,7 +2718,7 @@ window.SIMPLE_DATA = {
       "summary": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform with a pool of liquidity across the crypto marketplace for institutions; and a suite of products granting access to build onchain for\u2026",
       "employees": 4951,
       "price": 152.4,
-      "w52h": 413.63,
+      "w52h": 419.78,
       "w52l": 141.09,
       "mcap": 40151420928,
       "pe": 56.24,
@@ -2163,20 +2735,20 @@ window.SIMPLE_DATA = {
       "r1m": -0.23,
       "r3m": -0.227,
       "r6m": -0.45,
-      "r1y": null
+      "r1y": -0.405
     },
     "COP": {
       "news": [
-        {
-          "title": "ConocoPhillips stock underperforms Wednesday when compared to competitors despite daily gains",
-          "source": "MarketWatch"
-        },
         {
           "title": "ConocoPhillips stock outperforms competitors on strong trading day",
           "source": "MarketWatch"
         },
         {
           "title": "ConocoPhillips stock underperforms Monday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ConocoPhillips stock outperforms competitors despite losses on the day",
           "source": "MarketWatch"
         }
       ],
@@ -2188,7 +2760,7 @@ window.SIMPLE_DATA = {
       "employees": 9700,
       "price": 117.14,
       "w52h": 132.81,
-      "w52l": 83.6,
+      "w52l": 82.61,
       "mcap": 142710964224,
       "pe": 19.85,
       "fpe": 12.74,
@@ -2204,7 +2776,35 @@ window.SIMPLE_DATA = {
       "r1m": -0.007,
       "r3m": 0.008,
       "r6m": 0.295,
-      "r1y": null
+      "r1y": 0.408
+    },
+    "CORZ": {
+      "news": [],
+      "news_tone": null,
+      "name": "Core Scientific, Inc.",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "summary": "Core Scientific, Inc. provides infrastructure for high-density colocation services and digital asset mining in the United States. It operates through three segments: Colocation, Digital Asset Self-Mining, and Digital Asset Hosted Mining. The company offers space, power, cooling, facilities operations, security, and other services to\u2026",
+      "employees": 325,
+      "price": 25.85,
+      "w52h": 29.05,
+      "w52l": 11.35,
+      "mcap": 8217334784,
+      "pe": null,
+      "fpe": 87.13,
+      "eps": -3.36,
+      "margin": 0.0,
+      "beta": 5.48,
+      "divY": null,
+      "tgtMean": 32.05,
+      "tgtHigh": 55.0,
+      "tgtLow": 25.0,
+      "reco": "strong_buy",
+      "nAnalysts": 15,
+      "r1m": 0.05,
+      "r3m": 0.74,
+      "r6m": 0.562,
+      "r1y": 1.058
     },
     "COST": {
       "news": [
@@ -2237,7 +2837,35 @@ window.SIMPLE_DATA = {
       "r1m": -0.024,
       "r3m": -0.025,
       "r6m": 0.057,
-      "r1y": null
+      "r1y": -0.071
+    },
+    "CRDO": {
+      "news": [],
+      "news_tone": null,
+      "name": "Credo Technology Group Holding ",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "summary": "Credo Technology Group Holding Ltd provides various high-speed connectivity solutions for optical and electrical Ethernet, and PCIe applications in the United States, Taiwan, Mainland China, Hong Kong, and internationally. It provides HiWire active electrical cables solutions, including HiWire CLOS, SPAN, SHIFT, and SWITCH; optical\u2026",
+      "employees": null,
+      "price": 206.89,
+      "w52h": 236.03,
+      "w52l": 68.53,
+      "mcap": 38160846848,
+      "pe": 113.68,
+      "fpe": 23.81,
+      "eps": 1.82,
+      "margin": 0.354,
+      "beta": 3.23,
+      "divY": null,
+      "tgtMean": 256.3,
+      "tgtHigh": 300.0,
+      "tgtLow": 184.0,
+      "reco": "strong_buy",
+      "nAnalysts": 18,
+      "r1m": 0.043,
+      "r3m": 0.884,
+      "r6m": 0.094,
+      "r1y": 1.706
     },
     "CRM": {
       "news": [
@@ -2261,7 +2889,7 @@ window.SIMPLE_DATA = {
       "summary": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agentforce, which enables customers to build, deploy, and manage enterprise-grade, autonomous AI agents at scale, enabling humans and agents\u2026",
       "employees": 83334,
       "price": 185.66,
-      "w52h": 268.67,
+      "w52h": 272.48,
       "w52l": 164.96,
       "mcap": 152055545856,
       "pe": 21.51,
@@ -2278,7 +2906,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.025,
       "r3m": -0.079,
       "r6m": -0.219,
-      "r1y": null
+      "r1y": -0.289
     },
     "CRWD": {
       "news": [
@@ -2319,7 +2947,48 @@ window.SIMPLE_DATA = {
       "r1m": 0.434,
       "r3m": 0.564,
       "r6m": 0.28,
-      "r1y": null
+      "r1y": 0.457
+    },
+    "CSCO": {
+      "news": [
+        {
+          "title": "Cisco Systems Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Cisco Systems Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Cisco Shares Dip After Company Discusses Margin \u2018Headwind\u2019",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Cisco Systems, Inc.",
+      "sector": "Technology",
+      "industry": "Communication Equipment",
+      "summary": "Cisco Systems, Inc. designs, develops, and sells technologies that help to power, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and China. The company offers data center switching; network security, identity and access management, and secure access service edge;\u2026",
+      "employees": 86200,
+      "price": 121.64,
+      "w52h": 130.0,
+      "w52l": 62.65,
+      "mcap": 479436111872,
+      "pe": 40.55,
+      "fpe": 25.49,
+      "eps": 3.0,
+      "margin": 0.197,
+      "beta": 1.0,
+      "divY": 1.38,
+      "tgtMean": 125.82,
+      "tgtHigh": 150.0,
+      "tgtLow": 84.98,
+      "reco": "buy",
+      "nAnalysts": 22,
+      "r1m": 0.327,
+      "r3m": 0.555,
+      "r6m": 0.581,
+      "r1y": 0.933
     },
     "CSIQ": {
       "news": [],
@@ -2347,7 +3016,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.017,
       "r3m": 0.072,
       "r6m": -0.268,
-      "r1y": null
+      "r1y": 0.554
     },
     "CVX": {
       "news": [
@@ -2360,11 +3029,11 @@ window.SIMPLE_DATA = {
           "source": "Bloomberg.com"
         },
         {
-          "title": "Chevron Corp. stock outperforms competitors despite losses on the day",
-          "source": "MarketWatch"
+          "title": "Exxon, Chevron Stocks Drop Along With Oil Prices as Trump Gives Hope on Iran",
+          "source": "Barron's"
         }
       ],
-      "news_tone": "positive",
+      "news_tone": "mixed",
       "name": "Chevron Corporation",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -2372,7 +3041,7 @@ window.SIMPLE_DATA = {
       "employees": 43039,
       "price": 187.31,
       "w52h": 209.23,
-      "w52l": 143.66,
+      "w52l": 131.4,
       "mcap": 373046149120,
       "pe": 32.69,
       "fpe": 14.91,
@@ -2388,7 +3057,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.021,
       "r3m": -0.005,
       "r6m": 0.259,
-      "r1y": null
+      "r1y": 0.421
     },
     "D": {
       "news": [
@@ -2401,8 +3070,8 @@ window.SIMPLE_DATA = {
           "source": "CNBC"
         },
         {
-          "title": "Dominion Energy stock surges on a deal with NextEra to make the world's biggest utility",
-          "source": "Business Insider"
+          "title": "Dominion Energy Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
         }
       ],
       "news_tone": "positive",
@@ -2413,7 +3082,7 @@ window.SIMPLE_DATA = {
       "employees": 15200,
       "price": 66.9,
       "w52h": 67.61,
-      "w52l": 55.25,
+      "w52l": 51.5,
       "mcap": 58839388160,
       "pe": 19.73,
       "fpe": 17.54,
@@ -2429,7 +3098,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.096,
       "r3m": 0.068,
       "r6m": 0.15,
-      "r1y": null
+      "r1y": 0.246
     },
     "DDOG": {
       "news": [
@@ -2438,12 +3107,12 @@ window.SIMPLE_DATA = {
           "source": "CNBC"
         },
         {
-          "title": "How DDOG Stock Rises To $400",
-          "source": "Forbes"
-        },
-        {
           "title": "Datadog\u2019s stock is soaring. Here\u2019s how the company became such a crucial AI player.",
           "source": "MarketWatch"
+        },
+        {
+          "title": "How DDOG Stock Rises To $400",
+          "source": "Forbes"
         }
       ],
       "news_tone": "positive",
@@ -2470,7 +3139,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.629,
       "r3m": 0.862,
       "r6m": 0.502,
-      "r1y": null
+      "r1y": 0.956
     },
     "DHI": {
       "news": [
@@ -2495,7 +3164,7 @@ window.SIMPLE_DATA = {
       "employees": 14341,
       "price": 145.6,
       "w52h": 182.4,
-      "w52l": 129.71,
+      "w52l": 118.54,
       "mcap": 41289195520,
       "pe": 13.68,
       "fpe": 12.1,
@@ -2511,7 +3180,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.021,
       "r3m": -0.008,
       "r6m": -0.112,
-      "r1y": null
+      "r1y": 0.192
     },
     "DNN": {
       "news": [],
@@ -2523,7 +3192,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 3.03,
       "w52h": 4.37,
-      "w52l": 1.92,
+      "w52l": 1.58,
       "mcap": 2742201344,
       "pe": null,
       "fpe": -89.31,
@@ -2539,7 +3208,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.215,
       "r3m": -0.174,
       "r6m": 0.122,
-      "r1y": null
+      "r1y": 0.836
     },
     "DUK": {
       "news": [
@@ -2556,7 +3225,7 @@ window.SIMPLE_DATA = {
       "employees": 26441,
       "price": 124.22,
       "w52h": 132.32,
-      "w52l": 112.07,
+      "w52l": 110.71,
       "mcap": 96841441280,
       "pe": 19.11,
       "fpe": 17.33,
@@ -2564,7 +3233,7 @@ window.SIMPLE_DATA = {
       "margin": 0.157,
       "beta": 0.38,
       "divY": 3.43,
-      "tgtMean": 138.61,
+      "tgtMean": 138.56,
       "tgtHigh": 146.0,
       "tgtLow": 131.0,
       "reco": "buy",
@@ -2572,7 +3241,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.002,
       "r3m": -0.054,
       "r6m": 0.065,
-      "r1y": null
+      "r1y": 0.108
     },
     "DVN": {
       "news": [
@@ -2597,7 +3266,7 @@ window.SIMPLE_DATA = {
       "employees": 2200,
       "price": 44.28,
       "w52h": 52.07,
-      "w52l": 31.35,
+      "w52l": 30.63,
       "mcap": 51072688128,
       "pe": 12.33,
       "fpe": 8.16,
@@ -2613,7 +3282,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.05,
       "r3m": 0.001,
       "r6m": 0.189,
-      "r1y": null
+      "r1y": 0.439
     },
     "ED": {
       "news": [
@@ -2622,11 +3291,11 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Consolidated Edison Inc. stock outperforms competitors despite losses on the day",
+          "title": "Consolidated Edison Inc. stock underperforms Thursday when compared to competitors",
           "source": "MarketWatch"
         },
         {
-          "title": "Consolidated Edison Inc. stock underperforms Thursday when compared to competitors",
+          "title": "Consolidated Edison Inc. stock outperforms competitors despite losses on the day",
           "source": "MarketWatch"
         }
       ],
@@ -2646,7 +3315,7 @@ window.SIMPLE_DATA = {
       "margin": 0.125,
       "beta": 0.27,
       "divY": 3.27,
-      "tgtMean": 110.0,
+      "tgtMean": 109.75,
       "tgtHigh": 130.0,
       "tgtLow": 97.0,
       "reco": "hold",
@@ -2654,7 +3323,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.003,
       "r3m": -0.046,
       "r6m": 0.12,
-      "r1y": null
+      "r1y": 0.074
     },
     "EMR": {
       "news": [
@@ -2679,7 +3348,7 @@ window.SIMPLE_DATA = {
       "employees": 71000,
       "price": 138.12,
       "w52h": 160.42,
-      "w52l": 122.75,
+      "w52l": 120.54,
       "mcap": 77361004544,
       "pe": 31.97,
       "fpe": 19.31,
@@ -2695,7 +3364,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.063,
       "r3m": 0.002,
       "r6m": 0.032,
-      "r1y": null
+      "r1y": 0.154
     },
     "ENPH": {
       "news": [
@@ -2736,7 +3405,40 @@ window.SIMPLE_DATA = {
       "r1m": 0.566,
       "r3m": 0.394,
       "r6m": 0.908,
-      "r1y": null
+      "r1y": 0.299
+    },
+    "ENTG": {
+      "news": [
+        {
+          "title": "Entegris Earnings: Shares Fall on Revenue Guidance Below Consensus Estimates; Trimming Valuation",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "negative",
+      "name": "Entegris, Inc.",
+      "sector": "Technology",
+      "industry": "Semiconductor Equipment & Materials",
+      "summary": "Entegris, Inc. provides advanced materials and process solutions for the semiconductor and other high-technology industries in North America, Taiwan, South Korea, Japan, China, Europe, and Southeast Asia. It operates in two segments, Materials Solutions (MS) and Advanced Purity Solutions (APS). The MS segment provides materials-based\u2026",
+      "employees": 7700,
+      "price": 125.41,
+      "w52h": 156.33,
+      "w52l": 68.7,
+      "mcap": 19099942912,
+      "pe": 72.49,
+      "fpe": 27.13,
+      "eps": 1.73,
+      "margin": 0.082,
+      "beta": 1.36,
+      "divY": 0.32,
+      "tgtMean": 160.6,
+      "tgtHigh": 205.0,
+      "tgtLow": 115.0,
+      "reco": "buy",
+      "nAnalysts": 10,
+      "r1m": -0.195,
+      "r3m": 0.116,
+      "r6m": 0.456,
+      "r1y": 0.733
     },
     "EOG": {
       "news": [
@@ -2777,7 +3479,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.023,
       "r3m": 0.057,
       "r6m": 0.257,
-      "r1y": null
+      "r1y": 0.288
     },
     "ERO": {
       "news": [],
@@ -2805,7 +3507,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.048,
       "r3m": -0.071,
       "r6m": 0.023,
-      "r1y": null
+      "r1y": 0.621
+    },
+    "ETR": {
+      "news": [
+        {
+          "title": "Entergy Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Entergy Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Entergy Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Entergy Corporation",
+      "sector": "Utilities",
+      "industry": "Utilities - Regulated Electric",
+      "summary": "Entergy Corporation, together with its subsidiaries, engages in the production and retail distribution of electricity in the United States. It generates, transmits, distributes, and sells electric power in portions of Arkansas, Louisiana, Mississippi, and Texas, including the City of New Orleans. It also engages in the ownership of\u2026",
+      "employees": 12000,
+      "price": 110.74,
+      "w52h": 117.36,
+      "w52l": 78.9,
+      "mcap": 50706386944,
+      "pe": 28.25,
+      "fpe": 21.91,
+      "eps": 3.92,
+      "margin": 0.134,
+      "beta": 0.5,
+      "divY": 2.31,
+      "tgtMean": 121.95,
+      "tgtHigh": 131.0,
+      "tgtLow": 91.0,
+      "reco": "buy",
+      "nAnalysts": 21,
+      "r1m": -0.02,
+      "r3m": 0.063,
+      "r6m": 0.189,
+      "r1y": 0.387
     },
     "EXC": {
       "news": [
@@ -2830,7 +3573,7 @@ window.SIMPLE_DATA = {
       "employees": 20000,
       "price": 45.75,
       "w52h": 49.82,
-      "w52l": 41.61,
+      "w52l": 40.73,
       "mcap": 46811770880,
       "pe": 16.76,
       "fpe": 15.06,
@@ -2846,7 +3589,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.026,
       "r3m": -0.064,
       "r6m": 0.046,
-      "r1y": null
+      "r1y": 0.109
     },
     "EXK": {
       "news": [],
@@ -2858,7 +3601,7 @@ window.SIMPLE_DATA = {
       "employees": 2160,
       "price": 8.0,
       "w52h": 14.12,
-      "w52l": 4.96,
+      "w52l": 4.49,
       "mcap": 2368550400,
       "pe": null,
       "fpe": 6.07,
@@ -2874,7 +3617,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.141,
       "r3m": -0.284,
       "r6m": -0.103,
-      "r1y": null
+      "r1y": 0.891
+    },
+    "FANG": {
+      "news": [
+        {
+          "title": "Diamondback Energy Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Daughter of Wildcatter Stephens Offloads $2 Billion Energy Stake",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Diamondback Energy Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Diamondback Energy, Inc.",
+      "sector": "Energy",
+      "industry": "Oil & Gas E&P",
+      "summary": "Diamondback Energy, Inc., an independent oil and natural gas company, acquires, develops, explores, and exploits unconventional, onshore oil and natural gas reserves in the Permian Basin in West Texas, the United States. The company primarily focuses on the development of the Spraberry and Wolfcamp formations of the Midland Basin; and\u2026",
+      "employees": 1762,
+      "price": 192.62,
+      "w52h": 212.52,
+      "w52l": 132.09,
+      "mcap": 54186569728,
+      "pe": 196.55,
+      "fpe": 11.0,
+      "eps": 0.98,
+      "margin": 0.02,
+      "beta": 0.39,
+      "divY": 2.28,
+      "tgtMean": 233.1,
+      "tgtHigh": 277.0,
+      "tgtLow": 195.0,
+      "reco": "buy",
+      "nAnalysts": 29,
+      "r1m": -0.007,
+      "r3m": 0.073,
+      "r6m": 0.23,
+      "r1y": 0.418
     },
     "FCX": {
       "news": [
@@ -2915,20 +3699,20 @@ window.SIMPLE_DATA = {
       "r1m": 0.041,
       "r3m": 0.07,
       "r6m": 0.43,
-      "r1y": null
+      "r1y": 0.569
     },
     "FNV": {
       "news": [
+        {
+          "title": "Franco-Nevada Corp. stock falls Friday, underperforms market",
+          "source": "MarketWatch"
+        },
         {
           "title": "Franco-Nevada Corp. stock rises Thursday, outperforms market",
           "source": "MarketWatch"
         },
         {
           "title": "Franco-Nevada Corp. stock falls Wednesday, underperforms market",
-          "source": "MarketWatch"
-        },
-        {
-          "title": "Franco-Nevada Corp. stock rises Tuesday, outperforms market",
           "source": "MarketWatch"
         }
       ],
@@ -2940,7 +3724,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 218.74,
       "w52h": 280.36,
-      "w52l": 155.64,
+      "w52l": 154.14,
       "mcap": 42185220096,
       "pe": 30.77,
       "fpe": 22.78,
@@ -2956,7 +3740,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.067,
       "r3m": -0.156,
       "r6m": 0.08,
-      "r1y": null
+      "r1y": 0.24
     },
     "FSLR": {
       "news": [
@@ -2981,7 +3765,7 @@ window.SIMPLE_DATA = {
       "employees": 7900,
       "price": 279.01,
       "w52h": 318.25,
-      "w52l": 174.73,
+      "w52l": 143.67,
       "mcap": 29980563456,
       "pe": 18.01,
       "fpe": 11.91,
@@ -2997,7 +3781,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.28,
       "r3m": 0.475,
       "r6m": 0.09,
-      "r1y": null
+      "r1y": 0.746
     },
     "FSM": {
       "news": [
@@ -3030,7 +3814,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.117,
       "r3m": -0.246,
       "r6m": -0.09,
-      "r1y": null
+      "r1y": 0.289
     },
     "FTNT": {
       "news": [
@@ -3039,11 +3823,11 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Fortinet Inc. stock underperforms Wednesday when compared to competitors",
+          "title": "Fortinet Inc. stock outperforms competitors despite losses on the day",
           "source": "MarketWatch"
         },
         {
-          "title": "Fortinet Inc. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "title": "Fortinet Inc. stock underperforms Wednesday when compared to competitors",
           "source": "MarketWatch"
         }
       ],
@@ -3071,7 +3855,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.608,
       "r3m": 0.729,
       "r6m": 0.748,
-      "r1y": null
+      "r1y": 0.424
     },
     "GD": {
       "news": [
@@ -3096,7 +3880,7 @@ window.SIMPLE_DATA = {
       "employees": 110000,
       "price": 346.44,
       "w52h": 365.68,
-      "w52l": 293.19,
+      "w52l": 269.47,
       "mcap": 93687832576,
       "pe": 21.79,
       "fpe": 19.09,
@@ -3112,7 +3896,89 @@ window.SIMPLE_DATA = {
       "r1m": -0.002,
       "r3m": -0.042,
       "r6m": 0.034,
-      "r1y": null
+      "r1y": 0.283
+    },
+    "GEN": {
+      "news": [
+        {
+          "title": "Gen Digital Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Gen Digital Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Gen Digital Inc. stock underperforms Friday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Gen Digital Inc.",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "summary": "Gen Digital Inc. engages in the provision of cyber safety and trust-based solutions for individuals, families, and small businesses. The company offers security and performance management, identity protection, and online privacy, as well as technology platforms. It also provides restoration support services, digital reputation, and\u2026",
+      "employees": 3900,
+      "price": 26.28,
+      "w52h": 31.54,
+      "w52l": 17.79,
+      "mcap": 15831962624,
+      "pe": 16.74,
+      "fpe": 8.0,
+      "eps": 1.57,
+      "margin": 0.195,
+      "beta": 1.21,
+      "divY": 1.9,
+      "tgtMean": 30.01,
+      "tgtHigh": 46.0,
+      "tgtLow": 22.0,
+      "reco": "none",
+      "nAnalysts": 9,
+      "r1m": 0.351,
+      "r3m": 0.169,
+      "r6m": -0.023,
+      "r1y": -0.079
+    },
+    "GEV": {
+      "news": [
+        {
+          "title": "GE Vernova Inc. stock falls Friday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "GE Vernova Inc. stock rises Tuesday, outperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "GE Vernova Inc. stock falls Wednesday, underperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
+      "name": "GE Vernova Inc.",
+      "sector": "Industrials",
+      "industry": "Specialty Industrial Machinery",
+      "summary": "GE Vernova Inc., an energy company, engages in the provision of various products and services that generate, transfer, orchestrate, convert, and store electricity in the United States, Europe, Asia, the Middle East, and Africa. The company operates through three segments: Power, Wind, and Electrification. The Power segment designs,\u2026",
+      "employees": 78000,
+      "price": 933.61,
+      "w52h": 1149.53,
+      "w52l": 464.29,
+      "mcap": 250879672320,
+      "pe": 27.25,
+      "fpe": 38.09,
+      "eps": 34.26,
+      "margin": 0.238,
+      "beta": 1.04,
+      "divY": 0.21,
+      "tgtMean": 1216.13,
+      "tgtHigh": 1424.0,
+      "tgtLow": 836.0,
+      "reco": "buy",
+      "nAnalysts": 33,
+      "r1m": -0.166,
+      "r3m": 0.184,
+      "r6m": 0.553,
+      "r1y": 0.917
     },
     "GFI": {
       "news": [],
@@ -3124,7 +3990,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 36.62,
       "w52h": 59.77,
-      "w52l": 23.67,
+      "w52l": 22.22,
       "mcap": 32753606656,
       "pe": 9.29,
       "fpe": 6.79,
@@ -3140,7 +4006,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.207,
       "r3m": -0.253,
       "r6m": -0.077,
-      "r1y": null
+      "r1y": 0.505
     },
     "GILD": {
       "news": [
@@ -3165,7 +4031,7 @@ window.SIMPLE_DATA = {
       "employees": 17000,
       "price": 129.16,
       "w52h": 154.92,
-      "w52l": 106.22,
+      "w52l": 103.92,
       "mcap": 160361168896,
       "pe": 17.57,
       "fpe": 13.47,
@@ -3181,7 +4047,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.052,
       "r3m": -0.098,
       "r6m": 0.046,
-      "r1y": null
+      "r1y": 0.216
     },
     "GOLD": {
       "news": [
@@ -3198,7 +4064,7 @@ window.SIMPLE_DATA = {
       "employees": 956,
       "price": 39.62,
       "w52h": 63.6,
-      "w52l": 20.24,
+      "w52l": 20.13,
       "mcap": 1149153280,
       "pe": 12.91,
       "fpe": 10.91,
@@ -3214,24 +4080,24 @@ window.SIMPLE_DATA = {
       "r1m": -0.076,
       "r3m": -0.24,
       "r6m": 0.273,
-      "r1y": null
+      "r1y": 0.992
     },
     "GOOGL": {
       "news": [
-        {
-          "title": "Why Google Stock Is Being Bought by Investors as Different Cathie Wood\u2019s ARK and Berkshire Hathaway",
-          "source": "Barron's"
-        },
         {
           "title": "Google Stock Dips on $80 Billion Equity Raise Plan",
           "source": "WSJ"
         },
         {
-          "title": "Futures Fall As AI Leaders Keep Sliding; Google I/O Kicks Off",
-          "source": "Investor's Business Daily"
+          "title": "Google Stock Was Bought by Investors as Different as Cathie Wood\u2019s ARK and Berkshire Hathaway",
+          "source": "Barron's"
+        },
+        {
+          "title": "Alphabet\u2019s Mega Fundraising Shows the Value of Being a Public Company",
+          "source": "WSJ"
         }
       ],
-      "news_tone": "negative",
+      "news_tone": "mixed",
       "name": "Alphabet Inc.",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
@@ -3239,7 +4105,7 @@ window.SIMPLE_DATA = {
       "employees": 194668,
       "price": 368.53,
       "w52h": 402.62,
-      "w52l": 188.7,
+      "w52l": 164.82,
       "mcap": 4494199357440,
       "pe": 28.09,
       "fpe": 25.48,
@@ -3255,7 +4121,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.074,
       "r3m": 0.235,
       "r6m": 0.155,
-      "r1y": null
+      "r1y": 1.201
     },
     "GS": {
       "news": [
@@ -3280,7 +4146,7 @@ window.SIMPLE_DATA = {
       "employees": 47000,
       "price": 1038.68,
       "w52h": 1092.61,
-      "w52l": 686.59,
+      "w52l": 593.92,
       "mcap": 306418319360,
       "pe": 18.97,
       "fpe": 15.88,
@@ -3296,7 +4162,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.113,
       "r3m": 0.27,
       "r6m": 0.254,
-      "r1y": null
+      "r1y": 0.768
     },
     "HAL": {
       "news": [
@@ -3305,11 +4171,11 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Halliburton Co. stock outperforms competitors on strong trading day",
+          "title": "Halliburton Co. stock underperforms Monday when compared to competitors despite daily gains",
           "source": "MarketWatch"
         },
         {
-          "title": "Halliburton Co. stock underperforms Monday when compared to competitors despite daily gains",
+          "title": "Halliburton Co. stock outperforms competitors despite losses on the day",
           "source": "MarketWatch"
         }
       ],
@@ -3321,7 +4187,7 @@ window.SIMPLE_DATA = {
       "employees": 46000,
       "price": 39.18,
       "w52h": 42.8,
-      "w52l": 20.04,
+      "w52l": 19.5,
       "mcap": 32730884096,
       "pe": 21.65,
       "fpe": 13.41,
@@ -3337,7 +4203,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.026,
       "r3m": 0.156,
       "r6m": 0.443,
-      "r1y": null
+      "r1y": 1.003
     },
     "HBM": {
       "news": [
@@ -3374,7 +4240,40 @@ window.SIMPLE_DATA = {
       "r1m": 0.069,
       "r3m": 0.152,
       "r6m": 0.476,
-      "r1y": null
+      "r1y": 1.739
+    },
+    "HEI": {
+      "news": [
+        {
+          "title": "Heico Earnings: Strong Aftermarket Demand Continues; Shares Seem Overvalued",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Heico Corporation",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
+      "summary": "HEICO Corporation provides aerospace, defense, and electronic related products and services in the United States and internationally. Its Flight Support Group segment offers jet engine and aircraft component replacement parts; thermal insulation blankets and parts; renewable/reusable insulation systems; and specialty components and\u2026",
+      "employees": 11100,
+      "price": 331.43,
+      "w52h": 358.04,
+      "w52l": 260.99,
+      "mcap": 46287273984,
+      "pe": 59.18,
+      "fpe": 48.56,
+      "eps": 5.6,
+      "margin": 0.161,
+      "beta": 1.03,
+      "divY": 0.07,
+      "tgtMean": 386.1,
+      "tgtHigh": 471.0,
+      "tgtLow": 290.0,
+      "reco": "buy",
+      "nAnalysts": 20,
+      "r1m": 0.118,
+      "r3m": 0.091,
+      "r6m": 0.071,
+      "r1y": 0.105
     },
     "HII": {
       "news": [
@@ -3399,7 +4298,7 @@ window.SIMPLE_DATA = {
       "employees": 44000,
       "price": 293.04,
       "w52h": 451.78,
-      "w52l": 248.73,
+      "w52l": 219.59,
       "mcap": 11546956800,
       "pe": 19.05,
       "fpe": 14.39,
@@ -3415,7 +4314,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.079,
       "r3m": -0.314,
       "r6m": -0.045,
-      "r1y": null
+      "r1y": 0.326
     },
     "HL": {
       "news": [],
@@ -3427,7 +4326,7 @@ window.SIMPLE_DATA = {
       "employees": 1865,
       "price": 14.78,
       "w52h": 31.8,
-      "w52l": 5.68,
+      "w52l": 5.58,
       "mcap": 9913128960,
       "pe": 21.42,
       "fpe": 12.4,
@@ -3443,7 +4342,35 @@ window.SIMPLE_DATA = {
       "r1m": -0.185,
       "r3m": -0.275,
       "r6m": -0.148,
-      "r1y": null
+      "r1y": 1.422
+    },
+    "HMY": {
+      "news": [],
+      "news_tone": null,
+      "name": "Harmony Gold Mining Company Lim",
+      "sector": "Basic Materials",
+      "industry": "Gold",
+      "summary": "Harmony Gold Mining Company Limited engages in the exploration, extraction, and processing of mineral properties in South Africa, Papua New Guinea, and Australia. The company explores for gold, uranium, silver, and copper deposits. It has nine underground operations in the Witwatersrand Basin; the Kraaipan Greenstone Belt; and various\u2026",
+      "employees": 34350,
+      "price": 15.71,
+      "w52h": 25.55,
+      "w52l": 12.37,
+      "mcap": 9919060992,
+      "pe": 10.01,
+      "fpe": 4.73,
+      "eps": 1.57,
+      "margin": 0.201,
+      "beta": 0.7,
+      "divY": 2.59,
+      "tgtMean": 23.01,
+      "tgtHigh": 27.0,
+      "tgtLow": 20.04,
+      "reco": "buy",
+      "nAnalysts": 3,
+      "r1m": -0.104,
+      "r3m": -0.183,
+      "r6m": -0.159,
+      "r1y": 0.072
     },
     "HOOD": {
       "news": [
@@ -3484,7 +4411,35 @@ window.SIMPLE_DATA = {
       "r1m": 0.043,
       "r3m": 0.07,
       "r6m": -0.383,
-      "r1y": null
+      "r1y": 0.141
+    },
+    "HUBS": {
+      "news": [],
+      "news_tone": null,
+      "name": "HubSpot, Inc.",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "summary": "HubSpot, Inc., together with its subsidiaries, provides a cloud-based customer relationship management (CRM) platform for businesses in the Americas, Europe, and the Asia Pacific. The company's CRM platform includes Marketing Hub, a toolset for marketing automation and email, social media, SEO, AEO, and reporting and analytics; Sales\u2026",
+      "employees": 9021,
+      "price": 212.64,
+      "w52h": 609.4,
+      "w52l": 179.0,
+      "mcap": 10885191680,
+      "pe": 112.51,
+      "fpe": 13.62,
+      "eps": 1.89,
+      "margin": 0.03,
+      "beta": 1.2,
+      "divY": null,
+      "tgtMean": 280.16,
+      "tgtHigh": 450.0,
+      "tgtLow": 180.0,
+      "reco": "buy",
+      "nAnalysts": 33,
+      "r1m": -0.096,
+      "r3m": -0.283,
+      "r6m": -0.433,
+      "r1y": -0.645
     },
     "HUT": {
       "news": [
@@ -3495,6 +4450,10 @@ window.SIMPLE_DATA = {
         {
           "title": "S&P 500 Futures Rise in Premarket Trading; Hut 8, Compass Lead",
           "source": "Barron's"
+        },
+        {
+          "title": "Hut 8 Schedules First Quarter 2026 Earnings Release and Conference Call \u2013 Company Announcement",
+          "source": "Financial Times"
         }
       ],
       "news_tone": "positive",
@@ -3505,7 +4464,7 @@ window.SIMPLE_DATA = {
       "employees": 248,
       "price": 112.24,
       "w52h": 133.02,
-      "w52l": 19.45,
+      "w52l": 15.89,
       "mcap": 12637562880,
       "pe": null,
       "fpe": -60.43,
@@ -3521,7 +4480,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.03,
       "r3m": 1.385,
       "r6m": 1.805,
-      "r1y": null
+      "r1y": 5.598
     },
     "HWM": {
       "news": [
@@ -3546,7 +4505,7 @@ window.SIMPLE_DATA = {
       "employees": 25430,
       "price": 251.9,
       "w52h": 273.58,
-      "w52l": 170.73,
+      "w52l": 168.24,
       "mcap": 100787077120,
       "pe": 58.45,
       "fpe": 41.87,
@@ -3562,7 +4521,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.017,
       "r3m": 0.008,
       "r6m": 0.298,
-      "r1y": null
+      "r1y": 0.451
     },
     "INCY": {
       "news": [
@@ -3587,7 +4546,7 @@ window.SIMPLE_DATA = {
       "employees": 2844,
       "price": 102.38,
       "w52h": 110.57,
-      "w52l": 67.38,
+      "w52l": 67.24,
       "mcap": 20453697536,
       "pe": 14.46,
       "fpe": 11.29,
@@ -3603,7 +4562,48 @@ window.SIMPLE_DATA = {
       "r1m": 0.025,
       "r3m": 0.067,
       "r6m": 0.009,
-      "r1y": null
+      "r1y": 0.519
+    },
+    "INTC": {
+      "news": [
+        {
+          "title": "Intel soars 13% on report of Apple chip talks, hits new all-time high",
+          "source": "CNBC"
+        },
+        {
+          "title": "Intel Stock Has Surged on the AI Boom. Is it Still a Buy?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Intel's stock is up but the comeback is still underway",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Intel Corporation",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "summary": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates through three segments: CCG, DCAI, and Intel Foundry. The company offers client computing group products, including client and\u2026",
+      "employees": 85100,
+      "price": 99.17,
+      "w52h": 129.44,
+      "w52l": 19.31,
+      "mcap": 498428411904,
+      "pe": null,
+      "fpe": 64.18,
+      "eps": -0.6,
+      "margin": -0.059,
+      "beta": 2.23,
+      "divY": null,
+      "tgtMean": 89.32,
+      "tgtHigh": 150.0,
+      "tgtLow": 20.4,
+      "reco": "hold",
+      "nAnalysts": 41,
+      "r1m": -0.122,
+      "r3m": 1.284,
+      "r6m": 1.266,
+      "r1y": 3.897
     },
     "INTU": {
       "news": [
@@ -3644,20 +4644,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.236,
       "r3m": -0.381,
       "r6m": -0.54,
-      "r1y": null
+      "r1y": -0.61
+    },
+    "IREN": {
+      "news": [],
+      "news_tone": null,
+      "name": "IREN LIMITED",
+      "sector": "Financial Services",
+      "industry": "Capital Markets",
+      "summary": "IREN Limited operates in the vertically integrated data center business in Australia and Canada. The company owns and operates computing hardware, as well as electrical infrastructure and data centers. It also mines Bitcoin, a scarce digital asset that is created and transmitted through the operation of a peer-to-peer network of\u2026",
+      "employees": 257,
+      "price": 54.35,
+      "w52h": 76.41,
+      "w52l": 8.95,
+      "mcap": 19423531008,
+      "pe": 70.58,
+      "fpe": -57.82,
+      "eps": 0.77,
+      "margin": 0.209,
+      "beta": 4.23,
+      "divY": null,
+      "tgtMean": 81.07,
+      "tgtHigh": 126.0,
+      "tgtLow": 41.0,
+      "reco": "buy",
+      "nAnalysts": 14,
+      "r1m": -0.109,
+      "r3m": 0.481,
+      "r6m": 0.236,
+      "r1y": 4.764
     },
     "ISRG": {
       "news": [
-        {
-          "title": "Intuitive Surgical Inc. stock underperforms Tuesday when compared to competitors",
-          "source": "MarketWatch"
-        },
         {
           "title": "A New Robotics Giant Is Trying To Undercut Intuitive Surgical",
           "source": "Investor's Business Daily"
         },
         {
           "title": "Intuitive Surgical Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Intuitive Surgical Inc. stock underperforms Tuesday when compared to competitors",
           "source": "MarketWatch"
         }
       ],
@@ -3685,7 +4713,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.066,
       "r3m": -0.139,
       "r6m": -0.259,
-      "r1y": null
+      "r1y": -0.244
     },
     "JKS": {
       "news": [],
@@ -3697,7 +4725,7 @@ window.SIMPLE_DATA = {
       "employees": 26409,
       "price": 20.06,
       "w52h": 30.58,
-      "w52l": 20.06,
+      "w52l": 17.4,
       "mcap": 1050545920,
       "pe": null,
       "fpe": 26.8,
@@ -3713,7 +4741,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.154,
       "r3m": -0.141,
       "r6m": -0.168,
-      "r1y": null
+      "r1y": 0.141
     },
     "JPM": {
       "news": [
@@ -3726,7 +4754,7 @@ window.SIMPLE_DATA = {
           "source": "Morningstar"
         },
         {
-          "title": "JPMorgan Chase & Co. stock outperforms market despite losses on the day",
+          "title": "JPMorgan Chase & Co. stock rises Monday, outperforms market",
           "source": "MarketWatch"
         }
       ],
@@ -3738,7 +4766,7 @@ window.SIMPLE_DATA = {
       "employees": 320079,
       "price": 312.37,
       "w52h": 332.91,
-      "w52l": 281.4,
+      "w52l": 256.95,
       "mcap": 836998922240,
       "pe": 14.95,
       "fpe": 13.26,
@@ -3754,7 +4782,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.008,
       "r3m": 0.085,
       "r6m": 0.01,
-      "r1y": null
+      "r1y": 0.205
     },
     "KBH": {
       "news": [
@@ -3795,7 +4823,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.053,
       "r3m": -0.095,
       "r6m": -0.202,
-      "r1y": null
+      "r1y": -0.001
     },
     "KGC": {
       "news": [
@@ -3820,7 +4848,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 26.22,
       "w52h": 37.97,
-      "w52l": 15.36,
+      "w52l": 14.75,
       "mcap": 31309549568,
       "pe": 11.16,
       "fpe": 7.63,
@@ -3836,20 +4864,20 @@ window.SIMPLE_DATA = {
       "r1m": -0.147,
       "r3m": -0.192,
       "r6m": -0.031,
-      "r1y": null
+      "r1y": 0.702
     },
     "KLAC": {
       "news": [
+        {
+          "title": "KLA Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
         {
           "title": "KLA Corp. stock outperforms competitors on strong trading day",
           "source": "MarketWatch"
         },
         {
           "title": "KLA Corp. stock underperforms Tuesday when compared to competitors despite daily gains",
-          "source": "MarketWatch"
-        },
-        {
-          "title": "KLA Corp. stock outperforms competitors on strong trading day",
           "source": "MarketWatch"
         }
       ],
@@ -3861,7 +4889,7 @@ window.SIMPLE_DATA = {
       "employees": 15000,
       "price": 1929.2,
       "w52h": 2131.1,
-      "w52l": 840.32,
+      "w52l": 786.82,
       "mcap": 252006612992,
       "pe": 54.65,
       "fpe": 38.7,
@@ -3877,7 +4905,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.064,
       "r3m": 0.437,
       "r6m": 0.596,
-      "r1y": null
+      "r1y": 1.483
     },
     "KMI": {
       "news": [
@@ -3918,7 +4946,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.003,
       "r3m": -0.048,
       "r6m": 0.188,
-      "r1y": null
+      "r1y": 0.177
     },
     "KTOS": {
       "news": [
@@ -3935,7 +4963,7 @@ window.SIMPLE_DATA = {
       "employees": 4300,
       "price": 58.52,
       "w52h": 130.72,
-      "w52l": 52.09,
+      "w52l": 39.3,
       "mcap": 10973669376,
       "pe": 344.24,
       "fpe": 54.5,
@@ -3951,7 +4979,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.049,
       "r3m": -0.327,
       "r6m": -0.196,
-      "r1y": null
+      "r1y": 0.459
     },
     "LDOS": {
       "news": [
@@ -3992,7 +5020,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.078,
       "r3m": -0.299,
       "r6m": -0.337,
-      "r1y": null
+      "r1y": -0.13
     },
     "LEN": {
       "news": [
@@ -4033,7 +5061,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.001,
       "r3m": -0.101,
       "r6m": -0.314,
-      "r1y": null
+      "r1y": -0.164
     },
     "LEU": {
       "news": [],
@@ -4045,7 +5073,7 @@ window.SIMPLE_DATA = {
       "employees": 467,
       "price": 161.78,
       "w52h": 436.0,
-      "w52l": 161.78,
+      "w52l": 136.34,
       "mcap": 3182664704,
       "pe": 58.83,
       "fpe": 40.75,
@@ -4061,7 +5089,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.301,
       "r3m": -0.144,
       "r6m": -0.397,
-      "r1y": null
+      "r1y": 0.147
     },
     "LHX": {
       "news": [
@@ -4086,7 +5114,7 @@ window.SIMPLE_DATA = {
       "employees": 45000,
       "price": 307.83,
       "w52h": 375.64,
-      "w52l": 258.89,
+      "w52l": 238.2,
       "mcap": 57347170304,
       "pe": 33.46,
       "fpe": 22.58,
@@ -4102,7 +5130,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.023,
       "r3m": -0.157,
       "r6m": 0.117,
-      "r1y": null
+      "r1y": 0.291
     },
     "LMT": {
       "news": [],
@@ -4130,7 +5158,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.025,
       "r3m": -0.215,
       "r6m": 0.186,
-      "r1y": null
+      "r1y": 0.115
     },
     "LRCX": {
       "news": [
@@ -4155,7 +5183,7 @@ window.SIMPLE_DATA = {
       "employees": 20600,
       "price": 303.28,
       "w52h": 343.71,
-      "w52l": 94.38,
+      "w52l": 84.29,
       "mcap": 379273183232,
       "pe": 57.44,
       "fpe": 38.19,
@@ -4171,7 +5199,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.021,
       "r3m": 0.521,
       "r6m": 0.901,
-      "r1y": null
+      "r1y": 2.604
     },
     "LUNR": {
       "news": [
@@ -4208,7 +5236,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.115,
       "r3m": 0.665,
       "r6m": 1.878,
-      "r1y": null
+      "r1y": 1.655
     },
     "MARA": {
       "news": [],
@@ -4236,7 +5264,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.054,
       "r3m": 0.538,
       "r6m": -0.012,
-      "r1y": null
+      "r1y": -0.214
+    },
+    "MAS": {
+      "news": [
+        {
+          "title": "Masco (MAS): Company Profile, Stock Price, News, Rankings",
+          "source": "Fortune"
+        },
+        {
+          "title": "Masco Corp. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "An Unlikely Stock to Buy That\u2019s Trading at a Big Discount",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Masco Corporation",
+      "sector": "Industrials",
+      "industry": "Building Products & Equipment",
+      "summary": "Masco Corporation provides home improvement and building products in North America, Europe, and internationally. The company's Plumbing Products segment offers faucets, showerheads, handheld showers, valves, bath hardware and accessories, bathing units, shower bases and enclosures, shower drains, steam shower systems, water filtration\u2026",
+      "employees": 18000,
+      "price": 69.41,
+      "w52h": 77.12,
+      "w52l": 58.32,
+      "mcap": 14002387968,
+      "pe": 17.18,
+      "fpe": 14.76,
+      "eps": 4.04,
+      "margin": 0.109,
+      "beta": 1.31,
+      "divY": 1.84,
+      "tgtMean": 80.67,
+      "tgtHigh": 97.0,
+      "tgtLow": 67.0,
+      "reco": "buy",
+      "nAnalysts": 18,
+      "r1m": -0.031,
+      "r3m": 0.096,
+      "r6m": 0.084,
+      "r1y": 0.116
     },
     "MAXN": {
       "news": [
@@ -4277,7 +5346,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.134,
       "r3m": -0.818,
       "r6m": -0.857,
-      "r1y": null
+      "r1y": -0.863
     },
     "MCHP": {
       "news": [
@@ -4318,7 +5387,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.137,
       "r3m": 0.371,
       "r6m": 0.404,
-      "r1y": null
+      "r1y": 0.403
+    },
+    "MDB": {
+      "news": [
+        {
+          "title": "After Earnings, Is MongoDB Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Why MongoDB Stock Is Tumbling Despite A Q4 Earnings Beat",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "MongoDB Stock Falls 27% Even as Earnings Beat Estimates",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "MongoDB, Inc.",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "summary": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Enterprise Advanced, a commercial database server for enterprise customers to run in the cloud, on-premises, or in a hybrid environment; and\u2026",
+      "employees": 5636,
+      "price": 350.74,
+      "w52h": 440.6,
+      "w52l": 201.0,
+      "mcap": 28210694144,
+      "pe": null,
+      "fpe": 47.8,
+      "eps": -0.39,
+      "margin": -0.011,
+      "beta": 1.55,
+      "divY": null,
+      "tgtMean": 395.77,
+      "tgtHigh": 545.0,
+      "tgtLow": 272.64,
+      "reco": "buy",
+      "nAnalysts": 37,
+      "r1m": 0.322,
+      "r3m": 0.297,
+      "r6m": -0.136,
+      "r1y": 0.756
     },
     "META": {
       "news": [
@@ -4351,7 +5461,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.032,
       "r3m": -0.08,
       "r6m": -0.071,
-      "r1y": null
+      "r1y": -0.135
     },
     "MPC": {
       "news": [
@@ -4364,7 +5474,7 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Marathon Petroleum Corp. stock outperforms competitors on strong trading day",
+          "title": "Marathon Petroleum Corp. stock outperforms competitors despite losses on the day",
           "source": "MarketWatch"
         }
       ],
@@ -4376,7 +5486,7 @@ window.SIMPLE_DATA = {
       "employees": 18500,
       "price": 262.01,
       "w52h": 267.21,
-      "w52l": 155.55,
+      "w52l": 155.17,
       "mcap": 76490317824,
       "pe": 17.24,
       "fpe": 11.01,
@@ -4392,7 +5502,48 @@ window.SIMPLE_DATA = {
       "r1m": 0.07,
       "r3m": 0.189,
       "r6m": 0.395,
-      "r1y": null
+      "r1y": 0.702
+    },
+    "MPWR": {
+      "news": [
+        {
+          "title": "Monolithic Power Systems Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Monolithic Power Systems Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Monolithic Power Systems Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "mixed",
+      "name": "Monolithic Power Systems, Inc.",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "summary": "Monolithic Power Systems, Inc. provides semiconductor-based power electronics solutions in China, Taiwan, South Korea, Southeast Asia, Europe, the United States, Japan, and internationally. The company offers direct current (DC) to DC solutions to convert and control voltages within a range of electronic systems, such as cloud-based\u2026",
+      "employees": 4501,
+      "price": 1481.05,
+      "w52h": 1689.89,
+      "w52l": 667.93,
+      "mcap": 72763990016,
+      "pe": 106.4,
+      "fpe": 49.11,
+      "eps": 13.92,
+      "margin": 0.23,
+      "beta": 1.69,
+      "divY": 0.54,
+      "tgtMean": 1797.14,
+      "tgtHigh": 2000.0,
+      "tgtLow": 1500.0,
+      "reco": "none",
+      "nAnalysts": 14,
+      "r1m": -0.104,
+      "r3m": 0.45,
+      "r6m": 0.552,
+      "r1y": 1.148
     },
     "MRNA": {
       "news": [
@@ -4433,10 +5584,14 @@ window.SIMPLE_DATA = {
       "r1m": -0.028,
       "r3m": -0.097,
       "r6m": 0.884,
-      "r1y": null
+      "r1y": 0.74
     },
     "MRVL": {
       "news": [
+        {
+          "title": "Marvell looks poised to finally get a spot in the S&P 500 after explosive stock surge",
+          "source": "MarketWatch"
+        },
         {
           "title": "Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy?",
           "source": "Morningstar"
@@ -4444,10 +5599,6 @@ window.SIMPLE_DATA = {
         {
           "title": "Marvell Stock Was Just Added to S&P 500. Here\u2019s Who Else Was Included and Bumped.",
           "source": "Barron's"
-        },
-        {
-          "title": "Marvell Technology, Flex to join S&P 500 later this month",
-          "source": "Fortune"
         }
       ],
       "news_tone": "positive",
@@ -4474,17 +5625,17 @@ window.SIMPLE_DATA = {
       "r1m": 0.53,
       "r3m": 1.943,
       "r6m": 1.633,
-      "r1y": null
+      "r1y": 2.985
     },
     "MS": {
       "news": [
         {
-          "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
-          "source": "CNBC"
-        },
-        {
           "title": "Morgan Stanley Says Meta Can Win AI. The Stock Still Has Something to Prove.",
           "source": "Barron's"
+        },
+        {
+          "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
+          "source": "CNBC"
         },
         {
           "title": "Exclusive | Morgan Stanley Sees SpaceX\u2019s Revenue Reaching $3.4 Trillion in 2040",
@@ -4499,7 +5650,7 @@ window.SIMPLE_DATA = {
       "employees": 84000,
       "price": 211.93,
       "w52h": 218.27,
-      "w52l": 136.74,
+      "w52l": 126.44,
       "mcap": 334273970176,
       "pe": 19.2,
       "fpe": 16.69,
@@ -4515,7 +5666,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.096,
       "r3m": 0.329,
       "r6m": 0.233,
-      "r1y": null
+      "r1y": 0.694
     },
     "MSFT": {
       "news": [
@@ -4556,7 +5707,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.009,
       "r3m": 0.021,
       "r6m": -0.124,
-      "r1y": null
+      "r1y": -0.095
     },
     "MSTR": {
       "news": [
@@ -4572,7 +5723,7 @@ window.SIMPLE_DATA = {
       "summary": "Strategy Inc, together with its subsidiaries, operates as a bitcoin treasury company in the United States, Europe, the Middle East, Africa, and internationally. It offers investors varying degrees of economic exposure to Bitcoin by offering a range of securities, including equity and fixed income instruments. The company also provides\u2026",
       "employees": 1511,
       "price": 120.44,
-      "w52h": 426.4,
+      "w52h": 455.9,
       "w52l": 106.99,
       "mcap": 42384224256,
       "pe": null,
@@ -4589,17 +5740,17 @@ window.SIMPLE_DATA = {
       "r1m": -0.355,
       "r3m": -0.098,
       "r6m": -0.361,
-      "r1y": null
+      "r1y": -0.681
     },
     "MTH": {
       "news": [
         {
-          "title": "Meritage Homes: A Building Stock For All Seasons",
-          "source": "Forbes"
-        },
-        {
           "title": "Meritage Homes (MTH): Company Profile, Stock Price, News, Rankings",
           "source": "Fortune"
+        },
+        {
+          "title": "Meritage Homes: A Building Stock For All Seasons",
+          "source": "Forbes"
         }
       ],
       "news_tone": "mixed",
@@ -4626,16 +5777,24 @@ window.SIMPLE_DATA = {
       "r1m": 0.053,
       "r3m": 0.017,
       "r6m": -0.072,
-      "r1y": null
+      "r1y": 0.07
     },
     "MU": {
       "news": [
         {
           "title": "Why Is Micron Stock Falling Today? A New Warning Points to an Early Peak.",
           "source": "Barron's"
+        },
+        {
+          "title": "Marvell, Micron shares tumble as the chip sector suffers its worst day in 6 years",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Micron Technology: This AI Winner Has Been Unstoppable. Is It Time to Sell?",
+          "source": "Morningstar"
         }
       ],
-      "news_tone": "mixed",
+      "news_tone": "negative",
       "name": "Micron Technology, Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -4659,7 +5818,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.296,
       "r3m": 1.334,
       "r6m": 2.693,
-      "r1y": null
+      "r1y": 7.388
     },
     "NBIX": {
       "news": [],
@@ -4687,7 +5846,48 @@ window.SIMPLE_DATA = {
       "r1m": 0.115,
       "r3m": 0.279,
       "r6m": 0.078,
-      "r1y": null
+      "r1y": 0.316
+    },
+    "NDSN": {
+      "news": [
+        {
+          "title": "Nordson Corp. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Nordson Corp. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Nordson Corp. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Nordson Corporation",
+      "sector": "Industrials",
+      "industry": "Specialty Industrial Machinery",
+      "summary": "Nordson Corporation engineers, manufactures, and markets products and systems to dispense, apply, and control adhesives, coatings, polymers, sealants, biomaterials, medical components, and other fluids. The Industrial Precision Solutions segment provides dispensing, coating, and laminating systems for adhesives, lotions, liquids, and\u2026",
+      "employees": 8200,
+      "price": 282.73,
+      "w52h": 298.37,
+      "w52l": 207.12,
+      "mcap": 15753136128,
+      "pe": 30.21,
+      "fpe": 22.74,
+      "eps": 9.36,
+      "margin": 0.182,
+      "beta": 0.98,
+      "divY": 1.16,
+      "tgtMean": 319.12,
+      "tgtHigh": 345.0,
+      "tgtLow": 260.0,
+      "reco": "buy",
+      "nAnalysts": 8,
+      "r1m": -0.015,
+      "r3m": 0.039,
+      "r6m": 0.193,
+      "r1y": 0.345
     },
     "NEE": {
       "news": [
@@ -4712,7 +5912,7 @@ window.SIMPLE_DATA = {
       "employees": 17400,
       "price": 85.84,
       "w52h": 97.17,
-      "w52l": 68.33,
+      "w52l": 67.47,
       "mcap": 179028361216,
       "pe": 21.79,
       "fpe": 19.52,
@@ -4728,12 +5928,16 @@ window.SIMPLE_DATA = {
       "r1m": -0.094,
       "r3m": -0.05,
       "r6m": 0.025,
-      "r1y": null
+      "r1y": 0.264
     },
     "NEM": {
       "news": [
         {
           "title": "What's Fueling Newmont Stock\u2019s Rally?",
+          "source": "Forbes"
+        },
+        {
+          "title": "Should You Buy The Dip In Newmont Stock?",
           "source": "Forbes"
         }
       ],
@@ -4745,7 +5949,7 @@ window.SIMPLE_DATA = {
       "employees": 17500,
       "price": 99.71,
       "w52h": 131.38,
-      "w52l": 59.23,
+      "w52l": 51.81,
       "mcap": 106445684736,
       "pe": 12.93,
       "fpe": 8.76,
@@ -4761,7 +5965,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.132,
       "r3m": -0.141,
       "r6m": 0.117,
-      "r1y": null
+      "r1y": 0.823
     },
     "NET": {
       "news": [
@@ -4772,10 +5976,6 @@ window.SIMPLE_DATA = {
         {
           "title": "Why Cloudflare Stock Is Tumbling After a Solid Earnings Report",
           "source": "Barron's"
-        },
-        {
-          "title": "Cloudflare Earnings: Accelerating Top Line as AI Inference Demand Continues to Drive Results",
-          "source": "Morningstar"
         }
       ],
       "news_tone": "mixed",
@@ -4802,12 +6002,16 @@ window.SIMPLE_DATA = {
       "r1m": 0.006,
       "r3m": 0.281,
       "r6m": 0.224,
-      "r1y": null
+      "r1y": 0.463
     },
     "NFLX": {
       "news": [
         {
           "title": "Going Into Earnings, Is Netflix Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "After Earnings, Is Netflix Stock a Buy, a Sell, or Fairly Valued?",
           "source": "Morningstar"
         }
       ],
@@ -4818,7 +6022,7 @@ window.SIMPLE_DATA = {
       "summary": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It also provides members the ability to receive streaming content through a host of internet-connected devices, including TVs, digital video\u2026",
       "employees": 16000,
       "price": 82.18,
-      "w52h": 126.32,
+      "w52h": 133.91,
       "w52l": 75.86,
       "mcap": 346043416576,
       "pe": 26.51,
@@ -4835,7 +6039,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.069,
       "r3m": -0.17,
       "r6m": -0.21,
-      "r1y": null
+      "r1y": -0.337
     },
     "NNE": {
       "news": [
@@ -4872,7 +6076,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.19,
       "r3m": 0.001,
       "r6m": -0.305,
-      "r1y": null
+      "r1y": -0.205
     },
     "NOC": {
       "news": [
@@ -4889,7 +6093,7 @@ window.SIMPLE_DATA = {
       "employees": 95000,
       "price": 544.4,
       "w52h": 764.65,
-      "w52l": 507.34,
+      "w52l": 476.53,
       "mcap": 77323026432,
       "pe": 17.07,
       "fpe": 18.06,
@@ -4905,31 +6109,31 @@ window.SIMPLE_DATA = {
       "r1m": -0.023,
       "r3m": -0.277,
       "r6m": -0.009,
-      "r1y": null
+      "r1y": 0.125
     },
     "NOW": {
       "news": [
-        {
-          "title": "ServiceNow Inc. stock underperforms Tuesday when compared to competitors",
-          "source": "MarketWatch"
-        },
         {
           "title": "ServiceNow Inc. stock underperforms Friday when compared to competitors",
           "source": "MarketWatch"
         },
         {
-          "title": "ServiceNow Inc. stock underperforms Wednesday when compared to competitors",
+          "title": "ServiceNow Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ServiceNow Inc. stock outperforms competitors on strong trading day",
           "source": "MarketWatch"
         }
       ],
-      "news_tone": "mixed",
+      "news_tone": "positive",
       "name": "ServiceNow, Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
       "summary": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset management, integrated risk management, IT service management, Operational Technology management, Security Operations, strategic portfolio\u2026",
       "employees": 29187,
       "price": 112.45,
-      "w52h": 199.24,
+      "w52h": 208.94,
       "w52l": 83.0,
       "mcap": 115970588672,
       "pe": 66.93,
@@ -4946,7 +6150,40 @@ window.SIMPLE_DATA = {
       "r1m": 0.263,
       "r3m": -0.096,
       "r6m": -0.325,
-      "r1y": null
+      "r1y": -0.445
+    },
+    "NTLA": {
+      "news": [
+        {
+          "title": "Intellia Therapeutics says its Crispr-based treatment succeeds in pivotal trial",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "mixed",
+      "name": "Intellia Therapeutics, Inc.",
+      "sector": "Healthcare",
+      "industry": "Biotechnology",
+      "summary": "Intellia Therapeutics, Inc. operates as a clinical-stage genome editing company focused on developing potentially curative therapeutics using CRISPR/Cas9-based technologies. The company offers clustered, regularly interspaced short palindromic repeats (\u0093CRISPR\u0094)/CRISPR associated 9 (\u0093Cas9\u0094) technology for genome editing. The company\u2026",
+      "employees": 377,
+      "price": 13.54,
+      "w52h": 27.98,
+      "w52l": 7.58,
+      "mcap": 1891839616,
+      "pe": null,
+      "fpe": -7.36,
+      "eps": -3.52,
+      "margin": 0.0,
+      "beta": 1.81,
+      "divY": null,
+      "tgtMean": 26.63,
+      "tgtHigh": 95.0,
+      "tgtLow": 8.0,
+      "reco": "buy",
+      "nAnalysts": 19,
+      "r1m": -0.022,
+      "r3m": 0.007,
+      "r6m": 0.494,
+      "r1y": 0.765
     },
     "NVDA": {
       "news": [
@@ -4971,7 +6208,7 @@ window.SIMPLE_DATA = {
       "employees": 42000,
       "price": 205.1,
       "w52h": 235.47,
-      "w52l": 164.98,
+      "w52l": 139.79,
       "mcap": 4967727366144,
       "pe": 31.46,
       "fpe": 16.17,
@@ -4987,7 +6224,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.012,
       "r3m": 0.155,
       "r6m": 0.144,
-      "r1y": null
+      "r1y": 0.447
     },
     "NVR": {
       "news": [
@@ -5028,7 +6265,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.014,
       "r3m": -0.112,
       "r6m": -0.195,
-      "r1y": null
+      "r1y": -0.143
     },
     "NXE": {
       "news": [],
@@ -5040,7 +6277,7 @@ window.SIMPLE_DATA = {
       "employees": 142,
       "price": 10.28,
       "w52h": 13.92,
-      "w52l": 6.46,
+      "w52l": 6.3,
       "mcap": 6804428800,
       "pe": null,
       "fpe": -58.6,
@@ -5048,15 +6285,15 @@ window.SIMPLE_DATA = {
       "margin": 0.0,
       "beta": 1.61,
       "divY": null,
-      "tgtMean": 25.75,
-      "tgtHigh": 25.75,
-      "tgtLow": 25.75,
+      "tgtMean": 25.72,
+      "tgtHigh": 25.72,
+      "tgtLow": 25.72,
       "reco": "strong_buy",
       "nAnalysts": 1,
       "r1m": -0.202,
       "r3m": -0.15,
       "r6m": 0.104,
-      "r1y": null
+      "r1y": 0.606
     },
     "NXPI": {
       "news": [
@@ -5069,7 +6306,7 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "NXP Semiconductors N.V. stock underperforms Thursday when compared to competitors",
+          "title": "NXP Semiconductors N.V. stock outperforms competitors despite losses on the day",
           "source": "MarketWatch"
         }
       ],
@@ -5092,12 +6329,12 @@ window.SIMPLE_DATA = {
       "tgtMean": 302.39,
       "tgtHigh": 380.0,
       "tgtLow": 200.0,
-      "reco": "buy",
+      "reco": "none",
       "nAnalysts": 31,
       "r1m": -0.025,
       "r3m": 0.475,
       "r6m": 0.313,
-      "r1y": null
+      "r1y": 0.436
     },
     "NXT": {
       "news": [
@@ -5134,7 +6371,48 @@ window.SIMPLE_DATA = {
       "r1m": 0.044,
       "r3m": 0.297,
       "r6m": 0.514,
-      "r1y": null
+      "r1y": 1.311
+    },
+    "OKE": {
+      "news": [
+        {
+          "title": "ONEOK Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ONEOK Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ONEOK Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "ONEOK, Inc.",
+      "sector": "Energy",
+      "industry": "Oil & Gas Midstream",
+      "summary": "ONEOK, Inc. operates as a midstream service provider of gathering, processing, fractionation, transportation, storage, and marine export services in the United States. It operates in four segments: Natural Gas Gathering and Processing; Natural Gas Liquids; Natural Gas Pipelines; and Refined Products and Crude. The company owns natural\u2026",
+      "employees": 6326,
+      "price": 88.25,
+      "w52h": 95.24,
+      "w52l": 62.69,
+      "mcap": 55600398336,
+      "pe": 15.73,
+      "fpe": 14.28,
+      "eps": 5.61,
+      "margin": 0.1,
+      "beta": 0.71,
+      "divY": 4.85,
+      "tgtMean": 95.48,
+      "tgtHigh": 113.0,
+      "tgtLow": 84.0,
+      "reco": "buy",
+      "nAnalysts": 21,
+      "r1m": 0.031,
+      "r3m": 0.027,
+      "r6m": 0.209,
+      "r1y": 0.156
     },
     "OKLO": {
       "news": [
@@ -5175,7 +6453,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.27,
       "r3m": -0.003,
       "r6m": -0.399,
-      "r1y": null
+      "r1y": 0.183
     },
     "OKTA": {
       "news": [
@@ -5186,6 +6464,10 @@ window.SIMPLE_DATA = {
         {
           "title": "Our Okta Stock Pick is Up 63%. Why We See More Upside Ahead.",
           "source": "Barron's"
+        },
+        {
+          "title": "Okta\u2019s stock is surging. Here\u2019s why identity security has become the next hot thing.",
+          "source": "MarketWatch"
         }
       ],
       "news_tone": "positive",
@@ -5212,7 +6494,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.533,
       "r3m": 0.471,
       "r6m": 0.375,
-      "r1y": null
+      "r1y": 0.124
     },
     "ON": {
       "news": [
@@ -5223,9 +6505,13 @@ window.SIMPLE_DATA = {
         {
           "title": "TSMC and ASML post-earnings stock moves could be a sign of what's to come from chip companies",
           "source": "CNBC"
+        },
+        {
+          "title": "ON Semi Stock Falls After Earnings Meet Expectations",
+          "source": "Barron's"
         }
       ],
-      "news_tone": "mixed",
+      "news_tone": "negative",
       "name": "ON Semiconductor Corporation",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -5249,7 +6535,35 @@ window.SIMPLE_DATA = {
       "r1m": 0.109,
       "r3m": 1.062,
       "r6m": 1.052,
-      "r1y": null
+      "r1y": 1.332
+    },
+    "OR": {
+      "news": [],
+      "news_tone": null,
+      "name": "OR Royalties Inc.",
+      "sector": "Basic Materials",
+      "industry": "Gold",
+      "summary": "OR Royalties Inc. acquires and manages precious metal and other royalties, streams, and other interests in Canada and internationally. It also owns options on offtake; royalty/stream financings; and exclusive rights to participate in future royalty/stream financings on various projects. The company's primary asset is a 3-5% net\u2026",
+      "employees": null,
+      "price": 33.87,
+      "w52h": 47.66,
+      "w52l": 24.94,
+      "mcap": 6350484992,
+      "pe": 25.28,
+      "fpe": 20.47,
+      "eps": 1.34,
+      "margin": 0.781,
+      "beta": 1.3,
+      "divY": 0.77,
+      "tgtMean": 48.25,
+      "tgtHigh": 51.0,
+      "tgtLow": 41.0,
+      "reco": "buy",
+      "nAnalysts": 4,
+      "r1m": -0.126,
+      "r3m": -0.213,
+      "r6m": -0.004,
+      "r1y": 0.264
     },
     "ORCL": {
       "news": [
@@ -5286,7 +6600,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.101,
       "r3m": 0.402,
       "r6m": 0.035,
-      "r1y": null
+      "r1y": 0.284
     },
     "OXY": {
       "news": [
@@ -5327,7 +6641,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.033,
       "r3m": 0.056,
       "r6m": 0.355,
-      "r1y": null
+      "r1y": 0.388
     },
     "PAAS": {
       "news": [],
@@ -5355,14 +6669,10 @@ window.SIMPLE_DATA = {
       "r1m": -0.156,
       "r3m": -0.199,
       "r6m": 0.077,
-      "r1y": null
+      "r1y": 0.8
     },
     "PANW": {
       "news": [
-        {
-          "title": "Palo Alto Networks (PANW) Q3 2026 Earnings Call Transcript",
-          "source": "Fortune"
-        },
         {
           "title": "3 reasons why Palo Alto Networks\u2019 stock fell despite upbeat earnings",
           "source": "MarketWatch"
@@ -5370,6 +6680,10 @@ window.SIMPLE_DATA = {
         {
           "title": "Palo Alto CEO\u2019s Pay, Now Nearly $100 Million, Is Most Rejected in Corporate America",
           "source": "Bloomberg.com"
+        },
+        {
+          "title": "Palo Alto Networks\u2019 earnings show AI brings new urgency to cybersecurity, but stock still dips",
+          "source": "MarketWatch"
         }
       ],
       "news_tone": "negative",
@@ -5396,7 +6710,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.481,
       "r3m": 0.648,
       "r6m": 0.405,
-      "r1y": null
+      "r1y": 0.402
     },
     "PATH": {
       "news": [],
@@ -5424,7 +6738,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.07,
       "r3m": -0.052,
       "r6m": -0.244,
-      "r1y": null
+      "r1y": -0.139
     },
     "PEG": {
       "news": [
@@ -5457,15 +6771,15 @@ window.SIMPLE_DATA = {
       "margin": 0.177,
       "beta": 0.53,
       "divY": 3.37,
-      "tgtMean": 89.75,
-      "tgtHigh": 99.0,
+      "tgtMean": 89.64,
+      "tgtHigh": 97.0,
       "tgtLow": 75.0,
-      "reco": "none",
+      "reco": "buy",
       "nAnalysts": 18,
       "r1m": 0.002,
       "r3m": -0.039,
       "r6m": 0.003,
-      "r1y": null
+      "r1y": 0.021
     },
     "PEP": {
       "news": [
@@ -5490,7 +6804,7 @@ window.SIMPLE_DATA = {
       "employees": 306000,
       "price": 141.92,
       "w52h": 167.22,
-      "w52l": 132.67,
+      "w52l": 123.14,
       "mcap": 193996259328,
       "pe": 22.28,
       "fpe": 15.53,
@@ -5506,7 +6820,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.08,
       "r3m": -0.1,
       "r6m": -0.013,
-      "r1y": null
+      "r1y": 0.132
     },
     "PHM": {
       "news": [
@@ -5531,7 +6845,7 @@ window.SIMPLE_DATA = {
       "employees": 6506,
       "price": 118.4,
       "w52h": 142.26,
-      "w52l": 108.02,
+      "w52l": 98.15,
       "mcap": 22553583616,
       "pe": 11.45,
       "fpe": 10.6,
@@ -5547,7 +6861,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.014,
       "r3m": -0.072,
       "r6m": -0.088,
-      "r1y": null
+      "r1y": 0.172
     },
     "PL": {
       "news": [],
@@ -5559,7 +6873,7 @@ window.SIMPLE_DATA = {
       "employees": 945,
       "price": 32.22,
       "w52h": 51.4,
-      "w52l": 6.18,
+      "w52l": 5.03,
       "mcap": 11482988544,
       "pe": null,
       "fpe": -5642.73,
@@ -5575,7 +6889,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.188,
       "r3m": 0.275,
       "r6m": 1.683,
-      "r1y": null
+      "r1y": 7.075
     },
     "PLTR": {
       "news": [
@@ -5588,8 +6902,8 @@ window.SIMPLE_DATA = {
           "source": "CNBC"
         },
         {
-          "title": "Palantir rallies 15% for the week as Iran war boosts prospects, muting Anthropic concern",
-          "source": "CNBC"
+          "title": "Nvidia, CoreWeave And Palantir Are Driving AI Forward. Which Is The Top Stock Pick?",
+          "source": "Forbes"
         }
       ],
       "news_tone": "mixed",
@@ -5600,7 +6914,7 @@ window.SIMPLE_DATA = {
       "employees": 4395,
       "price": 135.53,
       "w52h": 207.18,
-      "w52l": 128.06,
+      "w52l": 119.91,
       "mcap": 324907696128,
       "pe": 152.28,
       "fpe": 65.34,
@@ -5616,7 +6930,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.013,
       "r3m": -0.138,
       "r6m": -0.23,
-      "r1y": null
+      "r1y": 0.042
     },
     "PNC": {
       "news": [
@@ -5625,12 +6939,12 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "PNC Financial Services Group Inc. stock outperforms competitors on strong trading day",
+          "title": "PNC Financial Services Group Inc. stock underperforms Monday when compared to competitors",
           "source": "MarketWatch"
         },
         {
-          "title": "PNC Financial Services Group Inc. stock underperforms Monday when compared to competitors",
-          "source": "MarketWatch"
+          "title": "PNC Profit Rises on Robust Client Activity",
+          "source": "WSJ"
         }
       ],
       "news_tone": "positive",
@@ -5641,7 +6955,7 @@ window.SIMPLE_DATA = {
       "employees": 56366,
       "price": 228.37,
       "w52h": 240.63,
-      "w52l": 175.66,
+      "w52l": 167.56,
       "mcap": 91705311232,
       "pe": 13.26,
       "fpe": 10.86,
@@ -5657,7 +6971,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.027,
       "r3m": 0.116,
       "r6m": 0.171,
-      "r1y": null
+      "r1y": 0.35
     },
     "PSX": {
       "news": [
@@ -5682,7 +6996,7 @@ window.SIMPLE_DATA = {
       "employees": 12600,
       "price": 183.08,
       "w52h": 186.92,
-      "w52l": 114.45,
+      "w52l": 108.51,
       "mcap": 73403179008,
       "pe": 18.09,
       "fpe": 10.74,
@@ -5698,7 +7012,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.074,
       "r3m": 0.111,
       "r6m": 0.329,
-      "r1y": null
+      "r1y": 0.683
     },
     "QCOM": {
       "news": [],
@@ -5726,16 +7040,11 @@ window.SIMPLE_DATA = {
       "r1m": 0.126,
       "r3m": 0.597,
       "r6m": 0.252,
-      "r1y": null
+      "r1y": 0.488
     },
     "QLYS": {
-      "news": [
-        {
-          "title": "Cybersecurity Company Qualys Explores Potential Sale",
-          "source": "Bloomberg.com"
-        }
-      ],
-      "news_tone": "mixed",
+      "news": [],
+      "news_tone": null,
       "name": "Qualys, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -5759,7 +7068,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.21,
       "r3m": 0.114,
       "r6m": -0.263,
-      "r1y": null
+      "r1y": -0.206
     },
     "RDW": {
       "news": [
@@ -5792,7 +7101,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.914,
       "r3m": 1.158,
       "r6m": 2.312,
-      "r1y": null
+      "r1y": 0.084
     },
     "REGN": {
       "news": [
@@ -5817,7 +7126,7 @@ window.SIMPLE_DATA = {
       "employees": 15343,
       "price": 635.45,
       "w52h": 810.08,
-      "w52l": 542.49,
+      "w52l": 480.44,
       "mcap": 66619965440,
       "pe": 15.5,
       "fpe": 11.82,
@@ -5833,7 +7142,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.117,
       "r3m": -0.162,
       "r6m": -0.12,
-      "r1y": null
+      "r1y": 0.318
     },
     "RGLD": {
       "news": [
@@ -5844,10 +7153,6 @@ window.SIMPLE_DATA = {
         {
           "title": "Royal Gold, Inc. Rings the Closing Bell",
           "source": "Nasdaq"
-        },
-        {
-          "title": "Royal Gold Stock Can Bounce Back",
-          "source": "Forbes"
         }
       ],
       "news_tone": "mixed",
@@ -5874,20 +7179,20 @@ window.SIMPLE_DATA = {
       "r1m": -0.13,
       "r3m": -0.262,
       "r6m": 0.031,
-      "r1y": null
+      "r1y": 0.13
     },
     "RIO": {
       "news": [
-        {
-          "title": "Rio Tinto, IBD Stock Of The Day, Breaks Out As Iran Deal Hopes Lift Metals Prices",
-          "source": "Investor's Business Daily"
-        },
         {
           "title": "Rio Tinto and Glencore Go Their Separate Ways",
           "source": "Morningstar"
         },
         {
           "title": "Rio Tinto Earnings: Stable, With Dividends Again at the Top of Its Target Payout Range",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Rio Tinto Shares Overvalued Due to Elevated Iron Ore, Copper, and Aluminum Prices",
           "source": "Morningstar"
         }
       ],
@@ -5899,7 +7204,7 @@ window.SIMPLE_DATA = {
       "employees": 56890,
       "price": 100.69,
       "w52h": 112.04,
-      "w52l": 56.5,
+      "w52l": 53.08,
       "mcap": 163747332096,
       "pe": 16.56,
       "fpe": 11.39,
@@ -5915,7 +7220,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.046,
       "r3m": 0.116,
       "r6m": 0.393,
-      "r1y": null
+      "r1y": 0.811
     },
     "RIOT": {
       "news": [
@@ -5932,7 +7237,7 @@ window.SIMPLE_DATA = {
       "employees": 816,
       "price": 24.66,
       "w52h": 28.25,
-      "w52l": 11.03,
+      "w52l": 8.99,
       "mcap": 9325209600,
       "pe": null,
       "fpe": -40.07,
@@ -5948,7 +7253,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.041,
       "r3m": 0.741,
       "r6m": 0.577,
-      "r1y": null
+      "r1y": 1.596
     },
     "RKLB": {
       "news": [
@@ -5969,7 +7274,7 @@ window.SIMPLE_DATA = {
       "employees": 2600,
       "price": 110.08,
       "w52h": 150.23,
-      "w52l": 39.48,
+      "w52l": 25.41,
       "mcap": 68780048384,
       "pe": null,
       "fpe": -15141.68,
@@ -5985,7 +7290,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.3,
       "r3m": 0.57,
       "r6m": 1.462,
-      "r1y": null
+      "r1y": 3.091
     },
     "ROK": {
       "news": [
@@ -6010,7 +7315,7 @@ window.SIMPLE_DATA = {
       "employees": 26000,
       "price": 446.71,
       "w52h": 463.41,
-      "w52l": 324.09,
+      "w52l": 313.42,
       "mcap": 49707184128,
       "pe": 46.29,
       "fpe": 30.78,
@@ -6026,7 +7331,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.025,
       "r3m": 0.212,
       "r6m": 0.123,
-      "r1y": null
+      "r1y": 0.421
+    },
+    "RPD": {
+      "news": [
+        {
+          "title": "5 Stocks with the Largest Fair Value Estimate Cuts After Q4 Earnings",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Rapid7 adds three new board directors in settlement with Jana Partners",
+          "source": "Reuters"
+        },
+        {
+          "title": "Exclusive: Rapid7 nears settlement with activist Jana Partners, sources say",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "mixed",
+      "name": "Rapid7, Inc.",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "summary": "Rapid7, Inc. provides cybersecurity software and services under the Rapid7, Nexpose, and Metasploit brand names. It offers Rapid7 Agent, a software-based agent that is used on assets across on-premises and cloud environments to centralize and monitor data on company's platform; Rapid7 Network Sensor that analyzes raw end-to-end\u2026",
+      "employees": 2613,
+      "price": 7.51,
+      "w52h": 25.59,
+      "w52l": 5.05,
+      "mcap": 501897952,
+      "pe": 21.46,
+      "fpe": 4.84,
+      "eps": 0.35,
+      "margin": 0.026,
+      "beta": 1.02,
+      "divY": null,
+      "tgtMean": 7.3,
+      "tgtHigh": 10.0,
+      "tgtLow": 6.0,
+      "reco": "hold",
+      "nAnalysts": 22,
+      "r1m": 0.143,
+      "r3m": 0.062,
+      "r6m": -0.532,
+      "r1y": -0.679
     },
     "RTX": {
       "news": [
@@ -6051,7 +7397,7 @@ window.SIMPLE_DATA = {
       "employees": 180000,
       "price": 180.99,
       "w52h": 211.28,
-      "w52l": 146.83,
+      "w52l": 136.35,
       "mcap": 243736231936,
       "pe": 34.02,
       "fpe": 23.88,
@@ -6067,7 +7413,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.028,
       "r3m": -0.134,
       "r6m": 0.083,
-      "r1y": null
+      "r1y": 0.327
     },
     "RUN": {
       "news": [
@@ -6092,7 +7438,7 @@ window.SIMPLE_DATA = {
       "employees": 9059,
       "price": 13.35,
       "w52h": 21.41,
-      "w52l": 9.07,
+      "w52l": 5.78,
       "mcap": 3185825536,
       "pe": 6.27,
       "fpe": 16.48,
@@ -6108,7 +7454,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.041,
       "r3m": 0.178,
       "r6m": -0.252,
-      "r1y": null
+      "r1y": 0.637
     },
     "S": {
       "news": [
@@ -6141,7 +7487,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.04,
       "r3m": 0.124,
       "r6m": -0.06,
-      "r1y": null
+      "r1y": -0.112
     },
     "SCCO": {
       "news": [
@@ -6182,7 +7528,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.045,
       "r3m": -0.051,
       "r6m": 0.283,
-      "r1y": null
+      "r1y": 0.961
     },
     "SCHW": {
       "news": [
@@ -6191,15 +7537,15 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Charles Schwab Corp. stock underperforms Wednesday when compared to competitors",
-          "source": "MarketWatch"
+          "title": "How AI Could Kill Charles Schwab and the Brokerage Industry\u2019s Cash Cow",
+          "source": "Barron's"
         },
         {
-          "title": "Charles Schwab Corp. stock outperforms competitors on strong trading day",
+          "title": "Charles Schwab Corp. stock underperforms Wednesday when compared to competitors",
           "source": "MarketWatch"
         }
       ],
-      "news_tone": "positive",
+      "news_tone": "mixed",
       "name": "Charles Schwab Corporation (The",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -6223,7 +7569,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.032,
       "r3m": -0.064,
       "r6m": -0.048,
-      "r1y": null
+      "r1y": 0.028
     },
     "SEDG": {
       "news": [
@@ -6244,7 +7590,7 @@ window.SIMPLE_DATA = {
       "employees": 3576,
       "price": 63.17,
       "w52h": 78.51,
-      "w52l": 24.42,
+      "w52l": 15.96,
       "mcap": 3841885696,
       "pe": null,
       "fpe": 40.33,
@@ -6260,7 +7606,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.556,
       "r3m": 0.891,
       "r6m": 0.998,
-      "r1y": null
+      "r1y": 2.616
     },
     "SERV": {
       "news": [
@@ -6297,7 +7643,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.191,
       "r3m": -0.179,
       "r6m": -0.343,
-      "r1y": null
+      "r1y": -0.357
     },
     "SHLS": {
       "news": [
@@ -6314,7 +7660,7 @@ window.SIMPLE_DATA = {
       "employees": 1480,
       "price": 10.81,
       "w52h": 12.77,
-      "w52l": 4.46,
+      "w52l": 4.25,
       "mcap": 1813613440,
       "pe": 54.05,
       "fpe": 21.3,
@@ -6330,7 +7676,89 @@ window.SIMPLE_DATA = {
       "r1m": 0.298,
       "r3m": 0.893,
       "r6m": 0.42,
-      "r1y": null
+      "r1y": 1.206
+    },
+    "SHOP": {
+      "news": [
+        {
+          "title": "Shopify Inc. Cl A stock rises Thursday, outperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Shopify Inc. Cl A stock falls Wednesday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Shopify Inc. Cl A stock falls Tuesday, underperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
+      "name": "Shopify Inc.",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "summary": "Shopify Inc., a commerce technology company, provides tools to start, scale, market, and run a business of various sizes in Canada, the United States, Europe, the Middle East, Africa, the Asia Pacific, and Latin America. The Company offers Shopify platform that enables merchants to manage products and inventory, process orders and\u2026",
+      "employees": 7600,
+      "price": 109.54,
+      "w52h": 179.01,
+      "w52l": 95.4,
+      "mcap": 142145093632,
+      "pe": 107.39,
+      "fpe": 46.98,
+      "eps": 1.02,
+      "margin": 0.108,
+      "beta": 2.59,
+      "divY": null,
+      "tgtMean": 150.11,
+      "tgtHigh": 200.0,
+      "tgtLow": 105.0,
+      "reco": "buy",
+      "nAnalysts": 45,
+      "r1m": 0.039,
+      "r3m": -0.159,
+      "r6m": -0.315,
+      "r1y": 0.058
+    },
+    "SHW": {
+      "news": [
+        {
+          "title": "Sherwin-Williams Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "AkzoNobel Shares Plunge After Sherwin-Williams, Nippon Paint Drop $14.5 Billion Bid",
+          "source": "WSJ"
+        },
+        {
+          "title": "Sherwin-Williams Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Sherwin-Williams Company (The)",
+      "sector": "Basic Materials",
+      "industry": "Specialty Chemicals",
+      "summary": "The Sherwin-Williams Company engages in the development, manufacture, distribution, and sale of paint, coatings, and related products to professional, industrial, commercial and retail customers. The company operates through three segments: Paint Stores Group, Consumer Brands Group, and Performance Coatings Group. The Paint Stores\u2026",
+      "employees": 64249,
+      "price": 305.3,
+      "w52h": 372.56,
+      "w52l": 293.0,
+      "mcap": 75297849344,
+      "pe": 29.33,
+      "fpe": 23.08,
+      "eps": 10.41,
+      "margin": 0.109,
+      "beta": 1.13,
+      "divY": 1.05,
+      "tgtMean": 373.95,
+      "tgtHigh": 420.0,
+      "tgtLow": 330.0,
+      "reco": "buy",
+      "nAnalysts": 20,
+      "r1m": -0.054,
+      "r3m": -0.072,
+      "r6m": -0.096,
+      "r1y": -0.149
     },
     "SLB": {
       "news": [
@@ -6371,7 +7799,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.0,
       "r3m": 0.176,
       "r6m": 0.478,
-      "r1y": null
+      "r1y": 0.696
     },
     "SMCI": {
       "news": [
@@ -6380,8 +7808,8 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Super Micro stock jumps 18% on guidance beat as revenue more than doubles",
-          "source": "CNBC"
+          "title": "Super Micro Computer Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
         },
         {
           "title": "Super Micro Computer Inc. stock underperforms Monday when compared to competitors despite daily gains",
@@ -6412,7 +7840,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.201,
       "r3m": 0.33,
       "r6m": 0.236,
-      "r1y": null
+      "r1y": -0.056
     },
     "SMR": {
       "news": [],
@@ -6440,7 +7868,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.223,
       "r3m": -0.1,
       "r6m": -0.479,
-      "r1y": null
+      "r1y": -0.663
     },
     "SNOW": {
       "news": [
@@ -6481,7 +7909,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.705,
       "r3m": 0.32,
       "r6m": -0.101,
-      "r1y": null
+      "r1y": 0.137
     },
     "SO": {
       "news": [
@@ -6522,7 +7950,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.002,
       "r3m": -0.042,
       "r6m": 0.07,
-      "r1y": null
+      "r1y": 0.083
     },
     "SPCE": {
       "news": [
@@ -6531,11 +7959,11 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Virgin Galactic Holdings Inc. stock outperforms competitors on strong trading day",
-          "source": "MarketWatch"
+          "title": "Virgin Galactic Stock Soars. Space Tourism Is a Big, Big Deal.",
+          "source": "Barron's"
         },
         {
-          "title": "Virgin Galactic Holdings Inc. stock outperforms competitors on strong trading day",
+          "title": "Virgin Galactic Holdings Inc. stock underperforms Thursday when compared to competitors",
           "source": "MarketWatch"
         }
       ],
@@ -6563,7 +7991,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.647,
       "r3m": 0.738,
       "r6m": 0.007,
-      "r1y": null
+      "r1y": 0.3
     },
     "SRE": {
       "news": [],
@@ -6575,7 +8003,7 @@ window.SIMPLE_DATA = {
       "employees": 15938,
       "price": 91.42,
       "w52h": 99.75,
-      "w52l": 76.91,
+      "w52l": 71.6,
       "mcap": 59761930240,
       "pe": 31.1,
       "fpe": 16.51,
@@ -6583,7 +8011,7 @@ window.SIMPLE_DATA = {
       "margin": 0.144,
       "beta": 0.58,
       "divY": 2.88,
-      "tgtMean": 103.62,
+      "tgtMean": 103.5,
       "tgtHigh": 118.0,
       "tgtLow": 93.0,
       "reco": "buy",
@@ -6591,7 +8019,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.024,
       "r3m": -0.006,
       "r6m": 0.022,
-      "r1y": null
+      "r1y": 0.233
     },
     "SRPT": {
       "news": [
@@ -6607,7 +8035,7 @@ window.SIMPLE_DATA = {
       "summary": "Sarepta Therapeutics, Inc., a commercial-stage biopharmaceutical company, focuses on the discovery and development of RNA-targeted therapeutics, siRNA platform, gene therapy, and other genetic therapeutic modalities for the treatment of rare diseases. It offers EXONDYS 51 for the treatment of Duchenne in patients who have a confirmed\u2026",
       "employees": 835,
       "price": 15.75,
-      "w52h": 24.45,
+      "w52h": 43.01,
       "w52l": 11.93,
       "mcap": 1662825472,
       "pe": 45.0,
@@ -6624,7 +8052,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.316,
       "r3m": -0.057,
       "r6m": -0.279,
-      "r1y": null
+      "r1y": -0.602
     },
     "SVM": {
       "news": [],
@@ -6636,7 +8064,7 @@ window.SIMPLE_DATA = {
       "employees": 372,
       "price": 10.64,
       "w52h": 15.69,
-      "w52l": 4.3,
+      "w52l": 4.06,
       "mcap": 2353594880,
       "pe": null,
       "fpe": 6.09,
@@ -6652,7 +8080,48 @@ window.SIMPLE_DATA = {
       "r1m": -0.181,
       "r3m": -0.1,
       "r6m": 0.341,
-      "r1y": null
+      "r1y": 1.538
+    },
+    "TDG": {
+      "news": [
+        {
+          "title": "TransDigm Group Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "TransDigm Group Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "TransDigm Group Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "Transdigm Group Incorporated",
+      "sector": "Industrials",
+      "industry": "Aerospace & Defense",
+      "summary": "TransDigm Group Incorporated designs, produces, and supplies aircraft components in the United States and internationally. The Power & Control segment offers mechanical/electro-mechanical actuators and controls, ignition systems and engine technology, specialized pumps and valves, power conditioning devices, specialized AC/DC electric\u2026",
+      "employees": 16500,
+      "price": 1238.74,
+      "w52h": 1516.55,
+      "w52l": 1132.88,
+      "mcap": 69287165952,
+      "pe": 38.61,
+      "fpe": 26.38,
+      "eps": 32.08,
+      "margin": 0.219,
+      "beta": 0.9,
+      "divY": null,
+      "tgtMean": 1524.0,
+      "tgtHigh": 1937.0,
+      "tgtLow": 1200.0,
+      "reco": "buy",
+      "nAnalysts": 20,
+      "r1m": 0.004,
+      "r3m": -0.043,
+      "r6m": -0.074,
+      "r1y": -0.086
     },
     "TEAM": {
       "news": [
@@ -6676,7 +8145,7 @@ window.SIMPLE_DATA = {
       "summary": "Atlassian Corporation provides a collaboration software that enables organizations to connect all teams through a system of work that unlocks productivity at scale worldwide. Its product portfolio includes Jira, a project management platform for planning, tracking, and managing work; Confluence, a connected workspace to create,\u2026",
       "employees": 13813,
       "price": 99.47,
-      "w52h": 203.0,
+      "w52h": 220.89,
       "w52l": 57.15,
       "mcap": 25242288128,
       "pe": null,
@@ -6693,7 +8162,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.12,
       "r3m": 0.19,
       "r6m": -0.365,
-      "r1y": null
+      "r1y": -0.528
     },
     "TECK": {
       "news": [
@@ -6726,15 +8195,15 @@ window.SIMPLE_DATA = {
       "margin": 0.149,
       "beta": 1.57,
       "divY": 0.59,
-      "tgtMean": 48.04,
-      "tgtHigh": 62.85,
-      "tgtLow": 34.37,
+      "tgtMean": 47.99,
+      "tgtHigh": 62.78,
+      "tgtLow": 34.33,
       "reco": "hold",
       "nAnalysts": 3,
       "r1m": -0.005,
       "r3m": 0.222,
       "r6m": 0.39,
-      "r1y": null
+      "r1y": 0.665
     },
     "TENB": {
       "news": [
@@ -6750,7 +8219,7 @@ window.SIMPLE_DATA = {
       "summary": "Tenable Holdings, Inc. provides cyber exposure management solutions in the Americas, Europe, the Middle East, Africa, the Asia Pacific, and Japan. Its platforms include Tenable AI Exposure, a solution that helps organizations identify, assess, and reduce security risks associated with the use of artificial intelligence technologies;\u2026",
       "employees": 1995,
       "price": 27.85,
-      "w52h": 33.47,
+      "w52h": 35.46,
       "w52l": 16.04,
       "mcap": 3071074560,
       "pe": null,
@@ -6767,7 +8236,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.316,
       "r3m": 0.324,
       "r6m": 0.039,
-      "r1y": null
+      "r1y": -0.144
     },
     "TER": {
       "news": [
@@ -6792,7 +8261,7 @@ window.SIMPLE_DATA = {
       "employees": 6600,
       "price": 357.93,
       "w52h": 417.92,
-      "w52l": 89.92,
+      "w52l": 81.53,
       "mcap": 56031133696,
       "pe": 66.28,
       "fpe": 37.29,
@@ -6808,7 +8277,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.064,
       "r3m": 0.311,
       "r6m": 0.836,
-      "r1y": null
+      "r1y": 3.373
     },
     "TFC": {
       "news": [
@@ -6833,7 +8302,7 @@ window.SIMPLE_DATA = {
       "employees": 37877,
       "price": 49.2,
       "w52h": 54.68,
-      "w52l": 39.79,
+      "w52l": 37.28,
       "mcap": 61297262592,
       "pe": 12.18,
       "fpe": 9.6,
@@ -6849,7 +8318,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.021,
       "r3m": 0.069,
       "r6m": 0.059,
-      "r1y": null
+      "r1y": 0.302
     },
     "TGB": {
       "news": [
@@ -6870,7 +8339,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 6.65,
       "w52h": 8.88,
-      "w52l": 3.05,
+      "w52l": 2.6,
       "mcap": 2431554816,
       "pe": 166.25,
       "fpe": 9.2,
@@ -6886,7 +8355,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.116,
       "r3m": -0.076,
       "r6m": 0.267,
-      "r1y": null
+      "r1y": 1.692
     },
     "TOL": {
       "news": [
@@ -6907,7 +8376,7 @@ window.SIMPLE_DATA = {
       "employees": 4900,
       "price": 137.91,
       "w52h": 165.81,
-      "w52l": 115.99,
+      "w52l": 104.05,
       "mcap": 12890586112,
       "pe": 10.48,
       "fpe": 9.75,
@@ -6923,7 +8392,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.026,
       "r3m": -0.064,
       "r6m": -0.03,
-      "r1y": null
+      "r1y": 0.284
     },
     "TPH": {
       "news": [
@@ -6944,7 +8413,7 @@ window.SIMPLE_DATA = {
       "employees": 1579,
       "price": 46.95,
       "w52h": 46.97,
-      "w52l": 30.65,
+      "w52l": 29.4,
       "mcap": 3998444288,
       "pe": 22.36,
       "fpe": 20.19,
@@ -6960,7 +8429,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.003,
       "r3m": 0.272,
       "r6m": 0.48,
-      "r1y": null
+      "r1y": 0.456
     },
     "TSLA": {
       "news": [
@@ -6985,7 +8454,7 @@ window.SIMPLE_DATA = {
       "employees": 134785,
       "price": 391.0,
       "w52h": 489.88,
-      "w52l": 302.63,
+      "w52l": 284.7,
       "mcap": 1468487958528,
       "pe": 358.72,
       "fpe": 156.11,
@@ -7001,11 +8470,16 @@ window.SIMPLE_DATA = {
       "r1m": -0.019,
       "r3m": -0.014,
       "r6m": -0.125,
-      "r1y": null
+      "r1y": 0.178
     },
     "TSM": {
-      "news": [],
-      "news_tone": null,
+      "news": [
+        {
+          "title": "Xi Warns of Taiwan Conflict. These Stocks Could Get Crushed.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Taiwan Semiconductor Manufactur",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -7013,7 +8487,7 @@ window.SIMPLE_DATA = {
       "employees": 76907,
       "price": 415.17,
       "w52h": 446.69,
-      "w52l": 225.37,
+      "w52l": 200.85,
       "mcap": 2153268510720,
       "pe": 35.58,
       "fpe": 21.26,
@@ -7029,7 +8503,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.01,
       "r3m": 0.229,
       "r6m": 0.413,
-      "r1y": null
+      "r1y": 1.077
     },
     "TXN": {
       "news": [
@@ -7070,7 +8544,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.015,
       "r3m": 0.483,
       "r6m": 0.579,
-      "r1y": null
+      "r1y": 0.537
     },
     "TXT": {
       "news": [
@@ -7095,7 +8569,7 @@ window.SIMPLE_DATA = {
       "employees": 34000,
       "price": 91.08,
       "w52h": 100.75,
-      "w52l": 76.97,
+      "w52l": 74.43,
       "mcap": 15837808640,
       "pe": 17.38,
       "fpe": 12.48,
@@ -7111,16 +8585,11 @@ window.SIMPLE_DATA = {
       "r1m": -0.022,
       "r3m": -0.041,
       "r6m": 0.089,
-      "r1y": null
+      "r1y": 0.224
     },
     "UEC": {
-      "news": [
-        {
-          "title": "Uranium Energy Corp Provides Date for Fiscal 2026 Third Quarter Results, Conference Call, and Webcast",
-          "source": "Financial Times"
-        }
-      ],
-      "news_tone": "mixed",
+      "news": [],
+      "news_tone": null,
       "name": "Uranium Energy Corp.",
       "sector": "Energy",
       "industry": "Uranium",
@@ -7128,7 +8597,7 @@ window.SIMPLE_DATA = {
       "employees": 171,
       "price": 12.65,
       "w52h": 20.14,
-      "w52l": 8.0,
+      "w52l": 5.92,
       "mcap": 6201292288,
       "pe": null,
       "fpe": -758.85,
@@ -7144,7 +8613,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.198,
       "r3m": -0.022,
       "r6m": -0.023,
-      "r1y": null
+      "r1y": 1.057
     },
     "USB": {
       "news": [
@@ -7153,12 +8622,12 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "U.S. Bancorp stock underperforms Wednesday when compared to competitors",
+          "title": "U.S. Bancorp stock outperforms competitors on strong trading day",
           "source": "MarketWatch"
         },
         {
-          "title": "U.S. Bancorp stock outperforms competitors on strong trading day",
-          "source": "MarketWatch"
+          "title": "US Bancorp Earnings: Good Commercial Loan Growth, but Net Interest Margin Flat in First Quarter",
+          "source": "Morningstar"
         }
       ],
       "news_tone": "positive",
@@ -7169,7 +8638,7 @@ window.SIMPLE_DATA = {
       "employees": 70000,
       "price": 55.69,
       "w52h": 60.07,
-      "w52l": 42.62,
+      "w52l": 40.95,
       "mcap": 86382493696,
       "pe": 11.68,
       "fpe": 9.85,
@@ -7180,12 +8649,12 @@ window.SIMPLE_DATA = {
       "tgtMean": 63.55,
       "tgtHigh": 74.0,
       "tgtLow": 57.5,
-      "reco": "buy",
+      "reco": "none",
       "nAnalysts": 19,
       "r1m": -0.008,
       "r3m": 0.074,
       "r6m": 0.115,
-      "r1y": null
+      "r1y": 0.322
     },
     "UUUU": {
       "news": [],
@@ -7197,7 +8666,7 @@ window.SIMPLE_DATA = {
       "employees": 1069,
       "price": 15.03,
       "w52h": 27.72,
-      "w52l": 8.47,
+      "w52l": 5.36,
       "mcap": 3755501056,
       "pe": null,
       "fpe": 3006.0,
@@ -7213,7 +8682,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.361,
       "r3m": -0.21,
       "r6m": -0.005,
-      "r1y": null
+      "r1y": 1.628
     },
     "VALE": {
       "news": [],
@@ -7225,7 +8694,7 @@ window.SIMPLE_DATA = {
       "employees": 65805,
       "price": 15.23,
       "w52h": 17.82,
-      "w52l": 8.75,
+      "w52l": 8.32,
       "mcap": 64927784960,
       "pe": 23.08,
       "fpe": 7.7,
@@ -7241,7 +8710,35 @@ window.SIMPLE_DATA = {
       "r1m": -0.076,
       "r3m": 0.017,
       "r6m": 0.206,
-      "r1y": null
+      "r1y": 0.774
+    },
+    "VRNS": {
+      "news": [],
+      "news_tone": null,
+      "name": "Varonis Systems, Inc.",
+      "sector": "Technology",
+      "industry": "Software - Infrastructure",
+      "summary": "Varonis Systems, Inc. provides software products and services that continuously discover and classify critical data, remediate exposures, and detect advanced threats with AI-powered technology in North America, Europe, APAC, and rest of worlds. The company offers Varonis Data Security Platform, a Software-as-a-Service solution which\u2026",
+      "employees": 2658,
+      "price": 32.69,
+      "w52h": 63.31,
+      "w52l": 20.19,
+      "mcap": 3839366144,
+      "pe": null,
+      "fpe": 85.53,
+      "eps": -1.13,
+      "margin": -0.198,
+      "beta": 0.87,
+      "divY": null,
+      "tgtMean": 36.32,
+      "tgtHigh": 47.0,
+      "tgtLow": 28.0,
+      "reco": "buy",
+      "nAnalysts": 22,
+      "r1m": 0.184,
+      "r3m": 0.34,
+      "r6m": 0.037,
+      "r1y": -0.346
     },
     "VRTX": {
       "news": [
@@ -7282,7 +8779,40 @@ window.SIMPLE_DATA = {
       "r1m": 0.045,
       "r3m": -0.022,
       "r6m": -0.035,
-      "r1y": null
+      "r1y": 0.002
+    },
+    "VSAT": {
+      "news": [
+        {
+          "title": "Iridium, Viasat Stocks Surge. Why a Bid for a Satellite Rival Is Good News.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "ViaSat, Inc.",
+      "sector": "Technology",
+      "industry": "Communication Equipment",
+      "summary": "Viasat, Inc. engages in the provision of broadband and communications products and services in the United States and internationally. It operates in segments, Communication Services; and Defense and Advanced Technologies. It offers satellite-based broadband and narrowband communications solutions; broadband services, including\u2026",
+      "employees": 7000,
+      "price": 67.18,
+      "w52h": 86.69,
+      "w52l": 9.12,
+      "mcap": 9174703104,
+      "pe": null,
+      "fpe": 166.56,
+      "eps": -0.25,
+      "margin": -0.007,
+      "beta": 1.72,
+      "divY": null,
+      "tgtMean": 88.88,
+      "tgtHigh": 130.0,
+      "tgtLow": 49.0,
+      "reco": "buy",
+      "nAnalysts": 8,
+      "r1m": -0.002,
+      "r3m": 0.534,
+      "r6m": 0.959,
+      "r1y": 6.557
     },
     "VST": {
       "news": [
@@ -7323,7 +8853,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.06,
       "r3m": -0.061,
       "r6m": -0.131,
-      "r1y": null
+      "r1y": -0.134
     },
     "WDAY": {
       "news": [
@@ -7347,7 +8877,7 @@ window.SIMPLE_DATA = {
       "summary": "Workday, Inc. provides enterprise cloud applications in the United States and internationally. The company offers a suite of financial management applications to maintain accounting information; manage financial processes, such as payables and receivables; identify real-time financial, operational, and management insights; perform\u2026",
       "employees": 20834,
       "price": 144.28,
-      "w52h": 247.69,
+      "w52h": 252.9,
       "w52l": 112.5,
       "mcap": 35633332224,
       "pe": 45.09,
@@ -7364,7 +8894,48 @@ window.SIMPLE_DATA = {
       "r1m": 0.177,
       "r3m": -0.045,
       "r6m": -0.328,
-      "r1y": null
+      "r1y": -0.422
+    },
+    "WEC": {
+      "news": [
+        {
+          "title": "WEC Energy Group Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "WEC Energy Group Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "WEC Energy Group Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
+      "name": "WEC Energy Group, Inc.",
+      "sector": "Utilities",
+      "industry": "Utilities - Regulated Electric",
+      "summary": "WEC Energy Group, Inc., through its subsidiaries, provides regulated natural gas and electricity, and renewable and nonregulated renewable energy services in the United States. The company operates through Wisconsin, Illinois, Other States, Electric Transmission, and Non-Utility Energy Infrastructure segments. It generates and\u2026",
+      "employees": 7000,
+      "price": 112.95,
+      "w52h": 117.77,
+      "w52l": 99.52,
+      "mcap": 36790714368,
+      "pe": 22.64,
+      "fpe": 18.81,
+      "eps": 4.99,
+      "margin": 0.162,
+      "beta": 0.47,
+      "divY": 3.37,
+      "tgtMean": 124.31,
+      "tgtHigh": 140.0,
+      "tgtLow": 108.0,
+      "reco": "buy",
+      "nAnalysts": 18,
+      "r1m": -0.0,
+      "r3m": -0.016,
+      "r6m": 0.071,
+      "r1y": 0.104
     },
     "WFC": {
       "news": [
@@ -7385,7 +8956,7 @@ window.SIMPLE_DATA = {
       "employees": 200999,
       "price": 81.94,
       "w52h": 95.37,
-      "w52l": 73.42,
+      "w52l": 70.81,
       "mcap": 250751926272,
       "pe": 12.66,
       "fpe": 10.37,
@@ -7401,7 +8972,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.025,
       "r3m": 0.025,
       "r6m": -0.073,
-      "r1y": null
+      "r1y": 0.111
     },
     "WMB": {
       "news": [
@@ -7442,7 +9013,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.024,
       "r3m": -0.024,
       "r6m": 0.187,
-      "r1y": null
+      "r1y": 0.236
     },
     "WPM": {
       "news": [
@@ -7451,11 +9022,11 @@ window.SIMPLE_DATA = {
           "source": "MarketWatch"
         },
         {
-          "title": "Wheaton Precious Metals Corp. stock rises Tuesday, still underperforms market",
+          "title": "Wheaton Precious Metals Corp. stock rises Thursday, outperforms market",
           "source": "MarketWatch"
         },
         {
-          "title": "Wheaton Precious Metals Corp. stock rises Thursday, outperforms market",
+          "title": "Wheaton Precious Metals Corp. stock rises Tuesday, still underperforms market",
           "source": "MarketWatch"
         }
       ],
@@ -7467,7 +9038,7 @@ window.SIMPLE_DATA = {
       "employees": null,
       "price": 116.23,
       "w52h": 165.21,
-      "w52l": 90.72,
+      "w52l": 86.45,
       "mcap": 52782960640,
       "pe": 29.43,
       "fpe": 20.58,
@@ -7483,7 +9054,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.135,
       "r3m": -0.206,
       "r6m": 0.08,
-      "r1y": null
+      "r1y": 0.257
     },
     "WULF": {
       "news": [],
@@ -7495,7 +9066,7 @@ window.SIMPLE_DATA = {
       "employees": 141,
       "price": 24.0,
       "w52h": 26.74,
-      "w52l": 4.76,
+      "w52l": 3.57,
       "mcap": 11892783104,
       "pe": null,
       "fpe": 129.73,
@@ -7511,7 +9082,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.068,
       "r3m": 0.745,
       "r6m": 0.663,
-      "r1y": null
+      "r1y": 4.66
     },
     "XEL": {
       "news": [
@@ -7536,7 +9107,7 @@ window.SIMPLE_DATA = {
       "employees": 11534,
       "price": 79.04,
       "w52h": 83.29,
-      "w52l": 69.53,
+      "w52l": 64.17,
       "mcap": 49342267392,
       "pe": 22.78,
       "fpe": 17.44,
@@ -7552,7 +9123,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.019,
       "r3m": -0.035,
       "r6m": 0.024,
-      "r1y": null
+      "r1y": 0.19
     },
     "XOM": {
       "news": [
@@ -7577,7 +9148,7 @@ window.SIMPLE_DATA = {
       "employees": 57900,
       "price": 149.92,
       "w52h": 170.31,
-      "w52l": 102.56,
+      "w52l": 98.68,
       "mcap": 621410451456,
       "pe": 25.24,
       "fpe": 14.09,
@@ -7593,7 +9164,7 @@ window.SIMPLE_DATA = {
       "r1m": 0.015,
       "r3m": -0.002,
       "r6m": 0.29,
-      "r1y": null
+      "r1y": 0.512
     },
     "ZBRA": {
       "news": [
@@ -7634,17 +9205,17 @@ window.SIMPLE_DATA = {
       "r1m": 0.01,
       "r3m": 0.057,
       "r6m": -0.105,
-      "r1y": null
+      "r1y": -0.202
     },
     "ZS": {
       "news": [
         {
-          "title": "Zscaler Stock Surges. Wall Street Is Buying the Company\u2019s \u2018Trust Me Story\u2019 on AI.",
-          "source": "Barron's"
-        },
-        {
           "title": "Zscaler Earnings: Disappointing Early Look at 2027 as Shares Sell Off",
           "source": "Morningstar"
+        },
+        {
+          "title": "Zscaler Stock Surges. Wall Street Is Buying the Company\u2019s \u2018Trust Me Story\u2019 on AI.",
+          "source": "Barron's"
         },
         {
           "title": "Zscaler Stock Plunges 21% on Weak Fourth-Quarter Guidance",
@@ -7675,7 +9246,7 @@ window.SIMPLE_DATA = {
       "r1m": -0.058,
       "r3m": -0.203,
       "r6m": -0.463,
-      "r1y": null
+      "r1y": -0.559
     }
   },
   "themes": [
@@ -7685,7 +9256,7 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.497,
       "vs_spy": 0.3971,
-      "buzz": 92,
+      "buzz": 88,
       "stocks": [
         "NVDA",
         "AVGO",
@@ -7702,7 +9273,13 @@ window.SIMPLE_DATA = {
         "MCHP",
         "NXPI",
         "ON",
-        "SMCI"
+        "SMCI",
+        "ASML",
+        "ARM",
+        "ALAB",
+        "CRDO",
+        "ENTG",
+        "MPWR"
       ],
       "crowd": "loud",
       "state": "confirmed",
@@ -7716,7 +9293,7 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.3159,
       "vs_spy": 0.216,
-      "buzz": 33,
+      "buzz": 30,
       "stocks": [
         "CRWD",
         "PANW",
@@ -7727,7 +9304,11 @@ window.SIMPLE_DATA = {
         "OKTA",
         "CYBR",
         "TENB",
-        "QLYS"
+        "QLYS",
+        "RPD",
+        "VRNS",
+        "GEN",
+        "AKAM"
       ],
       "crowd": "quiet",
       "state": "early",
@@ -7741,7 +9322,7 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.2292,
       "vs_spy": 0.1292,
-      "buzz": 68,
+      "buzz": 64,
       "stocks": [
         "RKLB",
         "LUNR",
@@ -7750,7 +9331,8 @@ window.SIMPLE_DATA = {
         "PL",
         "BKSY",
         "SPCE",
-        "ASTR"
+        "ASTR",
+        "VSAT"
       ],
       "crowd": "loud",
       "state": "confirmed",
@@ -7764,7 +9346,7 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.2021,
       "vs_spy": 0.1022,
-      "buzz": 24,
+      "buzz": 18,
       "stocks": [
         "FSLR",
         "ENPH",
@@ -7775,7 +9357,8 @@ window.SIMPLE_DATA = {
         "SHLS",
         "CSIQ",
         "JKS",
-        "MAXN"
+        "MAXN",
+        "NOVA"
       ],
       "crowd": "quiet",
       "state": "early",
@@ -7789,7 +9372,7 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.1771,
       "vs_spy": 0.0772,
-      "buzz": 47,
+      "buzz": 49,
       "stocks": [
         "AAPL",
         "MSFT",
@@ -7802,6 +9385,12 @@ window.SIMPLE_DATA = {
         "NFLX",
         "COST",
         "PEP",
+        "CSCO",
+        "AMD",
+        "INTC",
+        "QCOM",
+        "TXN",
+        "AMAT",
         "ADBE"
       ],
       "crowd": "loud",
@@ -7816,7 +9405,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": 0.0524,
       "vs_spy": -0.0476,
-      "buzz": 35,
+      "buzz": 31,
       "stocks": [
         "NVDA",
         "ISRG",
@@ -7827,7 +9416,8 @@ window.SIMPLE_DATA = {
         "EMR",
         "ZBRA",
         "IRBT",
-        "SERV"
+        "SERV",
+        "NDSN"
       ],
       "crowd": "loud",
       "state": "neutral_loud",
@@ -7841,7 +9431,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": 0.0395,
       "vs_spy": -0.0604,
-      "buzz": 72,
+      "buzz": 71,
       "stocks": [
         "JPM",
         "BAC",
@@ -7853,7 +9443,9 @@ window.SIMPLE_DATA = {
         "PNC",
         "TFC",
         "SCHW",
-        "AXP"
+        "AXP",
+        "COF",
+        "BK"
       ],
       "crowd": "loud",
       "state": "neutral_loud",
@@ -7867,7 +9459,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": 0.0377,
       "vs_spy": -0.0623,
-      "buzz": 22,
+      "buzz": 24,
       "stocks": [
         "VRTX",
         "REGN",
@@ -7878,7 +9470,11 @@ window.SIMPLE_DATA = {
         "ALNY",
         "INCY",
         "NBIX",
-        "SRPT"
+        "SRPT",
+        "EXAS",
+        "NTLA",
+        "BNTX",
+        "ARGX"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -7892,7 +9488,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": 0.0261,
       "vs_spy": -0.0738,
-      "buzz": 17,
+      "buzz": 23,
       "stocks": [
         "XOM",
         "CVX",
@@ -7905,7 +9501,11 @@ window.SIMPLE_DATA = {
         "WMB",
         "KMI",
         "HAL",
-        "DVN"
+        "DVN",
+        "FANG",
+        "HES",
+        "BKR",
+        "OKE"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -7919,7 +9519,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": 0.0086,
       "vs_spy": -0.0913,
-      "buzz": 33,
+      "buzz": 31,
       "stocks": [
         "FCX",
         "SCCO",
@@ -7929,13 +9529,14 @@ window.SIMPLE_DATA = {
         "VALE",
         "ERO",
         "HBM",
-        "TGB"
+        "TGB",
+        "IVN"
       ],
-      "crowd": "quiet",
-      "state": "neutral_quiet",
+      "crowd": "loud",
+      "state": "neutral_loud",
       "light": "grey",
       "emoji": "\u26aa",
-      "verdict": "Going sideways \u2014 no clear trend yet."
+      "verdict": "Going sideways, but getting noisy \u2014 one to watch."
     },
     {
       "label": "Utilities & Power",
@@ -7943,7 +9544,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": -0.0445,
       "vs_spy": -0.1444,
-      "buzz": 15,
+      "buzz": 14,
       "stocks": [
         "NEE",
         "SO",
@@ -7956,7 +9557,9 @@ window.SIMPLE_DATA = {
         "SRE",
         "XEL",
         "ED",
-        "PEG"
+        "PEG",
+        "ETR",
+        "WEC"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -7970,7 +9573,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": -0.052,
       "vs_spy": -0.1519,
-      "buzz": 21,
+      "buzz": 23,
       "stocks": [
         "LMT",
         "RTX",
@@ -7983,7 +9586,9 @@ window.SIMPLE_DATA = {
         "LDOS",
         "HWM",
         "AXON",
-        "KTOS"
+        "KTOS",
+        "TDG",
+        "HEI"
       ],
       "crowd": "quiet",
       "state": "neutral_quiet",
@@ -7997,7 +9602,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": 0.0896,
       "vs_spy": -0.0103,
-      "buzz": 44,
+      "buzz": 41,
       "stocks": [
         "MSFT",
         "CRM",
@@ -8012,7 +9617,11 @@ window.SIMPLE_DATA = {
         "DDOG",
         "TEAM",
         "WDAY",
-        "NET"
+        "NET",
+        "SHOP",
+        "HUBS",
+        "MDB",
+        "APP"
       ],
       "crowd": "loud",
       "state": "hype",
@@ -8026,7 +9635,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.0164,
       "vs_spy": -0.1163,
-      "buzz": 13,
+      "buzz": 15,
       "stocks": [
         "DHI",
         "LEN",
@@ -8037,7 +9646,9 @@ window.SIMPLE_DATA = {
         "MTH",
         "TPH",
         "BLDR",
-        "BLD"
+        "BLD",
+        "MAS",
+        "SHW"
       ],
       "crowd": "quiet",
       "state": "dead",
@@ -8051,7 +9662,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.0711,
       "vs_spy": -0.1711,
-      "buzz": 21,
+      "buzz": 19,
       "stocks": [
         "CCJ",
         "OKLO",
@@ -8062,7 +9673,8 @@ window.SIMPLE_DATA = {
         "DNN",
         "NNE",
         "NXE",
-        "BWXT"
+        "BWXT",
+        "GEV"
       ],
       "crowd": "quiet",
       "state": "dead",
@@ -8076,7 +9688,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.1155,
       "vs_spy": -0.2155,
-      "buzz": 84,
+      "buzz": 80,
       "stocks": [
         "COIN",
         "MSTR",
@@ -8087,7 +9699,9 @@ window.SIMPLE_DATA = {
         "WULF",
         "CIFR",
         "BITF",
-        "HUT"
+        "HUT",
+        "IREN",
+        "CORZ"
       ],
       "crowd": "loud",
       "state": "hype",
@@ -8101,7 +9715,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.2168,
       "vs_spy": -0.3168,
-      "buzz": 67,
+      "buzz": 65,
       "stocks": [
         "PAAS",
         "AG",
@@ -8112,7 +9726,9 @@ window.SIMPLE_DATA = {
         "SVM",
         "EXK",
         "MAG",
-        "FSM"
+        "FSM",
+        "SILV",
+        "GATO"
       ],
       "crowd": "loud",
       "state": "hype",
@@ -8126,7 +9742,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.2223,
       "vs_spy": -0.3223,
-      "buzz": 84,
+      "buzz": 78,
       "stocks": [
         "NEM",
         "AEM",
@@ -8138,7 +9754,9 @@ window.SIMPLE_DATA = {
         "GFI",
         "RGLD",
         "AGI",
-        "BTG"
+        "BTG",
+        "HMY",
+        "OR"
       ],
       "crowd": "loud",
       "state": "hype",
