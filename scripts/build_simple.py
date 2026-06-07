@@ -28,7 +28,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import pandas as pd
 
-from tickline.data import fetch_equity
+from tickline.data import fetch_equity, fetch_many
 from tickline.sentiment.live import fetch_news
 
 OUT = Path(__file__).resolve().parents[1] / "web" / "simple"
@@ -56,6 +56,28 @@ THEMES = [
     ("Utilities & Power", "XLU", "utility stocks power grid"),
 ]
 
+# Representative companies behind each category (the stocks you'd actually buy).
+STOCKS = {
+    "SMH":  ["NVDA", "AVGO", "AMD", "TSM", "MU", "QCOM"],
+    "IGV":  ["MSFT", "CRM", "NOW", "PLTR", "SNOW", "ORCL"],
+    "QQQ":  ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META"],
+    "CIBR": ["CRWD", "PANW", "ZS", "FTNT", "NET"],
+    "BOTZ": ["NVDA", "ISRG", "TSLA", "PATH", "TER"],
+    "IBIT": ["COIN", "MSTR", "MARA", "RIOT", "HOOD"],
+    "URA":  ["CCJ", "OKLO", "SMR", "LEU", "UEC"],
+    "TAN":  ["FSLR", "ENPH", "RUN", "NXT", "SEDG"],
+    "XLE":  ["XOM", "CVX", "COP", "EOG", "SLB"],
+    "GDX":  ["NEM", "AEM", "GOLD", "WPM", "FNV"],
+    "SIL":  ["PAAS", "AG", "HL", "WPM", "FNV"],
+    "COPX": ["FCX", "SCCO", "TECK", "BHP", "RIO"],
+    "ITA":  ["LMT", "RTX", "NOC", "GD", "BA"],
+    "UFO":  ["RKLB", "LUNR", "ASTS", "RDW"],
+    "XBI":  ["VRTX", "REGN", "MRNA", "GILD", "AMGN"],
+    "XLF":  ["JPM", "BAC", "WFC", "GS", "MS"],
+    "XHB":  ["DHI", "LEN", "PHM", "NVR"],
+    "XLU":  ["NEE", "SO", "DUK", "CEG", "VST"],
+}
+
 VERDICTS = {
     "confirmed": "Uptrend and the crowd is piling in — the trend everyone agrees on.",
     "early": "Quietly trending up before the crowd noticed — the early ones.",
@@ -81,6 +103,19 @@ def _news_last7(query: str, session) -> int:
         return 0
     latest = max(e.ts for e in evs)
     return sum(1 for e in evs if e.ts >= latest - pd.Timedelta(days=7))
+
+
+def _stock_trend(df) -> dict:
+    """Per-company trend: above its own 200-day line? + 3-month return."""
+    close = df["close"]
+    ma = close.rolling(200, min_periods=100).mean().iloc[-1]
+    above = bool(close.iloc[-1] > ma) if pd.notna(ma) else None
+    ret63 = _ret(close, 63)
+    return {
+        "trend": ("up" if above else "down") if above is not None else "flat",
+        "above_ma": above,
+        "ret3mo": round(ret63, 3) if ret63 is not None else None,
+    }
 
 
 def main() -> int:
@@ -121,6 +156,7 @@ def main() -> int:
             "label": label, "etf": etf, "trend": trend,
             "ret3mo": round(ret63, 4) if ret63 is not None else None,
             "vs_spy": round(beat, 4), "buzz": buzz,
+            "stocks": STOCKS.get(etf, []),
         })
         print(f"  {etf:5} {trend:8} 3mo {beat*100:+5.1f}% vs SPY · buzz {buzz}")
 
@@ -146,11 +182,21 @@ def main() -> int:
     order = {"up": 0, "sideways": 1, "down": 2}
     rows.sort(key=lambda r: (order[r["trend"]], -(r["vs_spy"] or 0)))
 
+    # per-company trend for the drill-down dots
+    all_stocks = sorted({s for syms in STOCKS.values() for s in syms})
+    print(f">> fetching {len(all_stocks)} companies for drill-down…")
+    stock_frames = fetch_many(all_stocks, days=320, use_cache=use_cache)
+    stock_info = {
+        sym: _stock_trend(df) for sym, df in stock_frames.items()
+        if df is not None and not df.empty and len(df) >= 120
+    }
+
     payload = {
         "as_of": str(spy.index[-1].date()),
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%MZ"),
         "benchmark": BENCH,
         "buzz_median": median,
+        "stock_info": stock_info,
         "themes": rows,
     }
     OUT.mkdir(parents=True, exist_ok=True)

@@ -67,6 +67,22 @@
     .wrap{padding:1.25rem 1rem}
     .grid{grid-template-columns:1fr}.legend{grid-template-columns:1fr}
   }
+
+  /* category drill-down: the companies inside */
+  .card.clickable{cursor:pointer}
+  .card-foot{margin-top:.7rem;font-family:var(--mono);font-size:.72rem;color:var(--ink-dim);
+    display:flex;align-items:center;gap:.35rem}
+  .caret{display:inline-block;transition:transform .2s ease;color:var(--ink-dim)}
+  .card.open .caret{transform:rotate(90deg);color:var(--green)}
+  .card-stocks{max-height:0;overflow:hidden;opacity:0;display:flex;flex-wrap:wrap;gap:.4rem;
+    transition:max-height .3s ease,opacity .25s,margin .3s ease}
+  .card.open .card-stocks{max-height:220px;opacity:1;margin-top:.75rem}
+  .stk-chip{font-family:var(--mono);font-size:.72rem;font-weight:500;color:var(--ink);
+    text-decoration:none;background:#eef1f6;border:1px solid var(--line);border-radius:6px;
+    padding:.2rem .45rem;display:inline-flex;align-items:center;transition:border-color .15s,background .15s}
+  .stk-chip:hover{border-color:var(--ink-dim);background:#fff}
+  .stk-dot{width:6px;height:6px;border-radius:50%;margin-right:5px;display:inline-block}
+  .stk-up{background:var(--green)} .stk-down{background:var(--red)} .stk-flat{background:var(--grey)}
 </style>
 </head>
 <body>
