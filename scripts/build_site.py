@@ -75,6 +75,28 @@ def _tier_payload(cfg, frames, bench_ret) -> dict:
     }
 
 
+def _ticker_info(frames) -> dict:
+    """Per-company trend: above its own 200-day line? + 3-month return."""
+    wanted = {t for th in ALL_THEMES for t in th.tickers}
+    wanted |= {th.etf for th in ALL_THEMES if th.etf}
+    out = {}
+    for sym in sorted(wanted):
+        df = frames.get(sym)
+        if df is None or df.empty or len(df) < 120:
+            continue
+        close = df["close"]
+        ma = close.rolling(200, min_periods=100).mean().iloc[-1]
+        last = float(close.iloc[-1])
+        above = bool(last > ma) if ma == ma else None  # ma==ma is False when NaN
+        ret63 = round(last / float(close.iloc[-64]) - 1, 3) if len(close) > 64 else None
+        out[sym] = {
+            "trend": ("up" if above else "down") if above is not None else "flat",
+            "above_ma": above,
+            "ret3mo": ret63,
+        }
+    return out
+
+
 def main() -> int:
     p = argparse.ArgumentParser(description="Export watchlist to web/data.js")
     p.add_argument("--days", type=int, default=250)
@@ -100,6 +122,7 @@ def main() -> int:
         "benchmark": BENCHMARK,
         "n_symbols": len(frames),
         "groups": groups,
+        "ticker_info": _ticker_info(frames),
         "tiers": {name: _tier_payload(cfg, frames, bench_ret) for name, cfg in TIERS.items()},
     }
 

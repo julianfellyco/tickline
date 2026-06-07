@@ -27,9 +27,9 @@
     var beatCls = (t.vs_spy || 0) >= 0 ? "up" : "down";
     var beatTxt = (t.vs_spy >= 0 ? "beating" : "lagging") + " S&P by " +
       pct(Math.abs(t.vs_spy || 0)).replace("+", "");
-    var crowd = t.crowd === "loud"
-      ? '🗣 Loud · ' + t.buzz + " stories"
-      : "· Quiet · " + t.buzz + " stories";
+    var med = D.buzz_median || 0;
+    var crowd = (t.crowd === "loud" ? "🗣 Loud" : "Quiet") +
+      " · " + t.buzz + " stories vs ~" + med + " typical";
     card.innerHTML =
       '<div class="chead"><span class="em">' + t.emoji + '</span>' +
       "<h3>" + t.label + '</h3><span class="etf">' + t.etf + "</span></div>" +

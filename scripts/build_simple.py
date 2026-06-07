@@ -150,6 +150,7 @@ def main() -> int:
         "as_of": str(spy.index[-1].date()),
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%MZ"),
         "benchmark": BENCH,
+        "buzz_median": median,
         "themes": rows,
     }
     OUT.mkdir(parents=True, exist_ok=True)

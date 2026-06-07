@@ -1,6 +1,6 @@
 window.TICKLINE_DATA = {
   "as_of": "2026-06-05",
-  "generated": "2026-06-07 08:09Z",
+  "generated": "2026-06-07 08:33Z",
   "benchmark": "SPY",
   "n_symbols": 154,
   "groups": [
@@ -11,6 +11,773 @@ window.TICKLINE_DATA = {
     "Crypto / Fintech",
     "Health / Defense / Financials"
   ],
+  "ticker_info": {
+    "ABBV": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.004
+    },
+    "AEM": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.258
+    },
+    "AFRM": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.23
+    },
+    "AG": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.342
+    },
+    "ALAB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.66
+    },
+    "ALNY": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.055
+    },
+    "AMAT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.397
+    },
+    "AMD": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.424
+    },
+    "AMZN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.154
+    },
+    "ANET": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.161
+    },
+    "APLD": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.576
+    },
+    "AR": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.084
+    },
+    "ASML": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.273
+    },
+    "ASTS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.046
+    },
+    "AVGO": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.17
+    },
+    "BAC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.112
+    },
+    "CAT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.331
+    },
+    "CCJ": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.057
+    },
+    "CEG": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.199
+    },
+    "CIBR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.316
+    },
+    "CIEN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.66
+    },
+    "CLF": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.376
+    },
+    "CLSK": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.693
+    },
+    "COHR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.599
+    },
+    "COIN": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.227
+    },
+    "COP": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.008
+    },
+    "COPX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.009
+    },
+    "CRDO": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.884
+    },
+    "CRWD": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.564
+    },
+    "CRWV": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.375
+    },
+    "CVX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.005
+    },
+    "DE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.008
+    },
+    "DHI": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.008
+    },
+    "DLR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.067
+    },
+    "DNN": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.174
+    },
+    "ENPH": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.394
+    },
+    "EOG": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.057
+    },
+    "EQIX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.159
+    },
+    "EQT": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.13
+    },
+    "ETN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.145
+    },
+    "EXE": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.133
+    },
+    "FCX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.07
+    },
+    "FSLR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.475
+    },
+    "FTNT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.729
+    },
+    "GD": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.042
+    },
+    "GDX": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.222
+    },
+    "GEV": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.184
+    },
+    "GFS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.611
+    },
+    "GOLD": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.24
+    },
+    "GOOGL": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.235
+    },
+    "GS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.27
+    },
+    "HIMS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.664
+    },
+    "HL": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.275
+    },
+    "HOOD": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.07
+    },
+    "IGV": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.09
+    },
+    "INTC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.284
+    },
+    "IONQ": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.589
+    },
+    "IREN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.481
+    },
+    "ITA": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.052
+    },
+    "JNJ": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.026
+    },
+    "JPM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.085
+    },
+    "KLAC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.437
+    },
+    "LEN": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.101
+    },
+    "LEU": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.144
+    },
+    "LHX": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.157
+    },
+    "LITE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.547
+    },
+    "LLY": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.144
+    },
+    "LMT": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.215
+    },
+    "LNG": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.062
+    },
+    "LRCX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.521
+    },
+    "LUNR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.665
+    },
+    "MA": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.058
+    },
+    "MARA": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.538
+    },
+    "META": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.08
+    },
+    "MP": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.016
+    },
+    "MRK": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.051
+    },
+    "MRNA": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.097
+    },
+    "MRVL": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.943
+    },
+    "MS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.329
+    },
+    "MSFT": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.021
+    },
+    "MSTR": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.098
+    },
+    "MU": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.334
+    },
+    "NBIS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.55
+    },
+    "NEM": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.141
+    },
+    "NNE": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.001
+    },
+    "NOC": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.277
+    },
+    "NOW": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.096
+    },
+    "NRG": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.16
+    },
+    "NUE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.513
+    },
+    "NVDA": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.155
+    },
+    "NVO": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.154
+    },
+    "NVR": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.112
+    },
+    "NVT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.538
+    },
+    "NXT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.297
+    },
+    "OKLO": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.003
+    },
+    "OXY": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.056
+    },
+    "PAAS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.199
+    },
+    "PANW": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.648
+    },
+    "PFE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.021
+    },
+    "PHM": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.072
+    },
+    "PLTR": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.138
+    },
+    "POWL": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.768
+    },
+    "PWR": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.287
+    },
+    "PYPL": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.118
+    },
+    "QBTS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.283
+    },
+    "QCOM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.597
+    },
+    "QUBT": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.31
+    },
+    "RDW": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.158
+    },
+    "REGN": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.162
+    },
+    "REMX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.043
+    },
+    "RGTI": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.216
+    },
+    "RIOT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.741
+    },
+    "RKLB": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.57
+    },
+    "RS": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.305
+    },
+    "RTX": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.134
+    },
+    "RUN": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.178
+    },
+    "SCCO": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.051
+    },
+    "SERV": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.179
+    },
+    "SIL": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.217
+    },
+    "SLX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.169
+    },
+    "SMH": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.497
+    },
+    "SMR": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.1
+    },
+    "SNOW": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.32
+    },
+    "STLD": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.483
+    },
+    "STX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.406
+    },
+    "TAN": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.202
+    },
+    "TECK": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.222
+    },
+    "TMC": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.106
+    },
+    "TSLA": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.014
+    },
+    "TSM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.229
+    },
+    "UAMY": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.194
+    },
+    "UEC": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.022
+    },
+    "UFO": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.229
+    },
+    "URA": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.071
+    },
+    "URI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.322
+    },
+    "UUUU": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.21
+    },
+    "V": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.022
+    },
+    "VKTX": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.137
+    },
+    "VRT": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.243
+    },
+    "VRTX": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.022
+    },
+    "VST": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.061
+    },
+    "WDC": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 1.087
+    },
+    "WFC": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": 0.025
+    },
+    "WGMI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.708
+    },
+    "WPM": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.206
+    },
+    "WULF": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.745
+    },
+    "XBI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.038
+    },
+    "XHB": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.016
+    },
+    "XLE": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.026
+    },
+    "XLF": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.04
+    },
+    "XLI": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": 0.028
+    },
+    "XOM": {
+      "trend": "up",
+      "above_ma": true,
+      "ret3mo": -0.002
+    },
+    "ZS": {
+      "trend": "down",
+      "above_ma": false,
+      "ret3mo": -0.203
+    }
+  },
   "tiers": {
     "slow": {
       "lookback": 63,

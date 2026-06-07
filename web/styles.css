@@ -178,6 +178,11 @@ main, .topbar, .foot { position: relative; z-index: 2; }
 .chip-ticker:hover { color: var(--signal); border-color: var(--signal); background: var(--signal-bg, #0d2419); }
 .chip-etf { color: var(--cyan); border-color: var(--cyan); }
 .chip-etf:hover { color: var(--cyan); border-color: var(--cyan); }
+.tk-dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+  margin-right: 5px; vertical-align: middle; }
+.tk-up { background: var(--signal); }
+.tk-down { background: var(--alert); }
+.tk-flat { background: var(--ink-faint); }
 .rd-empty { font-size: 0.78rem; color: var(--ink-faint); }
 .rank-id { display: flex; flex-direction: column; gap: 0.15rem; min-width: 0; }
 .rank-name { font-size: 0.95rem; color: var(--ink); white-space: nowrap; overflow: hidden;

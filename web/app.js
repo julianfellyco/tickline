@@ -18,14 +18,22 @@
     if (html !== undefined) n.innerHTML = html;
     return n;
   }
-  // a clickable ticker chip -> opens that company's chart (its own trend)
+  // a clickable ticker chip with a trend dot (its own 200-day line) -> chart
   function chip(sym, label, cls) {
     var a = document.createElement("a");
     a.className = "chip-ticker" + (cls ? " " + cls : "");
-    a.textContent = label || sym;
+    var info = (DATA.ticker_info || {})[sym];
+    if (info && info.trend) {
+      var dot = el("span", "tk-dot tk-" + info.trend);
+      a.appendChild(dot);
+    }
+    a.appendChild(document.createTextNode(label || sym));
     a.href = "https://finance.yahoo.com/quote/" + encodeURIComponent(sym);
     a.target = "_blank"; a.rel = "noopener";
-    a.title = "Open " + sym + " chart on Yahoo Finance";
+    a.title = info && info.ret3mo != null
+      ? sym + " · " + (info.above_ma ? "uptrend (above 200-day line)" : "downtrend (below 200-day line)")
+        + " · 3-mo " + (info.ret3mo > 0 ? "+" : "") + Math.round(info.ret3mo * 100) + "% — click for chart"
+      : "Open " + sym + " chart";
     a.addEventListener("click", function (e) { e.stopPropagation(); });
     return a;
   }
