@@ -41,6 +41,9 @@ jobs:
       - name: Rebuild data.js (latest market data)
         run: python scripts/build_site.py
 
+      - name: Rebuild simple board data
+        run: python scripts/build_simple.py
+
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
 
