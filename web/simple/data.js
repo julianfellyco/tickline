@@ -1,6 +1,6 @@
 window.SIMPLE_DATA = {
   "as_of": "2026-06-05",
-  "generated": "2026-06-07 09:13Z",
+  "generated": "2026-06-07 09:47Z",
   "benchmark": "SPY",
   "buzz_median": 35,
   "stock_info": {
@@ -912,6 +912,17 @@ window.SIMPLE_DATA = {
   },
   "company_info": {
     "AAPL": {
+      "news": [
+        {
+          "title": "Ahead of Earnings, Is Apple Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Ahead of Earnings, Is Apple Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Apple Inc.",
       "sector": "Technology",
       "industry": "Consumer Electronics",
@@ -938,6 +949,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ADBE": {
+      "news": [
+        {
+          "title": "Adobe Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Adobe Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Adobe Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Adobe Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -964,6 +990,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ADI": {
+      "news": [
+        {
+          "title": "Analog Devices Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Analog Devices Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Analog Devices Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Analog Devices, Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -990,6 +1031,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AEM": {
+      "news": [
+        {
+          "title": "Agnico-Eagle Mines Ltd. stock falls Friday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Agnico-Eagle Mines Ltd. stock rises Thursday, outperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Agnico-Eagle Mines Ltd. stock falls Wednesday, underperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Agnico Eagle Mines Limited",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1016,6 +1072,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AEP": {
+      "news": [
+        {
+          "title": "American Electric Power Co. Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "American Electric Power Utility Offers $2.6 Billion in Stock",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "American Electric Power Co. Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "American Electric Power Company",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -1042,6 +1113,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AG": {
+      "news": [
+        {
+          "title": "Why First Majestic Silver Stock Has Soared More Than 4x In A Year",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "First Majestic Silver Corp.",
       "sector": "Basic Materials",
       "industry": "Silver",
@@ -1068,6 +1146,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AGI": {
+      "news": [
+        {
+          "title": "Alamos Gold Stock, Argan, Diversified Energy, 23 Others Join IBD Watchlists As Market Lags",
+          "source": "Investor's Business Daily"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Alamos Gold Inc.",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1094,6 +1179,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ALNY": {
+      "news": [
+        {
+          "title": "Alnylam Pharmaceuticals (ALNY): Company Profile, Stock Price, News, Rankings",
+          "source": "Fortune"
+        },
+        {
+          "title": "How Alnylam Stock Weathers Market Shocks",
+          "source": "Forbes"
+        },
+        {
+          "title": "JPM Kicks Off With Alnylam In the Red; But Others Surge",
+          "source": "Investor's Business Daily"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Alnylam Pharmaceuticals, Inc.",
       "sector": "Healthcare",
       "industry": "Biotechnology",
@@ -1120,6 +1220,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AMAT": {
+      "news": [
+        {
+          "title": "Applied Materials Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Applied Materials Posts Strong Earnings and Outlook. The Stock Falls.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Does Applied Materials Stock Deserve Its Epic Rally?",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Applied Materials, Inc.",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
@@ -1146,6 +1261,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AMD": {
+      "news": [],
+      "news_tone": null,
       "name": "Advanced Micro Devices, Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -1172,6 +1289,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AMGN": {
+      "news": [
+        {
+          "title": "Amgen Inc. stock underperforms Friday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Amgen Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Amgen Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Amgen Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
@@ -1198,6 +1330,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AMZN": {
+      "news": [
+        {
+          "title": "Ahead of Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "After Earnings, Is Amazon Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Amazon\u2019s AI Success Sends Stock Racing Toward $3 Trillion Club",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Amazon.com, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Internet Retail",
@@ -1224,6 +1371,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ARRY": {
+      "news": [],
+      "news_tone": null,
       "name": "Array Technologies, Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -1250,6 +1399,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ASTS": {
+      "news": [
+        {
+          "title": "AST SpaceMobile\u2019s stock drops as earnings come with a big disappointment",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Online Mob Fuels 6,000% Stock Rally in Obscure SpaceX Rival",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "AST SpaceMobile, Inc.",
       "sector": "Technology",
       "industry": "Communication Equipment",
@@ -1276,6 +1436,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AU": {
+      "news": [],
+      "news_tone": null,
       "name": "AngloGold Ashanti PLC",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1302,6 +1464,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AVGO": {
+      "news": [
+        {
+          "title": "Broadcom suffers $285bn rout as revenue outlook disappoints",
+          "source": "Financial Times"
+        },
+        {
+          "title": "Emerging-Market Stocks Sink as Broadcom Miss Revives AI Concerns",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Why Broadcom\u2019s stock is falling so hard after earnings",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Broadcom Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -1328,6 +1505,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AXON": {
+      "news": [
+        {
+          "title": "Axon Enterprise Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Axon Enterprise Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Axon Enterprise Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Axon Enterprise, Inc.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -1354,6 +1546,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "AXP": {
+      "news": [
+        {
+          "title": "American Express Co. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "American Express Company",
       "sector": "Financial Services",
       "industry": "Credit Services",
@@ -1380,6 +1579,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BA": {
+      "news": [
+        {
+          "title": "Boeing Co. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Boeing Hits a Key Milestone. The Stock Is Up.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Boeing\u2019s Big Order From China Isn\u2019t Big Enough\u2014and the Stock Is Paying for It",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Boeing Company (The)",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -1406,6 +1620,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BAC": {
+      "news": [
+        {
+          "title": "BofA to Welcome Nearly 4,000 Summer Interns and Campus Recruits",
+          "source": "Nasdaq"
+        },
+        {
+          "title": "Bank of America to Launch Cross-Border Real-Time Payments, Expanding Global Payment Choice",
+          "source": "Nasdaq"
+        },
+        {
+          "title": "Bank of America beats profit estimates as trading, investment banking shine",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Bank of America Corporation",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
@@ -1432,6 +1661,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BHP": {
+      "news": [
+        {
+          "title": "BHP Earnings: Up Strongly Due to Higher Copper and Iron Ore Prices",
+          "source": "Morningstar"
+        },
+        {
+          "title": "BHP Overtakes CBA as Australia\u2019s Largest Stock",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "BHP Group Limited",
       "sector": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
@@ -1458,6 +1698,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BIIB": {
+      "news": [
+        {
+          "title": "Biogen Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Biogen Inc. Investigation Initiated: Levi & Korsinsky Investigates the Officers and Directors of Biogen Inc. (BIIB)",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Biogen Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Biogen Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
@@ -1484,6 +1739,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BKSY": {
+      "news": [],
+      "news_tone": null,
       "name": "BlackSky Technology Inc.",
       "sector": "Industrials",
       "industry": "Specialty Business Services",
@@ -1510,6 +1767,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BLD": {
+      "news": [
+        {
+          "title": "Shareholder Alert: Ademi LLP investigates whether TopBuild Corp. is obtaining a Fair Price for Public Shareholders",
+          "source": "Morningstar"
+        },
+        {
+          "title": "QXO to Buy Insulation Company TopBuild for $17 Billion",
+          "source": "WSJ"
+        },
+        {
+          "title": "TopBuild shares jump after $17 billion QXO deal",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "positive",
       "name": "TopBuild Corp.",
       "sector": "Industrials",
       "industry": "Engineering & Construction",
@@ -1536,6 +1808,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BLDR": {
+      "news": [
+        {
+          "title": "Builders FirstSource Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Builders FirstSource Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Builders FirstSource Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Builders FirstSource, Inc.",
       "sector": "Industrials",
       "industry": "Building Products & Equipment",
@@ -1562,6 +1849,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BTG": {
+      "news": [],
+      "news_tone": null,
       "name": "B2Gold Corp",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1588,6 +1877,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "BWXT": {
+      "news": [
+        {
+          "title": "BWX Technologies Beats Earnings Estimates. The Stock Is Down.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Nuclear Stock Up 100%, Gets Boost From Trump Battleships, Activist Investor",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "Ananym urges BWX Technologies to commercialize reactor design, says shares could double",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "positive",
       "name": "BWX Technologies, Inc.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -1614,6 +1918,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "C": {
+      "news": [
+        {
+          "title": "Citigroup Stock Tracking Highest Close in 18 Years",
+          "source": "Barron's"
+        },
+        {
+          "title": "Citigroup Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Citi\u2019s Chew Sees US Tech Stocks at Risk From Bullish Positioning",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Citigroup, Inc.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
@@ -1640,6 +1959,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CCJ": {
+      "news": [
+        {
+          "title": "Cameco Corp. stock falls Thursday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Cameco Corp. stock rises Tuesday, outperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Cameco Corp. stock falls Wednesday, underperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Cameco Corporation",
       "sector": "Energy",
       "industry": "Uranium",
@@ -1666,6 +2000,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CDE": {
+      "news": [],
+      "news_tone": null,
       "name": "Coeur Mining, Inc.",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -1692,6 +2028,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CEG": {
+      "news": [
+        {
+          "title": "Constellation Energy Corp. stock falls Friday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Constellation Energy Corp. stock rises Tuesday, outperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Constellation Energy Corp. stock falls Wednesday, underperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Constellation Energy Corporatio",
       "sector": "Utilities",
       "industry": "Utilities - Independent Power Producers",
@@ -1718,6 +2069,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CIFR": {
+      "news": [],
+      "news_tone": null,
       "name": "Cipher Digital Inc.",
       "sector": "Technology",
       "industry": "Information Technology Services",
@@ -1744,6 +2097,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CLSK": {
+      "news": [],
+      "news_tone": null,
       "name": "CleanSpark, Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -1770,6 +2125,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "COIN": {
+      "news": [
+        {
+          "title": "After Earnings, Is Coinbase Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Coinbase Stock Is Up 48% in 2025. Is It a Buy?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Is Coinbase Stock A Buy Now?",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Coinbase Global, Inc.",
       "sector": "Financial Services",
       "industry": "Financial Data & Stock Exchanges",
@@ -1796,6 +2166,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "COP": {
+      "news": [
+        {
+          "title": "ConocoPhillips stock underperforms Wednesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ConocoPhillips stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ConocoPhillips stock underperforms Monday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "ConocoPhillips",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
@@ -1822,6 +2207,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "COST": {
+      "news": [
+        {
+          "title": "Costco Wholesale Corp. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Costco Wholesale Corporation",
       "sector": "Consumer Defensive",
       "industry": "Discount Stores",
@@ -1848,6 +2240,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CRM": {
+      "news": [
+        {
+          "title": "After Earnings, Is Salesforce Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Salesforce First-Quarter Sales, Profit Rise Amid Agentforce Efforts",
+          "source": "WSJ"
+        },
+        {
+          "title": "Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy?",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Salesforce, Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -1874,6 +2281,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CRWD": {
+      "news": [
+        {
+          "title": "CrowdStrike Earnings: Impressive Results Lifted by AI and Vendor Consolidation",
+          "source": "Morningstar"
+        },
+        {
+          "title": "CrowdStrike Holdings Inc. Cl A stock falls Friday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "CrowdStrike Hits Projections, Signals Resilient Security Demand",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "negative",
       "name": "CrowdStrike Holdings, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -1900,6 +2322,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CSIQ": {
+      "news": [],
+      "news_tone": null,
       "name": "Canadian Solar Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -1926,6 +2350,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "CVX": {
+      "news": [
+        {
+          "title": "Chevron Corp. stock underperforms Wednesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Berkshire Sold $8 Billion of Chevron Shares as Prices Soared",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Chevron Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Chevron Corporation",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -1952,6 +2391,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "D": {
+      "news": [
+        {
+          "title": "Dominion Energy Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "NextEra Energy to buy Dominion in deal that unites two key players in race to power AI data centers",
+          "source": "CNBC"
+        },
+        {
+          "title": "Dominion Energy stock surges on a deal with NextEra to make the world's biggest utility",
+          "source": "Business Insider"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Dominion Energy, Inc.",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -1978,6 +2432,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "DDOG": {
+      "news": [
+        {
+          "title": "Datadog stock soars 31% on blockbuster earnings as AI winners emerge in software",
+          "source": "CNBC"
+        },
+        {
+          "title": "How DDOG Stock Rises To $400",
+          "source": "Forbes"
+        },
+        {
+          "title": "Datadog\u2019s stock is soaring. Here\u2019s how the company became such a crucial AI player.",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Datadog, Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -2004,6 +2473,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "DHI": {
+      "news": [
+        {
+          "title": "D.R. Horton Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "D.R. Horton Stock Rises on Earnings Beat. Have Home Builders Hit Bottom?",
+          "source": "Barron's"
+        },
+        {
+          "title": "D.R. Horton Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "D.R. Horton, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -2030,6 +2514,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "DNN": {
+      "news": [],
+      "news_tone": null,
       "name": "Denison Mines Corp",
       "sector": "Energy",
       "industry": "Uranium",
@@ -2056,6 +2542,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "DUK": {
+      "news": [
+        {
+          "title": "Why Berkshire Hathaway Energy Is One of Warren Buffett\u2019s 4 \u2018Jewels\u2019",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Duke Energy Corporation (Holdin",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -2082,6 +2575,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "DVN": {
+      "news": [
+        {
+          "title": "Devon Energy Corp. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Devon Energy Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Devon Energy Corp. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Devon Energy Corporation",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
@@ -2108,6 +2616,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ED": {
+      "news": [
+        {
+          "title": "Consolidated Edison Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Consolidated Edison Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Consolidated Edison Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Consolidated Edison, Inc.",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -2134,6 +2657,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "EMR": {
+      "news": [
+        {
+          "title": "Emerson Electric Co. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Emerson Electric Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Emerson Electric Co. stock underperforms Friday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Emerson Electric Company",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -2160,6 +2698,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ENPH": {
+      "news": [
+        {
+          "title": "Enphase Energy Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Enphase Energy Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Enphase Energy Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Enphase Energy, Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -2186,6 +2739,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "EOG": {
+      "news": [
+        {
+          "title": "EOG Resources Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "EOG Resources Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "EOG Resources Inc. stock underperforms Monday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "EOG Resources, Inc.",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
@@ -2212,6 +2780,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ERO": {
+      "news": [],
+      "news_tone": null,
       "name": "Ero Copper Corp.",
       "sector": "Basic Materials",
       "industry": "Copper",
@@ -2238,6 +2808,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "EXC": {
+      "news": [
+        {
+          "title": "Exelon Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Exelon Corp. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Exelon Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Exelon Corporation",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -2264,6 +2849,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "EXK": {
+      "news": [],
+      "news_tone": null,
       "name": "Endeavour Silver Corporation",
       "sector": "Basic Materials",
       "industry": "Silver",
@@ -2290,6 +2877,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "FCX": {
+      "news": [
+        {
+          "title": "Freeport-McMoRan Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Freeport-McMoRan Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Freeport-McMoRan Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Freeport-McMoRan, Inc.",
       "sector": "Basic Materials",
       "industry": "Copper",
@@ -2316,6 +2918,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "FNV": {
+      "news": [
+        {
+          "title": "Franco-Nevada Corp. stock rises Thursday, outperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Franco-Nevada Corp. stock falls Wednesday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Franco-Nevada Corp. stock rises Tuesday, outperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Franco-Nevada Corporation",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -2342,6 +2959,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "FSLR": {
+      "news": [
+        {
+          "title": "First Solar Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "First Solar Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "First Solar Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "First Solar, Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -2368,6 +3000,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "FSM": {
+      "news": [
+        {
+          "title": "Ross Healy's Past Picks: Fortuna Mining, Power Corp & Oceanagold",
+          "source": "BNN Bloomberg"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Fortuna Mining Corp.",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -2394,6 +3033,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "FTNT": {
+      "news": [
+        {
+          "title": "Fortinet Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Fortinet Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Fortinet Inc. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Fortinet, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -2420,6 +3074,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "GD": {
+      "news": [
+        {
+          "title": "General Dynamics Corp. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "General Dynamics Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "General Dynamics Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "General Dynamics Corporation",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -2427,7 +3096,7 @@ window.SIMPLE_DATA = {
       "employees": 110000,
       "price": 346.44,
       "w52h": 365.68,
-      "w52l": 293.18,
+      "w52l": 293.19,
       "mcap": 93687832576,
       "pe": 21.79,
       "fpe": 19.09,
@@ -2446,6 +3115,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "GFI": {
+      "news": [],
+      "news_tone": null,
       "name": "Gold Fields Limited",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -2472,6 +3143,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "GILD": {
+      "news": [
+        {
+          "title": "Gilead Sciences Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Gilead Sciences Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Gilead Sciences Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Gilead Sciences, Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - General",
@@ -2498,6 +3184,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "GOLD": {
+      "news": [
+        {
+          "title": "Gold.com Stock Poised for 50% Surge as Fintech, Precious Metals Shine",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Gold.com, Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -2524,6 +3217,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "GOOGL": {
+      "news": [
+        {
+          "title": "Why Google Stock Is Being Bought by Investors as Different Cathie Wood\u2019s ARK and Berkshire Hathaway",
+          "source": "Barron's"
+        },
+        {
+          "title": "Google Stock Dips on $80 Billion Equity Raise Plan",
+          "source": "WSJ"
+        },
+        {
+          "title": "Futures Fall As AI Leaders Keep Sliding; Google I/O Kicks Off",
+          "source": "Investor's Business Daily"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Alphabet Inc.",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
@@ -2550,6 +3258,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "GS": {
+      "news": [
+        {
+          "title": "Goldman\u2019s Flood Sees Buying Opportunity in Stock Market Selloff",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Goldman Sachs Group Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Goldman Sachs says on track for near-record M&A volumes in 2026",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Goldman Sachs Group, Inc. (The)",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -2576,6 +3299,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "HAL": {
+      "news": [
+        {
+          "title": "Halliburton Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Halliburton Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Halliburton Co. stock underperforms Monday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Halliburton Company",
       "sector": "Energy",
       "industry": "Oil & Gas Equipment & Services",
@@ -2602,6 +3340,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "HBM": {
+      "news": [
+        {
+          "title": "Hudbay Minerals to buy remaining Arizona Sonoran stake for $1.48 billion",
+          "source": "Reuters"
+        },
+        {
+          "title": "Hudbay Minerals signs deal to buy Arizona Sonoran in all-stock deal",
+          "source": "BNN Bloomberg"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Hudbay Minerals Inc.",
       "sector": "Basic Materials",
       "industry": "Copper",
@@ -2628,6 +3377,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "HII": {
+      "news": [
+        {
+          "title": "Huntington Ingalls Industries Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Huntington Ingalls Industries Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Huntington Ingalls Industries Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Huntington Ingalls Industries, ",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -2654,6 +3418,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "HL": {
+      "news": [],
+      "news_tone": null,
       "name": "Hecla Mining Company",
       "sector": "Basic Materials",
       "industry": "Other Precious Metals & Mining",
@@ -2680,6 +3446,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "HOOD": {
+      "news": [
+        {
+          "title": "Supreme Court seeks Trump administration views on Robinhood IPO dispute",
+          "source": "Reuters"
+        },
+        {
+          "title": "Robinhood Launches AI Stock Trading, Purchases on Credit Cards",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Your AI agent can now trade for you on Robinhood. And buy stuff with your credit card too",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Robinhood Markets, Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -2706,6 +3487,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "HUT": {
+      "news": [
+        {
+          "title": "Cramer's Stop Trading: Hut 8 Corp",
+          "source": "CNBC"
+        },
+        {
+          "title": "S&P 500 Futures Rise in Premarket Trading; Hut 8, Compass Lead",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Hut 8 Corp.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -2732,6 +3524,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "HWM": {
+      "news": [
+        {
+          "title": "Howmet Aerospace Inc. stock underperforms Friday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Howmet Aerospace Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Howmet Aerospace Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Howmet Aerospace Inc.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -2758,6 +3565,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "INCY": {
+      "news": [
+        {
+          "title": "Incyte Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Incyte Corp. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Incyte Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Incyte Corporation",
       "sector": "Healthcare",
       "industry": "Biotechnology",
@@ -2784,6 +3606,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "INTU": {
+      "news": [
+        {
+          "title": "Intuit Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Intuit Stock Falls on Earnings\u2014and the Company Plans to Cut 17% of Its Workforce",
+          "source": "Barron's"
+        },
+        {
+          "title": "Intuit Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Intuit Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -2810,6 +3647,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ISRG": {
+      "news": [
+        {
+          "title": "Intuitive Surgical Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "A New Robotics Giant Is Trying To Undercut Intuitive Surgical",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "Intuitive Surgical Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Intuitive Surgical, Inc.",
       "sector": "Healthcare",
       "industry": "Medical Instruments & Supplies",
@@ -2836,6 +3688,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "JKS": {
+      "news": [],
+      "news_tone": null,
       "name": "JinkoSolar Holding Company Limi",
       "sector": "Technology",
       "industry": "Solar",
@@ -2862,6 +3716,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "JPM": {
+      "news": [
+        {
+          "title": "JPMorgan tops estimates on Wall Street results, Dimon flags 'increasingly complex' economic risks",
+          "source": "CNBC"
+        },
+        {
+          "title": "JPMorgan Chase Earnings: Strong Results Across All Segments, Yet Shares Fully Valued",
+          "source": "Morningstar"
+        },
+        {
+          "title": "JPMorgan Chase & Co. stock outperforms market despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "JP Morgan Chase & Co.",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
@@ -2888,6 +3757,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "KBH": {
+      "news": [
+        {
+          "title": "Meritage, KB Home and Other Midsize Builders That Could Be Takeover Targets",
+          "source": "Barron's"
+        },
+        {
+          "title": "KB Home\u2019s Lower Estimates Drag Builder Stocks. It Might Not Be as Bad as It Looks.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Stocks making the biggest moves premarket: Chewy, EchoStar, Arm, KB Home & more",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "KB Home",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -2914,6 +3798,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "KGC": {
+      "news": [
+        {
+          "title": "Kinross Gold Corp. stock falls Friday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Kinross Gold Corp. stock rises Thursday, outperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Kinross Gold Corp. stock falls Tuesday, underperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Kinross Gold Corporation",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -2940,6 +3839,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "KLAC": {
+      "news": [
+        {
+          "title": "KLA Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "KLA Corp. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "KLA Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "KLA Corporation",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
@@ -2966,6 +3880,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "KMI": {
+      "news": [
+        {
+          "title": "Kinder Morgan Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Kinder Morgan Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Kinder Morgan Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Kinder Morgan, Inc.",
       "sector": "Energy",
       "industry": "Oil & Gas Midstream",
@@ -2992,6 +3921,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "KTOS": {
+      "news": [
+        {
+          "title": "Ryan Modesto's Top Picks: Kratos Defense and Security Solutions, Talen Energy & NVent Electric",
+          "source": "BNN Bloomberg"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Kratos Defense & Security Solut",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -3018,6 +3954,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "LDOS": {
+      "news": [
+        {
+          "title": "Leidos Holdings Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Leidos Holdings Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Leidos Holdings Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Leidos Holdings, Inc.",
       "sector": "Technology",
       "industry": "Information Technology Services",
@@ -3044,6 +3995,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "LEN": {
+      "news": [
+        {
+          "title": "Lennar Corp. Cl A stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Lennar Corp. Cl A stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Buy Lennar Stock. Its Foundation Is Stronger Than It Looks.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Lennar Corporation",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -3070,6 +4036,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "LEU": {
+      "news": [],
+      "news_tone": null,
       "name": "Centrus Energy Corp.",
       "sector": "Energy",
       "industry": "Uranium",
@@ -3096,6 +4064,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "LHX": {
+      "news": [
+        {
+          "title": "L3Harris Technologies Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "L3Harris Technologies Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "L3Harris Technologies Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "L3Harris Technologies, Inc.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -3122,6 +4105,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "LMT": {
+      "news": [],
+      "news_tone": null,
       "name": "Lockheed Martin Corporation",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -3148,6 +4133,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "LRCX": {
+      "news": [
+        {
+          "title": "Lam Research Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Lam Research Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Lam Research Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Lam Research Corporation",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
@@ -3174,6 +4174,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "LUNR": {
+      "news": [
+        {
+          "title": "Intuitive Machines Is Selling Stock. It\u2019s Another Warning Sign for Space Investors.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Why Intuitive Machines Stock Took Flight After Earnings",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Intuitive Machines, Inc.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -3200,6 +4211,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MARA": {
+      "news": [],
+      "news_tone": null,
       "name": "MARA Holdings, Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -3226,6 +4239,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MAXN": {
+      "news": [
+        {
+          "title": "Maxeon Defeats Investor Lawsuit Alleging Veiled Cash Flow Crisis",
+          "source": "Bloomberg Law News"
+        },
+        {
+          "title": "Maxeon Solar Plunges 53% on \u2018Going Concern\u2019 Warning",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Meme stock squeezes and new tariffs shake up US solar sector",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Maxeon Solar Technologies, Ltd.",
       "sector": "Technology",
       "industry": "Solar",
@@ -3252,6 +4280,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MCHP": {
+      "news": [
+        {
+          "title": "Microchip Technology Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Microchip Technology Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Microchip Technology Inc. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Microchip Technology Incorporat",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -3278,6 +4321,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "META": {
+      "news": [
+        {
+          "title": "Meta Considers Raising Billions in Share Sale, FT Reports",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Meta Platforms, Inc.",
       "sector": "Communication Services",
       "industry": "Internet Content & Information",
@@ -3304,6 +4354,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MPC": {
+      "news": [
+        {
+          "title": "Marathon Petroleum Corp. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Marathon Petroleum Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Marathon Petroleum Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Marathon Petroleum Corporation",
       "sector": "Energy",
       "industry": "Oil & Gas Refining & Marketing",
@@ -3330,6 +4395,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MRNA": {
+      "news": [
+        {
+          "title": "What's Happening With Moderna Stock?",
+          "source": "Forbes"
+        },
+        {
+          "title": "Moderna Stock: How Far Can The Flu Shot Fly?",
+          "source": "Forbes"
+        },
+        {
+          "title": "Why Moderna Stock Is Dropping After Good News",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Moderna, Inc.",
       "sector": "Healthcare",
       "industry": "Biotechnology",
@@ -3356,6 +4436,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MRVL": {
+      "news": [
+        {
+          "title": "Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Marvell Stock Was Just Added to S&P 500. Here\u2019s Who Else Was Included and Bumped.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Marvell Technology, Flex to join S&P 500 later this month",
+          "source": "Fortune"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Marvell Technology, Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -3382,6 +4477,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MS": {
+      "news": [
+        {
+          "title": "Morgan Stanley will soon open its trillion-dollar wealth management funnel to AI agents",
+          "source": "CNBC"
+        },
+        {
+          "title": "Morgan Stanley Says Meta Can Win AI. The Stock Still Has Something to Prove.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Exclusive | Morgan Stanley Sees SpaceX\u2019s Revenue Reaching $3.4 Trillion in 2040",
+          "source": "WSJ"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Morgan Stanley",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -3408,6 +4518,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MSFT": {
+      "news": [
+        {
+          "title": "Microsoft Stock Charts Look Vulnerable. Software Stocks Could Follow.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Microsoft (MSFT) Stock Outlook for 2026 | June Edition",
+          "source": "Forbes"
+        },
+        {
+          "title": "Why Microsoft Stock Is Worth $600",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Microsoft Corporation",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -3434,6 +4559,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MSTR": {
+      "news": [
+        {
+          "title": "Crypto mutiny on Strategy: Shorts target 'MSTR' in bitcoin bloodbath",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Strategy Inc",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -3460,6 +4592,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MTH": {
+      "news": [
+        {
+          "title": "Meritage Homes: A Building Stock For All Seasons",
+          "source": "Forbes"
+        },
+        {
+          "title": "Meritage Homes (MTH): Company Profile, Stock Price, News, Rankings",
+          "source": "Fortune"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Meritage Homes Corporation",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -3486,6 +4629,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "MU": {
+      "news": [
+        {
+          "title": "Why Is Micron Stock Falling Today? A New Warning Points to an Early Peak.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Micron Technology, Inc.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -3512,6 +4662,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NBIX": {
+      "news": [],
+      "news_tone": null,
       "name": "Neurocrine Biosciences, Inc.",
       "sector": "Healthcare",
       "industry": "Drug Manufacturers - Specialty & Generic",
@@ -3538,6 +4690,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NEE": {
+      "news": [
+        {
+          "title": "NextEra Energy Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "NextEra Energy Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "NextEra Energy Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "NextEra Energy, Inc.",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -3564,6 +4731,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NEM": {
+      "news": [
+        {
+          "title": "What's Fueling Newmont Stock\u2019s Rally?",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Newmont Corporation",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -3590,6 +4764,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NET": {
+      "news": [
+        {
+          "title": "Cloudflare stock sinks 24% after earnings as company cuts 1,100 employees due to AI changes",
+          "source": "CNBC"
+        },
+        {
+          "title": "Why Cloudflare Stock Is Tumbling After a Solid Earnings Report",
+          "source": "Barron's"
+        },
+        {
+          "title": "Cloudflare Earnings: Accelerating Top Line as AI Inference Demand Continues to Drive Results",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Cloudflare, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -3616,6 +4805,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NFLX": {
+      "news": [
+        {
+          "title": "Going Into Earnings, Is Netflix Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Netflix, Inc.",
       "sector": "Communication Services",
       "industry": "Entertainment",
@@ -3642,6 +4838,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NNE": {
+      "news": [
+        {
+          "title": "Nuclear Energy Stock Touts Key Milestone In Reactor Race",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "NANO Nuclear Energy Rings the Nasdaq Stock Market Opening Bell",
+          "source": "Nasdaq"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Nano Nuclear Energy Inc.",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -3668,6 +4875,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NOC": {
+      "news": [
+        {
+          "title": "Stealth Bomber Maker Northrop Grumman Delivers Strong Earnings. The Stock Is Down.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Northrop Grumman Corporation",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -3694,6 +4908,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NOW": {
+      "news": [
+        {
+          "title": "ServiceNow Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ServiceNow Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "ServiceNow Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "ServiceNow, Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -3720,6 +4949,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NVDA": {
+      "news": [
+        {
+          "title": "Nvidia vs. Salesforce vs. Marvell Technology: Which Is the Best Stock to Buy?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Nvidia: Entry Into the PC Market Announced at Computex; Shares Undervalued",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Nvidia, CoreWeave And Palantir Are Driving AI Forward. Which Is The Top Stock Pick?",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "positive",
       "name": "NVIDIA Corporation",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -3746,6 +4990,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NVR": {
+      "news": [
+        {
+          "title": "NVR Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "NVR Inc. stock underperforms Wednesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "NVR Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "NVR, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -3772,6 +5031,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NXE": {
+      "news": [],
+      "news_tone": null,
       "name": "Nexgen Energy Ltd.",
       "sector": "Energy",
       "industry": "Uranium",
@@ -3798,6 +5059,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NXPI": {
+      "news": [
+        {
+          "title": "NXP Semiconductors N.V. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "NXP Semiconductors N.V. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "NXP Semiconductors N.V. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "NXP Semiconductors N.V.",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -3824,6 +5100,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "NXT": {
+      "news": [
+        {
+          "title": "Solar Firm Nextpower Eyes AI\u2019s Power Needs With Battery Deal",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Nextpower Stock Rises Sharply. Why the Solar Company Is Raising Guidance.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Nextpower Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -3850,6 +5137,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "OKLO": {
+      "news": [
+        {
+          "title": "Oklo Is Turning Weapons-Grade Plutonium Into Nuclear Fuel. The Stock Is Climbing.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Oklo\u2019s Losses Deepen. Why the Nuclear Start-Up Still Has Wall Street\u2019s Attention.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Oklo Sinks On Earnings. Why Nuclear Startup Is Revving Up For July 4.",
+          "source": "Investor's Business Daily"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Oklo Inc.",
       "sector": "Utilities",
       "industry": "Utilities - Independent Power Producers",
@@ -3876,6 +5178,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "OKTA": {
+      "news": [
+        {
+          "title": "Okta Stock Soars. What\u2019s Stealing the Show From Earnings.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Our Okta Stock Pick is Up 63%. Why We See More Upside Ahead.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Okta, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -3902,6 +5215,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ON": {
+      "news": [
+        {
+          "title": "Markets Brief: Top Semiconductor, Software Stock Picks with AI Back in Focus",
+          "source": "Morningstar"
+        },
+        {
+          "title": "TSMC and ASML post-earnings stock moves could be a sign of what's to come from chip companies",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "ON Semiconductor Corporation",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -3928,6 +5252,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ORCL": {
+      "news": [
+        {
+          "title": "Buy Or Sell Oracle Stock At $230?",
+          "source": "Forbes"
+        },
+        {
+          "title": "Oracle Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Oracle Corporation",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -3954,6 +5289,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "OXY": {
+      "news": [
+        {
+          "title": "Occidental Petroleum Corp. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Occidental Petroleum Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Occidental Petroleum Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Occidental Petroleum Corporatio",
       "sector": "Energy",
       "industry": "Oil & Gas E&P",
@@ -3980,6 +5330,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PAAS": {
+      "news": [],
+      "news_tone": null,
       "name": "Pan American Silver Corp.",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -4006,6 +5358,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PANW": {
+      "news": [
+        {
+          "title": "Palo Alto Networks (PANW) Q3 2026 Earnings Call Transcript",
+          "source": "Fortune"
+        },
+        {
+          "title": "3 reasons why Palo Alto Networks\u2019 stock fell despite upbeat earnings",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Palo Alto CEO\u2019s Pay, Now Nearly $100 Million, Is Most Rejected in Corporate America",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Palo Alto Networks, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -4032,6 +5399,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PATH": {
+      "news": [],
+      "news_tone": null,
       "name": "UiPath, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -4058,6 +5427,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PEG": {
+      "news": [
+        {
+          "title": "Public Service Enterprise Group Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Public Service Enterprise Group Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "PSEG's Growth Investments To Strengthen New Jersey Energy Grid",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Public Service Enterprise Group",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -4084,6 +5468,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PEP": {
+      "news": [
+        {
+          "title": "PepsiCo Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "PepsiCo Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "PepsiCo Inc. stock underperforms Wednesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Pepsico, Inc.",
       "sector": "Consumer Defensive",
       "industry": "Beverages - Non-Alcoholic",
@@ -4110,6 +5509,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PHM": {
+      "news": [
+        {
+          "title": "PulteGroup Inc. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "PulteGroup Inc. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "PulteGroup Inc. stock underperforms Wednesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "PulteGroup, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -4136,6 +5550,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PL": {
+      "news": [],
+      "news_tone": null,
       "name": "Planet Labs PBC",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -4162,6 +5578,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PLTR": {
+      "news": [
+        {
+          "title": "Palantir Stock Dips Amid Google Cloud Deal, AIPCon 10 Announcements",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "Trump touted Palantir on Truth Social after buying the company's stock, records show",
+          "source": "CNBC"
+        },
+        {
+          "title": "Palantir rallies 15% for the week as Iran war boosts prospects, muting Anthropic concern",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Palantir Technologies Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -4188,6 +5619,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PNC": {
+      "news": [
+        {
+          "title": "PNC Financial Services Group Inc. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "PNC Financial Services Group Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "PNC Financial Services Group Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "PNC Financial Services Group, I",
       "sector": "Financial Services",
       "industry": "Banks - Regional",
@@ -4214,6 +5660,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "PSX": {
+      "news": [
+        {
+          "title": "Phillips 66 stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Phillips 66 stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Phillips 66 stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Phillips 66",
       "sector": "Energy",
       "industry": "Oil & Gas Refining & Marketing",
@@ -4240,6 +5701,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "QCOM": {
+      "news": [],
+      "news_tone": null,
       "name": "QUALCOMM Incorporated",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -4266,6 +5729,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "QLYS": {
+      "news": [
+        {
+          "title": "Cybersecurity Company Qualys Explores Potential Sale",
+          "source": "Bloomberg.com"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Qualys, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -4292,6 +5762,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "RDW": {
+      "news": [
+        {
+          "title": "Redwire Stock, Comfort Systems, 15 Others Join IBD Watchlists",
+          "source": "Investor's Business Daily"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Redwire Corporation",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -4318,6 +5795,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "REGN": {
+      "news": [
+        {
+          "title": "Regeneron Pharmaceuticals Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Regeneron Pharmaceuticals Inc. stock underperforms Wednesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Regeneron Pharmaceuticals Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Regeneron Pharmaceuticals, Inc.",
       "sector": "Healthcare",
       "industry": "Biotechnology",
@@ -4344,6 +5836,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "RGLD": {
+      "news": [
+        {
+          "title": "Royal Gold, Inc. Rings the Nasdaq Stock Market Closing Bell",
+          "source": "Nasdaq"
+        },
+        {
+          "title": "Royal Gold, Inc. Rings the Closing Bell",
+          "source": "Nasdaq"
+        },
+        {
+          "title": "Royal Gold Stock Can Bounce Back",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Royal Gold, Inc.",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -4370,6 +5877,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "RIO": {
+      "news": [
+        {
+          "title": "Rio Tinto, IBD Stock Of The Day, Breaks Out As Iran Deal Hopes Lift Metals Prices",
+          "source": "Investor's Business Daily"
+        },
+        {
+          "title": "Rio Tinto and Glencore Go Their Separate Ways",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Rio Tinto Earnings: Stable, With Dividends Again at the Top of Its Target Payout Range",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Rio Tinto Plc",
       "sector": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
@@ -4396,6 +5918,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "RIOT": {
+      "news": [
+        {
+          "title": "Why Did Riot Stock Move 40%?",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Riot Platforms, Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -4422,6 +5951,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "RKLB": {
+      "news": [
+        {
+          "title": "Rocket Lab surges 34% in best day ever on revenue beat, record-setting launch deal",
+          "source": "CNBC"
+        },
+        {
+          "title": "Rocket Lab Breaks Out On Revenue Beat, Record Launch Contract",
+          "source": "Investor's Business Daily"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Rocket Lab Corporation",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -4448,6 +5988,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ROK": {
+      "news": [
+        {
+          "title": "Rockwell Automation Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Rockwell Automation Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Rockwell Automation Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Rockwell Automation, Inc.",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -4474,6 +6029,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "RTX": {
+      "news": [
+        {
+          "title": "RTX Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "RTX Corp. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "RTX Stock Pops, Then Drops, as Earnings Beat. Why It Raised Guidance Amid Iran War.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "RTX Corporation",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -4500,6 +6070,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "RUN": {
+      "news": [
+        {
+          "title": "Sunrun Earnings Beat Expectations. Why the Stock Is Down 38%.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Sunrun Remains Focused on Its Value Over Volume Strategy",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Sunrun Earnings: Cash Burn and Subscriber Volumes Hurt Stock, but Value and Attachment Rates Help",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Sunrun Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -4526,6 +6111,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "S": {
+      "news": [
+        {
+          "title": "SentinelOne Earnings: Competitive Pressures Continue to Weigh on Growth Prospects",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "positive",
       "name": "SentinelOne, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -4552,6 +6144,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SCCO": {
+      "news": [
+        {
+          "title": "What's The Bull Case For Southern Copper Stock?",
+          "source": "Forbes"
+        },
+        {
+          "title": "Southern Copper Stock At A Crossroads: Is The Copper Rally Over?",
+          "source": "Forbes"
+        },
+        {
+          "title": "How Southern Copper Stock Gained 60%",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Southern Copper Corporation",
       "sector": "Basic Materials",
       "industry": "Copper",
@@ -4578,6 +6185,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SCHW": {
+      "news": [
+        {
+          "title": "Charles Schwab Corp. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Charles Schwab Corp. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Charles Schwab Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Charles Schwab Corporation (The",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -4604,6 +6226,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SEDG": {
+      "news": [
+        {
+          "title": "SolarEdge Should Benefit From Product and Organization Simplification Efforts",
+          "source": "Morningstar"
+        },
+        {
+          "title": "SolarEdge: Dropping Coverage",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "SolarEdge Technologies, Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -4630,6 +6263,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SERV": {
+      "news": [
+        {
+          "title": "Serve Robotics, Inc. Rings the Closing Bell",
+          "source": "Nasdaq"
+        },
+        {
+          "title": "Serve Robotics, Inc. Rings the Nasdaq Stock Market Closing Bell",
+          "source": "Nasdaq"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Serve Robotics Inc.",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -4656,6 +6300,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SHLS": {
+      "news": [
+        {
+          "title": "Weekly Market Update: Stocks Edge Lower as Consumer Defensives Rise and Financial Services Fall",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Shoals Technologies Group, Inc.",
       "sector": "Technology",
       "industry": "Solar",
@@ -4682,6 +6333,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SLB": {
+      "news": [
+        {
+          "title": "SLB Ltd. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "SLB Ltd. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "This Oilfield-Services Stock Is Just Getting Started",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "SLB Limited",
       "sector": "Energy",
       "industry": "Oil & Gas Equipment & Services",
@@ -4708,6 +6374,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SMCI": {
+      "news": [
+        {
+          "title": "Super Micro Computer Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Super Micro stock jumps 18% on guidance beat as revenue more than doubles",
+          "source": "CNBC"
+        },
+        {
+          "title": "Super Micro Computer Inc. stock underperforms Monday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Super Micro Computer, Inc.",
       "sector": "Technology",
       "industry": "Computer Hardware",
@@ -4734,6 +6415,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SMR": {
+      "news": [],
+      "news_tone": null,
       "name": "NuScale Power Corporation",
       "sector": "Industrials",
       "industry": "Specialty Industrial Machinery",
@@ -4760,6 +6443,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SNOW": {
+      "news": [
+        {
+          "title": "Snowflake Raises Sales Outlook, Touts Impact of AI Demand",
+          "source": "Bloomberg.com"
+        },
+        {
+          "title": "Snowflake Stock Went From Software Loser to AI Winner in an Instant After Earnings",
+          "source": "Barron's"
+        },
+        {
+          "title": "Snowflake\u2019s stock blasts off, fueled by AI acceleration and deeper Amazon partnership",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Snowflake Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -4786,6 +6484,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SO": {
+      "news": [
+        {
+          "title": "Southern Co. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Southern Co. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Southern Co. stock outperforms competitors despite losses on the day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Southern Company (The)",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -4812,6 +6525,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SPCE": {
+      "news": [
+        {
+          "title": "Virgin Galactic Holdings Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Virgin Galactic Holdings Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Virgin Galactic Holdings Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Virgin Galactic Holdings, Inc.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -4838,6 +6566,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SRE": {
+      "news": [],
+      "news_tone": null,
       "name": "DBA Sempra",
       "sector": "Utilities",
       "industry": "Utilities - Diversified",
@@ -4864,6 +6594,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SRPT": {
+      "news": [
+        {
+          "title": "Sarepta Stock Surges 30% After Gene Therapy Trials. The Safety Debate Is Far From Over.",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Sarepta Therapeutics, Inc.",
       "sector": "Healthcare",
       "industry": "Biotechnology",
@@ -4890,6 +6627,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "SVM": {
+      "news": [],
+      "news_tone": null,
       "name": "Silvercorp Metals Inc.",
       "sector": "Basic Materials",
       "industry": "Silver",
@@ -4916,6 +6655,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TEAM": {
+      "news": [
+        {
+          "title": "Atlassian stock soars 29% after earnings show strong cloud, data center growth",
+          "source": "CNBC"
+        },
+        {
+          "title": "Atlassian Earnings: AI Usage and Sunsetting Data Center Products Lead to Huge Quarter",
+          "source": "Morningstar"
+        },
+        {
+          "title": "What SaaSpocalypse? Atlassian, Twilio, and Five9 stocks soar as their AI moves deliver earnings beats",
+          "source": "Business Insider"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Atlassian Corporation",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -4942,6 +6696,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TECK": {
+      "news": [
+        {
+          "title": "Teck Resources Ltd. Cl B stock rises Thursday, still underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Teck Resources Ltd. Cl B stock falls Wednesday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Teck Resources Ltd. Cl B stock rises Monday, outperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Teck Resources Ltd",
       "sector": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
@@ -4968,6 +6737,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TENB": {
+      "news": [
+        {
+          "title": "3 Cybersecurity Stocks to Invest In as AI Reshapes Industries",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Tenable Holdings, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -4994,6 +6770,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TER": {
+      "news": [
+        {
+          "title": "Teradyne Inc. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Teradyne Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Teradyne Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Teradyne, Inc.",
       "sector": "Technology",
       "industry": "Semiconductor Equipment & Materials",
@@ -5020,6 +6811,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TFC": {
+      "news": [
+        {
+          "title": "Truist Financial Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Truist Financial Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Truist Financial Corp. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Truist Financial Corporation",
       "sector": "Financial Services",
       "industry": "Banks - Regional",
@@ -5046,6 +6852,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TGB": {
+      "news": [
+        {
+          "title": "Canada's Taseko shares fall 8% after strike at Gibraltar mine",
+          "source": "Reuters"
+        },
+        {
+          "title": "(TKO.TO) | Stock Price & Latest News",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Taseko Mines, Ltd.",
       "sector": "Basic Materials",
       "industry": "Copper",
@@ -5072,6 +6889,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TOL": {
+      "news": [
+        {
+          "title": "Toll Brothers Earnings: Management Raised Guidance Despite Housing Market Weakness",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Toll Brothers Stock Could Lead Homebuilder Rebound as Housing Stabilizes",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Toll Brothers, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -5098,6 +6926,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TPH": {
+      "news": [
+        {
+          "title": "Tri Pointe Homes (TPH): Company Profile, Stock Price, News, Rankings",
+          "source": "Fortune"
+        },
+        {
+          "title": "Tri Pointe Homes Stock Is Up on Sale to Sumitomo Forestry",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Tri Pointe Homes, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Residential Construction",
@@ -5124,6 +6963,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TSLA": {
+      "news": [
+        {
+          "title": "After Earnings, Is Tesla Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "After Earnings, Is Tesla Stock a Buy, a Sell, or Fairly Valued?",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Tesla stock adds nearly 8% as Elon Musk touts chip progress",
+          "source": "CNBC"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Tesla, Inc.",
       "sector": "Consumer Cyclical",
       "industry": "Auto Manufacturers",
@@ -5150,6 +7004,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TSM": {
+      "news": [],
+      "news_tone": null,
       "name": "Taiwan Semiconductor Manufactur",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -5176,6 +7032,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TXN": {
+      "news": [
+        {
+          "title": "Texas Instruments Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Texas Instruments Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Texas Instruments Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Texas Instruments Incorporated",
       "sector": "Technology",
       "industry": "Semiconductors",
@@ -5202,6 +7073,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "TXT": {
+      "news": [
+        {
+          "title": "Textron Inc. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Textron (TXT): Company Profile, Stock Price, News, Rankings",
+          "source": "Fortune"
+        },
+        {
+          "title": "Textron Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Textron Inc.",
       "sector": "Industrials",
       "industry": "Aerospace & Defense",
@@ -5228,6 +7114,13 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "UEC": {
+      "news": [
+        {
+          "title": "Uranium Energy Corp Provides Date for Fiscal 2026 Third Quarter Results, Conference Call, and Webcast",
+          "source": "Financial Times"
+        }
+      ],
+      "news_tone": "mixed",
       "name": "Uranium Energy Corp.",
       "sector": "Energy",
       "industry": "Uranium",
@@ -5254,6 +7147,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "USB": {
+      "news": [
+        {
+          "title": "U.S. Bancorp stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "U.S. Bancorp stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "U.S. Bancorp stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "U.S. Bancorp",
       "sector": "Financial Services",
       "industry": "Banks - Regional",
@@ -5280,6 +7188,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "UUUU": {
+      "news": [],
+      "news_tone": null,
       "name": "Energy Fuels Inc",
       "sector": "Energy",
       "industry": "Uranium",
@@ -5306,6 +7216,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "VALE": {
+      "news": [],
+      "news_tone": null,
       "name": "VALE S.A.",
       "sector": "Basic Materials",
       "industry": "Other Industrial Metals & Mining",
@@ -5332,6 +7244,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "VRTX": {
+      "news": [
+        {
+          "title": "Vertex Pharmaceuticals Inc. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Vertex Pharmaceuticals (VRTX): Company Profile, Stock Price, News, Rankings",
+          "source": "Fortune"
+        },
+        {
+          "title": "Vertex Pharmaceuticals Inc. stock underperforms Tuesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Vertex Pharmaceuticals Incorpor",
       "sector": "Healthcare",
       "industry": "Biotechnology",
@@ -5358,6 +7285,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "VST": {
+      "news": [
+        {
+          "title": "Vistra Corp. stock underperforms Friday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Vistra Corp. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Vistra Corp. stock underperforms Wednesday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Vistra Corp.",
       "sector": "Utilities",
       "industry": "Utilities - Independent Power Producers",
@@ -5384,6 +7326,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "WDAY": {
+      "news": [
+        {
+          "title": "Workday Stock Rises. Why The Software Company\u2019s Earnings Flip the AI Script.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Workday stock sinks on weak revenue guidance",
+          "source": "CNBC"
+        },
+        {
+          "title": "Workday Earnings: Margin Outperformance Mitigates Investor Concerns Around AI Investments",
+          "source": "Morningstar"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Workday, Inc.",
       "sector": "Technology",
       "industry": "Software - Application",
@@ -5410,6 +7367,17 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "WFC": {
+      "news": [
+        {
+          "title": "Wells Fargo & Co. stock underperforms Thursday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Wells Fargo & Company Declares Cash Dividends on Preferred Stock",
+          "source": "Financial Times"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Wells Fargo & Company",
       "sector": "Financial Services",
       "industry": "Banks - Diversified",
@@ -5436,6 +7404,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "WMB": {
+      "news": [
+        {
+          "title": "Sherwin-Williams Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Sherwin-Williams Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Sherwin-Williams Co. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Williams Companies, Inc. (The)",
       "sector": "Energy",
       "industry": "Oil & Gas Midstream",
@@ -5462,6 +7445,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "WPM": {
+      "news": [
+        {
+          "title": "Wheaton Precious Metals Corp. stock falls Friday, underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Wheaton Precious Metals Corp. stock rises Tuesday, still underperforms market",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Wheaton Precious Metals Corp. stock rises Thursday, outperforms market",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Wheaton Precious Metals Corp",
       "sector": "Basic Materials",
       "industry": "Gold",
@@ -5488,6 +7486,8 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "WULF": {
+      "news": [],
+      "news_tone": null,
       "name": "TeraWulf Inc.",
       "sector": "Financial Services",
       "industry": "Capital Markets",
@@ -5514,6 +7514,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "XEL": {
+      "news": [
+        {
+          "title": "Xcel Energy Inc. stock underperforms Tuesday when compared to competitors despite daily gains",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Xcel Energy Inc. stock underperforms Monday when compared to competitors",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Xcel Energy Inc. stock underperforms Thursday when compared to competitors",
+          "source": "MarketWatch"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Xcel Energy Inc.",
       "sector": "Utilities",
       "industry": "Utilities - Regulated Electric",
@@ -5540,6 +7555,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "XOM": {
+      "news": [
+        {
+          "title": "Stocks making the biggest moves midday: Exxon Mobil, GameStop, Palo Alto Networks, Blackstone & more",
+          "source": "CNBC"
+        },
+        {
+          "title": "Exxon Mobil Corp. stock outperforms competitors on strong trading day",
+          "source": "MarketWatch"
+        },
+        {
+          "title": "Exxon Mobil not liable to investors over Canadian oil sands, gas assets, jury says",
+          "source": "Reuters"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Exxon Mobil Corporation",
       "sector": "Energy",
       "industry": "Oil & Gas Integrated",
@@ -5566,6 +7596,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ZBRA": {
+      "news": [
+        {
+          "title": "Why Zebra Technologies Stock Could Be Your Next Buy?",
+          "source": "Forbes"
+        },
+        {
+          "title": "Why Is Zebra Tech Stock Falling?",
+          "source": "Forbes"
+        },
+        {
+          "title": "Is Zebra Technologies Stock A Buy Now?",
+          "source": "Forbes"
+        }
+      ],
+      "news_tone": "positive",
       "name": "Zebra Technologies Corporation",
       "sector": "Technology",
       "industry": "Communication Equipment",
@@ -5592,6 +7637,21 @@ window.SIMPLE_DATA = {
       "r1y": null
     },
     "ZS": {
+      "news": [
+        {
+          "title": "Zscaler Stock Surges. Wall Street Is Buying the Company\u2019s \u2018Trust Me Story\u2019 on AI.",
+          "source": "Barron's"
+        },
+        {
+          "title": "Zscaler Earnings: Disappointing Early Look at 2027 as Shares Sell Off",
+          "source": "Morningstar"
+        },
+        {
+          "title": "Zscaler Stock Plunges 21% on Weak Fourth-Quarter Guidance",
+          "source": "Barron's"
+        }
+      ],
+      "news_tone": "negative",
       "name": "Zscaler, Inc.",
       "sector": "Technology",
       "industry": "Software - Infrastructure",
@@ -5625,7 +7685,7 @@ window.SIMPLE_DATA = {
       "trend": "up",
       "ret3mo": 0.497,
       "vs_spy": 0.3971,
-      "buzz": 91,
+      "buzz": 92,
       "stocks": [
         "NVDA",
         "AVGO",
@@ -5781,7 +7841,7 @@ window.SIMPLE_DATA = {
       "trend": "sideways",
       "ret3mo": 0.0395,
       "vs_spy": -0.0604,
-      "buzz": 71,
+      "buzz": 72,
       "stocks": [
         "JPM",
         "BAC",
@@ -5937,7 +7997,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": 0.0896,
       "vs_spy": -0.0103,
-      "buzz": 45,
+      "buzz": 44,
       "stocks": [
         "MSFT",
         "CRM",
@@ -6041,7 +8101,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.2168,
       "vs_spy": -0.3168,
-      "buzz": 68,
+      "buzz": 67,
       "stocks": [
         "PAAS",
         "AG",
@@ -6066,7 +8126,7 @@ window.SIMPLE_DATA = {
       "trend": "down",
       "ret3mo": -0.2223,
       "vs_spy": -0.3223,
-      "buzz": 85,
+      "buzz": 84,
       "stocks": [
         "NEM",
         "AEM",

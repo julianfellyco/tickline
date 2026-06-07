@@ -121,7 +121,56 @@ def _stock_trend(df) -> dict:
     }
 
 
-def _company_brief(sym: str, df) -> dict:
+# Hard-news / research outlets only. Listicle and promo factories
+# (Motley Fool, Seeking Alpha, Investing.com, Yahoo listicles) are noise.
+TRUSTED = {
+    "reuters", "bloomberg", "wall street journal", "wsj", "financial times", "ft.com",
+    "cnbc", "barron", "marketwatch", "associated press", "forbes",
+    "investor's business daily", "morningstar", "the economist", "nasdaq",
+    "business insider", "fortune", "axios", "the new york times", "washington post",
+}
+
+
+def _trusted_news(query: str, scorer, session, limit: int = 3):
+    """Recent headlines from trusted outlets only + a coverage-tone read.
+
+    Filters Google News results to the TRUSTED whitelist (drops blogs,
+    promo, and aggregator noise). Returns (headlines, tone).
+    """
+    from urllib.parse import quote_plus
+    from xml.etree import ElementTree as ET
+
+    url = ("https://news.google.com/rss/search?q=" + quote_plus(query)
+           + "&hl=en-US&gl=US&ceid=US:en")
+    try:
+        resp = session.get(url, timeout=10)
+        resp.raise_for_status()
+        root = ET.fromstring(resp.content)
+    except Exception:
+        return [], None
+
+    out = []
+    for item in root.iterfind(".//item"):
+        title = (item.findtext("title") or "").strip()
+        src_el = item.find("source")
+        source = (src_el.text or "").strip() if src_el is not None else ""
+        if not title or not source:
+            continue
+        if not any(t in source.lower() for t in TRUSTED):
+            continue
+        if title.endswith(" - " + source):
+            title = title[: -(len(source) + 3)].strip()
+        out.append({"title": title, "source": source})
+        if len(out) >= limit:
+            break
+    if not out:
+        return [], None
+    avg = sum(scorer.score(h["title"]) for h in out) / len(out)
+    tone = "positive" if avg > 0.12 else "negative" if avg < -0.12 else "mixed"
+    return out, tone
+
+
+def _company_brief(sym: str, df, session=None, scorer=None) -> dict:
     """Analyst view + fundamentals + price action for the click-out modal.
 
     Price action is computed from the price frame (always available);
@@ -150,7 +199,13 @@ def _company_brief(sym: str, df) -> dict:
     if len(summary) > 340:
         summary = summary[:337].rsplit(" ", 1)[0] + "…"
 
+    news, news_tone = ([], None)
+    if session is not None and scorer is not None:
+        name_q = info.get("shortName") or info.get("longName") or sym
+        news, news_tone = _trusted_news(name_q + " stock", scorer, session)
+
     return {
+        "news": news, "news_tone": news_tone,
         "name": info.get("shortName") or info.get("longName") or sym,
         "sector": info.get("sector"), "industry": info.get("industry"),
         "summary": summary or None, "employees": info.get("fullTimeEmployees"),
@@ -238,10 +293,12 @@ def main() -> int:
              if df is not None and not df.empty and len(df) >= 120}
     stock_info = {sym: _stock_trend(df) for sym, df in valid.items()}
 
-    print(f">> fetching analyst + fundamentals for {len(valid)} companies (slow)…")
+    print(f">> fetching analyst + fundamentals + trusted news for {len(valid)} companies (slow)…")
+    from tickline.sentiment import LexiconScorer
+    scorer = LexiconScorer()
     company_info = {}
     for i, (sym, df) in enumerate(valid.items(), 1):
-        company_info[sym] = _company_brief(sym, df)
+        company_info[sym] = _company_brief(sym, df, sess, scorer)
         if i % 25 == 0:
             print(f"   …{i}/{len(valid)}")
 

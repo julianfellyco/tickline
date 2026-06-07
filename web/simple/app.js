@@ -120,6 +120,14 @@
           metric("1 month", pct(c.r1m), c.r1m) + metric("3 month", pct(c.r3m), c.r3m) +
           metric("6 month", pct(c.r6m), c.r6m) +
         "</div></div>" +
+      ((c.news && c.news.length)
+        ? '<div class="md-sec"><h3>In the news <span class="md-trust">· trusted sources</span>' +
+          (c.news_tone ? ' <span class="md-tone tone-' + c.news_tone + '">' + c.news_tone + " coverage</span>" : "") +
+          '</h3><ul class="md-news">' +
+          c.news.map(function (h) {
+            return '<li><span class="md-nsrc">' + h.source + "</span> " + h.title + "</li>";
+          }).join("") + "</ul></div>"
+        : "") +
       (c.summary ? '<div class="md-sec"><h3>Company briefing</h3><p class="md-summary">' + c.summary + "</p></div>" : "") +
       '<a class="md-link" href="https://finance.yahoo.com/quote/' + encodeURIComponent(sym) +
       '" target="_blank" rel="noopener">Full chart &amp; financials on Yahoo ↗</a>';
