@@ -5,6 +5,7 @@
 | **Product** | tick/line — a "where is the market moving?" tool |
 | **Owner** | Julian Fellyco |
 | **Status** | Two products live: a **Simple Board** (for anyone) and a **Research Engine** (for tinkering) |
+| **Live at** | tickline-bay.vercel.app/simple/ (simple board) · tickline-bay.vercel.app/ (research board) |
 | **Last updated** | 2026-06-07 |
 
 > **The one rule for this document:** no jargon without a plain explanation. If your aunt couldn't follow it, it's rewritten.
@@ -122,8 +123,8 @@ No accounts, no fees, no AI making decisions. (We deliberately left out any "sel
 
 ## 9. What's next
 
-- **Now:** ship the Simple Board as the front door; keep the Research Engine for tinkering.
-- **Soon:** put the board on a real web address and have it auto-update daily.
+- **Done ✅:** Simple Board is live on the web (tickline-bay.vercel.app/simple/). A daily auto-refresh is wired up (it rebuilds *both* boards) — it switches on once a Vercel access key is added and the change is merged.
+- **Note on "real-time":** the boards refresh *daily/intraday at best*, not second-by-second. Data is ~15 minutes delayed and the signal is a 3-month trend, so live ticks would just be noise. "Fresh each trading day" is the right speed.
 - **The real research question (maybe never profitable, and that's fine):** redo the backtest *without* cheating — only let it pick from stocks that looked relevant *at the time*, not with hindsight. That's the only way to get a number worth trusting. It might show there's no edge — which would be the honest answer.
 
 ---
