@@ -126,6 +126,47 @@ def fetch_many(
     return out
 
 
+def fetch_batch(
+    symbols: list[str],
+    days: int = 400,
+    interval: str = "1d",
+    min_bars: int = 40,
+) -> dict[str, pd.DataFrame]:
+    """Download many symbols in ONE yfinance call — fast, no parquet cache.
+
+    Use for broad universes where per-symbol fetching is too slow. Returns
+    {symbol: OHLCV DataFrame} in the canonical schema. Symbols with no/thin
+    data are dropped and reported (fail-loud: a schema break shows up as a
+    large drop count, not a silent empty result).
+    """
+    if not symbols:
+        return {}
+    import yfinance as yf
+
+    raw = yf.download(symbols, period=f"{days}d", interval=interval, auto_adjust=True,
+                      group_by="ticker", progress=False, threads=True)
+    out: dict[str, pd.DataFrame] = {}
+    dropped: list[str] = []
+    multi = len(symbols) > 1
+    for sym in symbols:
+        try:
+            sub = raw[sym] if multi else raw
+            df = sub.rename(columns={c: c.lower() for c in sub.columns})
+            df = df[[c for c in OHLCV_COLS if c in df.columns]].dropna(how="all")
+            if len(df) < min_bars:
+                dropped.append(sym)
+                continue
+            idx = pd.to_datetime(df.index)
+            df.index = idx.tz_localize("UTC") if idx.tz is None else idx.tz_convert("UTC")
+            out[sym] = df
+        except (KeyError, TypeError, IndexError, AttributeError):
+            dropped.append(sym)
+    if dropped:
+        shown = ", ".join(dropped[:12]) + ("…" if len(dropped) > 12 else "")
+        print(f"  [batch] {len(dropped)}/{len(symbols)} dropped (no/thin data): {shown}")
+    return out
+
+
 def fetch_shares_outstanding(symbol: str, days: int = 400) -> pd.Series | None:
     """Best-effort shares-outstanding history for an ETF (flow proxy).
 

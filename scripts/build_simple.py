@@ -28,8 +28,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import pandas as pd
 
-from tickline.data import fetch_equity, fetch_many
+from tickline.data import fetch_batch, fetch_equity
 from tickline.sentiment.live import fetch_news
+from tickline.themes.simple_universe import STOCKS
 
 OUT = Path(__file__).resolve().parents[1] / "web" / "simple"
 BENCH = "SPY"
@@ -56,30 +57,8 @@ THEMES = [
     ("Utilities & Power", "XLU", "utility stocks power grid"),
 ]
 
-# The companies screened into each category (comprehensive major US names).
-STOCKS = {
-    "SMH":  ["NVDA", "AVGO", "AMD", "TSM", "MU", "QCOM", "TXN", "AMAT", "LRCX",
-             "KLAC", "ADI", "MRVL", "MCHP", "NXPI", "ON", "SMCI"],
-    "IGV":  ["MSFT", "CRM", "NOW", "PLTR", "SNOW", "ORCL", "ADBE", "INTU",
-             "PANW", "CRWD", "DDOG", "TEAM", "WDAY", "NET"],
-    "QQQ":  ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "AVGO", "TSLA",
-             "NFLX", "COST", "PEP", "ADBE"],
-    "CIBR": ["CRWD", "PANW", "ZS", "FTNT", "NET", "S", "OKTA", "CYBR", "TENB", "QLYS"],
-    "BOTZ": ["NVDA", "ISRG", "TSLA", "PATH", "TER", "ROK", "EMR", "ZBRA", "IRBT", "SERV"],
-    "IBIT": ["COIN", "MSTR", "MARA", "RIOT", "HOOD", "CLSK", "WULF", "CIFR", "BITF", "HUT"],
-    "URA":  ["CCJ", "OKLO", "SMR", "LEU", "UEC", "UUUU", "DNN", "NNE", "NXE", "BWXT"],
-    "TAN":  ["FSLR", "ENPH", "RUN", "NXT", "SEDG", "ARRY", "SHLS", "CSIQ", "JKS", "MAXN"],
-    "XLE":  ["XOM", "CVX", "COP", "EOG", "SLB", "MPC", "PSX", "OXY", "WMB", "KMI", "HAL", "DVN"],
-    "GDX":  ["NEM", "AEM", "GOLD", "WPM", "FNV", "KGC", "AU", "GFI", "RGLD", "AGI", "BTG"],
-    "SIL":  ["PAAS", "AG", "HL", "WPM", "FNV", "CDE", "SVM", "EXK", "MAG", "FSM"],
-    "COPX": ["FCX", "SCCO", "TECK", "BHP", "RIO", "VALE", "ERO", "HBM", "TGB"],
-    "ITA":  ["LMT", "RTX", "NOC", "GD", "BA", "LHX", "HII", "TXT", "LDOS", "HWM", "AXON", "KTOS"],
-    "UFO":  ["RKLB", "LUNR", "ASTS", "RDW", "PL", "BKSY", "SPCE", "ASTR"],
-    "XBI":  ["VRTX", "REGN", "MRNA", "GILD", "AMGN", "BIIB", "ALNY", "INCY", "NBIX", "SRPT"],
-    "XLF":  ["JPM", "BAC", "WFC", "GS", "MS", "C", "USB", "PNC", "TFC", "SCHW", "AXP"],
-    "XHB":  ["DHI", "LEN", "PHM", "NVR", "TOL", "KBH", "MTH", "TPH", "BLDR", "BLD"],
-    "XLU":  ["NEE", "SO", "DUK", "CEG", "VST", "AEP", "D", "EXC", "SRE", "XEL", "ED", "PEG"],
-}
+# STOCKS (the companies per category) is the shared single source of truth
+# in tickline.themes.simple_universe — imported above.
 
 VERDICTS = {
     "confirmed": "Uptrend and the crowd is piling in — the trend everyone agrees on.",
@@ -287,8 +266,8 @@ def main() -> int:
 
     # per-company trend for the drill-down dots
     all_stocks = sorted({s for syms in STOCKS.values() for s in syms})
-    print(f">> fetching {len(all_stocks)} companies for drill-down…")
-    stock_frames = fetch_many(all_stocks, days=320, use_cache=use_cache)
+    print(f">> batch-fetching {len(all_stocks)} companies…")
+    stock_frames = fetch_batch(all_stocks, days=320)
     valid = {s: df for s, df in stock_frames.items()
              if df is not None and not df.empty and len(df) >= 120}
     stock_info = {sym: _stock_trend(df) for sym, df in valid.items()}

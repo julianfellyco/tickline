@@ -10,3 +10,4 @@ streamlit>=1.30.0
 plotly>=5.18.0
 yfinance>=0.2.40
 requests>=2.31.0
+playwright>=1.60.0   # E2E / browser checks; run `playwright install chromium` once

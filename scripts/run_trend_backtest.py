@@ -61,42 +61,52 @@ def main() -> int:
     p.add_argument("--cost-bps", type=float, default=5.0)
     p.add_argument("--cash-yield", type=float, default=2.5,
                    help="annual %% earned while sitting in cash")
+    p.add_argument("--universe", choices=["etfs", "stocks"], default="etfs",
+                   help="etfs = 18 theme ETFs · stocks = the ~218 screened companies")
     p.add_argument("--no-fetch", action="store_true")
     args = p.parse_args()
     cash = args.cash_yield / 100.0
 
     print(BANNER)
-    print(f"{INK_FAINT}>>{RESET} fetching {len(ETFS)} ETFs, ~{args.days//252}y…")
-    frames = fetch_many(ETFS, days=args.days, use_cache=not args.no_fetch)
+    if args.universe == "stocks":
+        from tickline.data import fetch_batch
+        from tickline.themes.simple_universe import all_company_tickers
+        syms = all_company_tickers()
+        print(f"{INK_FAINT}>>{RESET} batch-fetching {len(syms)} stocks, ~{args.days//252}y…")
+        frames = fetch_batch(syms, days=args.days)
+        uni = f"{len(frames)} stocks"
+    else:
+        print(f"{INK_FAINT}>>{RESET} fetching {len(ETFS)} ETFs, ~{args.days//252}y…")
+        frames = fetch_many(ETFS, days=args.days, use_cache=not args.no_fetch)
+        uni = f"{len(frames)} ETFs"
     if not frames:
         print(f"{ALERT}no data{RESET}"); return 1
-    span = next(iter(frames.values())).index
-    print(f"{INK_FAINT}>>{RESET} {len(frames)} ETFs · {args.ma}-day line · "
-          f"{args.cost_bps:.0f}bps/switch\n")
+    print(f"{INK_FAINT}>>{RESET} {uni} · {args.ma}-day line · {args.cost_bps:.0f}bps/switch\n")
 
-    # ── per-ETF ──────────────────────────────────────────────────────────
-    print(f"{INK}Per theme{RESET} {INK_FAINT}(trend-follow vs buy & hold){RESET}\n")
-    print(f"   {INK_FAINT}{'theme':<11}{'TF ret':>8}{'BH ret':>8}{'TF maxDD':>10}"
-          f"{'BH maxDD':>10}{'TF Shrp':>9}{'BH Shrp':>9}{'% in':>7}{RESET}")
-    print(f"   {INK_FAINT}{'─'*72}{RESET}")
-    for sym in ETFS:
-        df = frames.get(sym)
-        if df is None or len(df) < args.ma + 30:
-            continue
-        c = df["close"]
-        tf = trend_follow(c, args.ma, args.cost_bps)
-        bh = buy_hold(c)
-        better_dd = tf.max_dd > bh.max_dd  # shallower (less negative)
-        print(f"   {INK}{NAMES.get(sym, sym):<11}{RESET}"
-              f"{INK}{_pct(tf.cagr):>8}{_pct(bh.cagr):>8}{RESET}"
-              f"{(SIGNAL if better_dd else ALERT)}{tf.max_dd*100:>9.0f}%{RESET}"
-              f"{ALERT}{bh.max_dd*100:>9.0f}%{RESET}"
-              f"{INK}{tf.sharpe:>9.2f}{bh.sharpe:>9.2f}{RESET}"
-              f"{INK_DIM}{tf.time_in*100:>6.0f}%{RESET}")
+    # ── per-asset table (only practical for the small ETF set) ────────────
+    if args.universe == "etfs":
+        print(f"{INK}Per theme{RESET} {INK_FAINT}(trend-follow vs buy & hold){RESET}\n")
+        print(f"   {INK_FAINT}{'theme':<11}{'TF ret':>8}{'BH ret':>8}{'TF maxDD':>10}"
+              f"{'BH maxDD':>10}{'TF Shrp':>9}{'BH Shrp':>9}{'% in':>7}{RESET}")
+        print(f"   {INK_FAINT}{'─'*72}{RESET}")
+        for sym in ETFS:
+            df = frames.get(sym)
+            if df is None or len(df) < args.ma + 30:
+                continue
+            c = df["close"]
+            tf = trend_follow(c, args.ma, args.cost_bps)
+            bh = buy_hold(c)
+            better_dd = tf.max_dd > bh.max_dd  # shallower (less negative)
+            print(f"   {INK}{NAMES.get(sym, sym):<11}{RESET}"
+                  f"{INK}{_pct(tf.cagr):>8}{_pct(bh.cagr):>8}{RESET}"
+                  f"{(SIGNAL if better_dd else ALERT)}{tf.max_dd*100:>9.0f}%{RESET}"
+                  f"{ALERT}{bh.max_dd*100:>9.0f}%{RESET}"
+                  f"{INK}{tf.sharpe:>9.2f}{bh.sharpe:>9.2f}{RESET}"
+                  f"{INK_DIM}{tf.time_in*100:>6.0f}%{RESET}")
 
     # ── portfolio ────────────────────────────────────────────────────────
     tf, bh = portfolio(frames, args.ma, args.cost_bps, cash)
-    print(f"\n{INK}Equal-weight basket of all {len(frames)} themes{RESET} "
+    print(f"\n{INK}Equal-weight basket of all {uni}{RESET} "
           f"{INK_FAINT}(cash earns {args.cash_yield:.1f}%/yr){RESET}\n")
     for s in (tf, bh):
         print(f"   {INK}{s.label:<26}{RESET} return {SIGNAL if s.cagr>0 else ALERT}"
@@ -158,8 +168,9 @@ def main() -> int:
                "the honest win." + RESET) if dd_cut > 0.05 else (
                AMBER + "Drawdown reduction was modest here." + RESET)
     print(f"  {verdict}")
-    print(f"{INK_FAINT}  honest: no T-bill yield on cash, same-close fills, ETFs only, "
-          f"one ~7y window (one big bull + 2022).{RESET}")
+    print(f"{INK_FAINT}  honest: same-close fills · {uni} · ~{args.days//252}y window · "
+          f"cash earns {args.cash_yield:.1f}%/yr · universe is survivorship-biased "
+          f"(hand-picked winners — absolute returns overstated).{RESET}")
     print(f"{INK}{'═'*60}{RESET}")
     return 0
 

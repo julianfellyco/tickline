@@ -1,5 +1,6 @@
 from .fetcher import fetch_ohlcv, load_cached
 from .equity import (
+    fetch_batch,
     fetch_equity,
     fetch_many,
     fetch_shares_outstanding,
@@ -9,6 +10,7 @@ from .equity import (
 __all__ = [
     "fetch_ohlcv",
     "load_cached",
+    "fetch_batch",
     "fetch_equity",
     "fetch_many",
     "fetch_shares_outstanding",
