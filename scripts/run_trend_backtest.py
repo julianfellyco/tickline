@@ -69,10 +69,11 @@ def main() -> int:
 
     print(BANNER)
     if args.universe == "stocks":
-        import build_simple as bs
-        syms = sorted({s for v in bs.STOCKS.values() for s in v})
+        from tickline.data import fetch_batch
+        from tickline.themes.simple_universe import all_company_tickers
+        syms = all_company_tickers()
         print(f"{INK_FAINT}>>{RESET} batch-fetching {len(syms)} stocks, ~{args.days//252}y…")
-        frames = bs._batch_frames(syms, days=args.days)
+        frames = fetch_batch(syms, days=args.days)
         uni = f"{len(frames)} stocks"
     else:
         print(f"{INK_FAINT}>>{RESET} fetching {len(ETFS)} ETFs, ~{args.days//252}y…")
