@@ -28,6 +28,7 @@ jobs:
     env:
       VERCEL_ORG_ID: team_MAVkVtSps6hmtTQkUQfU8uLP
       VERCEL_PROJECT_ID: prj_Aoyfikd3WI45LDaBD2TioykjJ5fq
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -45,7 +46,13 @@ jobs:
         run: python scripts/build_simple.py
 
       - name: Install Vercel CLI
+        if: ${{ env.VERCEL_TOKEN != '' }}
         run: npm install --global vercel@latest
 
       - name: Deploy to Vercel
-        run: vercel deploy ./web --prod --yes --token "${{ secrets.VERCEL_TOKEN }}"
+        if: ${{ env.VERCEL_TOKEN != '' }}
+        run: vercel deploy ./web --prod --yes --token "$VERCEL_TOKEN"
+
+      - name: Skip Vercel deploy when token is missing
+        if: ${{ env.VERCEL_TOKEN == '' }}
+        run: echo "VERCEL_TOKEN secret is not configured; built data files successfully but skipped deploy."
