@@ -36,7 +36,7 @@ jobs:
           python-version: "3.12"
 
       - name: Install data deps
-        run: pip install --quiet yfinance pandas numpy pyarrow requests
+        run: pip install --quiet yfinance pandas numpy pyarrow requests ccxt
 
       - name: Rebuild data.js (latest market data)
         run: python scripts/build_site.py
